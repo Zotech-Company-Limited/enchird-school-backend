@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "9dea2e9a-fa95-4048-9900-bf27e571f30e",
+		"name": "Enchird LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25876129"
+	},
+	"item": [
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "priscarionmbeng@ubuea.cm",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Priscarion",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Mbeng",
+							"type": "text"
+						},
+						{
+							"key": "student_id",
+							"value": "SM20A322",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Colonel@1998",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "Colonel@1998",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "2003-01-06",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/student/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "priscarionmbeng@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Colonel@1998",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/login/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MzM5NDg1LCJpYXQiOjE2OTgzMzY3NDMsImp0aSI6ImZlMmNiZmJiOWFkMjQyMjhhMTQ4OTZhOWQ4OTJjMTZlIiwidXNlcl9pZCI6MTR9.MraC3D4zDjx9FaQy2lYOWCLSbQir-OIic8HLzzn1KyM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/student/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MzM5NDg1LCJpYXQiOjE2OTgzMzY3NDMsImp0aSI6ImZlMmNiZmJiOWFkMjQyMjhhMTQ4OTZhOWQ4OTJjMTZlIiwidXNlcl9pZCI6MTR9.MraC3D4zDjx9FaQy2lYOWCLSbQir-OIic8HLzzn1KyM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/student/14/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"student",
+						"14",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5ODQyMzE0MywiaWF0IjoxNjk4MzM2NzQzLCJqdGkiOiJhOTEwYzdjZmJhNjU0MTU0YTkwMDFlMzg0YTE2M2E3OSIsInVzZXJfaWQiOjE0fQ.hiP8IFGkVsD9n2W2iD5ocfxceIWnhVdkOeUejde9h28",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/token/refresh/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "token_prisca",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MzM3MzQzLCJpYXQiOjE2OTgzMzY3NDMsImp0aSI6ImJiZmNiNjhhNGI3YTQzZGFiMDU3YzgxNmE1ZTc4ZDg4IiwidXNlcl9pZCI6MTR9.QVU8mGLnnBI5RyQ3P_cyO6Ep-uSVcbKRx6PCMjH-c7c",
+			"type": "string"
+		}
+	]
+}

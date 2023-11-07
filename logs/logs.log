@@ -1,0 +1,263 @@
+ERROR : 2023-10-26 01:44 : None : 539 : {views} : [create] : JSON parse error - Expecting value: line 1 column 1 (char 0) : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:212]
+ERROR : 2023-10-26 01:45 : None : 532 : {views} : [create] : name 'UserSerializer' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:212]
+ERROR : 2023-10-26 01:46 : None : 403 : {views} : [create] : {'student_id': [ErrorDetail(string='This field is required.', code='required')], 'enrollment_date': [ErrorDetail(string='This field is required.', code='required')], 'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 01:47 : None : 343 : {views} : [create] : {'enrollment_date': [ErrorDetail(string='This field is required.', code='required')], 'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 01:49 : None : 900 : {views} : [create] : {'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 01:57 : None : 359 : {views} : [create] : Field name `is_staff` is not valid for model `User`. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 02:03 : None : 478 : {views} : [create] : {'date_birth': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 02:05 : None : 745 : {views} : [create] : 'email' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:213]
+ERROR : 2023-10-26 02:14 : None : 135 : {views} : [create] : {'password': [ErrorDetail(string='This field is required.', code='required')], 'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
+ERROR : 2023-10-26 02:15 : None : 153 : {views} : [create] : name '_' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
+ERROR : 2023-10-26 02:16 : None : 504 : {views} : [create] : name '_' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
+ERROR : 2023-10-26 02:17 : None : 207 : {views} : [create] : name '_' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
+ERROR : 2023-10-26 02:19 : None : 623 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least 1 uppercase letter, A-Z.', code='password_no_upper')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
+ERROR : 2023-10-26 02:20 : None : 302 : {views} : [create] : {'password': [ErrorDetail(string='Le mot de passe doit au moins contenir au moins un symbole()[]{}|\\`~!@#$%^&*_-+=;:\'",<>./?', code='password_no_symbol')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
+ERROR : 2023-10-26 02:20 : None : 702 : {views} : [create] : Passwords do not match. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:146]
+ERROR : 2023-10-26 02:21 : None : 1 : {views} : [create] : null value in column "user_id" of relation "students" violates not-null constraint
+DETAIL:  Failing row contains (1, null, SM20A320, null, null). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
+ERROR : 2023-10-26 02:22 : None : 966 : {views} : [create] : 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
+ERROR : 2023-10-26 02:24 : None : 781 : {views} : [create] : 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
+ERROR : 2023-10-26 02:25 : None : 355 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (3, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:25:26.343885+00, 2023-10-26 01:25:26.343885+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
+ERROR : 2023-10-26 02:27 : None : 207 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:218]
+ERROR : 2023-10-26 02:27 : None : 285 : {views} : [create] : create_user() got an unexpected keyword argument 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:218]
+ERROR : 2023-10-26 02:29 : None : 146 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (4, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:29:53.131074+00, 2023-10-26 01:29:53.131074+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:220]
+ERROR : 2023-10-26 02:30 : None : 687 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (5, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:30:51.682873+00, 2023-10-26 01:30:51.682873+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:34 : None : 454 : {views} : [create] : User() got unexpected keyword arguments: 'is_student', 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:34 : None : 981 : {views} : [create] : create_user() got an unexpected keyword argument 'is_studentt' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:35 : None : 702 : {views} : [create] : User() got unexpected keyword arguments: 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:36 : None : 899 : {views} : [create] : User() got unexpected keyword arguments: 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 08:47 : None : 875 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (6, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 07:47:51.858202+00, 2023-10-26 07:47:51.858202+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 08:49 : None : 357 : {views} : [create] : Cannot assign "7": "Student.user" must be a "User" instance. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 08:58 : None : 46 : {views} : [create] : Cannot assign "8": "Student.user" must be a "User" instance. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:02 : None : 154 : {views} : [create] : 'password' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:222]
+ERROR : 2023-10-26 09:02 : None : 714 : {views} : [create] : local variable 'password' referenced before assignment : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:03 : None : 27 : {views} : [create] : Password must be a string or bytes, got tuple. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:05 : None : 927 : {views} : [create] : JSON parse error - Expecting value: line 1 column 1 (char 0) : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:11 : None : 348 : {views} : [create] : Password must be a string or bytes, got tuple. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:222]
+ERROR : 2023-10-26 09:12 : None : 248 : {views} : [create] : Password must be a string or bytes, got tuple. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:223]
+INFO : 2023-10-26 09:13:23,943 : 14 : 943 : Student created successfully! : views : None
+ERROR : 2023-10-26 09:33 : None : 227 : {views} : [create] : {'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:36 : None : 822 : {views} : [create] : {'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+WARNING : 2023-10-26 09:37:09,209 : anonymous : 209 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:161]
+ERROR : 2023-10-26 09:43 : None : 570 : {views} : [create] : create_user() got an unexpected keyword argument 'is_student' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 09:44 : None : 605 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
+DETAIL:  Key (student_id)=(SM20A320) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+INFO : 2023-10-26 09:44:48,346 : 17 : 346 : Student created successfully! : views : None
+ERROR : 2023-10-26 10:08 : None : 275 : {views} : [create] : JSON parse error - Expecting value: line 1 column 1 (char 0) : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 11:44 : None : 885 : {login} : [post] : {'phone': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:145]
+ERROR : 2023-10-26 11:44 : None : 46 : {login} : [post] : 'RefreshToken' object has no attribute 'access' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:145]
+INFO : 2023-10-26 11:45:22,025 : 2 : 25 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-26 11:45 : None : 321 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:145]
+ERROR : 2023-10-26 11:46 : None : 70 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:145]
+INFO : 2023-10-26 11:46:47,558 : 2 : 558 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-26 11:46 : None : 501 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:145]
+INFO : 2023-10-26 11:48:31,091 : 14 : 91 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 11:48:58,572 : 14 : 572 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 11:53:53,389 : 14 : 389 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 16:55:44,262 : 14 : 262 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 16:59:21,940 : 14 : 940 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 17:00:12,700 : 14 : 700 : User Logged in sucessfully. : login : None
+INFO : 2023-10-26 17:12:23,219 : 14 : 219 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-26 17:12 : Anonymous : 690 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:55]
+ERROR : 2023-10-26 17:15 : Anonymous : 8 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:55]
+ERROR : 2023-10-26 17:16 : Anonymous : 561 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:56]
+INFO : 2023-10-26 17:17:23,838 : 14 : 838 : Students list returned successfully. : views : None
+INFO : 2023-10-26 17:28:34,369 : 14 : 369 : Students list returned successfully. : views : None
+ERROR : 2023-10-26 17:33 : Anonymous : 545 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:56]
+ERROR : 2023-10-26 17:38 : 14 : 721 : {views} : [retrieve] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:102]
+ERROR : 2023-10-26 17:39 : 14 : 162 : {views} : [retrieve] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:102]
+ERROR : 2023-10-26 17:40 : 14 : 265 : {views} : [retrieve] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:102]
+WARNING : 2023-10-26 17:41:49,983 : 14 : 983 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:116]
+WARNING : 2023-10-26 17:42:26,761 : 14 : 761 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:117]
+WARNING : 2023-10-26 17:42:59,790 : 14 : 790 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:117]
+WARNING : 2023-10-26 17:43:16,034 : 14 : 34 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:117]
+WARNING : 2023-10-26 17:43:49,853 : 14 : 853 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:118]
+WARNING : 2023-10-26 17:44:21,479 : 14 : 479 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:118]
+WARNING : 2023-10-26 17:45:10,177 : 14 : 177 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:118]
+INFO : 2023-10-26 17:48:08,580 : 14 : 580 : Client details returned successfully! : views : None
+WARNING : 2023-10-26 17:49:14,268 : 14 : 268 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:116]
+ERROR : 2023-10-26 23:30 : 14 : 554 : {views} : [update] : You cannot edit another student's information : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:258]
+WARNING : 2023-10-26 23:51:03,410 : anonymous : 410 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:293]
+WARNING : 2023-10-26 23:53:32,631 : anonymous : 631 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:293]
+WARNING : 2023-10-27 00:05:15,391 : anonymous : 391 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:294]
+WARNING : 2023-10-27 11:16:08,302 : anonymous : 302 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:294]
+INFO : 2023-10-27 11:16:55,261 : 14 : 261 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:34:26,993 : 14 : 993 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:35:58,367 : 14 : 367 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:43:05,671 : 14 : 671 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:52:31,820 : 14 : 820 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:52:45,449 : 14 : 449 : Student modified successfully! : views : None
+INFO : 2023-10-27 11:53:06,738 : 14 : 738 : Student modified successfully! : views : None
+WARNING : 2023-10-27 11:55:08,177 : anonymous : 177 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+INFO : 2023-10-27 11:56:02,043 : 18 : 43 : Student created successfully! : views : None
+ERROR : 2023-10-27 13:45 : Anonymous : 562 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:56]
+INFO : 2023-10-27 13:47:22,683 : 14 : 683 : Student details returned successfully! : views : None
+INFO : 2023-10-27 13:51:56,720 : 2 : 720 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-27 13:55 : None : 373 : {views} : [create] : JSON parse error - Expecting value: line 1 column 1 (char 0) : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:55 : None : 160 : {views} : [create] : {'email': [ErrorDetail(string='This field is required.', code='required')], 'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:56 : None : 125 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:56 : None : 51 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least 1 uppercase letter, A-Z.', code='password_no_upper')], 'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:57 : None : 226 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:59 : None : 996 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 13:59 : None : 297 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+WARNING : 2023-10-27 13:59:26,392 : anonymous : 392 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+ERROR : 2023-10-27 13:59 : None : 598 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
+DETAIL:  Key (student_id)=(SM20A320) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+INFO : 2023-10-27 14:00:01,933 : 20 : 933 : Student created successfully! : views : None
+ERROR : 2023-10-27 14:07 : None : 991 : {views} : [create] : {'student_id': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-27 14:09 : None : 761 : {views} : [create] : {'student_id': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+INFO : 2023-10-27 14:44:41,600 : 21 : 600 : Student created successfully! : views : None
+INFO : 2023-10-27 14:48:01,699 : 2 : 699 : User Logged in sucessfully. : login : None
+INFO : 2023-10-27 14:48:15,043 : 2 : 43 : Students list returned successfully. : views : None
+INFO : 2023-10-28 18:27:49,325 : 2 : 325 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 18:27:54,150 : 2 : 150 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 18:27:54,854 : 2 : 854 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-28 18:32 : None : 582 : {login} : [post] : {'email': [ErrorDetail(string='This field may not be blank.', code='blank')], 'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+INFO : 2023-10-28 18:33:35,841 : 2 : 841 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 18:33:40,134 : 2 : 134 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-28 18:33 : None : 289 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+INFO : 2023-10-28 19:12:44,578 : 2 : 578 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-28 19:13 : None : 500 : {login} : [post] : {'password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+ERROR : 2023-10-28 19:14 : None : 534 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+INFO : 2023-10-28 19:14:40,624 : 2 : 624 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:14:42,325 : 2 : 325 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:14:47,903 : 2 : 903 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:14:49,533 : 2 : 533 : User Logged in sucessfully. : login : None
+ERROR : 2023-10-28 19:15 : None : 999 : {login} : [post] : {'email': [ErrorDetail(string='This field may not be blank.', code='blank')], 'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+ERROR : 2023-10-28 19:15 : None : 496 : {login} : [post] : {'email': [ErrorDetail(string='This field may not be blank.', code='blank')], 'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:150]
+INFO : 2023-10-28 19:23:04,255 : 2 : 255 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:23:24,459 : 2 : 459 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:23:42,037 : 2 : 37 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 19:25:00,044 : 2 : 44 : User Logged in sucessfully. : login : None
+WARNING : 2023-10-28 19:49:20,432 : anonymous : 432 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+WARNING : 2023-10-28 19:51:48,052 : anonymous : 52 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+INFO : 2023-10-28 19:53:52,176 : 22 : 176 : Student created successfully! : views : None
+INFO : 2023-10-28 20:07:38,816 : 23 : 816 : Student created successfully! : views : None
+INFO : 2023-10-28 20:24:47,283 : 14 : 283 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 20:25:04,072 : 14 : 72 : Student details returned successfully! : views : None
+INFO : 2023-10-28 20:25:26,984 : 2 : 984 : User Logged in sucessfully. : login : None
+INFO : 2023-10-28 20:25:46,872 : 2 : 872 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:27:04,889 : 2 : 889 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:29:32,601 : 2 : 601 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:39:45,309 : 2 : 309 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:44:27,164 : 2 : 164 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:50:27,851 : 2 : 851 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:51:07,759 : 2 : 759 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:51:52,647 : 2 : 647 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:53:04,183 : 2 : 183 : Students list returned successfully. : views : None
+INFO : 2023-10-28 20:54:41,033 : 2 : 33 : Students list returned successfully. : views : None
+INFO : 2023-10-30 16:58:54,430 : 2 : 430 : User Logged in sucessfully. : login : None
+WARNING : 2023-10-30 16:59:20,938 : anonymous : 938 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
+ERROR : 2023-10-30 16:59 : None : 948 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
+DETAIL:  Key (student_id)=() already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
+INFO : 2023-10-30 17:04:28,668 : 25 : 668 : Student created successfully! : views : None
+INFO : 2023-11-01 18:50:28,043 : 2 : 43 : User Logged in sucessfully. : login : None
+INFO : 2023-11-01 19:03:03,987 : 2 : 987 : User Logged in sucessfully. : login : None
+INFO : 2023-11-01 19:12:37,062 : 2 : 62 : User Logged in sucessfully. : login : None
+WARNING : 2023-11-01 19:20:22,964 : anonymous : 964 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
+ERROR : 2023-11-01 19:20 : None : 297 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
+DETAIL:  Key (student_id)=() already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
+INFO : 2023-11-01 19:23:08,302 : 27 : 302 : Student created successfully! : views : None
+INFO : 2023-11-01 19:24:22,141 : 2 : 141 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-01 22:16 : None : 814 : {views} : [create] : {'password': [ErrorDetail(string='Le mot de passe doit au moins contenir au moins un symbole()[]{}|\\`~!@#$%^&*_-+=;:\'",<>./?', code='password_no_symbol')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
+INFO : 2023-11-01 23:29:31,647 : 2 : 647 : User Logged in sucessfully. : login : None
+INFO : 2023-11-01 23:29:53,363 : 2 : 363 : Students list returned successfully. : views : None
+ERROR : 2023-11-01 23:32 : None : 103 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least one symbol()[]{}|\\`~!@#$%^&*_-+=;:\'",<>./?', code='password_no_symbol')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
+INFO : 2023-11-01 23:32:35,475 : 28 : 475 : Student created successfully! : views : None
+INFO : 2023-11-01 23:36:03,695 : 29 : 695 : Student created successfully! : views : None
+INFO : 2023-11-01 23:38:10,786 : 2 : 786 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:38:33,349 : 2 : 349 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:38:56,261 : 2 : 261 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:42:14,448 : 2 : 448 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:47:02,782 : 2 : 782 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:50:45,191 : 2 : 191 : Students list returned successfully. : views : None
+INFO : 2023-11-01 23:52:02,641 : 30 : 641 : Student created successfully! : views : None
+ERROR : 2023-11-01 23:57 : None : 806 : {views} : [create] : Field name `reference` is not valid for model `Student`. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:227]
+INFO : 2023-11-01 23:58:35,442 : 31 : 442 : Student created successfully! : views : None
+ERROR : 2023-11-01 23:59 : None : 757 : {views} : [create] : null value in column "student_id" of relation "students" violates not-null constraint
+DETAIL:  Failing row contains (24, null, null, 32, f, 2023-11-01 22:59:33.742001+00). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:227]
+INFO : 2023-11-02 00:00:04,362 : 33 : 362 : Student created successfully! : views : None
+ERROR : 2023-11-02 00:02 : None : 63 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-02 00:03:15,351 : 25 : 351 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-02 00:03 : 25 : 523 : {views} : [update] : You cannot edit another student's information : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:259]
+INFO : 2023-11-02 00:03:54,557 : 25 : 557 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:09:31,152 : 25 : 152 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:14:51,424 : 25 : 424 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:14:56,278 : 25 : 278 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:15:11,543 : 25 : 543 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:17:23,475 : 25 : 475 : Student modified successfully! : views : None
+INFO : 2023-11-02 00:17:37,738 : 25 : 738 : Student modified successfully! : views : None
+ERROR : 2023-11-02 00:19 : 25 : 26 : {views} : [update] : {'email': [ErrorDetail(string='user with this email already exists.', code='unique')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:319]
+INFO : 2023-11-02 00:28:04,379 : 25 : 379 : Student marked as deleted successfully : views : None
+ERROR : 2023-11-02 20:43 : None : 2 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-02 20:43 : None : 929 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-02 20:43:37,812 : 2 : 812 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-02 20:50 : None : 392 : {views} : [create] : name 'student_serializer' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+ERROR : 2023-11-02 20:52 : None : 341 : {views} : [create] : duplicate key value violates unique constraint "users_email_key"
+DETAIL:  Key (email)=(teacher@teacher.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+ERROR : 2023-11-02 20:54 : None : 768 : {views} : [create] : duplicate key value violates unique constraint "users_email_key"
+DETAIL:  Key (email)=(teachr@teacher.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+INFO : 2023-11-02 20:54:47,966 : 38 : 966 : Teacher created successfully! : views : None
+INFO : 2023-11-02 20:59:31,320 : 39 : 320 : Teacher created successfully! : views : None
+INFO : 2023-11-03 19:37:04,043 : 2 : 43 : User Logged in sucessfully. : login : None
+INFO : 2023-11-03 19:37:57,876 : 2 : 876 : Students list returned successfully. : views : None
+INFO : 2023-11-03 19:38:16,547 : 2 : 547 : List of teachers returned successfully. : views : None
+INFO : 2023-11-03 19:45:03,349 : 2 : 349 : Teacher details returned successfully! : views : None
+INFO : 2023-11-03 20:27:54,390 : 2 : 390 : User Logged in sucessfully. : login : None
+WARNING : 2023-11-03 20:28:07,113 : 2 : 113 : You do not have the necessary rights! (Not a teacher) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:258]
+WARNING : 2023-11-03 20:28:27,985 : 2 : 985 : You do not have the necessary rights! (Not a teacher) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:258]
+ERROR : 2023-11-03 20:29 : None : 73 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:30 : None : 866 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:30 : None : 617 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-03 20:37:38,778 : 2 : 778 : User Logged in sucessfully. : login : None
+INFO : 2023-11-03 20:37:58,999 : 40 : 999 : Teacher created successfully! : views : None
+ERROR : 2023-11-03 20:38 : None : 73 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:39 : None : 107 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:40 : None : 245 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:41 : None : 282 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:42 : None : 857 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 20:42 : None : 837 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-03 20:42:42,793 : 41 : 793 : Teacher created successfully! : views : None
+ERROR : 2023-11-03 20:42 : None : 900 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-03 20:44:25,150 : 41 : 150 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-03 23:42 : None : 942 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+ERROR : 2023-11-03 23:42 : None : 409 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
+INFO : 2023-11-03 23:44:18,000 : 2 : 0 : User Logged in sucessfully. : login : None
+INFO : 2023-11-03 23:44:18,006 : 2 : 6 : User Logged in sucessfully. : login : None
+INFO : 2023-11-03 23:44:18,023 : 2 : 23 : User Logged in sucessfully. : login : None
+INFO : 2023-11-03 23:44:18,024 : 2 : 24 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-06 23:05 : None : 964 : {views} : [create] : (1062, "Duplicate entry '' for key 'users_username_e8658fc8_uniq'") : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:231]
+INFO : 2023-11-06 23:23:01,875 : 4 : 875 : Student created successfully! : views : None
+ERROR : 2023-11-06 23:43 : None : 150 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:69]
+INFO : 2023-11-06 23:44:00,666 : 3 : 666 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-06 23:45 : None : 356 : {views} : [create] : {'email': [ErrorDetail(string='This field is required.', code='required')], 'first_name': [ErrorDetail(string='This field is required.', code='required')], 'last_name': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:238]
+INFO : 2023-11-06 23:46:41,187 : 3 : 187 : Refresh Token is required. : logout : None
+INFO : 2023-11-06 23:48:14,983 : 3 : 983 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:48:43,693 : 3 : 693 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:48:53,382 : 3 : 382 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:50:25,909 : 3 : 909 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:51:34,097 : 3 : 97 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:57:32,044 : 3 : 44 : Invalid Token. : logout : None
+INFO : 2023-11-06 23:59:07,453 : 3 : 453 : Error during logout: 'RefreshToken' object has no attribute 'blacklist' : logout : None
+INFO : 2023-11-06 23:59:47,758 : 3 : 758 : Error during logout: 'RefreshToken' object has no attribute 'blacklist' : logout : None
+INFO : 2023-11-07 00:07:24,954 : 3 : 954 : Error during logout: 'RefreshToken' object has no attribute 'blacklist' : logout : None
+INFO : 2023-11-07 00:11:55,616 : 3 : 616 : Error during logout: 'User' object has no attribute 'auth_token' : logout : None
+ERROR : 2023-11-07 00:24 : None : 90 : {login} : [post] : 'phone' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:84]
+ERROR : 2023-11-07 00:25 : None : 647 : {login} : [post] : 'role' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:84]
+ERROR : 2023-11-07 01:29 : None : 223 : {login} : [post] : name 'Token' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:83]
+INFO : 2023-11-07 01:30:09,651 : 3 : 651 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 01:39:35,724 : 3 : 724 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 01:39:44,780 : 3 : 780 : Logout successful : logout : None
+ERROR : 2023-11-07 01:49 : None : 715 : {login} : [post] : (1146, "Table 'enchird_database.users_customtoken' doesn't exist") : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:95]
+ERROR : 2023-11-07 02:50 : None : 345 : {login} : [post] : 'LoginView' object has no attribute 'serializer_class' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:85]
+INFO : 2023-11-07 02:52:46,437 : 3 : 437 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 02:53:47,781 : 3 : 781 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 02:53:56,422 : 3 : 422 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 02:54:15,959 : 3 : 959 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 03:01:35,876 : 3 : 876 : List of teachers returned successfully. : views : None
+INFO : 2023-11-07 03:02:33,746 : 3 : 746 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 03:05:24,292 : 3 : 292 : User Logged in sucessfully. : login : None
