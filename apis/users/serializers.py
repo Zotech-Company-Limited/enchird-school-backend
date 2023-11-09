@@ -13,9 +13,9 @@ class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(required=True, allow_null=False, allow_blank=False)
     groups = serializers.SerializerMethodField()
     date_of_birth = serializers.DateField(required=False, allow_null=True)
+    username = serializers.CharField(max_length=100, required=True)
 
     class Meta:
-        """Docstring for class."""
 
         model = User
         fields = ['id', 'reference', 'phone', 'email', 'username', 'first_name', 

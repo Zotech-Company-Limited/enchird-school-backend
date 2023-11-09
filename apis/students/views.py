@@ -19,6 +19,7 @@ from apis.students.serializers import StudentSerializer
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 from apis.utils import *
 from django.db import transaction
+from core.email import send_verification_email
 
 
 logger = logging.getLogger("myLogger")
@@ -213,6 +214,17 @@ class StudentViewSet(viewsets.ModelViewSet):
 
                             # Add the student to the Student Group
                             user.groups.add(student_group)
+
+                            try:
+                                send_verification_email(user, reset_token)
+                            except Exception as e:
+                                print(e)
+                                logger.error(
+                                    e,
+                                    extra={
+                                        'user': user.id
+                                    }
+                                )
                             
                             logger.info(
                                 "Student created successfully!",

@@ -261,3 +261,10 @@ INFO : 2023-11-07 02:54:15,959 : 3 : 959 : User Logged in sucessfully. : login :
 INFO : 2023-11-07 03:01:35,876 : 3 : 876 : List of teachers returned successfully. : views : None
 INFO : 2023-11-07 03:02:33,746 : 3 : 746 : User Logged in sucessfully. : login : None
 INFO : 2023-11-07 03:05:24,292 : 3 : 292 : User Logged in sucessfully. : login : None
+INFO : 2023-11-07 17:40:40,160 : 10 : 160 : Student created successfully! : views : None
+INFO : 2023-11-07 17:55:04,744 : 11 : 744 : Student created successfully! : views : None
+INFO : 2023-11-07 17:58:51,765 : 12 : 765 : Student created successfully! : views : None
+INFO : 2023-11-07 18:01:48,634 : 13 : 634 : Student created successfully! : views : None
+ERROR : 2023-11-07 18:01 : 13 : 347 : {views} : [get] : Email Verified Successfully. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\views.py:views.py:29]
+INFO : 2023-11-07 21:35:55,312 : 3 : 312 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-08 08:31 : None : 101 : {login} : [post] : {'email': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:86]

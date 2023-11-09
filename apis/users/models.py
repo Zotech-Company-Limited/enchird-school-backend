@@ -57,6 +57,7 @@ class UserManager(BaseUserManager):
             is_student=False,
             is_teacher=False
         )
+        new_user.is_active = True
         new_user.is_admin = True
         new_user.is_staff = True
         new_user.is_superuser = True
@@ -131,7 +132,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     date_of_birth = models.DateField(null=True, blank=True)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
     role = models.CharField(
         choices=ROLE_CHOICES,

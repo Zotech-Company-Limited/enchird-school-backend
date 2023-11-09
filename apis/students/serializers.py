@@ -8,7 +8,7 @@ from drf_writable_nested import WritableNestedModelSerializer
 
 class StudentSerializer(WritableNestedModelSerializer):
 
-    user = UserSerializer(read_only=True) 
+    user = UserSerializer(read_only=True)
 
     class Meta:
 
