@@ -147,6 +147,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         db_column="modification_date",
         auto_now=True
     )
+    password_requested_at = models.DateTimeField(null=True, blank=True)
     reset_token = models.CharField(max_length=255, null=True, blank=True)
 
     objects = UserManager()

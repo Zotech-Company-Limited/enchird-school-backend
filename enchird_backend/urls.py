@@ -21,7 +21,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-
+from apis.users.views import EmailVerificationView
+from apis.users.reset_password import ResetPasswordView
 
 
 
@@ -29,12 +30,11 @@ from django.conf.urls.static import static
 app_name = 'api'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('api/', include('apis.students.urls')),  # This includes the student app's URLs under /api/
     path('api/', include('apis.teachers.urls')),
     path('api/', include('apis.users.urls')),
+    path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
+    path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),
     # path('api/', include((router.urls, 'api'))),
 ]
 

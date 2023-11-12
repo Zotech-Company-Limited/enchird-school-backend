@@ -268,3 +268,67 @@ INFO : 2023-11-07 18:01:48,634 : 13 : 634 : Student created successfully! : view
 ERROR : 2023-11-07 18:01 : 13 : 347 : {views} : [get] : Email Verified Successfully. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\views.py:views.py:29]
 INFO : 2023-11-07 21:35:55,312 : 3 : 312 : User Logged in sucessfully. : login : None
 ERROR : 2023-11-08 08:31 : None : 101 : {login} : [post] : {'email': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:86]
+ERROR : 2023-11-10 22:38 : None : 980 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
+ERROR : 2023-11-10 22:39 : None : 231 : {views} : [create] : {'password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
+ERROR : 2023-11-10 22:39 : None : 686 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least one symbol()[]{}|\\`~!@#$%^&*_-+=;:\'",<>./?', code='password_no_symbol')], 'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
+ERROR : 2023-11-10 22:40 : None : 760 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
+WARNING : 2023-11-10 22:42:05,814 : anonymous : 814 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+INFO : 2023-11-10 22:55:32,876 : 14 : 876 : Student created successfully! : views : None
+INFO : 2023-11-10 23:17:41,589 : 15 : 589 : Student created successfully! : views : None
+WARNING : 2023-11-10 23:36:18,691 : anonymous : 691 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+INFO : 2023-11-11 01:08:37,574 : 3 : 574 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-11 01:08 : None : 203 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:86]
+ERROR : 2023-11-11 01:12 : None : 740 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:89]
+ERROR : 2023-11-11 01:13 : None : 821 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:91]
+ERROR : 2023-11-11 01:14 : None : 61 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:92]
+WARNING : 2023-11-11 01:16:39,575 : anonymous : 575 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+ERROR : 2023-11-11 01:16 : None : 107 : {views} : [create] : (1062, "Duplicate entry 'user3' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
+INFO : 2023-11-11 01:17:03,033 : 17 : 33 : Student created successfully! : views : None
+ERROR : 2023-11-11 01:17 : None : 108 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:91]
+ERROR : 2023-11-11 01:27 : None : 316 : {login} : [post] : name 'role' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+ERROR : 2023-11-11 01:28 : None : 970 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+ERROR : 2023-11-11 01:28 : None : 315 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+ERROR : 2023-11-11 01:31 : None : 885 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+ERROR : 2023-11-11 01:31 : None : 253 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+INFO : 2023-11-11 01:34:06,830 : 18 : 830 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-11 01:34 : None : 653 : {views} : [create] : (1062, "Duplicate entry 'user9' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
+INFO : 2023-11-11 01:35:03,772 : 20 : 772 : Student created successfully! : views : None
+ERROR : 2023-11-11 01:35 : None : 2 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
+WARNING : 2023-11-11 01:41:43,565 : anonymous : 565 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+ERROR : 2023-11-11 01:41 : None : 192 : {views} : [create] : (1062, "Duplicate entry 'user8' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:235]
+INFO : 2023-11-11 01:42:00,963 : 22 : 963 : Student created successfully! : views : None
+INFO : 2023-11-11 01:42:33,336 : 22 : 336 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-11 09:49 : None : 961 : {views} : [create] : (1062, "Duplicate entry 'user0' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:235]
+INFO : 2023-11-11 09:49:59,620 : 24 : 620 : Student created successfully! : views : None
+ERROR : 2023-11-11 10:04 : 24 : 998 : {views} : [get] : Email Verified Successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:30]
+INFO : 2023-11-11 11:14:09,406 : 25 : 406 : Student created successfully! : views : None
+WARNING : 2023-11-11 11:31:23,563 : anonymous : 563 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+ERROR : 2023-11-11 12:59 : None : 718 : {reset_password} : [post] : {'email': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\reset_password.py:reset_password.py:92]
+ERROR : 2023-11-11 13:00 : None : 396 : {reset_password} : [post] : unsupported operand type(s) for +: 'NoneType' and 'datetime.timedelta' : [in C:\enchird_LMS\enchird-school-backend\apis\users\reset_password.py:reset_password.py:92]
+INFO : 2023-11-11 13:01:04,929 : 25 : 929 : Reset password link sent to email. : reset_password : None
+ERROR : 2023-11-11 20:44 : Anonymous : 439 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:16]
+ERROR : 2023-11-11 20:45 : Anonymous : 610 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:16]
+ERROR : 2023-11-11 20:46 : Anonymous : 298 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:17]
+ERROR : 2023-11-11 20:47 : Anonymous : 982 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:17]
+INFO : 2023-11-11 20:54:25,913 : 25 : 913 : Reset password link sent to email. : reset_password : None
+INFO : 2023-11-11 21:00:42,852 : 25 : 852 : Reset password link sent to email. : reset_password : None
+INFO : 2023-11-11 21:10:09,330 : 25 : 330 : Reset password link sent to email. : reset_password : None
+INFO : 2023-11-11 21:12:02,351 : 25 : 351 : Reset password link sent to email. : reset_password : None
+INFO : 2023-11-11 22:49:39,077 : 25 : 77 : Reset password link sent to email. : reset_password : None
+ERROR : 2023-11-12 08:13 : None : 647 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least 1 digit, 0-9.', code='password_no_number')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
+WARNING : 2023-11-12 08:14:27,701 : anonymous : 701 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+ERROR : 2023-11-12 08:14 : None : 913 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
+ERROR : 2023-11-12 08:20 : None : 321 : {views} : [create] : name 'logger' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
+WARNING : 2023-11-12 08:20:59,879 : anonymous : 879 : The password must be at least 8 characters. : utils : [in C:\enchird_LMS\enchird-school-backend\apis\utils.py:utils.py:15]
+ERROR : 2023-11-12 08:20 : None : 881 : {views} : [create] : name 'Response' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
+WARNING : 2023-11-12 08:21:25,413 : anonymous : 413 : The password must be at least 8 characters. : utils : [in C:\enchird_LMS\enchird-school-backend\apis\utils.py:utils.py:16]
+WARNING : 2023-11-12 08:21:25,417 : anonymous : 417 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+ERROR : 2023-11-12 08:25 : None : 298 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
+WARNING : 2023-11-12 08:29:38,995 : anonymous : 995 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:29:55,518 : anonymous : 518 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:30:24,059 : anonymous : 59 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:39:37,478 : anonymous : 478 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:173]
+ERROR : 2023-11-12 08:44 : None : 795 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
+ERROR : 2023-11-12 08:45 : None : 282 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
+ERROR : 2023-11-12 08:45 : None : 14 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
+WARNING : 2023-11-12 09:12:40,525 : anonymous : 525 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]

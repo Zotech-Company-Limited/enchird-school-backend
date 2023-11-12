@@ -51,9 +51,8 @@ class UserPasswordSerializer(serializers.Serializer):
 
     password = serializers.CharField(
         max_length=100,
-        validators=[validate_password]
+        # validators=[validate_password]
     )
-    confirm_password = serializers.CharField(max_length=100)
 
 
 class LoginSerializer(serializers.Serializer):
@@ -71,5 +70,12 @@ class PermissionSerializer(serializers.ModelSerializer):
 
 class LogoutSerializer(serializers.ModelSerializer):
     pass
+
+
+class ResetPasswordSerializer(serializers.Serializer):
+
+    email = serializers.CharField(max_length=100, required=True)
+
+
 
 

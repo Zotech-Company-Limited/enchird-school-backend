@@ -26,6 +26,7 @@ class LoginView(APIView):
     """Docstring for class."""
     serializer_class = AuthTokenSerializer
 
+
     def post(self, request,  *args, **kwargs):
         """Docstring for function."""
         try:
@@ -39,14 +40,19 @@ class LoginView(APIView):
                 "username": serializer.validated_data['email'],
                 "password": serializer.validated_data['password']
             }
+
             serializer = self.serializer_class(
                 data=data,
                 context={'request': request}
             )
+            print("3")
             serializer.is_valid(raise_exception=True)
+            print("4")
             
             user = serializer.validated_data['user']
+
             user.reset_token = None
+            print("4")
 
             if user.reset_token is not None:
                 logger.error(

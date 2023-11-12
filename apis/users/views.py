@@ -1,5 +1,6 @@
 import logging
 from rest_framework.views import APIView
+from rest_framework import status, viewsets
 from rest_framework.response import Response
 from .models import User  # Replace with your user model
 
@@ -8,6 +9,7 @@ logger = logging.getLogger("myLogger")
 
 
 class EmailVerificationView(APIView):
+
     def get(self, request, verification_token):
         try:
             user = User.objects.get(reset_token=verification_token)

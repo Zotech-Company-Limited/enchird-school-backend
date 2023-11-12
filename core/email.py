@@ -75,6 +75,42 @@ def send_verification_email(user, reset_token):
         return False
 
 
+def send_reset_password_email(user, reset_token, uid):
+    try:
+        context = ssl.create_default_context()
+
+        # Create a connection to the SMTP server using SSL
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            # Log in to your SMTP server using your credentials
+            server.login(sender_email, password)
+
+            # Create the verification link using the token
+            verification_link = f"http://localhost:8000/reset-password?uid={uid}&token={reset_token}/"
+
+            # Create the email message
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = user.email
+            msg['Subject'] = "Reset Password"
+
+            # Include the verification link in the email body
+            email_body = f"Hello {user.first_name}, \n\nClick the following link to reset your password:\n{verification_link}"
+
+            msg.attach(MIMEText(email_body, 'plain'))
+
+            server.sendmail(sender_email, user.email, msg.as_string())
+
+            # Close the connection
+            server.quit()
+
+        return True
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return False
+
+
+
+
 def send_adminhtmltext(user, content):
 
     message = MIMEMultipart("alternative")

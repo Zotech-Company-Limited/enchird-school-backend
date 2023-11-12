@@ -3,6 +3,7 @@ from uuid import uuid4
 import datetime
 import random
 import string
+from apis.utils import validate_password
 from django.conf import settings
 from django.utils import timezone
 from rest_framework.response import Response
@@ -20,9 +21,12 @@ from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserU
 from apis.utils import *
 from django.db import transaction
 from core.email import send_verification_email
+from django.core.mail import EmailMessage
 
 
 logger = logging.getLogger("myLogger")
+
+logging.basicConfig(filename='app.log', level=logging.DEBUG) 
 
 
 
@@ -152,17 +156,16 @@ class StudentViewSet(viewsets.ModelViewSet):
                 if student_serializer.is_valid(raise_exception=True):
                     if user_serializer.is_valid(raise_exception=True):
                         if password_serializer.is_valid(raise_exception=True):
-
+                            
+                            password = password_serializer.validated_data['password']
+                            try:
+                                validate_password(password)
+                                # If valid, proceed with user creation
+                            except ValueError as e:
+                                error_message = e.args[0]  # Access the error message from the exception
+                                return Response({"error": error_message}, status=status.HTTP_400_BAD_REQUEST)
+                            
                             reset_token = uuid4()
-                            if password_serializer.validated_data['password'] != password_serializer.validated_data['confirm_password']:
-                                logger.error(
-                                        "Passwords do not match.",
-                                        extra={
-                                            'user': request.user.id
-                                        }
-                                    )
-                                return Response({"error": "Passwords do not match."},
-                                                status=status.HTTP_400_BAD_REQUEST)
 
                             # Verify uniqueness of email address
                             num = User.objects.all().filter(
@@ -179,6 +182,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                                                 status=status.HTTP_409_CONFLICT)
 
                             # Create user
+                            logging.debug('Your message here')
                             user = User.objects.create_user(
                                 email=user_serializer.validated_data['email'],
                                 role="student",
@@ -201,6 +205,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                             user.password_requested_at = timezone.now()
                             user.is_admin = False
                             user.role = "student"
+                            user.is_active = True
                             user.username =  user_serializer.validated_data['username']
                             password = password_serializer.validated_data['password']
                             user.set_password(password)
@@ -214,6 +219,14 @@ class StudentViewSet(viewsets.ModelViewSet):
 
                             # Add the student to the Student Group
                             user.groups.add(student_group)
+
+                            # email = EmailMessage(
+                            #     'Subject here',
+                            #     'Body here',
+                            #     'jvperezmbi@gmail.com',
+                            #     ['mbiacharetyron@gmail.com']
+                            # )
+                            # email.send()
 
                             try:
                                 send_verification_email(user, reset_token)

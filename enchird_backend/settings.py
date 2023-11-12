@@ -29,9 +29,10 @@ SECRET_KEY = 'django-insecure-j_tya--8(3c9l^%yx@@nv3*47^7%-bx22jlbwq_qo3q-nuqvae
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['enchird.zotechinsights.com',
-                  'https://enchird.zotechinsights.com'
-]
+# ALLOWED_HOSTS = ['enchird.zotechinsights.com',
+#                   'https://enchird.zotechinsights.com'
+#                   'http://127.0.0.1'
+# ]
 
 
 # Application definition
@@ -88,27 +89,12 @@ WSGI_APPLICATION = 'enchird_backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zotechin_enchird_database',
-        'USER': 'zotechin_enchird_database',
-        'PASSWORD': 'td5Z2JaVre&@Y&BaIBCSfY)k',
-        'HOST': 'localhost',
-        'PORT': '',            # Set to empty string for default
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'enchird_database',
-#         'USER': 'root',
-#         'PASSWORD': '',
+#         'NAME': 'zotechin_enchird_database',
+#         'USER': 'zotechin_enchird_database',
+#         'PASSWORD': 'td5Z2JaVre&@Y&BaIBCSfY)k',
 #         'HOST': 'localhost',
 #         'PORT': '',            # Set to empty string for default
 #         'OPTIONS': {
@@ -116,6 +102,21 @@ DATABASES = {
 #         }
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'enchird_database',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',            # Set to empty string for default
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+    }
+}
 
 
 REST_FRAMEWORK = { 

@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 from .logout import Logout
 from .login import LoginView
 from knox import views as knox_views
+from apis.users.reset_password import *
 
 
 # Create a router
@@ -19,4 +20,7 @@ urlpatterns = [
     path('auth/login/', LoginView.as_view(), name='Login'),
     path('auth/logout/', knox_views.LogoutView.as_view(), name='Logout'),
     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name="Logout all sessions"),
+    path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
+    path('reset_password/<verification_token>/', ResetPasswordView.as_view(), name="verify-email"),
+
 ]
