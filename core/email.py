@@ -85,7 +85,7 @@ def send_reset_password_email(user, reset_token, uid):
             server.login(sender_email, password)
 
             # Create the verification link using the token
-            verification_link = f"http://localhost:8000/reset-password?uid={uid}&token={reset_token}/"
+            verification_link = f"https://frontend.zotechinsights.com/createnewpassword?uid={uid}&token={reset_token}/"
 
             # Create the email message
             msg = MIMEMultipart()

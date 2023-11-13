@@ -332,3 +332,4 @@ ERROR : 2023-11-12 08:44 : None : 795 : {views} : [create] : {'password': [Error
 ERROR : 2023-11-12 08:45 : None : 282 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
 ERROR : 2023-11-12 08:45 : None : 14 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
 WARNING : 2023-11-12 09:12:40,525 : anonymous : 525 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
+INFO : 2023-11-12 09:49:24,649 : 25 : 649 : Reset password link sent to email. : reset_password : None

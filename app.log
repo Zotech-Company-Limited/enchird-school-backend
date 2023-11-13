@@ -1053,3 +1053,9 @@ WARNING:myLogger:A student/teacher with this email address already exists.
 WARNING:django.request:Conflict: /api/student/
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\utils.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:myLogger:Reset password link sent to email.
