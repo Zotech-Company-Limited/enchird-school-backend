@@ -1,20 +1,48 @@
 {
     "client": "Thunder Client",
     "collectionName": "ENCHIRD_LMS",
-    "dateExported": "2023-11-07T02:07:00.824Z",
+    "dateExported": "2023-11-14T08:35:54.555Z",
     "version": "1.1",
     "folders": [],
     "requests": [
+        {
+            "_id": "4f43c7b2-a9d3-4d92-a925-185d0f6b2c27",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Login",
+            "url": "{{url}}/api/auth/login/",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-10-27T12:50:49.379Z",
+            "modified": "2023-11-14T07:21:07.763Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "colonelpirate@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "superadmin"
+                    }
+                ]
+            },
+            "tests": []
+        },
         {
             "_id": "04cad0bc-fec0-45db-a823-0a1a331bc185",
             "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
             "containerId": "",
             "name": "Create Student",
-            "url": "{{url}}/api/student/",
+            "url": "{{remote}}/api/student/",
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-10-25T22:05:44.023Z",
-            "modified": "2023-11-01T23:00:13.516Z",
+            "modified": "2023-11-11T10:33:33.473Z",
             "headers": [
                 {
                     "name": "Content-Type",
@@ -37,7 +65,7 @@
                     },
                     {
                         "name": "email",
-                        "value": "jvperz@gmail.com"
+                        "value": "mbiacharetyron@gmail.com"
                     },
                     {
                         "name": "password",
@@ -45,11 +73,12 @@
                     },
                     {
                         "name": "confirm_password",
-                        "value": "Ghost@2023"
+                        "value": "Ghost",
+                        "isDisabled": true
                     },
                     {
                         "name": "username",
-                        "value": "user6"
+                        "value": "user"
                     }
                 ],
                 "files": [
@@ -66,15 +95,15 @@
             "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
             "containerId": "",
             "name": "List Students",
-            "url": "{{url}}/api/student/",
+            "url": "{{remote}}/api/student/",
             "method": "GET",
             "sortNum": 13125,
             "created": "2023-10-27T12:44:35.545Z",
-            "modified": "2023-11-01T22:29:53.421Z",
+            "modified": "2023-11-12T11:05:24.089Z",
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4ODc5NTcxLCJpYXQiOjE2OTg4Nzc3NzEsImp0aSI6ImRhMzVmMWEzOWQ4ZjQzZWY4NGZhMzcyZmIxOWZlMDViIiwidXNlcl9pZCI6Mn0.PtFhNtYPByr0c-_MJkFqojzJ_aahdKlj4LwQST4q-O0"
+                    "value": "Token 1c61469ea1927ad06d11579524fbcdf85994b7132fdfe389c659a395a6054a78"
                 }
             ],
             "params": [],
@@ -314,34 +343,6 @@
             "tests": []
         },
         {
-            "_id": "4f43c7b2-a9d3-4d92-a925-185d0f6b2c27",
-            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
-            "containerId": "",
-            "name": "Login",
-            "url": "{{url}}/api/auth/login/",
-            "method": "POST",
-            "sortNum": 40000,
-            "created": "2023-10-27T12:50:49.379Z",
-            "modified": "2023-11-07T02:02:03.816Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "formdata",
-                "raw": "",
-                "form": [
-                    {
-                        "name": "email",
-                        "value": "colonelpirate@gmail.com"
-                    },
-                    {
-                        "name": "password",
-                        "value": "superadmin"
-                    }
-                ]
-            },
-            "tests": []
-        },
-        {
             "_id": "9bd5be1e-fa49-4d75-ac00-0c7288d2af73",
             "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
             "containerId": "",
@@ -411,6 +412,154 @@
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "ac6f4ca5-9bad-479b-bcd0-99ee1a76c1d0",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Reset Password",
+            "url": "{{url}}/reset-password/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-11T11:58:18.222Z",
+            "modified": "2023-11-11T12:00:11.470Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "mbiacharetyron@gmail.com"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e1472672-d17d-4f6e-a625-a40af734dd19",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Create Faculty",
+            "url": "{{url}}/api/admin/faculty/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-11-14T07:26:41.952Z",
+            "modified": "2023-11-14T07:33:57.433Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 0463473568a39db9a887b114cafa87ee780a91019482ade447be110653853430",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Faculty of Engineering and Technology"
+                    },
+                    {
+                        "name": "abbrev",
+                        "value": "FET"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "091504c9-b275-4b28-8e20-2d8ec3b51fc0",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Get Faculty Info",
+            "url": "{{url}}/api/admin/faculty/1/",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-11-14T07:38:10.448Z",
+            "modified": "2023-11-14T07:39:30.186Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 0463473568a39db9a887b114cafa87ee780a91019482ade447be110653853430"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b64a4c88-cf77-4f9e-95d3-08112c00bae1",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "List Faculties",
+            "url": "{{url}}/api/admin/faculty/",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-11-14T07:40:53.230Z",
+            "modified": "2023-11-14T07:41:15.887Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 0463473568a39db9a887b114cafa87ee780a91019482ade447be110653853430"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9af64c5f-fe19-4c34-9def-8e528e78cff5",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Update Faculty Info",
+            "url": "{{url}}/api/admin/faculty/1/",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-11-14T07:46:02.536Z",
+            "modified": "2023-11-14T08:17:16.868Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 0463473568a39db9a887b114cafa87ee780a91019482ade447be110653853430"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Engineering and Technology"
+                    },
+                    {
+                        "name": "abbrev",
+                        "value": "FET"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "7b2c9b3e-75b3-4dc5-9715-16b447b82cce",
+            "colId": "5d142fbb-abb2-4673-a856-fd3087da6ab4",
+            "containerId": "",
+            "name": "Delete Faculty",
+            "url": "{{url}}/api/admin/faculty/1/",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2023-11-14T08:21:26.432Z",
+            "modified": "2023-11-14T08:22:24.209Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 0463473568a39db9a887b114cafa87ee780a91019482ade447be110653853430"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]
