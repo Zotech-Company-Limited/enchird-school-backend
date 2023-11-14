@@ -10,7 +10,6 @@ from apis.users.models import User
 # Create your models here.
 
 class Teacher(models.Model):
-    """Docstring for class."""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     teacher_id = models.CharField(max_length=255, blank=False, null=False, unique=True)

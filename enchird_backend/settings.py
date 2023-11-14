@@ -45,10 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "corsheaders",
+    'core',
     'apis.users',
     'apis.students',
     'apis.teachers',
-    'core',
+    'apis.faculty',
     'rest_framework',
     'knox',
 ]

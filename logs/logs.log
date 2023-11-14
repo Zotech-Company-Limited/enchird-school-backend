@@ -333,3 +333,23 @@ ERROR : 2023-11-12 08:45 : None : 282 : {views} : [create] : {'password': [Error
 ERROR : 2023-11-12 08:45 : None : 14 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
 WARNING : 2023-11-12 09:12:40,525 : anonymous : 525 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
 INFO : 2023-11-12 09:49:24,649 : 25 : 649 : Reset password link sent to email. : reset_password : None
+INFO : 2023-11-14 08:26:21,315 : 3 : 315 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-14 08:28 : None : 711 : {views} : [create] : You must call `.is_valid()` before accessing `.validated_data`. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:211]
+ERROR : 2023-11-14 08:29 : None : 112 : {views} : [create] : (1054, "Unknown column 'created_by_id' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:211]
+INFO : 2023-11-14 08:31:28,741 : 3 : 741 : Faculty created successfully! : views : None
+WARNING : 2023-11-14 08:33:46,467 : anonymous : 467 : A faculty with this name already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:168]
+ERROR : 2023-11-14 08:35 : None : 472 : {views} : [create] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:144]
+ERROR : 2023-11-14 08:38 : Anonymous : 330 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:48]
+ERROR : 2023-11-14 08:38 : None : 985 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:93]
+INFO : 2023-11-14 08:39:30,170 : 3 : 170 : Faculty details returned successfully! : views : None
+ERROR : 2023-11-14 08:41 : Anonymous : 158 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:48]
+INFO : 2023-11-14 08:41:15,860 : 3 : 860 : List of faculties returned successfully. : views : None
+ERROR : 2023-11-14 08:47 : None : 583 : {views} : [update] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:229]
+ERROR : 2023-11-14 09:05 : 3 : 804 : {views} : [update] : A Faculty already exists with this name. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:266]
+INFO : 2023-11-14 09:06:35,730 : 3 : 730 : Faculty info modified successfully! : views : None
+ERROR : 2023-11-14 09:10 : 3 : 122 : {views} : [update] : No Faculty matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:307]
+ERROR : 2023-11-14 09:16 : 3 : 160 : {views} : [update] : No Faculty matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:307]
+INFO : 2023-11-14 09:17:16,826 : 3 : 826 : Faculty info Modified successfully! : views : None
+ERROR : 2023-11-14 09:21 : None : 727 : {views} : [destroy] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:328]
+INFO : 2023-11-14 09:24:26,442 : 3 : 442 : Faculty marked as deleted successfully : views : None
+ERROR : 2023-11-14 09:24 : 3 : 530 : {views} : [update] : No Faculty matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:307]

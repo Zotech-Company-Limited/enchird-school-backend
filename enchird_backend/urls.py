@@ -32,6 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('apis.students.urls')),  # This includes the student app's URLs under /api/
     path('api/', include('apis.teachers.urls')),
+    path('api/', include('apis.faculty.urls')),
     path('api/', include('apis.users.urls')),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),
