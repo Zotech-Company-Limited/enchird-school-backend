@@ -13,8 +13,8 @@ class FacultySerializer(WritableNestedModelSerializer):
     class Meta:
 
         model = Faculty
-        fields = ['name', 'faculty_id', 'abbrev', 'is_deleted', 'created_at']
-        read_only_fields = ['faculty_id', 'created_at']
+        fields = ['id', 'name', 'faculty_id', 'abbrev', 'is_deleted', 'created_at']
+        read_only_fields = ['id', 'faculty_id', 'created_at']
 
 
 

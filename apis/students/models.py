@@ -1,9 +1,10 @@
 import datetime
 import hashlib
 from django.db import models
-from django.dispatch import receiver
-from django.db.models.signals import post_save
 from apis.users.models import User
+from django.dispatch import receiver
+from apis.faculty.models import Faculty
+from django.db.models.signals import post_save
 
 
 
@@ -12,6 +13,11 @@ class Student(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     student_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
+    faculty = models.ForeignKey(
+        Faculty,
+        on_delete=models.PROTECT,
+        null=True
+    )
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",

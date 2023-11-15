@@ -105,6 +105,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         ("student", "Student"),
         ("teacher", "Teacher")
     )
+    GENDERS = (
+        ('male', 'Male'),
+        ('female', 'Female'),
+        ('other', 'other'),
+    )
 
     def user_directory_path(self, filename):
         """Docstring for function."""
@@ -130,6 +135,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_a_student = models.BooleanField(default=False)
     is_a_teacher = models.BooleanField(default=False)
     date_of_birth = models.DateField(null=True, blank=True)
+    gender = models.CharField(
+        choices=GENDERS,
+        max_length=10
+    )
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
