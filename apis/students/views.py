@@ -1,28 +1,27 @@
-import logging
-from uuid import uuid4
-import datetime
+import ssl
 import random
 import string
-import ssl
-from apis.utils import validate_password
+import logging
+import datetime
+from uuid import uuid4
+from apis.utils import *
+from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
-from rest_framework.response import Response
-from rest_framework import status, viewsets
-from django.contrib.auth.models import Group, Permission
-from rest_framework.decorators import permission_classes
-from django.conf import settings
-from django.db.models import Q
-from django.contrib.auth import get_user_model
-from rest_framework.permissions import IsAuthenticated, AllowAny
-from apis.users.models import User, AnonymousUser
-from apis.students.models import Student
-from apis.students.serializers import StudentSerializer
-from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
-from apis.utils import *
 from django.db import transaction
-from core.email import send_verification_email
+from apis.students.models import Student
+from apis.utils import validate_password
 from django.core.mail import EmailMessage
+from rest_framework import status, viewsets
+from rest_framework.response import Response
+from django.contrib.auth import get_user_model
+from apis.users.models import User, AnonymousUser
+from core.email import send_student_verification_email
+from apis.students.serializers import StudentSerializer
+from rest_framework.decorators import permission_classes
+from django.contrib.auth.models import Group, Permission
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -157,7 +156,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                 if student_serializer.is_valid(raise_exception=True):
                     if user_serializer.is_valid(raise_exception=True):
                         if password_serializer.is_valid(raise_exception=True):
-                            
+                            print("1")
                             password = password_serializer.validated_data['password']
                             try:
                                 validate_password(password)
@@ -167,7 +166,8 @@ class StudentViewSet(viewsets.ModelViewSet):
                                 return Response({"error": error_message}, status=status.HTTP_400_BAD_REQUEST)
                             
                             reset_token = uuid4()
-
+                            print("1")
+                            
                             # Verify uniqueness of email address
                             num = User.objects.all().filter(
                                     email=user_serializer.validated_data['email']
@@ -184,21 +184,8 @@ class StudentViewSet(viewsets.ModelViewSet):
 
                             # Create user
                             logging.debug('Your message here')
-                            user = User.objects.create_user(
-                                email=user_serializer.validated_data['email'],
-                                role="student",
-                                last_name=user_serializer.validated_data['last_name'],
-                                first_name=user_serializer.validated_data['first_name'],
-                                is_student=True,
-                                is_teacher=False,
-                            )
+                            user = user_serializer.save(is_a_student=True)
 
-                            if 'date_of_birth' in user_serializer.validated_data:
-                                user.date_of_birth = user_serializer.validated_data['date_of_birth']
-                            
-                            if 'picture' in user_serializer.validated_data:
-                                user.picture = user_serializer.validated_data['picture']
-                            
                             # Create of Student
                             student = student_serializer.save(user=user)
 
@@ -206,8 +193,6 @@ class StudentViewSet(viewsets.ModelViewSet):
                             user.password_requested_at = timezone.now()
                             user.is_admin = False
                             user.role = "student"
-                            user.is_active = True
-                            user.username =  user_serializer.validated_data['username']
                             password = password_serializer.validated_data['password']
                             user.set_password(password)
                             user.save()
@@ -221,16 +206,9 @@ class StudentViewSet(viewsets.ModelViewSet):
                             # Add the student to the Student Group
                             user.groups.add(student_group)
 
-                            # email = EmailMessage(
-                            #     'Subject here',
-                            #     'Body here',
-                            #     'jvperezmbi@gmail.com',
-                            #     ['mbiacharetyron@gmail.com']
-                            # )
-                            # email.send()
-
+                            # Send activation email.
                             try:
-                                send_verification_email(user, reset_token)
+                                send_student_verification_email(user, reset_token)
                             except Exception as e:
                                 print(e)
                                 logger.error(

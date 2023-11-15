@@ -374,3 +374,22 @@ WARNING : 2023-11-15 09:29:28,307 : anonymous : 307 : A student/teacher with thi
 INFO : 2023-11-15 09:29:47,608 : 32 : 608 : Student created successfully! : views : None
 INFO : 2023-11-15 09:31:25,187 : 33 : 187 : Student created successfully! : views : None
 ERROR : 2023-11-15 09:34 : 33 : 467 : {views} : [get] : Email Verified Successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:31]
+ERROR : 2023-11-15 20:55 : None : 666 : {views} : [create] : {'phone': [ErrorDetail(string='user with this phone already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:257]
+WARNING : 2023-11-15 20:56:18,801 : anonymous : 801 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+ERROR : 2023-11-15 20:56 : None : 708 : {views} : [create] : (1062, "Duplicate entry 'user' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:257]
+INFO : 2023-11-15 20:57:17,077 : 35 : 77 : Student created successfully! : views : None
+ERROR : 2023-11-15 22:23 : None : 315 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
+ERROR : 2023-11-15 22:26 : None : 400 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:233]
+ERROR : 2023-11-15 22:27 : None : 886 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
+INFO : 2023-11-15 22:28:10,112 : 36 : 112 : Student created successfully! : views : None
+ERROR : 2023-11-15 22:29 : None : 531 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:92]
+INFO : 2023-11-15 22:29:56,370 : 3 : 370 : User Logged in sucessfully. : login : None
+WARNING : 2023-11-15 22:30:58,795 : anonymous : 795 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:175]
+ERROR : 2023-11-15 22:31 : None : 214 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:221]
+ERROR : 2023-11-15 22:31 : None : 851 : {views} : [create] : (1062, "Duplicate entry 'teacher2' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:221]
+INFO : 2023-11-15 22:32:12,808 : 38 : 808 : Teacher created successfully! : views : None
+ERROR : 2023-11-15 22:48 : Anonymous : 695 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:17]
+INFO : 2023-11-15 22:59:24,572 : 39 : 572 : Teacher created successfully! : views : None
+INFO : 2023-11-15 23:02:28,103 : 40 : 103 : Teacher created successfully! : views : None
+INFO : 2023-11-15 23:03:50,156 : 41 : 156 : Teacher created successfully! : views : None
+INFO : 2023-11-15 23:11:06,027 : 42 : 27 : Teacher created successfully! : views : None

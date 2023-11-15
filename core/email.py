@@ -5,15 +5,16 @@ from email.mime.multipart import MIMEMultipart
 from email import encoders
 import os
 import smtplib
+from django.conf import settings
 from io import BytesIO
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 port = 465  # For SSL
-smtp_server = "smtp.gmail.com"
-sender_email = "jvperezmbi@gmail.com"  # Enter your address
+smtp_server = settings.EMAIL_HOST 
+sender_email = settings.EMAIL_HOST_USER # Enter your address
 
-password = 'qamgdgifrpkuikdn'
+password = settings.EMAIL_HOST_PASSWORD 
 
 def send_plaintext(user, message):
     try:
@@ -41,7 +42,8 @@ def send_plaintext(user, message):
         print(f"An error occurred: {str(e)}")
         return False
 
-def send_verification_email(user, reset_token):
+
+def send_student_verification_email(user, reset_token):
     try:
         context = ssl.create_default_context()
 
@@ -73,6 +75,38 @@ def send_verification_email(user, reset_token):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return False
+
+
+def send_teacher_verification_email(user, temp_password):
+    try:
+        context = ssl.create_default_context()
+
+        # Create a connection to the SMTP server using SSL
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            # Log in to your SMTP server using your credentials
+            server.login(sender_email, password)
+
+            # Create the email message
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = user.email
+            msg['Subject'] = "Enchird Teacher Account Creation"
+
+            # Include the verification link in the email body
+            email_body = f"Hello {user.first_name}, \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
+
+            msg.attach(MIMEText(email_body, 'plain'))
+
+            server.sendmail(sender_email, user.email, msg.as_string())
+
+            # Close the connection
+            server.quit()
+
+        return True
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return False
+
 
 
 def send_reset_password_email(user, reset_token, uid):

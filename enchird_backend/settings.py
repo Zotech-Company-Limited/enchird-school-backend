@@ -86,39 +86,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'enchird_backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'zotechin_enchird_database',
-#         'USER': 'zotechin_enchird_database',
-#         'PASSWORD': 'td5Z2JaVre&@Y&BaIBCSfY)k',
-#         'HOST': 'localhost',
-#         'PORT': '',            # Set to empty string for default
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#         }
-#     }
-# }
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'enchird_database',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',            # Set to empty string for default
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
-    }
-}
-
 
 REST_FRAMEWORK = { 
     'DEFAULT_AUTHENTICATION_CLASSES': [ 
@@ -292,12 +259,3 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# MEDIA_ROOT = os.path.join('https://storage.googleapis.com/project-bucket/', 'media')
-# MEDIA_URL = 'https://storage.googleapis.com/project-bucket/media/'
-
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='jvperezmbi@gmail.com'
-EMAIL_HOST_PASSWORD='qamgdgifrpkuikdn' 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'

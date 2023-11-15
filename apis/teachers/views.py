@@ -1,25 +1,26 @@
-from django.shortcuts import render
-import logging
-from uuid import uuid4
-import datetime
-import random
 import string
+import random
+import logging
+import datetime
+from uuid import uuid4
+from apis.utils import *
+from django.db.models import Q
 from django.conf import settings
+from django.db import transaction
 from django.utils import timezone
-from rest_framework.response import Response
+from django.shortcuts import render
+from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
+from rest_framework.response import Response
+from django.contrib.auth import get_user_model
+from apis.users.models import User, AnonymousUser
+from core.email import send_teacher_verification_email
+from apis.teachers.serializers import TeacherSerializer
 from django.contrib.auth.models import Group, Permission
 from rest_framework.decorators import permission_classes
-from django.conf import settings
-from django.db.models import Q
-from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from apis.users.models import User, AnonymousUser
-from apis.teachers.models import Teacher
-from apis.teachers.serializers import TeacherSerializer
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
-from apis.utils import *
-from django.db import transaction
+
 
 logger = logging.getLogger("myLogger")
 
@@ -182,24 +183,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
                                             status=status.HTTP_409_CONFLICT)
 
                         # Create user
-                        user = User.objects.create_user(
-                            email=user_serializer.validated_data['email'],
-                            role="teacher",
-                            last_name=user_serializer.validated_data['last_name'],
-                            first_name=user_serializer.validated_data['first_name'],
-                            is_student=False,
-                            is_teacher=True,
-                        )
-
-                        print(user)
-
-                        if 'date_of_birth' in user_serializer.validated_data:
-                            user.date_of_birth = user_serializer.validated_data['date_of_birth']
-                        
-                        if 'picture' in user_serializer.validated_data:
-                            user.picture = user_serializer.validated_data['picture']
-                        
-                        user.username =  user_serializer.validated_data['username']
+                        user = user_serializer.save(is_a_teacher=True, role='teacher')
                         
                         # Create Teacher
                         teacher = teacher_serializer.save(user=user)
@@ -221,6 +205,18 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         # Add the teacher to the Teacher Group
                         user.groups.add(teacher_group)
                         
+                         # Send activation email.
+                        try:
+                            send_teacher_verification_email(user, password)
+                        except Exception as e:
+                            print(e)
+                            logger.error(
+                                e,
+                                extra={
+                                    'user': user.id
+                                }
+                            )
+                            
                         logger.info(
                             "Teacher created successfully!",
                             extra={
