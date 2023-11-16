@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from django.contrib.auth.models import Permission
 from rest_framework.views import APIView
 from django.db import models
-from rest_framework import status
+from rest_framework import status, serializers
 from django.contrib.auth import get_user_model
 from apis.users.models import User, Group
 from knox.views import AuthToken, LoginView
@@ -16,6 +16,7 @@ from urllib.parse import urlsplit
 from apis.utils import *
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from apis.users.serializers import LoginSerializer, PermissionSerializer
+from core.authtokenserializer import CustomAuthTokenSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -24,7 +25,7 @@ logger = logging.getLogger("myLogger")
 
 class LoginView(APIView):
     """Docstring for class."""
-    serializer_class = AuthTokenSerializer
+    serializer_class = CustomAuthTokenSerializer
 
 
     def post(self, request,  *args, **kwargs):
@@ -88,6 +89,20 @@ class LoginView(APIView):
                 'user': user_serializer.data
             })
 
+        except serializers.ValidationError as e:
+            # Handle validation errors from the serializer
+            error_message = e.detail.get('non_field_errors', [''])[0]
+            logger.error(
+                error_message,
+                extra={
+                    'user': None
+                }
+            )
+            return Response(
+                {'error': error_message},
+                status=status.HTTP_412_PRECONDITION_FAILED
+            )
+        
         except Exception as e:
             logger.error(
                 str(e),

@@ -2940,3 +2940,172 @@ INFO:myLogger:Teacher created successfully!
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+ERROR:myLogger:{'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:myLogger:{'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+ERROR:myLogger:name 'status' is not defined
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+ERROR:myLogger:'user'
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+ERROR:myLogger:{'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+ERROR:myLogger:{'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:{'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 50, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 92, in post
+    except serializers.ValidationError as e:
+NameError: name 'serializers' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 50, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 92, in post
+    except self.serializers.ValidationError as e:
+AttributeError: 'LoginView' object has no attribute 'serializers'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 50, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 92, in post
+    except self.serializer_class.ValidationError as e:
+AttributeError: type object 'CustomAuthTokenSerializer' has no attribute 'ValidationError'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 50, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\users\login.py", line 92, in post
+    except serializers.ValidationError as e:
+NameError: name 'serializers' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:myLogger:Unable to log in with provided credentialssss.
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+ERROR:myLogger:{'password': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:{'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:{'password': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:{'email': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field may not be blank.', code='blank')]}
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\login.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\authtokenserializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.

@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate
-# from wazieats.backends import auth
+from rest_framework import status
 from django.utils.translation import gettext_lazy as _
-
+from rest_framework.response import Response
 from rest_framework import serializers
 
 
@@ -48,3 +48,10 @@ class CustomAuthTokenSerializer(serializers.Serializer):
 
         attrs['user'] = user
         return attrs
+
+    def to_representation(self, instance):
+        # Customize the error response format
+        if 'non_field_errors' in instance:
+            return {'error': instance['non_field_errors'][0]}
+        return super().to_representation(instance)
+

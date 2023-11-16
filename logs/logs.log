@@ -393,3 +393,17 @@ INFO : 2023-11-15 22:59:24,572 : 39 : 572 : Teacher created successfully! : view
 INFO : 2023-11-15 23:02:28,103 : 40 : 103 : Teacher created successfully! : views : None
 INFO : 2023-11-15 23:03:50,156 : 41 : 156 : Teacher created successfully! : views : None
 INFO : 2023-11-15 23:11:06,027 : 42 : 27 : Teacher created successfully! : views : None
+ERROR : 2023-11-16 15:23 : None : 855 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:92]
+ERROR : 2023-11-16 15:25 : None : 838 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:26 : None : 812 : {login} : [post] : name 'status' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:27 : None : 313 : {login} : [post] : 'user' : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:28 : None : 171 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:37 : None : 925 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:38 : None : 388 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentialssss.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:93]
+ERROR : 2023-11-16 15:45 : None : 179 : {login} : [post] : Unable to log in with provided credentialssss. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2023-11-16 15:46 : None : 248 : {login} : [post] :  : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2023-11-16 15:46 : None : 904 : {login} : [post] :  : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2023-11-16 15:46 : None : 514 : {login} : [post] : {'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:107]
+ERROR : 2023-11-16 15:49 : None : 154 : {login} : [post] : {'password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:107]
+ERROR : 2023-11-16 15:49 : None : 59 : {login} : [post] : {'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:107]
+ERROR : 2023-11-16 15:50 : None : 99 : {login} : [post] : {'email': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:107]

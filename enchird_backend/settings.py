@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'apis.students',
     'apis.teachers',
     'apis.faculty',
+    'apis.courses',
     'rest_framework',
     'knox',
 ]
@@ -104,7 +105,6 @@ REST_KNOX = {
   'TOKEN_LIMIT_PER_USER': 2,
   'AUTO_REFRESH': False,
   'EXPIRY_DATETIME_FORMAT': api_settings.DATETIME_FORMAT,
-#   'EXPIRY_DATETIME_FORMAT': api_settings.DATETME_FORMAT,
 }
 
 
