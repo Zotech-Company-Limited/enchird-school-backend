@@ -49,6 +49,12 @@ class Course(models.Model):
         on_delete=models.PROTECT,
         null=True
     )
+    modified_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True,
+        related_name='course_modifier'
+    )
     
     def __str__(self):
         return self.course_title

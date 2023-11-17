@@ -33,6 +33,76 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
 
 
+    def list(self, request, *args, **kwargs):
+
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error(
+                "You do not have the necessary rights.",
+                extra={
+                    'user': 'Anonymous'
+                }
+            )
+            return Response(
+                {'error': "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        queryset = self.filter_queryset(self.get_queryset())
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        serializer = self.get_serializer(queryset, many=True)
+        logger.info(
+            "List of courses returned successfully.",
+            extra={
+                'user': user.id
+            }
+        )
+
+        return Response(serializer.data)
+
+
+    def retrieve(self, request, *args, **kwargs):
+
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error(
+                "You must provide valid authentication credentials.",
+                extra={
+                    'user': 'Anonymous'
+                }
+            )
+            return Response(
+                {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        try: 
+            instance = Course.objects.get(id=kwargs['pk'])
+        except Course.DoesNotExist:
+            logger.error(
+                "Course not Found.",
+                extra={
+                    'user': user.id
+                }
+            )
+            return Response(
+                {"error": "Course Not Found."},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+
+        serializer = self.get_serializer(instance)
+        logger.info(
+            "Course details returned successfully!",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(serializer.data)
 
     
     def create(self, request, *args, **kwargs):
@@ -67,7 +137,6 @@ class CourseViewSet(viewsets.ModelViewSet):
             with transaction.atomic():
                 course_serializer = self.get_serializer(data=request.data)
                 if course_serializer.is_valid(raise_exception=True):
-                    print("0")
                     # Verify uniqueness of course title
                     title_num = Course.objects.all().filter(
                             course_title=course_serializer.validated_data['course_title']
@@ -95,19 +164,15 @@ class CourseViewSet(viewsets.ModelViewSet):
                         )
                         return Response({"error": "A course with this code already exists."},
                                         status=status.HTTP_409_CONFLICT)
-                    print("1")
                     
                     # Create course
                     logging.debug('Your message here')
                     course = course_serializer.save(created_by=user)
-                    print("2")
-
 
                     headers = self.get_success_headers(course_serializer.data)
-                    print("3")
                     
                     logger.info(
-                        "Student created successfully!",
+                        "Course created successfully!",
                         extra={
                             'user': user.id
                         }
@@ -130,6 +195,161 @@ class CourseViewSet(viewsets.ModelViewSet):
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
+
+    def update(self, request, *args, **kwargs):
+        
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error(
+                "You must provide valid authentication credentials.",
+                extra={
+                    'user': 'Anonymous'
+                }
+            )
+            return Response(
+                {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+
+        if request.user.is_admin is False:
+            logger.warning(
+                "You do not have the necessary rights!",
+                extra={
+                    'user': request.user.id
+                }
+            )
+            return Response(
+                {"error": "You do not have the necessary rights"},
+                status.HTTP_403_FORBIDDEN
+            )
+
+        partial = kwargs.pop('partial', True)
+        try:
+            instance = Course.objects.get(id=kwargs['pk'])
+        except Course.DoesNotExist:
+            logger.error(
+                "Course not Found.",
+                extra={
+                    'user': user.id
+                }
+            )
+            return Response(
+                {"error": "Course Not Found."},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        print(instance)
+        
+        course_serializer = self.get_serializer(instance, 
+                data=request.data,
+                partial=partial)
+        if course_serializer.is_valid() is True:
+
+            number = Course.objects.all().filter(
+                ~Q(id=kwargs['pk']),
+                course_title=course_serializer.validated_data['course_title'],
+                is_deleted=False
+            ).count()
+            if number >= 1:
+                logger.error(
+                    "A Course already exists with this name.",
+                    extra={
+                        'user': request.user.id
+                    }
+                )
+                return Response(
+                    {'message': "A Course already exists with this name."},
+                    status=status.HTTP_409_CONFLICT)
+
+            num = Course.objects.all().filter(
+                ~Q(id=kwargs['pk']),
+                course_code=course_serializer.validated_data['course_code'],
+                is_deleted=False
+            ).count()
+            if num >= 1:
+                logger.error(
+                    "A Course already exists with this code.",
+                    extra={
+                        'user': request.user.id
+                    }
+                )
+                return Response(
+                    {'message': "A Course already exists with this code."},
+                    status=status.HTTP_409_CONFLICT)
+
+            course_serializer.save(modified_by=user)
+
+            if getattr(instance, '_prefetched_objects_cache', None):
+                instance._prefetched_objects_cache = {}
+            logger.info(
+                "Course Info modified successfully!",
+                extra={
+                    'user': request.user.id
+                }
+            )
+            return Response(course_serializer.data)
+        else:
+            logger.error(
+                str(course_serializer.errors),
+                extra={
+                    'user': request.user.id
+                }
+            )
+            return Response(course_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+    def destroy(self, request, *args, **kwargs):
+
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error(
+                "You must provide valid authentication credentials.",
+                extra={
+                    'user': 'Anonymous'
+                }
+            )
+            return Response(
+                {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        if not user.is_admin:
+            logger.warning(
+                "You do not have the necessary rights!",
+                extra={
+                    'user': user.id
+                }
+            )
+            return Response(
+                {"error": "You do not have the necessary rights"},
+                status.HTTP_403_FORBIDDEN
+            )
+
+        try:
+            instance = Course.objects.get(id=kwargs['pk'])
+        except Course.DoesNotExist:
+            logger.error(
+                "Course not Found.",
+                extra={
+                    'user': user.id
+                }
+            )
+            return Response(
+                {"error": "Course Not Found."},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        instance.is_deleted = True
+        instance.save()
+
+        logger.info(
+            "Course marked as deleted successfully",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response(
+            {"message": "Course marked as Deleted"},
+            status=status.HTTP_200_OK)
 
 
     

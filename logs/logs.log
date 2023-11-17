@@ -435,3 +435,26 @@ ERROR : 2023-11-17 01:17 : None : 324 : {views} : [create] : The field 'instruct
 INFO : 2023-11-17 01:18:10,282 : 3 : 282 : Student created successfully! : views : None
 INFO : 2023-11-17 01:22:28,741 : 3 : 741 : User Logged in sucessfully. : login : None
 INFO : 2023-11-17 01:23:33,160 : 3 : 160 : Student created successfully! : views : None
+INFO : 2023-11-17 09:27:10,167 : 3 : 167 : User Logged in sucessfully. : login : None
+INFO : 2023-11-17 09:27:38,585 : 3 : 585 : User Logged in sucessfully. : login : None
+INFO : 2023-11-17 09:28:10,778 : 3 : 778 : Student created successfully! : views : None
+ERROR : 2023-11-17 09:47 : Anonymous : 715 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:41]
+INFO : 2023-11-17 10:46:02,865 : 3 : 865 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-17 10:46 : None : 550 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:206]
+INFO : 2023-11-17 10:46:36,716 : 3 : 716 : List of courses returned successfully. : views : None
+INFO : 2023-11-17 10:48:13,474 : 3 : 474 : List of courses returned successfully. : views : None
+INFO : 2023-11-17 10:48:35,214 : 3 : 214 : List of courses returned successfully. : views : None
+INFO : 2023-11-17 11:02:48,932 : 3 : 932 : List of courses returned successfully. : views : None
+INFO : 2023-11-17 11:03:53,572 : 3 : 572 : List of courses returned successfully. : views : None
+ERROR : 2023-11-17 11:09 : 3 : 634 : {views} : [retrieve] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:86]
+ERROR : 2023-11-17 11:09 : 3 : 979 : {views} : [retrieve] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:86]
+INFO : 2023-11-17 11:09:47,110 : 3 : 110 : Course details returned successfully! : views : None
+INFO : 2023-11-17 13:19:08,407 : 3 : 407 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-17 13:20 : 3 : 653 : {views} : [update] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:219]
+ERROR : 2023-11-17 13:21 : 3 : 309 : {views} : [update] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:219]
+INFO : 2023-11-17 13:27:40,035 : 3 : 35 : Course Info modified successfully! : views : None
+INFO : 2023-11-17 13:28:32,190 : 3 : 190 : Course Info modified successfully! : views : None
+INFO : 2023-11-17 13:29:25,510 : 3 : 510 : Course Info modified successfully! : views : None
+ERROR : 2023-11-17 13:38 : 3 : 655 : {views} : [destroy] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:332]
+ERROR : 2023-11-17 13:39 : 3 : 272 : {views} : [destroy] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:332]
+INFO : 2023-11-17 13:39:09,572 : 3 : 572 : Course marked as deleted successfully : views : None
