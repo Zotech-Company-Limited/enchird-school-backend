@@ -5,7 +5,6 @@ from apis.users.serializers import UserSerializer
 
 
 
-
 class CourseSerializer(serializers.ModelSerializer):
     
     instructors = serializers.PrimaryKeyRelatedField(

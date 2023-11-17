@@ -11,6 +11,7 @@ from apis.courses.models import Course
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
+from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
 from apis.courses.serializers import CourseSerializer
 from rest_framework.decorators import permission_classes
@@ -352,6 +353,89 @@ class CourseViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK)
 
 
-    
+
+@api_view(['POST'])
+def assign_teacher(request, course_id, teacher_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You must provide valid authentication credentials.",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(
+            {"error": "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if request.user.is_admin is False:
+        logger.warning(
+            "You do not have the necessary rights! (Not admin)",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(
+            {"error": "You do not have the necessary rights (Not admin)"},
+            status.HTTP_403_FORBIDDEN
+        )
+
+    try:
+        course = Course.objects.get(id=course_id, is_deleted=False)
+        teacher = User.objects.get(id=teacher_id, is_deleted=False, is_a_teacher=True, is_active=True)
+    except Course.DoesNotExist:
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+    except User.DoesNotExist:
+        return Response({'error': 'Teacher not found or is not an active teacher'}, status=status.HTTP_404_NOT_FOUND)
+
+    course.instructors.add(teacher)
+    course.save()
+
+    serializer = CourseSerializer(course)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def unassign_teacher(request, course_id, teacher_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You must provide valid authentication credentials.",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(
+            {"error": "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if request.user.is_admin is False:
+        logger.warning(
+            "You do not have the necessary rights! (Not admin)",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(
+            {"error": "You do not have the necessary rights (Not admin)"},
+            status.HTTP_403_FORBIDDEN
+        )
+
+    try:
+        course = Course.objects.get(id=course_id, is_deleted=False)
+        teacher = User.objects.get(id=teacher_id, is_deleted=False, is_a_teacher=True, is_active=True)
+    except Course.DoesNotExist:
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+    except User.DoesNotExist:
+        return Response({'error': 'Teacher not found or is not an active teacher'}, status=status.HTTP_404_NOT_FOUND)
+
+    course.instructors.remove(teacher)
+    course.save()
+
+    serializer = CourseSerializer(course)
+    return Response(serializer.data)
 
 

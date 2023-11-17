@@ -458,3 +458,7 @@ INFO : 2023-11-17 13:29:25,510 : 3 : 510 : Course Info modified successfully! : 
 ERROR : 2023-11-17 13:38 : 3 : 655 : {views} : [destroy] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:332]
 ERROR : 2023-11-17 13:39 : 3 : 272 : {views} : [destroy] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:332]
 INFO : 2023-11-17 13:39:09,572 : 3 : 572 : Course marked as deleted successfully : views : None
+INFO : 2023-11-17 13:48:09,090 : 3 : 90 : Course created successfully! : views : None
+ERROR : 2023-11-17 20:16 : None : 430 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
+ERROR : 2023-11-17 20:17 : None : 669 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
+INFO : 2023-11-17 20:17:52,878 : 3 : 878 : User Logged in sucessfully. : login : None
