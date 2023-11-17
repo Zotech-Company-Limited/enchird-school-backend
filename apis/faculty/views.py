@@ -30,15 +30,6 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 ).order_by('-created_at')
     serializer_class = FacultySerializer
 
-    # def get_permissions(self):
-    #     if self.action in ['create', 'list', 'retrieve', 'delete', 'update']:
-    #         # Allow unauthenticated access for create
-    #         permission_classes = [IsAuthenticated]
-    #     # else:
-    #     #     # Require authentication and permissions for other actions
-    #     #     permission_classes = [IsAuthenticated]  # You can add more permissions as needed
-    #     return [permission() for permission in permission_classes]
-
 
     def list(self, request, *args, **kwargs):
         """Docstring for function."""
@@ -132,7 +123,7 @@ class FacultyViewSet(viewsets.ModelViewSet):
             logger.error(
                 "You must provide valid authentication credentials.",
                 extra={
-                    'user': request.user.id
+                    'user': 'Anonymous'
                 }
             )
             return Response(
