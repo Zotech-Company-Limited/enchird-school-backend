@@ -1,3 +1,6 @@
+import random
+import hashlib
+import datetime
 from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
@@ -5,7 +8,8 @@ from apis.teachers.models import Teacher
 from django.db.models.signals import post_save
 
 
-# Create your models here.
+
+
 class Course(models.Model):
 
     # Course Status
@@ -29,7 +33,7 @@ class Course(models.Model):
     location = models.CharField(max_length=255, blank=True, null=True)
 
     # Materials and Objectives
-    course_materials = models.TextField(blank=True, null=True)
+    # course_materials = models.ManyToManyField(CourseMaterial, related_name='courses', blank=True)
     learning_objectives = models.TextField(blank=True, null=True)
 
     # Assessment and Grading
@@ -68,3 +72,8 @@ def update_course_id(instance, **kwargs):
     if not instance.course_id:
         instance.course_id = 'COUR_' + str(instance.id).zfill(8)
         instance.save()
+
+
+
+
+

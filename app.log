@@ -3741,3 +3741,657 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\
 ERROR:myLogger:You must provide valid authentication credentials.
 WARNING:django.request:Unauthorized: /api/assign_teacher/42/course/11/
 INFO:myLogger:User Logged in sucessfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/register_course/42/11/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:Only students can register courses.
+WARNING:django.request:Forbidden: /api/register_course/42/11/
+ERROR:myLogger:Unable to log in with provided credentials.
+WARNING:django.request:Precondition Failed: /api/auth/login/
+ERROR:myLogger:Unable to log in with provided credentials.
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Not Found: /api/register_course/42/11/
+ERROR:django.request:Internal Server Error: /api/register_course/STU_00000028/11/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\students\views.py", line 406, in register_course
+    course = Course.objects.get(course_id=course_id, course_status='open')
+NameError: name 'Course' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\students\views.py", line 409, in register_course
+    except Course.DoesNotExist:
+NameError: name 'Course' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+WARNING:django.request:Not Found: /api/register_course/STU_00000028/11/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+ERROR:myLogger:Course not found or course closed for dropping.
+WARNING:django.request:Not Found: /api/drop_course/STU_00000028/10/
+ERROR:myLogger:Student not registed for this course.
+WARNING:django.request:Bad Request: /api/drop_course/STU_00000028/10/
+INFO:myLogger:Student successfully dropped course.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+ERROR:myLogger:Student not registed for this course.
+WARNING:django.request:Bad Request: /api/drop_course/STU_00000028/11/
+INFO:myLogger:Student successfully registered course.
+ERROR:django.request:Internal Server Error: /api/register_course/STU_00000028/11/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\students\views.py", line 446, in register_course
+    return Response({'message': 'Student successfully registered this course'}, status=status.HHTP_200_OK)
+AttributeError: module 'rest_framework.status' has no attribute 'HHTP_200_OK'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+ERROR:myLogger:Student is already registed for this course.
+WARNING:django.request:Bad Request: /api/register_course/STU_00000028/11/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+WARNING:django.request:Forbidden: /api/register_course/STU_00000028/11/
+INFO:myLogger:User Logged in sucessfully.
+INFO:myLogger:Student successfully dropped course.
+ERROR:myLogger:Student not registed for this course.
+WARNING:django.request:Bad Request: /api/drop_course/STU_00000028/11/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+WARNING:django.request:Not Found: /api/drop_course/STU_00000028/11/
+ERROR:django.request:Internal Server Error: /api/drop_course/11/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: drop_course() missing 1 required positional argument: 'student_id'
+WARNING:django.request:Forbidden: /api/register_course/11/
+INFO:myLogger:Student successfully registered course.
+ERROR:myLogger:Student is already registed for this course.
+WARNING:django.request:Bad Request: /api/register_course/11/
+ERROR:django.request:Internal Server Error: /api/drop_course/11/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: drop_course() missing 1 required positional argument: 'student_id'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:myLogger:Student successfully dropped course.
+ERROR:myLogger:Student not registed for this course.
+WARNING:django.request:Bad Request: /api/drop_course/11/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:myLogger:Student successfully registered course.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+WARNING:django.request:Forbidden: /api/course/
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:root:Your message here
+INFO:myLogger:Course created successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/add_course_material/1/
+WARNING:myLogger:You do not have the necessary rights! (Not a lecturer)
+WARNING:django.request:Forbidden: /api/add_course_material/1/
+ERROR:myLogger:Unable to log in with provided credentials.
+WARNING:django.request:Precondition Failed: /api/auth/login/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:myLogger:You are not a lecturer of this course
+WARNING:django.request:Forbidden: /api/add_course_material/1/
+WARNING:django.request:Forbidden: /api/assign_teacher/42/course/11/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Not Found: /api/assign_teacher/42/course/11/
+WARNING:django.request:Bad Request: /api/add_course_material/1/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+WARNING:django.request:Bad Request: /api/add_course_material/1/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+WARNING:django.request:Bad Request: /api/add_course_material/1/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+WARNING:django.request:Bad Request: /api/add_course_material/1/
+ERROR:django.request:Internal Server Error: /api/add_course_material/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\views.py", line 501, in add_course_material
+    course_material = CourseMaterial.objects.create(
+NameError: name 'CourseMaterial' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/add_course_material/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\views.py", line 501, in add_course_material
+    course_material = CourseMaterial.objects.create(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in as_sql
+    value_rows = [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1746, in <listcomp>
+    [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1695, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 92, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 332, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\models.py", line 78, in course_material_directory_path
+    time = datetime.datetime.now().isoformat()
+NameError: name 'datetime' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/add_course_material/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\views.py", line 501, in add_course_material
+    course_material = CourseMaterial.objects.create(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in as_sql
+    value_rows = [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1746, in <listcomp>
+    [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1695, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 92, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 332, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\models.py", line 80, in course_material_directory_path
+    plain = str(self.phone) + '\0' + time
+AttributeError: 'CourseMaterial' object has no attribute 'phone'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/add_course_material/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\views.py", line 501, in add_course_material
+    course_material = CourseMaterial.objects.create(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in as_sql
+    value_rows = [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1746, in <listcomp>
+    [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1695, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 92, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\files.py", line 332, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\models.py", line 82, in course_material_directory_path
+    hashlib.sha1(
+NameError: name 'hashlib' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/add_course_material/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\courses\views.py", line 508, in add_course_material
+    serializer = CourseMaterialSerializer(course_material)
+NameError: name 'CourseMaterialSerializer' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /api/remove_course_material/1/
+INFO:myLogger:Course material deleted successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+WARNING:django.request:Not Found: /api/view_course_material/1/
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/view_course_materials/1/
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:You are not registered for this course.
+WARNING:django.request:Forbidden: /api/view_course_materials/1/
+WARNING:django.request:Forbidden: /api/register_course/1/
+INFO:myLogger:Student successfully registered course.
+ERROR:django.request:Internal Server Error: /api/view_course_materials/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\students\views.py", line 615, in view_course_materials
+    course_materials = CourseMaterial.objects.filter(course=course)
+NameError: name 'CourseMaterial' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/view_course_materials/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\students\views.py", line 616, in view_course_materials
+    serializer = CourseMaterialSerializer(course_materials, many=True)
+NameError: name 'CourseMaterialSerializer' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:myLogger:Course materials returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/view_course_materials/1/
+INFO:myLogger:Course materials returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:myLogger:Course materials returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:myLogger:Course materials returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.

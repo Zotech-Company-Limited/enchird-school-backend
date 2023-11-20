@@ -3,13 +3,13 @@ import hashlib
 from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
+from apis.courses.models import Course
 from apis.faculty.models import Faculty
 from django.db.models.signals import post_save
 
 
 
 class Student(models.Model):
-    """Docstring for class."""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     student_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
@@ -18,6 +18,7 @@ class Student(models.Model):
         on_delete=models.PROTECT,
         null=True
     )
+    registered_courses = models.ManyToManyField(Course, related_name='students', blank=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",

@@ -208,12 +208,12 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
     def perform_create(self, serializer, user):
-        """Docstring for function."""
+
         return serializer.save(created_by=user)
 
 
     def update(self, request, *args, **kwargs):
-        """Docstring for function."""
+
         user = self.request.user
 
         if not user.is_authenticated:

@@ -1,7 +1,9 @@
-from .models import Course
 from apis.users.models import User
 from rest_framework import serializers
+from .models import Course
 from apis.users.serializers import UserSerializer
+# from apis.courses.serializers import CourseSerializer
+
 
 
 
@@ -36,4 +38,6 @@ class CourseSerializer(serializers.ModelSerializer):
         representation['modified_by'] = instance.modified_by.email if instance.modified_by else None
 
         return representation
+
+
 

@@ -462,3 +462,41 @@ INFO : 2023-11-17 13:48:09,090 : 3 : 90 : Course created successfully! : views :
 ERROR : 2023-11-17 20:16 : None : 430 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
 ERROR : 2023-11-17 20:17 : None : 669 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
 INFO : 2023-11-17 20:17:52,878 : 3 : 878 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-19 16:38 : Anonymous : 234 : {views} : [register_course] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:379]
+INFO : 2023-11-19 16:39:37,826 : 3 : 826 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-19 16:40 : Anonymous : 919 : {views} : [register_course] : Only students can register courses. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:391]
+ERROR : 2023-11-19 16:43 : None : 558 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2023-11-19 16:43 : None : 193 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2023-11-19 16:46:27,653 : 36 : 653 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-19 17:29 : Anonymous : 36 : {views} : [drop_course] : Course not found or course closed for dropping. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:480]
+ERROR : 2023-11-19 17:31 : 36 : 519 : {views} : [drop_course] : Student not registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:490]
+INFO : 2023-11-19 17:32:14,524 : 36 : 524 : Student successfully dropped course. : views : None
+ERROR : 2023-11-19 17:38 : 36 : 412 : {views} : [drop_course] : Student not registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:501]
+INFO : 2023-11-19 17:38:58,740 : 36 : 740 : Student successfully registered course. : views : None
+ERROR : 2023-11-19 17:39 : 36 : 353 : {views} : [register_course] : Student is already registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:427]
+INFO : 2023-11-19 19:15:27,632 : 36 : 632 : User Logged in sucessfully. : login : None
+INFO : 2023-11-19 19:16:00,803 : 36 : 803 : Student successfully dropped course. : views : None
+ERROR : 2023-11-19 19:16 : 36 : 852 : {views} : [drop_course] : Student not registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:501]
+INFO : 2023-11-19 19:16:56,876 : 36 : 876 : Student successfully registered course. : views : None
+ERROR : 2023-11-19 19:17 : 36 : 705 : {views} : [register_course] : Student is already registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:427]
+INFO : 2023-11-19 19:17:45,172 : 36 : 172 : Student successfully dropped course. : views : None
+ERROR : 2023-11-19 19:17 : 36 : 448 : {views} : [drop_course] : Student not registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:501]
+INFO : 2023-11-19 19:27:44,823 : 36 : 823 : Student successfully registered course. : views : None
+INFO : 2023-11-19 21:46:44,744 : 3 : 744 : User Logged in sucessfully. : login : None
+INFO : 2023-11-19 21:47:05,575 : 3 : 575 : Course created successfully! : views : None
+ERROR : 2023-11-19 22:00 : None : 471 : {views} : [add_course_material] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:448]
+WARNING : 2023-11-19 22:01:28,895 : 3 : 895 : You do not have the necessary rights! (Not a lecturer) : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:472]
+ERROR : 2023-11-19 22:02 : None : 998 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2023-11-19 22:03:18,374 : 42 : 374 : User Logged in sucessfully. : login : None
+WARNING : 2023-11-19 22:03:38,609 : 42 : 609 : You are not a lecturer of this course : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:484]
+INFO : 2023-11-19 22:04:27,348 : 3 : 348 : User Logged in sucessfully. : login : None
+INFO : 2023-11-19 22:32:13,995 : 42 : 995 : Course material deleted successfully. : views : None
+ERROR : 2023-11-19 22:45 : None : 932 : {views} : [view_course_materials] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:578]
+INFO : 2023-11-19 22:45:58,366 : 36 : 366 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-19 22:46 : 36 : 184 : {views} : [view_course_materials] : You are not registered for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:604]
+INFO : 2023-11-19 22:46:34,569 : 36 : 569 : Student successfully registered course. : views : None
+INFO : 2023-11-19 22:48:02,936 : 36 : 936 : Course materials returned successfully. : views : None
+INFO : 2023-11-20 11:15:35,497 : 36 : 497 : User Logged in sucessfully. : login : None
+INFO : 2023-11-20 11:15:49,517 : 36 : 517 : Course materials returned successfully. : views : None
+INFO : 2023-11-20 11:18:46,148 : 36 : 148 : Course materials returned successfully. : views : None
+INFO : 2023-11-20 11:20:34,118 : 36 : 118 : Course materials returned successfully. : views : None

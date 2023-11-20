@@ -7,17 +7,17 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
-from apis.courses.models import Course
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
-from apis.courses.serializers import CourseSerializer
+from apis.courses.models import Course
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from apis.users.serializers import UserSerializer, UserUpdateSerializer
+from apis.courses.serializers import CourseSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -396,6 +396,7 @@ def assign_teacher(request, course_id, teacher_id):
     serializer = CourseSerializer(course)
     return Response(serializer.data)
 
+
 @api_view(['POST'])
 def unassign_teacher(request, course_id, teacher_id):
     user = request.user
@@ -437,5 +438,10 @@ def unassign_teacher(request, course_id, teacher_id):
 
     serializer = CourseSerializer(course)
     return Response(serializer.data)
+
+
+
+
+
 
 

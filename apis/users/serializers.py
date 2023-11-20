@@ -5,7 +5,6 @@ from django.contrib.auth.models import Permission
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """Docstring for class."""
 
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)

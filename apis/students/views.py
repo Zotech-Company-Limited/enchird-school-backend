@@ -17,10 +17,12 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from apis.users.models import User, AnonymousUser
 from core.email import send_student_verification_email
+from apis.courses.models import Course
 from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.decorators import api_view, permission_classes
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
 
@@ -31,7 +33,6 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG)
 
 
 class StudentViewSet(viewsets.ModelViewSet):
-    """Docstring for class."""
 
     queryset = Student.objects.all().filter(
                 is_deleted=False,
@@ -49,7 +50,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 
 
     def list(self, request, *args, **kwargs):
-        """Docstring for function."""
+
         user = self.request.user
 
         if not user.is_authenticated:
@@ -77,6 +78,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                 },
                 status.HTTP_403_FORBIDDEN
             )
+        
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
@@ -248,7 +250,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 
 
     def update(self, request, *args, **kwargs):
-        """Docstring for function."""
+
         user = self.request.user
 
         if request.user.is_a_student is False:
@@ -317,12 +319,12 @@ class StudentViewSet(viewsets.ModelViewSet):
             return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def perform_update(self, serializer):
-        """Docstring for function."""
+       
         return serializer.save()
 
 
     def destroy(self, request, *args, **kwargs):
-        """Docstring for function."""
+        
         user = self.request.user
         if not user.is_a_student:
             logger.warning(
@@ -370,6 +372,152 @@ class StudentViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK)
 
 
+@api_view(['POST'])
+def register_course(request, course_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You do not have the necessary rights.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {'error': "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if user.is_a_student is False:
+        logger.error(
+            "Only students can register courses.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {
+                "error": "Only students can register courses."
+            },
+            status.HTTP_403_FORBIDDEN
+        )
     
+    try:
+        student = Student.objects.get(user=request.user)
+        course = Course.objects.get(id=course_id, course_status='open')
+    except Student.DoesNotExist:
+        logger.info(
+            "Student not found.",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Course.DoesNotExist:
+        logger.error(
+            "Course not found or not open for registration.",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response({'error': 'Course not found or not open for registration'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the student is registered for the course
+    if course in student.registered_courses.all():
+        logger.error(
+            "Student is already registed for this course.",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response({'error': 'Student is already registered for this course'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+    student.registered_courses.add(course)
+    student.save()
+
+    serializer = StudentSerializer(student)
+    logger.info(
+        "Student successfully registered course.",
+        extra={
+            'user': user.id
+        }
+    )
+    return Response({'message': 'Student successfully registered this course'}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+def drop_course(request, course_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You do not have the necessary rights.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {'error': "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if user.is_a_student is False:
+        logger.error(
+            "Only students can register courses.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {
+                "error": "Only students can register courses."
+            },
+            status.HTTP_403_FORBIDDEN
+        )
+    
+    try:
+        student = Student.objects.get(user=request.user)
+        course = Course.objects.get(id=course_id, course_status='open')
+    except Student.DoesNotExist:
+        logger.error(
+            "Student not found.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Course.DoesNotExist:
+        logger.error(
+            "Course not found or course closed for dropping.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response({'error': 'Course not found or closed for dropping'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the student is registered for the course
+    if course not in student.registered_courses.all():
+        logger.error(
+            "Student not registed for this course.",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response({'error': 'Student is not registered for this course'}, status=status.HTTP_400_BAD_REQUEST)
+
+    # If the course is registered, proceed with dropping
+    student.registered_courses.remove(course)
+    student.save()
+
+    serializer = StudentSerializer(student)
+    logger.info(
+            "Student successfully dropped course.",
+            extra={
+                'user': user.id
+            }
+        )
+    return Response({'message': 'Student successfully dropped this course'}, status=status.HTTP_200_OK)
+
 
 
