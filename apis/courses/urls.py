@@ -14,4 +14,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('assign_teacher/<int:teacher_id>/course/<str:course_id>/', assign_teacher, name='assign_teacher'),
     path('unassign_teacher/<int:teacher_id>/course/<str:course_id>/', unassign_teacher, name='unassign_teacher'),
+    # path('add_course_material/<str:course_id>/', add_course_material, name='add_course_material'),
+    # path('remove_course_material/<int:course_material_id>/', remove_course_material, name='remove_course_material'),
 ]

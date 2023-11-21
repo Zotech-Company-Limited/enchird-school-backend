@@ -40,4 +40,18 @@ class CourseSerializer(serializers.ModelSerializer):
         return representation
 
 
+# class CourseMaterialSerializer(serializers.ModelSerializer):
+#     material_file = serializers.FileField(required=True)
+#     course = CourseSerializer(read_only=True)
+#     class Meta:
+#         model = CourseMaterial
+#         fields = ['id', 'material_file', 'description', 'course', 'uploaded_by', 'uploaded_at']
+
+#     def to_representation(self, instance):
+#         representation = super(CourseMaterialSerializer, self).to_representation(instance)
+
+#         # Override the course field to only include the course title
+#         representation['course'] = instance.course.course_title if instance.course else None
+
+#         return representation
 

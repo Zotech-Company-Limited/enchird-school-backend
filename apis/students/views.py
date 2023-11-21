@@ -17,10 +17,11 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from apis.users.models import User, AnonymousUser
 from core.email import send_student_verification_email
-from apis.courses.models import Course
+from apis.courses.models import Course, CourseMaterial
 from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
+# from apis.courses.serializers import CourseMaterialSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
@@ -518,6 +519,117 @@ def drop_course(request, course_id):
             }
         )
     return Response({'message': 'Student successfully dropped this course'}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_registered_courses(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You do not have the necessary rights.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {'error': "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if user.is_a_student is False:
+        logger.error(
+            "Only students view registered courses.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {
+                "error": "Only students can register courses."
+            },
+            status.HTTP_403_FORBIDDEN
+        )
+    try:
+        student = Student.objects.get(user=request.user)
+    except Student.DoesNotExist:
+        logger.error(
+            "Student Not Found.",
+            extra={
+                'user': user.id
+            }
+        )
+        return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = StudentSerializer(student)
+    logger.info(
+            "List of Registered courses returned successfully.",
+            extra={
+                'user': user.id
+            }
+        )
+    return Response(serializer.data['registered_courses'])
+
+
+# @api_view(['GET'])
+# def view_course_materials(request, course_id):
+#     user = request.user
+
+#     if not user.is_authenticated:
+#         logger.error(
+#             "You must provide valid authentication credentials.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(
+#             {"error": "You must provide valid authentication credentials."},
+#             status=status.HTTP_401_UNAUTHORIZED
+#         )
+
+#     try:
+#         course = Course.objects.get(id=course_id)
+#     except Course.DoesNotExist:
+#         logger.error(
+#             "Course Not Found.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+
+#     # Check if the authenticated user is a student and is registered for the course
+#     try:
+#         student = Student.objects.get(user=request.user, is_deleted=False)
+#         if course not in student.registered_courses.all():
+#             logger.error(
+#                 "You are not registered for this course.",
+#                 extra={
+#                     'user': request.user.id
+#                 }
+#             )
+#             return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
+#     except Student.DoesNotExist:
+#         return Response({'error': 'You are not registered as a student'}, status=status.HTTP_403_FORBIDDEN)
+
+#     if request.method == 'GET':
+#         course_materials = CourseMaterial.objects.filter(course=course)
+#         serializer = CourseMaterialSerializer(course_materials, many=True)
+#         logger.info(
+#             "Course materials returned successfully.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(serializer.data)
+
+#     logger.error(
+#         "Invalid request method.",
+#         extra={
+#             'user': request.user.id
+#         }
+#     )
+#     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 

@@ -12,12 +12,12 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
-from apis.courses.models import Course
+from apis.courses.models import Course, CourseMaterial
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from apis.users.serializers import UserSerializer, UserUpdateSerializer
-from apis.courses.serializers import CourseSerializer
+from apis.courses.serializers import CourseSerializer #CourseMaterialSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -438,6 +438,147 @@ def unassign_teacher(request, course_id, teacher_id):
 
     serializer = CourseSerializer(course)
     return Response(serializer.data)
+
+
+# @api_view(['POST'])
+# def add_course_material(request, course_id):
+#     user = request.user
+
+#     if not user.is_authenticated:
+#         logger.error(
+#             "You must provide valid authentication credentials.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(
+#             {"error": "You must provide valid authentication credentials."},
+#             status=status.HTTP_401_UNAUTHORIZED
+#         )
+
+
+#     try:
+#         course = Course.objects.get(id=course_id)
+#     except Course.DoesNotExist:
+#         logger.warning(
+#             "Course Not Found",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response({'error': 'Course Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+#     if user.is_a_teacher is False:
+#         logger.warning(
+#             "You do not have the necessary rights! (Not a lecturer)",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(
+#             {"error": "You do not have the necessary rights (Not a lecturer)"},
+#             status.HTTP_403_FORBIDDEN
+#         )
+
+#     if user not in course.instructors.all():
+#         logger.warning(
+#             "You are not a lecturer of this course",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(
+#             {"error": "You are not a lecturer of this course."},
+#             status.HTTP_403_FORBIDDEN
+#         )
+    
+#     if request.method == 'POST':
+#         material_file = request.FILES.get('material')
+#         description = request.data.get('description')  # If you have a description field
+
+#         if material_file:
+#             # Create a new CourseMaterial instance and associate it with the course
+#             course_material = CourseMaterial.objects.create(
+#                 material_file=material_file,
+#                 description=description,
+#                 uploaded_by=request.user,
+#                 course=course
+#             )
+
+#             serializer = CourseMaterialSerializer(course_material)
+#             return Response(serializer.data)
+#         else:
+#             logger.error(
+#                 "No file or invalid file sent in request",
+#                 extra={
+#                     'user': request.user.id
+#                 }
+#             )
+#             return Response({'error': 'No file or invalid sent in request'}, status=status.HTTP_400_BAD_REQUEST)
+
+#     logger.warning(
+#         "Invalid request method.",
+#         extra={
+#             'user': request.user.id
+#         }
+#     )
+#     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+# @api_view(['DELETE'])
+# def remove_course_material(request, course_material_id):
+#     user = request.user
+
+#     if not user.is_authenticated:
+#         logger.error(
+#             "You must provide valid authentication credentials.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response(
+#             {"error": "You must provide valid authentication credentials."},
+#             status=status.HTTP_401_UNAUTHORIZED
+#         )
+
+#     try:
+#         course_material = CourseMaterial.objects.get(pk=course_material_id)
+#     except CourseMaterial.DoesNotExist:
+#         logger.warning(
+#             "Course material not found.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response({'error': 'Course material not found'}, status=status.HTTP_404_NOT_FOUND)
+
+#     # Check if the authenticated user is the one who uploaded the material or is an admin/teacher with appropriate permissions
+#     if request.user != course_material.uploaded_by and not request.user.is_staff:
+#         logger.warning(
+#             "You do not have permission to remove this course material.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response({'error': 'You do not have permission to remove this course material'}, status=status.HTTP_403_FORBIDDEN)
+
+#     if request.method == 'DELETE':
+#         course_material.delete()
+#         logger.info(
+#             "Course material deleted successfully.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#         return Response({'message': 'Course material deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
+
+#     logger.error(
+#             "Invalid request method.",
+#             extra={
+#                 'user': request.user.id
+#             }
+#         )
+#     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 

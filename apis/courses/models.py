@@ -74,6 +74,27 @@ def update_course_id(instance, **kwargs):
         instance.save()
 
 
+class CourseMaterial(models.Model):
+
+    def course_material_directory_path(self, filename):
+
+        time = datetime.datetime.now().isoformat()
+        plain = str(self.course) + '\0' + time
+        return 'Course_Material/{0}/{1}'.format(
+            hashlib.sha1(
+                plain.encode('utf-8')
+            ).hexdigest(),
+            filename)
+
+    material_file = models.FileField(upload_to=course_material_directory_path)
+    description = models.TextField(blank=True, null=True)
+    uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='course_materials')
+
+
+    def __str__(self):
+        return f"CourseMaterial: {self.material_file.name}"
 
 
 
