@@ -500,3 +500,12 @@ INFO : 2023-11-20 11:15:35,497 : 36 : 497 : User Logged in sucessfully. : login 
 INFO : 2023-11-20 11:15:49,517 : 36 : 517 : Course materials returned successfully. : views : None
 INFO : 2023-11-20 11:18:46,148 : 36 : 148 : Course materials returned successfully. : views : None
 INFO : 2023-11-20 11:20:34,118 : 36 : 118 : Course materials returned successfully. : views : None
+ERROR : 2023-11-21 21:16 : Anonymous : 75 : {views} : [create_assessment] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:14]
+ERROR : 2023-11-21 21:17 : Anonymous : 115 : {views} : [create_assessment] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:16]
+ERROR : 2023-11-21 21:17 : Anonymous : 146 : {views} : [create_assessment] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:17]
+INFO : 2023-11-21 21:17:49,377 : 42 : 377 : User Logged in sucessfully. : login : None
+INFO : 2023-11-22 07:59:00,497 : 42 : 497 : User Logged in sucessfully. : login : None
+ERROR : 2023-11-22 08:44 : None : 791 : {views} : [create_question_with_choices] : (1048, "Column 'question_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:116]
+INFO : 2023-11-22 09:24:05,918 : 42 : 918 : User Logged in sucessfully. : login : None
+INFO : 2023-11-22 10:34:57,159 : 42 : 159 : User Logged in sucessfully. : login : None
+INFO : 2023-11-22 12:15:19,540 : 42 : 540 : User Logged in sucessfully. : login : None

@@ -1,6 +1,6 @@
 from apis.users.models import User
 from rest_framework import serializers
-from .models import Course
+from .models import Course, CourseMaterial
 from apis.users.serializers import UserSerializer
 # from apis.courses.serializers import CourseSerializer
 
@@ -40,18 +40,18 @@ class CourseSerializer(serializers.ModelSerializer):
         return representation
 
 
-# class CourseMaterialSerializer(serializers.ModelSerializer):
-#     material_file = serializers.FileField(required=True)
-#     course = CourseSerializer(read_only=True)
-#     class Meta:
-#         model = CourseMaterial
-#         fields = ['id', 'material_file', 'description', 'course', 'uploaded_by', 'uploaded_at']
+class CourseMaterialSerializer(serializers.ModelSerializer):
+    material_file = serializers.FileField(required=True)
+    course = CourseSerializer(read_only=True)
+    class Meta:
+        model = CourseMaterial
+        fields = ['id', 'material_file', 'description', 'course', 'uploaded_by', 'uploaded_at']
 
-#     def to_representation(self, instance):
-#         representation = super(CourseMaterialSerializer, self).to_representation(instance)
+    def to_representation(self, instance):
+        representation = super(CourseMaterialSerializer, self).to_representation(instance)
 
-#         # Override the course field to only include the course title
-#         representation['course'] = instance.course.course_title if instance.course else None
+        # Override the course field to only include the course title
+        representation['course'] = instance.course.course_title if instance.course else None
 
-#         return representation
+        return representation
 

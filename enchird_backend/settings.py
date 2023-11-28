@@ -29,10 +29,10 @@ SECRET_KEY = 'django-insecure-j_tya--8(3c9l^%yx@@nv3*47^7%-bx22jlbwq_qo3q-nuqvae
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['enchird.zotechinsights.com',
-#                   'https://enchird.zotechinsights.com'
-#                   'http://127.0.0.1'
-# ]
+ALLOWED_HOSTS = ['enchird.biz',
+                  'https://enchird.biz',
+                  'http://127.0.0.1'
+]
 
 
 # Application definition
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apis.teachers',
     'apis.faculty',
     'apis.courses',
+    'apis.assessment',
     'rest_framework',
     'knox',
 ]
