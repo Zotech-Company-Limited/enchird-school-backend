@@ -13,7 +13,7 @@ class Assessment(models.Model):
 
     TEXT_TYPE = 'text'
     MIXED_TYPE = 'mixed'
-    MULTIPLE_CHOICE_TYPE = 'multiple_choice'
+    MULTIPLE_CHOICE_TYPE = 'mcq'
 
     ASSESSMENT_TYPE_CHOICES = [
         (TEXT_TYPE, 'Text'),

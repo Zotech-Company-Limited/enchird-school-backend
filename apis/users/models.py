@@ -1,14 +1,14 @@
-from django.db import models
-import hashlib
 import random
+import hashlib
 import datetime
+from django.db import models
 from django.utils import timezone
 from django.dispatch import receiver
+from rest_framework import permissions
 from django.db.models.signals import post_save
+from django.core.validators import RegexValidator
 from django.contrib.auth.models import Group, Permission
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, AnonymousUser, PermissionsMixin
-from rest_framework import permissions
-from django.core.validators import RegexValidator
 
 
 class UserManager(BaseUserManager):
@@ -21,11 +21,7 @@ class UserManager(BaseUserManager):
         return user
 
     def create_user(self, email, last_name, role, first_name, is_teacher, is_student):
-        """Docstring for function create_user.
-
-        Returns:
-            object: 
-        """
+        
         if not email:
             raise ValueError('User must have an email address')
 
@@ -96,7 +92,6 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    """Docstring for class."""
 
     ROLE_CHOICES = (
         ("superadmin", "Superadmin"),
@@ -203,6 +198,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class CustomAnonymousUser(AnonymousUser):
     pass
+
+
 
 # class IsSuperuser(permissions.BasePermission):
 #     def has_permission(self, request, view):

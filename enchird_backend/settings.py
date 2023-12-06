@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['enchird.biz',
                   'https://enchird.biz',
-                  'http://127.0.0.1'
+                  '127.0.0.1'
 ]
 
 
@@ -101,7 +101,7 @@ REST_FRAMEWORK = {
 REST_KNOX = {
   'SECURE_HASH_ALGORITHM': 'cryptography.hazmat.primitives.hashes.SHA512',
   'AUTH_TOKEN_CHARACTER_LENGTH': 64,
-  'TOKEN_TTL': timedelta(hours=1),
+  'TOKEN_TTL': timedelta(hours=2),
   'USER_SERIALIZER': 'knox.serializers.UserSerializer',
   'TOKEN_LIMIT_PER_USER': 2,
   'AUTO_REFRESH': False,

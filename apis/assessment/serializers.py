@@ -8,6 +8,11 @@ class ChoiceSerializer(serializers.ModelSerializer):
         model = Choice
         fields = ['id', 'text', 'is_correct']
 
+class SimplifiedChoiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Choice
+        fields = ['id', 'text']
+
 
 class QuestionSerializer(serializers.ModelSerializer):
     choices = ChoiceSerializer(many=True, read_only=True)
