@@ -18,11 +18,37 @@
 						{
 							"key": "email",
 							"value": "colonelpirate@gmail.com",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "password",
 							"value": "superadmin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ghostfox062@gmail.com",
+							"description": "student",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Ghost@2023",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "mbiacharetyron@gmail.com",
+							"description": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "RN%);UzsPZ",
 							"type": "text"
 						}
 					]
@@ -516,7 +542,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 7320b52326116ab4455f9803104fc5234d9dc86fb46bf316f697a0459ea7457d",
+						"value": "Token 9e168d427dcd79354b69f82c126f19a0c68bdd2d151462c7fd325b4bcbefeee2",
 						"type": "text"
 					}
 				],
@@ -900,9 +926,15 @@
 			"name": "Assign Teacher to Course",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6b1f8128be8e31fa0d82c94db1e243315353b213dd27f7e9a73a5591d7143eeb",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{url}}/api/assign_teacher/42/course/11/",
+					"raw": "{{url}}/api/assign_teacher/42/course/1/",
 					"host": [
 						"{{url}}"
 					],
@@ -911,7 +943,7 @@
 						"assign_teacher",
 						"42",
 						"course",
-						"11",
+						"1",
 						""
 					]
 				}
@@ -934,6 +966,294 @@
 						"42",
 						"course",
 						"11",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 663beb8f5f5d0742c462a525453e0106756f924ed359fec07c1c791474fa1161",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/register_course/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register_course",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drop Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 25e211e30ab4322b19627c957648b099ed3003b72f11d826ecdc2b7f6668f20a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/drop_course/11/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drop_course",
+						"11",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Registered Courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 25e211e30ab4322b19627c957648b099ed3003b72f11d826ecdc2b7f6668f20a",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/registered_courses/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"registered_courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Course Material",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fc1bf821e413081fc753a31d63564161c61f69500b6763fb4c0bf1e20cfd22fd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/enchird.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/add_course_material/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"add_course_material",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Course Material",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fc1bf821e413081fc753a31d63564161c61f69500b6763fb4c0bf1e20cfd22fd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/enchird.zip",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/remove_course_material/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"remove_course_material",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Course Material(s)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 315af70b3636498f7d6c3b8f56fd925dce65741d464be0f74eb4007d9855fe99",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/view_course_materials/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"view_course_materials",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Assessment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 794a579f603bd4fa4bd42638087c68110c4731b9ff4f7da48417cc00e95e7f34",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Continuous Assessment ",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "First Semester",
+							"type": "text"
+						},
+						{
+							"key": "course",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "assessment_type",
+							"value": "mcq",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/create_assessment/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"create_assessment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question to Assessment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 794a579f603bd4fa4bd42638087c68110c4731b9ff4f7da48417cc00e95e7f34",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"question\": {\r\n//     \"text\": \"What is the capital of France?\",\r\n//     \"question_type\": \"multiple_choice\"\r\n//     // \"image\": \"base64_encoded_image\"  // You can include an image if question has one.\r\n//   },\r\n//   \"choices\": [\r\n//     {\"text\": \"Berlin\", \"is_correct\": false},\r\n//     {\"text\": \"Paris\", \"is_correct\": true},\r\n//     {\"text\": \"London\", \"is_correct\": false}\r\n//   ]\r\n// }\r\n\r\n\r\n{\r\n    \"file\": \"C:/Users/Admin/Documents/questions.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/assessments/2/add_question/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"assessments",
+						"2",
+						"add_question",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Assessment Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 9d6c43d0205e411098e7cbff5af822837469d704ed12ba2a00362bf333ede5fe",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/assessments/2/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"assessments",
+						"2",
 						""
 					]
 				}

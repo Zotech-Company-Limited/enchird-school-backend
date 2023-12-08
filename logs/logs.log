@@ -527,3 +527,12 @@ WARNING : 2023-12-06 04:13:55,841 : 42 : 841 : Course Not Found : permissions : 
 WARNING : 2023-12-06 04:16:44,517 : 42 : 517 : Course Not Found : permissions : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\permissions.py:permissions.py:39]
 WARNING : 2023-12-06 04:17:13,601 : 42 : 601 : Course Not Found : permissions : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\permissions.py:permissions.py:39]
 WARNING : 2023-12-06 04:22:35,333 : 42 : 333 : Course Not Foundh : permissions : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\permissions.py:permissions.py:39]
+INFO : 2023-12-08 01:54:46,959 : 36 : 959 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-08 02:23 : 36 : 654 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:393]
+ERROR : 2023-12-08 02:23 : 36 : 675 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:393]
+ERROR : 2023-12-08 02:39 : 36 : 526 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:386]
+ERROR : 2023-12-08 02:54 : 36 : 559 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:404]
+ERROR : 2023-12-08 02:56 : 36 : 855 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:386]
+ERROR : 2023-12-08 02:56 : 36 : 341 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:405]
+ERROR : 2023-12-08 02:59 : 36 : 643 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:406]
+ERROR : 2023-12-08 03:03 : 36 : 619 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:406]

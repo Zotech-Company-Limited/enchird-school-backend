@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib import admin
 from apis.users.models import User
@@ -29,6 +30,12 @@ class Assessment(models.Model):
     instructor = models.ForeignKey(User, on_delete=models.PROTECT)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.assessment_id
+
+    class Meta:
+        db_table = "assessments"
+
 @receiver(post_save, sender=Assessment, dispatch_uid="update_assessment_id")
 def update_assessment_id(instance, **kwargs):
     if not instance.assessment_id:
@@ -46,6 +53,7 @@ class Question(models.Model):
     def __str__(self):
         return f" Question for Assessment: {self.assessment.title}"
 
+
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='choices')
     text = models.TextField()
@@ -53,5 +61,20 @@ class Choice(models.Model):
 
     def __str__(self):
         return f"Choice: {self.text} for Question: {self.question.text}"
+
+
+class StudentResponse(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    assessment = models.ForeignKey(Assessment, on_delete=models.PROTECT)
+    question = models.ForeignKey(Question, on_delete=models.PROTECT)
+    selected_choice = models.ForeignKey(Choice, on_delete=models.PROTECT)
+    recorded_at = models.DateTimeField(
+        db_column="creation_date",
+        auto_now_add=True
+    )
+
+
+    def __str__(self):
+        return f"Response by {self.student.username} for Question: {self.question.text}"
 
 

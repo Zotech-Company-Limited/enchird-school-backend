@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Assessment, Question, Choice
+from .models import Assessment, Question, Choice, StudentResponse
 
 
 
@@ -36,6 +36,13 @@ class AssessmentSerializer(serializers.ModelSerializer):
         model = Assessment
         fields = ['id', 'title', 'description', 'assessment_type', 'instructor', 'course', 'created_at']
         read_only_fields = ['instructor']
+
+
+class StudentResponseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentResponse
+        fields = '__all__'
+        # fields = ['id', 'assess']
 
 
 # class CourseAssessmentSerializer(serializers.ModelSerializer):

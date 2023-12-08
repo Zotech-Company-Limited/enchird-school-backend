@@ -484,7 +484,7 @@ def drop_course(request, course_id):
         logger.error(
             "Student not found.",
             extra={
-                'user': 'Anonymous'
+                'user': user.id
             }
         )
         return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
