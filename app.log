@@ -6507,3 +6507,5 @@ WARNING:django.request:Bad Request: /api/assessments/2/submit/
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Invalid Question ID.
+WARNING:django.request:Bad Request: /api/assessments/2/submit/
