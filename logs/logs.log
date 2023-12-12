@@ -571,3 +571,4 @@ INFO : 2023-12-12 16:44:41,558 : None : 558 : Applicant created successfully! : 
 ERROR : 2023-12-12 16:51 : None : 452 : {views} : [create] : name 'serializer' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:174]
 ERROR : 2023-12-12 16:52 : None : 403 : {views} : [create] : name 'achievement_documents' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:174]
 ERROR : 2023-12-12 16:53 : None : 476 : {views} : [create] : name 'instance' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:175]
+INFO : 2023-12-12 16:55:42,818 : None : 818 : Applicant created successfully! : views : None

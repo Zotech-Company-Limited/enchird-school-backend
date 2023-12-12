@@ -6855,3 +6855,4 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applican
 ERROR:myLogger:name 'instance' is not defined
 WARNING:django.request:Precondition Failed: /api/applicant/
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:myLogger:Applicant created successfully!
