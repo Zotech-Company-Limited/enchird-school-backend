@@ -11,3 +11,4 @@ router.register(r'teacher', TeacherViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+

@@ -26,7 +26,6 @@ from apis.users.reset_password import ResetPasswordView
 
 
 
-
 app_name = 'api'
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,6 +34,7 @@ urlpatterns = [
     path('api/', include('apis.faculty.urls')),
     path('api/', include('apis.users.urls')),
     path('api/', include('apis.courses.urls')),
+    path('api/', include('apis.applicants.urls')),
     path('api/', include('apis.assessment.urls')),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),

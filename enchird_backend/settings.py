@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'apis.faculty',
     'apis.courses',
     'apis.assessment',
+    'apis.applicants',
     'rest_framework',
     'knox',
 ]
