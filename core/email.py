@@ -175,7 +175,6 @@ def send_reset_password_email(user, reset_token, uid):
 
 
 
-
 def send_adminhtmltext(user, content):
 
     message = MIMEMultipart("alternative")
