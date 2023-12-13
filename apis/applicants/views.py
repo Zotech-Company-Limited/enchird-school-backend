@@ -14,6 +14,7 @@ from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
 from .models import Applicant, AchievementDocument
+from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from rest_framework.permissions import IsAuthenticated, AllowAny

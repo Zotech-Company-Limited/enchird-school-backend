@@ -122,7 +122,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=100, unique=True, null=False, blank=False)
     username = models.CharField(max_length=50, unique=True, null=True, blank=True, default=None)
     picture = models.ImageField(default=None, null=True, upload_to=user_directory_path)
-    phone = models.CharField(validators=[phone_regex], unique=True, max_length=17, null=True, default=None)
+    phone = models.CharField(validators=[phone_regex], max_length=17, null=True, default=None)
     last_name = models.CharField(max_length=255, null=True, blank=True)
     first_name = models.CharField(max_length=255, null=True, blank=True)
     is_a_student = models.BooleanField(default=False)

@@ -38,7 +38,7 @@ class Applicant(models.Model):
     guardian2_name = models.CharField(max_length=255, blank=True, null=True)
     guardian2_contact = models.CharField(max_length=15, blank=True, null=True)
     motivation_letter = models.TextField()
-    # past_achievement_documents = models.ManyToManyField('AchievementDocument')
+    is_selected = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",

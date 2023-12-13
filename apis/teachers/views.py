@@ -45,7 +45,6 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
 
     def list(self, request, *args, **kwargs):
-        """Docstring for function."""
         user = self.request.user
 
         if not user.is_authenticated:
@@ -90,7 +89,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
 
     def retrieve(self, request, *args, **kwargs):
-        """Docstring for function."""
+          
         user = self.request.user
         print(user)
         if not user.is_authenticated:

@@ -1,3 +1,4 @@
+# Import necessary modules
 import ssl
 import random
 import string
@@ -13,11 +14,13 @@ from apis.students.models import Student
 from apis.utils import validate_password
 from django.core.mail import EmailMessage
 from rest_framework import status, viewsets
+from rest_framework.decorators import action
+from apis.applicants.models import Applicant
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
+from core.email import send_student_temp_password
 from apis.users.models import User, AnonymousUser
-from core.email import send_student_verification_email
 from apis.courses.models import Course, CourseMaterial
 from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
@@ -35,6 +38,7 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG)
 
 class StudentViewSet(viewsets.ModelViewSet):
 
+    # Define the queryset and serializer class
     queryset = Student.objects.all().filter(
                 is_deleted=False,
                 ).order_by('-created_at')
@@ -149,89 +153,116 @@ class StudentViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     
-    def create(self, request, *args, **kwargs):
+    @action(detail=False, methods=['post'])
+    def register_student(self, request):
         
         try:
             with transaction.atomic():
-                student_serializer = self.get_serializer(data=request.data)
-                user_serializer = UserSerializer(data=request.data)
-                password_serializer = UserPasswordSerializer(data=request.data)
-                if student_serializer.is_valid(raise_exception=True):
-                    if user_serializer.is_valid(raise_exception=True):
-                        if password_serializer.is_valid(raise_exception=True):
-                            print("1")
-                            password = password_serializer.validated_data['password']
-                            try:
-                                validate_password(password)
-                                # If valid, proceed with user creation
-                            except ValueError as e:
-                                error_message = e.args[0]  # Access the error message from the exception
-                                return Response({"error": error_message}, status=status.HTTP_400_BAD_REQUEST)
-                            
-                            reset_token = uuid4()
-                            print("1")
-                            
-                            # Verify uniqueness of email address
-                            num = User.objects.all().filter(
-                                    email=user_serializer.validated_data['email']
-                                ).count()
-                            if num > 0:
-                                logger.warning(
-                                    "A student/teacher with this email address already exists.",
-                                    extra={
-                                        'user': 'anonymous'
-                                    }
-                                )
-                                return Response({"error": "A student/teacher with this email address already exists."},
-                                                status=status.HTTP_409_CONFLICT)
+                user = request.user
 
-                            # Create user
-                            logging.debug('Your message here')
-                            user = user_serializer.save(is_a_student=True)
+                reset_token = uuid4()
 
-                            # Create of Student
-                            student = student_serializer.save(user=user)
 
-                            user.reset_token = reset_token
-                            user.password_requested_at = timezone.now()
-                            user.is_admin = False
-                            user.role = "student"
-                            password = password_serializer.validated_data['password']
-                            user.set_password(password)
-                            user.save()
-                            print(user)
-                            headers = self.get_success_headers(student_serializer.data)
+                # Check if the user making the request is an admin
+                if not request.user.is_authenticated or not request.user.is_admin:
+                    logger.error("You do not have permission to perform this action.", extra={'user': 'Anonymous'})
+                    return Response({'error': 'You do not have permission to perform this action.'}, status=status.HTTP_403_FORBIDDEN)
+                 
+                # Get applicant information from the request data (assuming 'applicant_id' is provided)
+                applicant_id = request.data.get('applicant_id')
+                print(applicant_id)
+                try:
+                    applicant = Applicant.objects.get(applicant_id=applicant_id)
+                except Applicant.DoesNotExist:
+                    logger.error("Applicant Not Found.", extra={'user': user})
+                    return Response({'error': 'Applicant not found.'}, status=status.HTTP_404_NOT_FOUND)
 
-                            # Create or get Student group
-                            all_permissions = Permission.objects.all()
-                            student_group, created = Group.objects.get_or_create(name='Student')
+                # Create a User instance based on the Applicant data
+                user_data = {
+                    'first_name': applicant.first_name,
+                    'last_name': applicant.last_name,
+                    'username': applicant.first_name,
+                    'gender': applicant.gender,
+                    'email': applicant.email,
+                    'phone': applicant.phone,
+                    'date_of_birth': applicant.date_of_birth,
+                } 
 
-                            # Add the student to the Student Group
-                            user.groups.add(student_group)
+                user_serializer = UserSerializer(data=user_data)
+                student_serializer = self.get_serializer(data=user_data)
+                print('3')
+                
+                if user_serializer.is_valid():
+                    # Verify uniqueness of email address
+                    num = User.objects.all().filter(email=user_serializer.validated_data['email']).count()
+                    if num > 0:
+                        logger.warning("A student/teacher with this email address already exists.", extra={'user': 'anonymous'})
+                        return Response({"error": "A student/teacher with this email address already exists."},
+                                        status=status.HTTP_409_CONFLICT)
+                    
+                    user = user_serializer.save(is_a_student=True, is_active=True)
 
-                            # Send activation email.
-                            try:
-                                send_student_verification_email(user, reset_token)
-                            except Exception as e:
-                                print(e)
-                                logger.error(
-                                    e,
-                                    extra={
-                                        'user': user.id
-                                    }
-                                )
-                            
-                            logger.info(
-                                "Student created successfully!",
+                    password = User.objects.make_random_password()
+                    user.reset_token = reset_token
+                    user.password_requested_at = timezone.now()
+                    user.set_password(password)
+                    user.save()
+
+                    applicant.is_selected = True
+                    applicant.save()
+
+                    # Create a Student instance
+                    student_data = {
+                        'user_id': user.id,
+                        # 'faculty': applicant.faculty,  
+                    }
+
+                    student_serializer = self.get_serializer(data=student_data)
+                    
+                    if student_serializer.is_valid():
+
+                        student_serializer.save(user_id=user.id)
+                       
+                        headers = self.get_success_headers(student_serializer.data)
+
+                        # Create or get Student group
+                        all_permissions = Permission.objects.all()
+                        student_group, created = Group.objects.get_or_create(name='Student')
+
+                        # Add the student to the Student Group
+                        user.groups.add(student_group)
+
+                        # Send activation email.
+                        try:
+                            send_student_temp_password(user, password)
+                        except Exception as e:
+                            print(e)
+                            logger.error(
+                                e,
                                 extra={
                                     'user': user.id
                                 }
                             )
-                            return Response(
-                                student_serializer.data,
-                                status.HTTP_201_CREATED,
-                                headers=headers)
-                
+                        
+                        logger.info(
+                            "Student created successfully!",
+                            extra={
+                                'user': user.id
+                            }
+                        )
+                        return Response(
+                            student_serializer.data,
+                            status.HTTP_201_CREATED,
+                            headers=headers)
+                    else:
+                        logger.error(
+                            str(student_serializer.errors), extra={ 'user': user.id })
+                        return Response({'error': student_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+                else:
+                    logger.error(
+                            str(user_serializer.errors), extra={ 'user': user.id })
+                    return Response({'error': user_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
@@ -245,9 +276,6 @@ class StudentViewSet(viewsets.ModelViewSet):
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
-    def perform_create(self, serializer):
-        """Docstring for function."""
-        return serializer.save()
 
 
     def update(self, request, *args, **kwargs):
