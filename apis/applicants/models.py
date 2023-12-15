@@ -18,6 +18,12 @@ class Applicant(models.Model):
         ('other', 'Other'),
     ]
 
+    STATUS_CHOICES = [
+        ('accepted', 'Accepted'),
+        ('rejected', 'Rejected'),
+        ('pending', 'Pending'),
+    ]
+
     phone_regex = RegexValidator(
         regex=r'^\+?1?\d{9,13}$',
         message="Phone number must be entered in the format: '+999999999'. Up to 13 digits allowed.")
@@ -40,7 +46,7 @@ class Applicant(models.Model):
     guardian2_name = models.CharField(max_length=255, blank=True, null=True)
     guardian2_contact = models.CharField(max_length=15, blank=True, null=True)
     motivation_letter = models.TextField()
-    is_selected = models.BooleanField(default=False)
+    status = models.CharField(max_length=8, choices=STATUS_CHOICES, default="pending")
     is_deleted = models.BooleanField(default=False)
     faculty = models.ForeignKey(
         Faculty,

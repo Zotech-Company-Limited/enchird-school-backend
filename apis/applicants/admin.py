@@ -6,9 +6,9 @@ from .models import Applicant, AchievementDocument
 
 @admin.register(Applicant)
 class ApplicantAdmin(admin.ModelAdmin):
-    list_display = ('applicant_id', 'first_name', 'last_name', 'email', 'is_selected', 'created_at')
+    list_display = ('applicant_id', 'first_name', 'last_name', 'email', 'status', 'created_at')
     search_fields = ('first_name', 'last_name', 'email')
-    list_filter = ('is_selected', 'is_deleted', 'created_at')
+    list_filter = ( 'is_deleted', 'created_at')
 
 @admin.register(AchievementDocument)
 class AchievementDocumentAdmin(admin.ModelAdmin):

@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
-    picture = serializers.ImageField(allow_null=True, required=False)
+    picture = serializers.CharField(allow_null=True, required=False)
     email = serializers.EmailField(required=True, allow_null=False, allow_blank=False)
     groups = serializers.SerializerMethodField()
     date_of_birth = serializers.DateField(required=False, allow_null=True)

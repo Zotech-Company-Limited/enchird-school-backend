@@ -19,7 +19,6 @@ from apis.applicants.models import Applicant
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
-from core.email import send_student_temp_password
 from apis.users.models import User, AnonymousUser
 from apis.courses.models import Course, CourseMaterial
 from apis.students.serializers import StudentSerializer
@@ -27,6 +26,7 @@ from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from apis.courses.serializers import CourseMaterialSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from core.email import send_student_accept_mail, send_student_reject_mail
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
 
@@ -154,28 +154,34 @@ class StudentViewSet(viewsets.ModelViewSet):
 
     
     @action(detail=False, methods=['post'])
-    def register_student(self, request):
-        
+    def accept(self, request):
         try:
             with transaction.atomic():
                 user = request.user
 
                 reset_token = uuid4()
 
-
                 # Check if the user making the request is an admin
                 if not request.user.is_authenticated or not request.user.is_admin:
                     logger.error("You do not have permission to perform this action.", extra={'user': 'Anonymous'})
                     return Response({'error': 'You do not have permission to perform this action.'}, status=status.HTTP_403_FORBIDDEN)
                  
+                
                 # Get applicant information from the request data (assuming 'applicant_id' is provided)
                 applicant_id = request.data.get('applicant_id')
-                print(applicant_id)
                 try:
                     applicant = Applicant.objects.get(applicant_id=applicant_id)
                 except Applicant.DoesNotExist:
                     logger.error("Applicant Not Found.", extra={'user': user})
                     return Response({'error': 'Applicant not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+                if applicant.status == "accepted":
+                    logger.error("Applicant has already been accepted.", extra={'user': user})
+                    return Response({'error': 'Applicant has already been accepted.'}, status=status.HTTP_400_BAD_REQUEST)
+
+                if applicant.status == "rejected":
+                    logger.error("Unfortunately applicant had earlier been rejected.", extra={'user': user})
+                    return Response({'error': 'Unfortunately applicant had earlier been rejected.'}, status=status.HTTP_400_BAD_REQUEST)
 
                 # Create a User instance based on the Applicant data
                 user_data = {
@@ -186,11 +192,11 @@ class StudentViewSet(viewsets.ModelViewSet):
                     'email': applicant.email,
                     'phone': applicant.phone,
                     'date_of_birth': applicant.date_of_birth,
+                    'picture': applicant.profile_picture,
                 } 
 
                 user_serializer = UserSerializer(data=user_data)
                 student_serializer = self.get_serializer(data=user_data)
-                print('3')
                 
                 if user_serializer.is_valid():
                     # Verify uniqueness of email address
@@ -208,13 +214,14 @@ class StudentViewSet(viewsets.ModelViewSet):
                     user.set_password(password)
                     user.save()
 
-                    applicant.is_selected = True
+                    applicant.status = 'accepted'
                     applicant.save()
 
                     # Create a Student instance
                     student_data = {
                         'user_id': user.id,
-                        # 'faculty': applicant.faculty,  
+                        'faculty': applicant.faculty.id,
+                        'department': applicant.department.id,
                     }
 
                     student_serializer = self.get_serializer(data=student_data)
@@ -232,24 +239,15 @@ class StudentViewSet(viewsets.ModelViewSet):
                         # Add the student to the Student Group
                         user.groups.add(student_group)
 
-                        # Send activation email.
+                        # Send acceptance email.
+                        faculty = applicant.faculty.name
                         try:
-                            send_student_temp_password(user, password)
+                            send_student_accept_mail(user, password, faculty)
                         except Exception as e:
                             print(e)
-                            logger.error(
-                                e,
-                                extra={
-                                    'user': user.id
-                                }
-                            )
+                            logger.error( e,  extra={ 'user': user.id } )
                         
-                        logger.info(
-                            "Student created successfully!",
-                            extra={
-                                'user': user.id
-                            }
-                        )
+                        logger.info( "Student created successfully!", extra={ 'user': user.id } )
                         return Response(
                             student_serializer.data,
                             status.HTTP_201_CREATED,
@@ -276,6 +274,54 @@ class StudentViewSet(viewsets.ModelViewSet):
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
+
+    @action(detail=True, methods=['post'])
+    def reject(self, request):
+        try:
+            with transaction.atomic():
+                user = request.user
+
+                # Get applicant information from the request data (assuming 'applicant_id' is provided)
+                applicant_id = request.data.get('applicant_id')
+                try:
+                    applicant = Applicant.objects.get(applicant_id=applicant_id)
+                except Applicant.DoesNotExist:
+                    logger.error("Applicant Not Found.", extra={'user': user})
+                    return Response({'error': 'Applicant not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+                if applicant.status == "accepted":
+                    logger.error("Applicant has already been accepted.", extra={'user': user})
+                    return Response({'error': 'Applicant has already been accepted.'}, status=status.HTTP_400_BAD_REQUEST)
+
+                if applicant.status == "rejected":
+                    logger.error("Unfortunately applicant had earlier been rejected.", extra={'user': user})
+                    return Response({'error': 'Unfortunately applicant had earlier been rejected.'}, status=status.HTTP_400_BAD_REQUEST)
+                # applicant = self.get_object()
+
+                # Check if the user making the request is an admin
+                if not request.user.is_authenticated or not request.user.is_admin:
+                    logger.error("You do not have permission to perform this action.", extra={'user': 'Anonymous'})
+                    return Response({'error': 'You do not have permission to perform this action.'}, status=status.HTTP_403_FORBIDDEN)
+
+                # Mark the applicant as rejected
+                applicant.status = 'rejected'
+                applicant.save()
+
+                # Send rejection email.
+                department = applicant.department.name
+                try:
+                    send_student_reject_mail(user, department)
+                except Exception as e:
+                    print(e)
+                    logger.error( e,  extra={ 'user': user.id } )
+                
+
+                logger.error("Applicant rejected successfully.", extra={'user': request.user.id})
+                return Response({'message': 'Applicant rejected successfully.'}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            # Handle exceptions and return an appropriate response
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
     def update(self, request, *args, **kwargs):

@@ -4,8 +4,8 @@ from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
 from apis.courses.models import Course
-from apis.faculty.models import Faculty
 from django.db.models.signals import post_save
+from apis.faculty.models import Faculty, Department
 
 
 
@@ -15,6 +15,11 @@ class Student(models.Model):
     student_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     faculty = models.ForeignKey(
         Faculty,
+        on_delete=models.PROTECT,
+        null=True
+    )
+    department = models.ForeignKey(
+        Department,
         on_delete=models.PROTECT,
         null=True
     )

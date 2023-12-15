@@ -45,10 +45,10 @@ class ApplicantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Applicant
         fields = ['id', 'applicant_id', 'first_name', 'last_name', 'nationality', 'gender', 'email', 'faculty',
-                   'department', 'primary_location', 'secondary_location', 'guardian1_name', 'guardian1_contact', 
+                   'department', 'primary_location', 'secondary_location', 'guardian1_name', 'guardian1_contact', 'status', 
                    'date_of_birth', 'phone', 'id_card_number', 'scanned_id_document', 'profile_picture', 'faculty_details',
                    'department_details', 'guardian2_name', 'guardian2_contact', 'motivation_letter', 'past_achievement_documents']
-        read_only_fields = ['applicant_id', 'past_achievement_documents', 'faculty_details', 'department_details']
+        read_only_fields = ['applicant_id', 'past_achievement_documents', 'faculty_details', 'department_details', 'status']
 
 
 

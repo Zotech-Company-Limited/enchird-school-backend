@@ -77,7 +77,7 @@ def send_student_verification_email(user, reset_token):
         return False
 
 
-def send_student_temp_password(user, temp_password):
+def send_student_accept_mail(user, temp_password, faculty):
     try:
         context = ssl.create_default_context()
 
@@ -90,10 +90,41 @@ def send_student_temp_password(user, temp_password):
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
-            msg['Subject'] = "Enchird Teacher Account Creation"
+            msg['Subject'] = "Enchird Application Decision"
 
             # Include the verification link in the email body
-            email_body = f"Hello {user.first_name}, \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
+            email_body = f"Hello {user.first_name}, \n\nCongratulations!! You have been accepted into {faculty}. \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
+
+            msg.attach(MIMEText(email_body, 'plain'))
+
+            server.sendmail(sender_email, user.email, msg.as_string())
+
+            # Close the connection
+            server.quit()
+
+        return True
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return False
+
+
+def send_student_reject_mail(user, department):
+    try:
+        context = ssl.create_default_context()
+
+        # Create a connection to the SMTP server using SSL
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            # Log in to your SMTP server using your credentials
+            server.login(sender_email, password)
+
+            # Create the email message
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = user.email
+            msg['Subject'] = "Enchird Application Decision"
+
+            # Include the verification link in the email body
+            email_body = f"Hello {user.first_name}, \n\nWe regret to inform you that your application for admission has been carefully reviewed, and we are unable to offer you a place in the {department} program at our institution. \n\nWe appreciate your interest and wish you the best in your future endeavors."
 
             msg.attach(MIMEText(email_body, 'plain'))
 

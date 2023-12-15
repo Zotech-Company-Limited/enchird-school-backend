@@ -136,13 +136,19 @@ class ApplicantViewSet(viewsets.ModelViewSet):
                 if applicant_serializer.is_valid(raise_exception=True):
                     
                     # Create applicant
-                    applicant = applicant_serializer.save()
+                    applicant = applicant_serializer.save(status="pending")
 
                     scanned_id_document_url = request.data.get("scanned_id_document_url")
 
                     # Extract documents data from the request
                     documents_data = request.data.get('documents', [])
 
+                    # Verify uniqueness of email address
+                    num = User.objects.all().filter(email=applicant_serializer.validated_data['email']).count()
+                    if num > 0:
+                        logger.warning("An applicant/student/teacher with this email address already exists.", extra={'user': request.user.id})
+                        return Response({"error": "An applicant/student/teacher with this email address already exists."},
+                                        status=status.HTTP_409_CONFLICT)
 
                     # Handling documents separately
                     achievement_documents = []

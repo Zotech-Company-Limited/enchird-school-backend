@@ -743,3 +743,29 @@ Original exception was:
 TypeError: Applicant() got unexpected keyword arguments: 'department'
  : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:176]
 INFO : 2023-12-15 12:04:07,131 : None : 131 : Applicant created successfully! : views : None
+INFO : 2023-12-15 17:53:03,777 : 3 : 777 : User Logged in sucessfully. : login : None
+WARNING : 2023-12-15 17:54:01,572 : anonymous : 572 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+WARNING : 2023-12-15 17:57:34,153 : anonymous : 153 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+ERROR : 2023-12-15 17:58 : None : 545 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:181]
+INFO : 2023-12-15 17:58:54,219 : None : 219 : Applicant created successfully! : views : None
+ERROR : 2023-12-15 17:59 : 55 : 614 : {views} : [accept] : {'faculty': [ErrorDetail(string='Incorrect type. Expected pk value, received Faculty.', code='incorrect_type')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:249]
+WARNING : 2023-12-15 18:00:28,522 : anonymous : 522 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+INFO : 2023-12-15 18:01:14,977 : 56 : 977 : Student created successfully! : views : None
+ERROR : 2023-12-15 18:22 : colonelpirate@gmail.com : 257 : {views} : [accept] : Applicant has already been accepted. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
+ERROR : 2023-12-15 18:22 : colonelpirate@gmail.com : 264 : {views} : [accept] : Applicant Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+INFO : 2023-12-15 18:22:55,555 : None : 555 : Applicant created successfully! : views : None
+ERROR : 2023-12-15 18:23 : 3 : 446 : {views} : [accept] : {'picture': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:262]
+ERROR : 2023-12-15 18:24 : 3 : 893 : {views} : [accept] : {'picture': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:262]
+ERROR : 2023-12-15 18:24 : 3 : 464 : {views} : [accept] : {'picture': [ErrorDetail(string='Enter a valid URL.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:262]
+INFO : 2023-12-15 18:25:20,748 : 57 : 748 : Student created successfully! : views : None
+ERROR : 2023-12-15 18:45 : colonelpirate@gmail.com : 112 : {views} : [reject] : Applicant Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:289]
+INFO : 2023-12-15 18:46:30,447 : 3 : 447 : User Logged in sucessfully. : login : None
+WARNING : 2023-12-15 18:46:43,264 : None : 264 : An applicant/student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:149]
+ERROR : 2023-12-15 18:47 : None : 641 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:181]
+INFO : 2023-12-15 18:47:17,663 : None : 663 : Applicant created successfully! : views : None
+ERROR : 2023-12-15 18:47 : 3 : 845 : {views} : [reject] : name 'send_student_reject_mail' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:316]
+ERROR : 2023-12-15 18:47 : 3 : 846 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:319]
+ERROR : 2023-12-15 18:48 : 3 : 360 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:319]
+ERROR : 2023-12-15 18:51 : 3 : 730 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:319]
+ERROR : 2023-12-15 18:51 : colonelpirate@gmail.com : 101 : {views} : [reject] : Unfortunately applicant had earlier been rejected. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:297]
+ERROR : 2023-12-15 18:52 : 3 : 486 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:319]

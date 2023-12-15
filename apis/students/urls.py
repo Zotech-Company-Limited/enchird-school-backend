@@ -14,5 +14,6 @@ urlpatterns = [
     path('drop_course/<str:course_id>/', drop_course, name='drop_course'),
     path('registered_courses/', get_registered_courses, name='get_registered_courses'),
     path('view_course_materials/<str:course_id>/', view_course_materials, name='view_course_materials'),
-    path('admin/register_student/', StudentViewSet.as_view({'post': 'register_student'}), name='register_student'),
+    path('admin/accept-application/', StudentViewSet.as_view({'post': 'accept'}), name='accept_application'),
+    path('admin/reject-application/', StudentViewSet.as_view({'post': 'reject'}), name='reject_application'),
 ]
