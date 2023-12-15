@@ -166,16 +166,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
 
                     headers = self.get_success_headers(applicant_serializer.data)
                     
-                    logger.info(
-                        "Applicant created successfully!",
-                        extra={
-                            'user': user.id
-                        }
-                    )
-                    return Response(
-                        serialized_data,
-                        status.HTTP_201_CREATED,
-                        headers=headers)
+                    logger.info( "Applicant created successfully!", extra={ 'user': user.id } )
+                    return Response( serialized_data, status.HTTP_201_CREATED, headers=headers)
         
         except Exception as e:
             # Rollback transaction and raise validation error

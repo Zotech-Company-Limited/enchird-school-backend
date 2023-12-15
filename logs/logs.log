@@ -695,3 +695,51 @@ INFO : 2023-12-15 09:50:18,784 : None : 784 : Applicant created successfully! : 
 ERROR : 2023-12-15 10:07 : None : 597 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')], 'profile_picture': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:183]
 ERROR : 2023-12-15 10:08 : None : 128 : {views} : [create] : (1054, "Unknown column 'profile_picture' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:183]
 INFO : 2023-12-15 10:09:17,829 : None : 829 : Applicant created successfully! : views : None
+ERROR : 2023-12-15 11:21 : Anonymous : 959 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:39]
+INFO : 2023-12-15 11:22:20,688 : 42 : 688 : User Logged in sucessfully. : login : None
+INFO : 2023-12-15 11:23:03,685 : 42 : 685 : List of faculties returned successfully. : views : None
+INFO : 2023-12-15 11:24:00,173 : 42 : 173 : List of faculties returned successfully. : views : None
+ERROR : 2023-12-15 11:24 : 42 : 0 : {views} : [create] : You do not have the necessary rights/Not an Admin. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:136]
+INFO : 2023-12-15 11:25:12,366 : 3 : 366 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-15 11:25 : None : 769 : {views} : [create] : {'abbrev': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:201]
+ERROR : 2023-12-15 11:27 : None : 759 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:493]
+ERROR : 2023-12-15 11:28 : None : 668 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:494]
+INFO : 2023-12-15 11:31:15,250 : 3 : 250 : Department created successfully! : views : None
+INFO : 2023-12-15 11:32:44,675 : 3 : 675 : List of departments returned successfully. : views : None
+INFO : 2023-12-15 11:35:17,999 : 3 : 999 : Department details returned successfully! : views : None
+INFO : 2023-12-15 11:36:05,924 : 3 : 924 : Department details returned successfully! : views : None
+INFO : 2023-12-15 11:36:11,403 : 3 : 403 : Department details returned successfully! : views : None
+ERROR : 2023-12-15 11:36 : 3 : 1 : {views} : [update] : 'faculty' : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:564]
+INFO : 2023-12-15 11:36:52,670 : 3 : 670 : Department info modified successfully! : views : None
+INFO : 2023-12-15 11:38:37,733 : 3 : 733 : Department marked as deleted successfully : views : None
+INFO : 2023-12-15 11:38:48,361 : 3 : 361 : Department details returned successfully! : views : None
+INFO : 2023-12-15 11:39:13,108 : 3 : 108 : List of departments returned successfully. : views : None
+INFO : 2023-12-15 11:42:20,689 : 3 : 689 : Department Not Found : views : None
+ERROR : 2023-12-15 11:52 : None : 239 : {views} : [create] : {'department': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')], 'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:183]
+ERROR : 2023-12-15 11:53 : None : 563 : {views} : [create] : Got a `TypeError` when calling `Applicant.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Applicant.objects.create()`. You may need to make the field read-only, or override the ApplicantSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Applicant() got unexpected keyword arguments: 'department'
+ : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:183]
+ERROR : 2023-12-15 12:03 : None : 248 : {views} : [create] : Got a `TypeError` when calling `Applicant.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Applicant.objects.create()`. You may need to make the field read-only, or override the ApplicantSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Applicant() got unexpected keyword arguments: 'department'
+ : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:176]
+INFO : 2023-12-15 12:04:07,131 : None : 131 : Applicant created successfully! : views : None

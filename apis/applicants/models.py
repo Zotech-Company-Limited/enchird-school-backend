@@ -3,8 +3,9 @@ import hashlib
 import datetime
 from django.db import models
 from django.dispatch import receiver
-from django.core.validators import RegexValidator
 from django.db.models.signals import post_save
+from django.core.validators import RegexValidator
+from apis.faculty.models import Faculty, Department
 
 
 
@@ -41,6 +42,16 @@ class Applicant(models.Model):
     motivation_letter = models.TextField()
     is_selected = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
+    faculty = models.ForeignKey(
+        Faculty,
+        on_delete=models.PROTECT,
+        null=True
+    )
+    department = models.ForeignKey(
+        Department,
+        on_delete=models.PROTECT,
+        null=True
+    )
     created_at = models.DateTimeField(
         db_column="creation_date",
         auto_now_add=True

@@ -7388,3 +7388,200 @@ WARNING:django.request:Precondition Failed: /api/applicant/
 ERROR:myLogger:(1054, "Unknown column 'profile_picture' in 'field list'")
 WARNING:django.request:Precondition Failed: /api/applicant/
 INFO:myLogger:Applicant created successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\urls.py changed, reloading.
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/department/
+INFO:myLogger:User Logged in sucessfully.
+INFO:myLogger:List of faculties returned successfully.
+INFO:myLogger:List of faculties returned successfully.
+ERROR:myLogger:You do not have the necessary rights/Not an Admin.
+WARNING:django.request:Forbidden: /api/department/
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:{'abbrev': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/department/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:myLogger:{'faculty': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/department/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:myLogger:{'faculty': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/department/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:myLogger:Department created successfully!
+INFO:myLogger:List of departments returned successfully.
+INFO:myLogger:Department details returned successfully!
+INFO:myLogger:Department details returned successfully!
+INFO:myLogger:Department details returned successfully!
+ERROR:myLogger:'faculty'
+WARNING:django.request:Precondition Failed: /api/department/1/
+INFO:myLogger:Department info modified successfully!
+ERROR:django.request:Internal Server Error: /api/department/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:myLogger:Department marked as deleted successfully
+INFO:myLogger:Department details returned successfully!
+INFO:myLogger:List of departments returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/department/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py", line 420, in retrieve
+    instance = Department.objects.get(id=kwargs['pk'], is_deleted=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.faculty.models.Department.DoesNotExist: Department matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py", line 428, in retrieve
+    except ObjectDoesNotExist:
+NameError: name 'ObjectDoesNotExist' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/department/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py", line 420, in retrieve
+    instance = Department.objects.get(id=kwargs['pk'], is_deleted=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.faculty.models.Department.DoesNotExist: Department matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py", line 429, in retrieve
+    raise Http404
+NameError: name 'Http404' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:myLogger:Department Not Found
+WARNING:django.request:Not Found: /api/department/1/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+ERROR:myLogger:{'department': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')], 'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:Got a `TypeError` when calling `Applicant.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Applicant.objects.create()`. You may need to make the field read-only, or override the ApplicantSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Applicant() got unexpected keyword arguments: 'department'
+
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:Got a `TypeError` when calling `Applicant.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Applicant.objects.create()`. You may need to make the field read-only, or override the ApplicantSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Applicant() got unexpected keyword arguments: 'department'
+
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:myLogger:Applicant created successfully!
