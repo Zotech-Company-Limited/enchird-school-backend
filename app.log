@@ -7142,3 +7142,249 @@ WARNING:django.request:Precondition Failed: /api/register_student/
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
 INFO:myLogger:Student created successfully!
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/assessments/2/submit/
+ERROR:myLogger:Responses for this assessment already submitted.
+WARNING:django.request:Bad Request: /api/assessments/2/submit/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+WARNING:django.request:Forbidden: /api/assessments/2/add_question/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Bad Request: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:local variable 'is_correct' referenced before assignment
+WARNING:django.request:Precondition Failed: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Question and choices created successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+WARNING:django.request:Bad Request: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+WARNING:django.request:Forbidden: /api/assessments/2/add_question/
+INFO:myLogger:User Logged in sucessfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Unsupported media type "text/plain" in request.
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')], 'scanned_id_document': [ErrorDetail(string='No file was submitted.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+WARNING:django.security.csrf:Forbidden (CSRF token from POST incorrect.): /admin/login/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:JSON parse error - Expecting ',' delimiter: line 11 column 21 (char 295)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting ',' delimiter: line 11 column 21 (char 295)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting value: line 28 column 3 (char 960)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting value: line 28 column 3 (char 960)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting value: line 28 column 3 (char 960)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 16 column 1 (char 612)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 608)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 608)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 609)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 487)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 609)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting ':' delimiter: line 17 column 1 (char 616)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 533)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 635)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'first_name': [ErrorDetail(string='This field is required.', code='required')], 'last_name': [ErrorDetail(string='This field is required.', code='required')], 'nationality': [ErrorDetail(string='This field is required.', code='required')], 'gender': [ErrorDetail(string='This field is required.', code='required')], 'email': [ErrorDetail(string='This field is required.', code='required')], 'phone': [ErrorDetail(string='This field is required.', code='required')], 'id_card_number': [ErrorDetail(string='This field is required.', code='required')], 'scanned_id_document': [ErrorDetail(string='No file was submitted.', code='required')], 'primary_location': [ErrorDetail(string='This field is required.', code='required')], 'guardian1_name': [ErrorDetail(string='This field is required.', code='required')], 'guardian1_contact': [ErrorDetail(string='This field is required.', code='required')], 'motivation_letter': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 15 column 1 (char 460)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 14 column 1 (char 458)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:JSON parse error - Expecting property name enclosed in double quotes: line 3 column 1 (char 31)
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')], 'scanned_id_document': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')], 'motivation_letter': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')], 'scanned_id_document': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'scanned_id_document': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+ERROR:myLogger:{'scanned_id_document': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+ERROR:myLogger:name 'url' is not defined
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:name 'url' is not defined
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:Failed to download file from URL: C:/Users/Admin/Documents/questions.xlsx, No connection adapters were found for 'C:/Users/Admin/Documents/questions.xlsx'
+WARNING:django.request:Bad Request: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:name 'DocumentSerializer' is not defined
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:myLogger:Applicant created successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:myLogger:Applicant created successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:name 'achievement_documents' is not defined
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:name 'DocumentSerializer' is not defined
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:myLogger:Applicant created successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+ERROR:myLogger:{'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')], 'profile_picture': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/applicant/
+ERROR:myLogger:(1054, "Unknown column 'profile_picture' in 'field list'")
+WARNING:django.request:Precondition Failed: /api/applicant/
+INFO:myLogger:Applicant created successfully!

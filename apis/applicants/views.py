@@ -2,6 +2,8 @@ import random
 import string
 import logging
 import datetime
+import requests
+from io import BytesIO
 from apis.utils import *
 from django.db.models import Q
 from django.conf import settings
@@ -134,28 +136,33 @@ class ApplicantViewSet(viewsets.ModelViewSet):
                 if applicant_serializer.is_valid(raise_exception=True):
                     
                     # Create applicant
-                    # logging.debug('Your message here')
                     applicant = applicant_serializer.save()
 
-                    documents = request.FILES.getlist('past_achievement_documents')
-                    names = request.data.getlist('names')
+                    scanned_id_document_url = request.data.get("scanned_id_document_url")
 
-                    # Handling past_achievement_documents separately
-                    achievements = []
-                    for document, name in zip(documents, names):
+                    # Extract documents data from the request
+                    documents_data = request.data.get('documents', [])
 
-                        #Create and save achievementDocument object
+
+                    # Handling documents separately
+                    achievement_documents = []
+                    for doc_data in documents_data:
+                        name = doc_data.get('name')
+                        document_path = doc_data.get('document_path')
+
+                        # Create and save AchievementDocument object
                         achievement = AchievementDocument.objects.create(
                             applicant=applicant,
-                            document=document, name=name)
-                        achievements.append(achievement)
+                            document=document_path,
+                            name=name
+                        )
+                        achievement_documents.append(achievement)
 
                     #Serialize and return response
-                    achievement_documents = AchievementDocument.objects.filter(applicant=applicant)
                     serialized_data = applicant_serializer.data
                     
                     # Include serialized achievement documents in the response
-                    serialized_data['past_achievement_documents'] = AchievementDocumentSerializer(achievement_documents, many=True).data
+                    serialized_data['documents'] = AchievementDocumentSerializer(achievement_documents, many=True).data
 
                     headers = self.get_success_headers(applicant_serializer.data)
                     

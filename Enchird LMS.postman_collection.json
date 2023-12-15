@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "9dea2e9a-fa95-4048-9900-bf27e571f30e",
+		"_postman_id": "43e2265e-9569-4db3-ab1f-2dae1e4bd75c",
 		"name": "Enchird LMS",
 		"description": "This is the documentation for Enchird LMS APIs documented by Tyron Mbiachare.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25876129"
+		"_exporter_id": "16834674"
 	},
 	"item": [
 		{
@@ -18,14 +18,12 @@
 						{
 							"key": "email",
 							"value": "colonelpirate@gmail.com",
-							"type": "text",
-							"disabled": true
+							"type": "text"
 						},
 						{
 							"key": "password",
 							"value": "superadmin",
-							"type": "text",
-							"disabled": true
+							"type": "text"
 						},
 						{
 							"key": "email",
@@ -44,12 +42,14 @@
 							"key": "email",
 							"value": "mbiacharetyron@gmail.com",
 							"description": "teacher",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "password",
 							"value": "RN%);UzsPZ",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						}
 					]
 				},
@@ -1241,7 +1241,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 9d6c43d0205e411098e7cbff5af822837469d704ed12ba2a00362bf333ede5fe",
+						"value": "Token 816e4d036cb08505acd69707b1a7315f0dc3aff12371a86726b83a26555f7cbb",
 						"type": "text"
 					}
 				],
@@ -1254,6 +1254,322 @@
 						"api",
 						"assessments",
 						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Assessment Responses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 159b3e3c093e06988ab7afbeee64acf82b5e9edea7ef0487661bb4726a19d601",
+						"type": "text"
+					},
+					{
+						"key": "CSRF",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"responses\": [\r\n    {\r\n      \"question_id\": 8,\r\n      \"selected_choice_id\": 2\r\n    },\r\n    {\r\n      \"question_id\": 19,\r\n      \"selected_choice_id\": 25\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/assessments/2/submit/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"assessments",
+						"2",
+						"submit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Applicant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Tyron",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Mbiachare",
+							"type": "text"
+						},
+						{
+							"key": "nationality",
+							"value": "Cameroonian",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1998-07-22",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ghostfox062@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+237683185006",
+							"type": "text"
+						},
+						{
+							"key": "id_card_number",
+							"value": "11824350423",
+							"type": "text"
+						},
+						{
+							"key": "scanned_id_document",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Ako_Egbe Nadia Resume.pdf"
+						},
+						{
+							"key": "primary_location",
+							"value": "Bomaka, Buea",
+							"type": "text"
+						},
+						{
+							"key": "guardian1_name",
+							"value": "MJB",
+							"type": "text"
+						},
+						{
+							"key": "guardian1_contact",
+							"value": "+237675430082",
+							"type": "text"
+						},
+						{
+							"key": "motivation_letter",
+							"value": "Dear Admissions Committee,\n\nI am writing to express my enthusiastic interest in applying for admission to [School Name] for the [Program/Degree] starting in the [Month/Year]. After thorough research and consideration, I am confident that [School Name] is the ideal institution to further my academic and personal growth.\n\nHaving explored your website, attended information sessions, and spoken with current students, I am impressed by [School Name]'s commitment to academic excellence, diverse learning environment, and emphasis on fostering a community of innovative thinkers. The [specific program or aspect of the school] particularly resonates with my academic and career aspirations.\n\nI hold a strong academic record and have actively engaged in extracurricular activities that reflect my passion for [mention relevant interests or activities]. These experiences have not only shaped my character but have also equipped me with skills such as [mention specific skills] that I believe will contribute to the vibrant and dynamic community at [School Name].\n\nSincerely,\n\n[Your Name]",
+							"type": "text"
+						},
+						{
+							"key": "names",
+							"value": "O level",
+							"type": "text"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Enchird LMS Endpoints Doc.pdf"
+						},
+						{
+							"key": "names",
+							"value": "Bachelors",
+							"type": "text"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/users.xlsx"
+						},
+						{
+							"key": "names",
+							"value": "A levels",
+							"type": "text"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/journalsms.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/applicant/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"applicant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Applicants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a1047a5bbcdd2cc67f7a602cf09fec11fa78443b52971dbf336109b21470234c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "scanned_id_document",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Ako_Egbe Nadia Resume.pdf"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Enchird LMS Endpoints Doc.pdf"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/users.xlsx"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/journalsms.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/applicant/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"applicant",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Applicant Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a1047a5bbcdd2cc67f7a602cf09fec11fa78443b52971dbf336109b21470234c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "scanned_id_document",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Ako_Egbe Nadia Resume.pdf"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/Enchird LMS Endpoints Doc.pdf"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/users.xlsx"
+						},
+						{
+							"key": "past_achievement_documents",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/journalsms.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/applicant/2/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"applicant",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 83f1226c69138c491bbf22e10b4d26fc1a5a0c288d3589f6266fdff1810f6a19",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "applicant_id",
+							"value": "APL_00000008",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/register_student/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register_student",
 						""
 					]
 				}

@@ -1,3 +1,4 @@
+import hashlib
 import logging
 import pandas as pd
 from .serializers import *
@@ -57,6 +58,15 @@ def create_assessment(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+def hash_string(input_string):
+    """
+    Helper function to hash a string using SHA-256.
+    """
+    sha256 = hashlib.sha256()
+    sha256.update(input_string.encode('utf-8'))
+    return sha256.hexdigest()
+
+
 @api_view(['POST'])
 def create_question_with_choices(request, assessment_id):
     user = request.user
@@ -73,22 +83,14 @@ def create_question_with_choices(request, assessment_id):
         )
 
     if user.is_a_teacher is False:
-        logger.error(
-            "Only teachers can add questions.",
-            extra={
-                'user': user.id
-            }
-        )
+        logger.error( "Only teachers can add questions.", extra={ 'user': user.id } )
         return Response(
-            {
-                "error": "Only teachers can add questions."
-            },
-            status.HTTP_403_FORBIDDEN
-        )
+            { "error": "Only teachers can add questions."},  status.HTTP_403_FORBIDDEN )
     
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
+        logger.error( "Assessment Not Found.", extra={ 'user': user.id } )
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     if 'file' in request.data:
@@ -103,21 +105,28 @@ def create_question_with_choices(request, assessment_id):
                     choices = [row['Choice1'], row['Choice2'], row['Choice3']]
                     correct_choice = row['CorrectChoice']
 
+                    # Hash question text
+                    hashed_question_text = hash_string(question_text)
+
                     # Save the question first
-                    question_data = {'text': question_text, 'assessment': assessment.id}
+                    question_data = {'text': hashed_question_text, 'assessment': assessment.id}
                     question_serializer = QuestionSerializer(data=question_data)
                     if question_serializer.is_valid():
                         question = question_serializer.save(assessment=assessment)
 
                     # Save choices for the question
-                    for choice_text in choices:
+                    for choice_text in choices: 
+                        # Hash choice text
+                        hashed_choice_text = hash_string(choice_text)
+                        
                         is_correct = choice_text == correct_choice
-                        print(is_correct)
-                        choice_data = {'question': question.id, 'text': choice_text, 'is_correct': is_correct}
-                        choice_serializer = SimplifiedChoiceSerializer(data=choice_data)
+                        
+                        choice_data = {'question': question.id, 'text': hashed_choice_text, 'is_correct': is_correct}
+                        choice_serializer = ChoiceSerializer(data=choice_data)
                         if choice_serializer.is_valid():
                             choice_serializer.save(question=question)
-
+            
+            logger.info( 'Questions and choices created successfully', extra={ 'user': user.id } )
             return Response({'message': 'Questions and choices created successfully'}, status=status.HTTP_201_CREATED)
 
         except Exception as e:
@@ -135,25 +144,39 @@ def create_question_with_choices(request, assessment_id):
         try:
             with transaction.atomic():
                 question_data = request.data.get('question', {})
-                choices_data = request.data.get('choices', [])
+            choices_data = request.data.get('choices', [])
 
-                question_serializer = QuestionSerializer(data=question_data)
-                if question_serializer.is_valid():
-                    # Save the question first
-                    question = question_serializer.save(assessment=assessment)
-                    print(question)
+            # Hash question text
+            hashed_question_text = hash_string(question_data.get('text', ''))
 
-                    # Save choices for the question
-                    for choice_data in choices_data:
-                        # Associate the choice with the saved question
-                        choice_data['question'] = question.id
-                        choice_serializer = SimplifiedChoiceSerializer(data=choice_data)
-                        if choice_serializer.is_valid():
-                            choice_serializer.save(question=question)
+            question_serializer = QuestionSerializer(data={'text': hashed_question_text, 'assessment': assessment.id})
+            if question_serializer.is_valid():
+                # Save the question first
+                question = question_serializer.save(assessment=assessment)
 
-                    return Response({'message': 'Question and choices created successfully'}, status=status.HTTP_201_CREATED)
+                # Save choices for the question
+                for choice_data in choices_data:
+                    # Hash choice text
+                    hashed_choice_text = hash_string(choice_data.get('text', ''))
 
-                return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+                    # Check if the choice is correct
+                    is_correct = choice_data.get('is_correct', False)
+                    print(is_correct)
+
+                    # Associate the choice with the saved question
+                    choice_data['question'] = question.id
+                    choice_data['text'] = hashed_choice_text
+                    choice_data['is_correct'] = is_correct
+
+                    choice_serializer = ChoiceSerializer(data=choice_data)
+                    if choice_serializer.is_valid():
+                        choice_serializer.save(question=question)
+
+                logger.info( "Question and choices created successfully.", extra={ 'user': user.id } )
+                return Response({'message': 'Question and choices created successfully'}, status=status.HTTP_201_CREATED)
+
+            logger.info( str(question_serializer.errors), extra={ 'user': user.id } )
+            return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
             
         except Exception as e:
             # Rollback transaction and raise validation error
@@ -265,79 +288,6 @@ def get_assessment_details(request, assessment_id):
     return Response(response_data, status=status.HTTP_200_OK)
 
 
-# @api_view(['POST'])
-# def submit_assessment_responses(request, assessment_id):
-#     user = request.user
-
-#     if not user.is_authenticated:
-#         logger.error(
-#             "You do not have the necessary rights.",
-#             extra={
-#                 'user': 'Anonymous'
-#             }
-#         )
-#         return Response(
-#             {'error': "You must provide valid authentication credentials."},
-#             status=status.HTTP_401_UNAUTHORIZED
-#         )
-
-#     if user.is_a_student is False:
-#         logger.error(
-#             "Only students can register courses.",
-#             extra={
-#                 'user': 'Anonymous'
-#             }
-#         )
-#         return Response(
-#             {
-#                 "error": "Only students can register courses."
-#             },
-#             status.HTTP_403_FORBIDDEN
-#         )
-    
-
-#     try:
-#         assessment = Assessment.objects.get(pk=assessment_id)
-#     except Assessment.DoesNotExist:
-#         logger.error(
-#             "Assessment not found.",
-#             extra={
-#                 'user': user.id
-#             }
-#         )
-#         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
-
-#     if request.method == 'POST':
-#         serializer = StudentResponseSerializer(data=request.data)
-#         if serializer.is_valid():
-#             # Ensure that the user is the student for whom the response is being submitted
-#             if serializer.validated_data['student'] != user:
-#                 return Response({'error': 'Invalid student for the response'}, status=status.HTTP_403_FORBIDDEN)
-
-#             # Check if responses already exist for the assessment by the student
-#             existing_responses = StudentResponse.objects.filter(student=user, question__assessment=assessment)
-#             if existing_responses.exists():
-#                 logger.error(
-#                     "Responses for this assessment already submitted.",
-#                     extra={
-#                         'user': user.id
-#                     }
-#                 )
-#                 return Response({'error': 'Responses for this assessment already submitted'}, status=status.HTTP_400_BAD_REQUEST)
-
-#             # Save the responses
-#             serializer.save(student=user)
-#             logger.info(
-#                 "Responses submitted successfully.",
-#                 extra={
-#                     'user': user.id
-#                 }
-#             )
-#             return Response({'message': 'Responses submitted successfully'}, status=status.HTTP_201_CREATED)
-
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 @api_view(['POST'])
 @transaction.atomic
 def submit_assessment_responses(request, assessment_id):
@@ -372,27 +322,19 @@ def submit_assessment_responses(request, assessment_id):
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
-        logger.error(
-            "Assessment not found.",
-            extra={
-                'user': user.id
-            }
-        )
+        logger.error( "Assessment not found.", extra={ 'user': user.id } )
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
     try:
         with transaction.atomic():
             # Check if responses already exist for the assessment by the student
             existing_responses = StudentResponse.objects.filter(student=user, assessment=assessment)
             if existing_responses.exists():
-                logger.error(
-                    "Responses for this assessment already submitted.",
-                    extra={
-                        'user': user.id
-                    }
-                )
+                logger.error( "Responses for this assessment already submitted.", extra={  'user': user.id } )
                 return Response({'error': 'Responses for this assessment already submitted'}, status=status.HTTP_400_BAD_REQUEST)
 
             responses_data = request.data.get('responses', [])
+
+            total_score = 0
 
             # Assuming the 'responses' data is a list of dictionaries with question_id and selected_choice_id
             for response_data in responses_data:
@@ -403,23 +345,18 @@ def submit_assessment_responses(request, assessment_id):
                     question = Question.objects.get(pk=question_id)
                     selected_choice = Choice.objects.get(pk=selected_choice_id)
                 except Question.DoesNotExist:
-                    logger.error(
-                        "Invalid Question ID.",
-                        extra={
-                            'user': user.id
-                        }
-                    )
+                    logger.error( "Invalid Question ID.", extra={ 'user': user.id })
                     return Response({'error': 'Invalid question ID'}, status=status.HTTP_400_BAD_REQUEST)
                 except Choice.DoesNotExist:
-                    logger.error(
-                        "Invalid Choice ID.",
-                        extra={
-                            'user': user.id
-                        }
-                    )
+                    logger.error( "Invalid Choice ID.", extra={ 'user': user.id })
                     return Response({'error': 'Invalid Choice ID'}, status=status.HTTP_400_BAD_REQUEST)
 
+                # Check if the selected choice is correct
+                is_correct = selected_choice.is_correct
 
+                # Update the total score
+                if is_correct:
+                    total_score += 1  # You might assign different weights for each question
 
                 # Create or update the student response
                 response, created = StudentResponse.objects.get_or_create(

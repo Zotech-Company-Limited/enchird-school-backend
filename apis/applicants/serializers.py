@@ -22,9 +22,9 @@ class ApplicantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Applicant
-        fields = ['id', 'applicant_id', 'first_name', 'last_name', 'nationality', 'gender', 
-                   'date_of_birth', 'email', 'phone', 'id_card_number', 'scanned_id_document',
+        fields = ['id', 'applicant_id', 'first_name', 'last_name', 'nationality', 'gender', 'email',
                    'primary_location', 'secondary_location', 'guardian1_name', 'guardian1_contact',
+                   'date_of_birth', 'phone', 'id_card_number', 'scanned_id_document', 'profile_picture',
                    'guardian2_name', 'guardian2_contact', 'motivation_letter', 'past_achievement_documents']
         read_only_fields = ['applicant_id', 'past_achievement_documents']
 

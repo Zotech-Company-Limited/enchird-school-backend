@@ -30,7 +30,8 @@ class Applicant(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=15, validators=[phone_regex])  
     id_card_number = models.CharField(max_length=20, unique=True)
-    scanned_id_document = models.FileField(upload_to='scanned_id_documents/')
+    scanned_id_document = models.CharField(max_length=255, null=False, blank=False) #FileField(upload_to='scanned_id_documents/')
+    profile_picture = models.CharField(max_length=255) 
     primary_location = models.CharField(max_length=255)
     secondary_location = models.CharField(max_length=255, blank=True, null=True)
     guardian1_name = models.CharField(max_length=255)
@@ -67,7 +68,7 @@ class AchievementDocument(models.Model):
         related_name='applicant_achievements'
     )
     name = models.CharField(max_length=255)
-    document = models.FileField(upload_to='achievement_documents/')
+    document = models.CharField(max_length=255) #FileField(upload_to='achievement_documents/')
     description = models.TextField()
 
     def __str__(self):
