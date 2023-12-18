@@ -7762,3 +7762,907 @@ ERROR:myLogger:Applicant rejected successfully.
 ERROR:myLogger:Unfortunately applicant had earlier been rejected.
 WARNING:django.request:Bad Request: /api/admin/reject-application/
 ERROR:myLogger:Applicant rejected successfully.
+WARNING:django.request:Forbidden: /api/assessments/2/add_question/
+INFO:myLogger:User Logged in sucessfully.
+INFO:myLogger:User Logged in sucessfully.
+INFO:myLogger:Questions and choices created successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Fernet key must be 32 url-safe base64-encoded bytes.
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:local variable 'question' referenced before assignment
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:local variable 'question' referenced before assignment
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:name 'enc' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:{'text': [ErrorDetail(string='Not a valid string.', code='invalid')]}
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:myLogger:Questions and choices created successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 117, in _get_unverified_token_data
+    data = base64.urlsafe_b64decode(token)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 296, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 76, in decrypt_string
+    decrypted_text = cipher_suite.decrypt(encrypted_text).decode('utf-8')
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 86, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 119, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:name 'settings' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Fernet key must be 32 url-safe base64-encoded bytes.
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+WARNING:django.request:Not Found: /favicon.ico
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:data must be bytes
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:type() takes 1 or 3 arguments
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:data must be bytes
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:name 'encrypted_question_text_str' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:'str' object has no attribute 'decode'
+ERROR:django.request:Internal Server Error: /api/assessments/2/add_question/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Questions and choices created successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+WARNING:django.request:Forbidden: /api/assessments/2/
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 306, in get_assessment_details
+    # Retrieve only questions and choices without correct responses
+NameError: name 'decrypt_string' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 306, in get_assessment_details
+    # Retrieve only questions and choices without correct responses
+NameError: name 'decrypt_string' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 306, in get_assessment_details
+    # Retrieve only questions and choices without correct responses
+NameError: name 'decrypt_string' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 34, in __init__
+    key = base64.urlsafe_b64decode(key)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 96, in decrypt_string
+    cipher_suite = Fernet(settings.SECRET_KEY.encode('utf-8'))
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 36, in __init__
+    raise ValueError(
+ValueError: Fernet key must be 32 url-safe base64-encoded bytes.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 316, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 101, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'binascii' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 34, in __init__
+    key = base64.urlsafe_b64decode(key)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 97, in decrypt_string
+    cipher_suite = Fernet(settings.SECRET_KEY.encode('utf-8'))
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 36, in __init__
+    raise ValueError(
+ValueError: Fernet key must be 32 url-safe base64-encoded bytes.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 317, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 102, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'cryptography' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 99, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 317, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 102, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'cryptography' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 100, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 318, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 103, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'cryptography' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 100, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 318, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 103, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'cryptography' is not defined
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 100, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 318, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 103, in decrypt_string
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+NameError: name 'cryptography' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 319, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 101, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 332, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 115, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 332, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 115, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 336, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 117, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:myLogger:Decryption error: Incorrect padding
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 335, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 116, in decrypt_string
+    encrypted_bytes = base64.urlsafe_b64decode(encrypted_text.encode('utf-8'))
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+ERROR:myLogger:Decryption error: 
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 117, in _get_unverified_token_data
+    data = base64.urlsafe_b64decode(token)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 335, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 118, in decrypt_string
+    decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 86, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 119, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+ERROR:myLogger:Decryption error: 
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 117, in _get_unverified_token_data
+    data = base64.urlsafe_b64decode(token)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 335, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 118, in decrypt_string
+    decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 86, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 119, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: 
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 117, in _get_unverified_token_data
+    data = base64.urlsafe_b64decode(token)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 335, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 118, in decrypt_string
+    decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 86, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 119, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:myLogger:Decryption error: 
+ERROR:django.request:Internal Server Error: /api/assessments/2/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 117, in _get_unverified_token_data
+    data = base64.urlsafe_b64decode(token)
+  File "C:\Program Files\Python38\lib\base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "C:\Program Files\Python38\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Program Files\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 335, in get_assessment_details
+    decrypted_choice_text = decrypt_string(choice['text'])
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 118, in decrypt_string
+    decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 86, in decrypt
+    timestamp, data = Fernet._get_unverified_token_data(token)
+  File "C:\enchird_LMS\venv\lib\site-packages\cryptography\fernet.py", line 119, in _get_unverified_token_data
+    raise InvalidToken
+cryptography.fernet.InvalidToken
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.

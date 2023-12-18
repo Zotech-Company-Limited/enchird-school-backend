@@ -170,7 +170,6 @@ def send_teacher_verification_email(user, temp_password):
         return False
 
 
-
 def send_reset_password_email(user, reset_token, uid):
     try:
         context = ssl.create_default_context()
@@ -203,7 +202,6 @@ def send_reset_password_email(user, reset_token, uid):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return False
-
 
 
 def send_adminhtmltext(user, content):

@@ -26,6 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-j_tya--8(3c9l^%yx@@nv3*47^7%-bx22jlbwq_qo3q-nuqvae'
 
+# For encyption of assessment questions
+FERNET_KEY = '4aBCu0mbi2XbC_ItJZz0iFa6V81xAkIjpRasQnbF_8Q='
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

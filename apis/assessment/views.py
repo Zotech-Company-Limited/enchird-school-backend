@@ -1,12 +1,18 @@
+import base64
 import hashlib
 import logging
+import binascii
+import cryptography
 import pandas as pd
 from .serializers import *
+from django.conf import settings
 from django.db import transaction
 from django.shortcuts import render
-from apis.courses.models import Course
+from apis.courses.models import Course 
+from cryptography.fernet import Fernet
 from apis.students.models import Student
 from rest_framework import status, viewsets
+from cryptography.fernet import InvalidToken
 from rest_framework.response import Response
 from apis.assessment.models import Assessment
 from rest_framework.decorators import api_view
@@ -57,47 +63,70 @@ def create_assessment(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# ENCRYPTION_KEY = b'enchird_tyron'
 
-def hash_string(input_string):
-    """
-    Helper function to hash a string using SHA-256.
-    """
-    sha256 = hashlib.sha256()
-    sha256.update(input_string.encode('utf-8'))
-    return sha256.hexdigest()
+# Generate a secure random key
+ENCRYPTION_KEY = Fernet.generate_key()
+
+# Print or store the generated key securely 
+print(f"Generated Key: {ENCRYPTION_KEY.decode('utf-8')}")
+
+def encrypt_string(input_string):
+    cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
+
+    # Ensure input_string is converted to bytes
+    input_bytes = input_string.encode('utf-8')
+    print(input_bytes)
+
+    # Encrypt the bytes
+    encrypted_bytes = cipher_suite.encrypt(input_bytes)
+    print(encrypted_bytes)
+
+    # Convert encrypted bytes to base64-encoded string
+    encrypted_string = encrypted_bytes.decode('utf-8')
+    print(encrypted_string) 
+
+    return encrypted_string
+
+
+
+def decrypt_string(encrypted_text):
+    try:
+        cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
+
+        # Ensure encrypted_text is converted to bytes
+        encrypted_bytes = encrypted_text.encode('utf-8')
+        
+        # Decrypt the bytes
+        decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+        
+        return decrypted_text
+    except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+        logger.error(f"Decryption error: {str(e)}", extra={'user': 'Anonymous'})
+        raise
 
 
 @api_view(['POST'])
 def create_question_with_choices(request, assessment_id):
     user = request.user
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
-        return Response(
-            {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+        logger.error( "You do not have the necessary rights.", extra={'user': 'Anonymous'} )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_teacher is False:
-        logger.error( "Only teachers can add questions.", extra={ 'user': user.id } )
-        return Response(
-            { "error": "Only teachers can add questions."},  status.HTTP_403_FORBIDDEN )
-    
+        logger.error("Only teachers can add questions.", extra={'user': user.id})
+        return Response(  {"error": "Only teachers can add questions."}, status.HTTP_403_FORBIDDEN )
+
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
-        logger.error( "Assessment Not Found.", extra={ 'user': user.id } )
+        logger.error("Assessment Not Found.", extra={'user': user.id})
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     if 'file' in request.data:
         try:
             with transaction.atomic():
                 file = request.data['file']
-                print(file)
                 df = pd.read_excel(file)
 
                 for index, row in df.iterrows():
@@ -105,79 +134,84 @@ def create_question_with_choices(request, assessment_id):
                     choices = [row['Choice1'], row['Choice2'], row['Choice3']]
                     correct_choice = row['CorrectChoice']
 
-                    # Hash question text
-                    hashed_question_text = hash_string(question_text)
-
+                    # Encrypt question text
+                    encrypted_question_text = encrypt_string(question_text)
+                    print(encrypted_question_text) 
+                     
                     # Save the question first
-                    question_data = {'text': hashed_question_text, 'assessment': assessment.id}
+                    question_data = {'text': encrypted_question_text, 'assessment': assessment.id}
                     question_serializer = QuestionSerializer(data=question_data)
                     if question_serializer.is_valid():
                         question = question_serializer.save(assessment=assessment)
 
-                    # Save choices for the question
-                    for choice_text in choices: 
-                        # Hash choice text
-                        hashed_choice_text = hash_string(choice_text)
-                        
-                        is_correct = choice_text == correct_choice
-                        
-                        choice_data = {'question': question.id, 'text': hashed_choice_text, 'is_correct': is_correct}
-                        choice_serializer = ChoiceSerializer(data=choice_data)
-                        if choice_serializer.is_valid():
-                            choice_serializer.save(question=question)
-            
-            logger.info( 'Questions and choices created successfully', extra={ 'user': user.id } )
+                        # Save choices for the question
+                        for choice_text in choices:
+                             
+                            # Encrypt choice text
+                            encrypted_choice_text = encrypt_string(choice_text) 
+
+
+                            # Check if the choice is correct
+                            is_correct = choice_text == correct_choice
+
+                            choice_data = {'question': question.id, 'text': encrypted_choice_text, 'is_correct': is_correct}
+                            choice_serializer = ChoiceSerializer(data=choice_data)
+                            if choice_serializer.is_valid():
+                                choice_serializer.save(question=question)
+                            else:
+                                # Handle choice serializer validation errors
+                                logger.info(str(choice_serializer.errors), extra={'user': user.id})
+                                raise serializers.ValidationError(choice_serializer.errors)
+                    else:
+                        # Handle question serializer validation errors
+                        logger.info(str(question_serializer.errors), extra={'user': user.id})
+                        raise serializers.ValidationError(question_serializer.errors)
+
+            logger.info('Questions and choices created successfully', extra={'user': user.id})
             return Response({'message': 'Questions and choices created successfully'}, status=status.HTTP_201_CREATED)
 
         except Exception as e:
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            )
-            return Response(
-                {"error": str(e)},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            logger.error( str(e), extra={ 'user': None } )
+            return Response( {"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
     if 'file' not in request.data:
         try:
             with transaction.atomic():
                 question_data = request.data.get('question', {})
-            choices_data = request.data.get('choices', [])
+                choices_data = request.data.get('choices', [])
 
-            # Hash question text
-            hashed_question_text = hash_string(question_data.get('text', ''))
+                # Encrypt question text
+                encrypted_question_text = encrypt_string(question_data.get('text', ''))
 
-            question_serializer = QuestionSerializer(data={'text': hashed_question_text, 'assessment': assessment.id})
-            if question_serializer.is_valid():
-                # Save the question first
-                question = question_serializer.save(assessment=assessment)
+                question_serializer = QuestionSerializer(data={'text': encrypted_question_text, 'assessment': assessment.id})
+                if question_serializer.is_valid():
+                    # Save the question first
+                    question = question_serializer.save(assessment=assessment)
 
-                # Save choices for the question
-                for choice_data in choices_data:
-                    # Hash choice text
-                    hashed_choice_text = hash_string(choice_data.get('text', ''))
+                    # Save choices for the question
+                    for choice_data in choices_data:
+                        # Encrypt choice text
+                        encrypted_choice_text = encrypt_string(choice_data.get('text', ''))
 
-                    # Check if the choice is correct
-                    is_correct = choice_data.get('is_correct', False)
-                    print(is_correct)
+                        # Check if the choice is correct
+                        is_correct = choice_data.get('is_correct', False)
 
-                    # Associate the choice with the saved question
-                    choice_data['question'] = question.id
-                    choice_data['text'] = hashed_choice_text
-                    choice_data['is_correct'] = is_correct
+                        # Associate the choice with the saved question
+                        choice_data['question'] = question.id
+                        choice_data['text'] = encrypted_choice_text
+                        choice_data['is_correct'] = is_correct
 
-                    choice_serializer = ChoiceSerializer(data=choice_data)
-                    if choice_serializer.is_valid():
-                        choice_serializer.save(question=question)
+                        choice_serializer = ChoiceSerializer(data=choice_data)
+                        if choice_serializer.is_valid():
+                            choice_serializer.save(question=question)
 
-                logger.info( "Question and choices created successfully.", extra={ 'user': user.id } )
-                return Response({'message': 'Question and choices created successfully'}, status=status.HTTP_201_CREATED)
+                    logger.info("Question and choices created successfully.", extra={'user': user.id})
+                    return Response({'message': 'Question and choices created successfully'}, status=status.HTTP_201_CREATED)
 
-            logger.info( str(question_serializer.errors), extra={ 'user': user.id } )
-            return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-            
+                logger.info(str(question_serializer.errors), extra={'user': user.id})
+                return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
@@ -276,7 +310,20 @@ def get_assessment_details(request, assessment_id):
     for question in question_data:
         choices = Choice.objects.filter(question=question['id'])
         choice_serializer = SimplifiedChoiceSerializer(choices, many=True)
-        question['choices'] = choice_serializer.data
+        # question['choices'] = choice_serializer.data
+        decrypted_choices = []
+
+        for choice in choice_serializer.data:
+            # Assuming 'text' is the encrypted field, decrypt it
+            decrypted_choice_text = decrypt_string(choice['text'])
+            choice['text'] = decrypted_choice_text
+            decrypted_choices.append(choice)
+
+        question['choices'] = decrypted_choices
+
+        # Decrypt question text
+        decrypted_question_text = decrypt_string(question['text'])
+        question['text'] = decrypted_question_text
 
     # You can customize the structure of the response based on your needs
     response_data = {
