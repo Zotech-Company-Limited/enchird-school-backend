@@ -153,6 +153,17 @@ class StudentViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     
+    def create(self, request, *args, **kwargs):
+        logger.warning(
+            "Method not allowed",
+            extra={
+                'user': "Anonymous"
+            })
+        return Response(
+            {"error": "Method not allowed"},
+            status=status.HTTP_400_BAD_REQUEST)
+
+
     @action(detail=False, methods=['post'])
     def accept(self, request):
         try:
@@ -329,12 +340,8 @@ class StudentViewSet(viewsets.ModelViewSet):
         user = self.request.user
 
         if request.user.is_a_student is False:
-            logger.warning(
-                "You do not have the necessary rights!",
-                extra={
-                    'user': request.user.id
-                }
-            )
+            logger.warning( "You do not have the necessary rights!",
+                extra={ 'user': request.user.id } )
             return Response(
                 {"error": "You do not have the necessary rights"},
                 status.HTTP_403_FORBIDDEN

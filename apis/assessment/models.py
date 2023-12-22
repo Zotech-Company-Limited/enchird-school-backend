@@ -78,3 +78,13 @@ class StudentResponse(models.Model):
         return f"Response by {self.student.username} for Question: {self.question.text}"
 
 
+class StudentAssessmentScore(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    assessment = models.ForeignKey(Assessment, on_delete=models.CASCADE)
+    score = models.IntegerField(default=0)  # Assuming the score is an integer
+
+    def __str__(self):
+        return f"Score for {self.student.username} in {self.assessment.title}"
+
+
+

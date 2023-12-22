@@ -96,6 +96,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     ROLE_CHOICES = (
         ("superadmin", "Superadmin"),
         ("student", "Student"),
+        ("faculty", "Faculty_Member"),
         ("teacher", "Teacher")
     )
     GENDERS = (
@@ -121,12 +122,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     reference = models.CharField(max_length=255, blank=True, null=True, unique=True)
     email = models.EmailField(max_length=100, unique=True, null=False, blank=False)
     username = models.CharField(max_length=50, unique=True, null=True, blank=True, default=None)
-    picture = models.CharField(max_length=255) #ImageField(default=None, null=True, upload_to=user_directory_path)
-    phone = models.CharField(validators=[phone_regex], max_length=17, null=True, default=None)
+    picture = models.CharField(max_length=255, null=True, blank=True) #ImageField(default=None, null=True, upload_to=user_directory_path)
+    phone = models.CharField(validators=[phone_regex], max_length=17, null=True, blank=True, default=None)
     last_name = models.CharField(max_length=255, null=True, blank=True)
     first_name = models.CharField(max_length=255, null=True, blank=True)
     is_a_student = models.BooleanField(default=False)
     is_a_teacher = models.BooleanField(default=False)
+    is_faculty_member = models.BooleanField(default=False)
     date_of_birth = models.DateField(null=True, blank=True)
     gender = models.CharField(
         choices=GENDERS,

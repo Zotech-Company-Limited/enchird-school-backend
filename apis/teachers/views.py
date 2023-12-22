@@ -145,18 +145,8 @@ class TeacherViewSet(viewsets.ModelViewSet):
         user = request.user
 
         if user.is_admin is False:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {
-                    "error": "You do not have the necessary rights."
-                },
-                status.HTTP_403_FORBIDDEN
-            )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': user.id })
+            return Response({ "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
         
         try:
             with transaction.atomic():
@@ -172,14 +162,8 @@ class TeacherViewSet(viewsets.ModelViewSet):
                                 email=user_serializer.validated_data['email']
                             ).count()
                         if num > 0:
-                            logger.warning(
-                                "A student/teacher with this email address already exists.",
-                                extra={
-                                    'user': 'anonymous'
-                                }
-                            )
-                            return Response({"error": "A student/teacher with this email address already exists."},
-                                            status=status.HTTP_409_CONFLICT)
+                            logger.warning( "A student/teacher with this email address already exists.", extra={ 'user': 'anonymous' })
+                            return Response({"error": "A student/teacher with this email address already exists."}, status=status.HTTP_409_CONFLICT)
 
                         # Create user
                         user = user_serializer.save(is_a_teacher=True, role='teacher')
@@ -204,24 +188,13 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         # Add the teacher to the Teacher Group
                         user.groups.add(teacher_group)
                         
-                         # Send activation email.
+                        # Send activation email.
                         try:
                             send_teacher_verification_email(user, password)
                         except Exception as e:
-                            print(e)
-                            logger.error(
-                                e,
-                                extra={
-                                    'user': user.id
-                                }
-                            )
+                            logger.error( e, extra={ 'user': user.id })
                             
-                        logger.info(
-                            "Teacher created successfully!",
-                            extra={
-                                'user': user.id
-                            }
-                        )
+                        logger.info( "Teacher created successfully!", extra={ 'user': user.id } )
                         return Response(
                             teacher_serializer.data,
                             status.HTTP_201_CREATED,

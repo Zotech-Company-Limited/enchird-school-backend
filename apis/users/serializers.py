@@ -18,8 +18,8 @@ class UserSerializer(serializers.ModelSerializer):
 
         model = User
         fields = ['id', 'reference', 'phone', 'email', 'username', 'first_name', 
-                   'last_name', 'gender', 'date_of_birth', 'is_active', 'is_admin',
-                  'is_a_student', 'is_a_teacher', 'groups', 'picture']
+                   'last_name', 'gender', 'date_of_birth', 'is_active', 'is_admin', 'role',
+                   'is_a_student', 'is_a_teacher', 'groups', 'picture', 'is_faculty_member']
         read_only_fields = ['is_active', 'reference', 'is_a_student', 'is_a_teacher', 'is_admin', 'is_superuser']
     
     def get_groups(self, obj):

@@ -22,7 +22,7 @@ class Faculty(models.Model):
     )
     
     def __str__(self):
-        return self.faculty_id
+        return self.name
 
     class Meta:
         db_table = "faculty"
@@ -65,4 +65,47 @@ def update_department_id(instance, **kwargs):
     if not instance.department_id:
         instance.department_id = 'DEP_' + str(instance.id).zfill(8)
         instance.save()
+
+
+class Faculty_Member(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    faculty_member_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
+    name = models.CharField(max_length=100, blank=False, null=False, unique=True)
+    highest_degree = models.CharField(max_length=100, blank=True, null=True)
+    post_at_faculty = models.CharField(max_length=100, blank=True, null=True)
+    faculty = models.ForeignKey(
+        Faculty,
+        on_delete=models.CASCADE,
+        related_name='faculty_member'
+    )
+    department = models.ForeignKey(
+        Department,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True
+    )
+    is_deleted = models.BooleanField(default=False)
+    created_at = models.DateTimeField(
+        db_column="creation_date",
+        auto_now_add=True
+    )
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True,
+        related_name='faculty_member_creator'
+    )
+
+    def __str__(self):
+        return self.department_id
+
+    class Meta:
+        db_table = "faculty_members"
+
+@receiver(post_save, sender=Faculty_Member, dispatch_uid="update_faculty_member_id")
+def update_faculty_member_id(instance, **kwargs):
+    if not instance.faculty_member_id:
+        instance.faculty_member_id = 'FM' + str(instance.id).zfill(8)
+        instance.save()
+
 

@@ -4,6 +4,7 @@ import logging
 import binascii
 import cryptography
 import pandas as pd
+from .models import *
 from .serializers import *
 from django.conf import settings
 from django.db import transaction
@@ -12,11 +13,9 @@ from apis.courses.models import Course
 from cryptography.fernet import Fernet
 from apis.students.models import Student
 from rest_framework import status, viewsets
-from cryptography.fernet import InvalidToken
 from rest_framework.response import Response
-from apis.assessment.models import Assessment
+from cryptography.fernet import InvalidToken
 from rest_framework.decorators import api_view
-from .models import Question, Choice, StudentResponse
 from rest_framework.decorators import permission_classes
 from apis.assessment.serializers import AssessmentSerializer
 
@@ -66,10 +65,10 @@ def create_assessment(request):
 # ENCRYPTION_KEY = b'enchird_tyron'
 
 # Generate a secure random key
-ENCRYPTION_KEY = Fernet.generate_key()
+# ENCRYPTION_KEY = Fernet.generate_key()
 
 # Print or store the generated key securely 
-print(f"Generated Key: {ENCRYPTION_KEY.decode('utf-8')}")
+# print(f"Generated Key: {ENCRYPTION_KEY.decode('utf-8')}")
 
 def encrypt_string(input_string):
     cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
@@ -87,7 +86,6 @@ def encrypt_string(input_string):
     print(encrypted_string) 
 
     return encrypted_string
-
 
 
 def decrypt_string(encrypted_text):
@@ -131,7 +129,7 @@ def create_question_with_choices(request, assessment_id):
 
                 for index, row in df.iterrows():
                     question_text = row['Question']
-                    choices = [row['Choice1'], row['Choice2'], row['Choice3']]
+                    choices = [row['Choice1'], row['Choice2'], row['Choice3'], row['Choice4']]
                     correct_choice = row['CorrectChoice']
 
                     # Encrypt question text
@@ -391,6 +389,12 @@ def submit_assessment_responses(request, assessment_id):
                 try:
                     question = Question.objects.get(pk=question_id)
                     selected_choice = Choice.objects.get(pk=selected_choice_id)
+
+                    # Check if the selected choice is a valid choice for the given question
+                    if selected_choice.question != question:
+                        logger.error("Selected choice is not valid for the given question.", extra={'user': user.id})
+                        return Response({'error': 'Selected choice is not valid for the given question'}, status=status.HTTP_400_BAD_REQUEST)
+
                 except Question.DoesNotExist:
                     logger.error( "Invalid Question ID.", extra={ 'user': user.id })
                     return Response({'error': 'Invalid question ID'}, status=status.HTTP_400_BAD_REQUEST)
@@ -403,7 +407,7 @@ def submit_assessment_responses(request, assessment_id):
 
                 # Update the total score
                 if is_correct:
-                    total_score += 1  # You might assign different weights for each question
+                    total_score += 1  
 
                 # Create or update the student response
                 response, created = StudentResponse.objects.get_or_create(
@@ -418,7 +422,17 @@ def submit_assessment_responses(request, assessment_id):
                     response.selected_choice = selected_choice
                     response.save()
 
-            return Response({'message': 'Responses submitted successfully'}, status=status.HTTP_200_OK)
+            # Calculate the percentage score
+            total_questions = Question.objects.filter(assessment=assessment).count()
+            percentage_score = (total_score / total_questions) * 100
+
+            student_score, created = StudentAssessmentScore.objects.get_or_create(
+                student=user,
+                assessment=assessment,
+                defaults={'score': percentage_score}
+            )
+
+            return Response({'message': 'Responses submitted successfully', 'total_score': f'{percentage_score}%'}, status=status.HTTP_200_OK)
 
     except Exception as e:
         # Rollback transaction and raise validation error

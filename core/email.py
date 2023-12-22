@@ -170,6 +170,38 @@ def send_teacher_verification_email(user, temp_password):
         return False
 
 
+def send_faculty_verification_email(user, temp_password):
+    try:
+        context = ssl.create_default_context()
+
+        # Create a connection to the SMTP server using SSL
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            # Log in to your SMTP server using your credentials
+            server.login(sender_email, password)
+
+            # Create the email message
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = user.email
+            msg['Subject'] = "Enchird Faculty Member Account Creation"
+
+            # Include the verification link in the email body
+            email_body = f"Hello {user.last_name}, \n\nYour Faculty member account has been created. \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
+
+            msg.attach(MIMEText(email_body, 'plain'))
+
+            server.sendmail(sender_email, user.email, msg.as_string())
+
+            # Close the connection
+            server.quit()
+
+        return True
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return False
+
+
+
 def send_reset_password_email(user, reset_token, uid):
     try:
         context = ssl.create_default_context()

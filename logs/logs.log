@@ -812,3 +812,45 @@ ERROR : 2023-12-18 15:19 : Anonymous : 538 : {views} : [decrypt_string] : Decryp
 ERROR : 2023-12-18 15:20 : Anonymous : 397 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:122]
 ERROR : 2023-12-18 15:26 : Anonymous : 548 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:122]
 ERROR : 2023-12-18 15:26 : Anonymous : 346 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:122]
+INFO : 2023-12-18 16:06:55,729 : 36 : 729 : User Logged in sucessfully. : login : None
+INFO : 2023-12-18 16:11:33,238 : 42 : 238 : User Logged in sucessfully. : login : None
+INFO : 2023-12-18 16:13:22,626 : 42 : 626 : Questions and choices created successfully : views : None
+INFO : 2023-12-18 16:19:10,532 : 42 : 532 : Questions and choices created successfully : views : None
+INFO : 2023-12-18 16:25:19,469 : 42 : 469 : Question and choices created successfully. : views : None
+ERROR : 2023-12-18 16:36 : 36 : 337 : {views} : [submit_assessment_responses] : Invalid Choice ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:396]
+ERROR : 2023-12-18 16:37 : 36 : 483 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:377]
+ERROR : 2023-12-18 16:52 : 36 : 98 : {views} : [submit_assessment_responses] : Selected choice is not valid for the given question. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:397]
+ERROR : 2023-12-18 16:53 : 36 : 103 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:377]
+WARNING : 2023-12-20 11:57:47,070 : Anonymous : 70 : Method not allowed : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:157]
+ERROR : 2023-12-20 14:11 : Anonymous : 943 : {views} : [create] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:705]
+INFO : 2023-12-20 14:12:22,577 : 3 : 577 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-20 14:13 : None : 360 : {views} : [create] : {'gender': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:778]
+ERROR : 2023-12-20 14:13 : None : 317 : {views} : [create] : (1048, "Column 'faculty_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:778]
+ERROR : 2023-12-20 14:14 : None : 469 : {views} : [create] : (1048, "Column 'faculty_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:781]
+ERROR : 2023-12-20 14:19 : None : 467 : {views} : [create] : (1048, "Column 'faculty_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:781]
+ERROR : 2023-12-20 14:19 : None : 707 : {views} : [create] : (1048, "Column 'faculty_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:781]
+ERROR : 2023-12-20 14:22 : 62 : 492 : {views} : [create] : name 'send_faculty_verification_email' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:772]
+INFO : 2023-12-20 14:22:59,494 : 62 : 494 : Faculty Member created successfully! : views : None
+ERROR : 2023-12-20 14:22 : None : 498 : {views} : [create] : name 'fac_member_serializer' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:781]
+ERROR : 2023-12-20 14:23 : 63 : 966 : {views} : [create] : name 'send_faculty_verification_email' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:772]
+INFO : 2023-12-20 14:23:43,968 : 63 : 968 : Faculty Member created successfully! : views : None
+WARNING : 2023-12-20 14:27:25,772 : anonymous : 772 : An account with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:740]
+ERROR : 2023-12-20 14:37 : None : 774 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:85]
+INFO : 2023-12-20 14:40:54,004 : 3 : 4 : List of faculty members returned successfully. : views : None
+INFO : 2023-12-20 14:53:29,419 : 3 : 419 : Department Not Found : views : None
+INFO : 2023-12-20 14:54:47,514 : 3 : 514 : Faculty Member Not Found : views : None
+INFO : 2023-12-20 14:55:25,064 : 3 : 64 : Faculty Member Not Found : views : None
+INFO : 2023-12-20 14:55:27,441 : 3 : 441 : Faculty Member Not Found : views : None
+INFO : 2023-12-20 14:55:31,421 : 3 : 421 : Faculty member details returned successfully! : views : None
+INFO : 2023-12-20 23:20:56,156 : 3 : 156 : User Logged in sucessfully. : login : None
+WARNING : 2023-12-20 23:21:09,684 : anonymous : 684 : An account with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:726]
+WARNING : 2023-12-20 23:21:48,345 : anonymous : 345 : An account with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:726]
+WARNING : 2023-12-20 23:23:25,967 : anonymous : 967 : An account with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:726]
+ERROR : 2023-12-20 23:27 : 64 : 117 : {views} : [create] : name 'send_faculty_verification_email' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:758]
+INFO : 2023-12-20 23:27:00,119 : 64 : 119 : Faculty Member created successfully! : views : None
+INFO : 2023-12-20 23:32:15,859 : 65 : 859 : Faculty Member created successfully! : views : None
+ERROR : 2023-12-20 23:34 : None : 992 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2023-12-20 23:36 : None : 217 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2023-12-20 23:36:58,966 : 65 : 966 : User Logged in sucessfully. : login : None
+WARNING : 2023-12-20 23:41:38,296 : 65 : 296 : You do not have the necessary rights! (Not admin) : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:779]
+INFO : 2023-12-20 23:46:48,464 : 65 : 464 : Faculty Member Info modified successfully! : views : None
