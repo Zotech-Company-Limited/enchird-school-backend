@@ -854,3 +854,28 @@ ERROR : 2023-12-20 23:36 : None : 217 : {login} : [post] : Unable to log in with
 INFO : 2023-12-20 23:36:58,966 : 65 : 966 : User Logged in sucessfully. : login : None
 WARNING : 2023-12-20 23:41:38,296 : 65 : 296 : You do not have the necessary rights! (Not admin) : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:779]
 INFO : 2023-12-20 23:46:48,464 : 65 : 464 : Faculty Member Info modified successfully! : views : None
+ERROR : 2023-12-25 10:36 : None : 115 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2023-12-25 10:36:21,305 : 36 : 305 : User Logged in sucessfully. : login : None
+INFO : 2023-12-25 10:46:34,549 : 36 : 549 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:51:55,640 : 42 : 640 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-25 10:52 : Anonymous : 269 : {views} : [get_assessment_results] : You do not have access to this endpoint. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:452]
+INFO : 2023-12-25 10:53:26,087 : 42 : 87 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:55:07,535 : 42 : 535 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:55:33,030 : 42 : 30 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:57:59,301 : 42 : 301 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:58:13,773 : 42 : 773 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:58:30,789 : 42 : 789 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:58:43,528 : 42 : 528 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:58:58,064 : 42 : 64 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:59:10,773 : 42 : 773 : Score returned successfully. : views : None
+INFO : 2023-12-25 10:59:38,154 : 42 : 154 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:00:36,479 : 42 : 479 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:01:53,423 : 42 : 423 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:02:39,402 : 42 : 402 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:03:56,061 : 42 : 61 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:09:13,944 : 42 : 944 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:10:04,371 : 42 : 371 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:13:20,342 : 42 : 342 : Score returned successfully. : views : None
+INFO : 2023-12-25 11:15:22,886 : 42 : 886 : Score returned successfully. : views : None
+INFO : 2023-12-26 09:50:33,300 : 42 : 300 : User Logged in sucessfully. : login : None
+INFO : 2023-12-26 09:54:12,991 : 42 : 991 : Score returned successfully. : views : None

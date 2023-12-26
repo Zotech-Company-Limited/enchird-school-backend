@@ -1,5 +1,6 @@
+from .models import *
 from rest_framework import serializers
-from .models import Assessment, Question, Choice, StudentResponse
+from apis.users.serializers import UserSerializer
 
 
 
@@ -45,13 +46,18 @@ class StudentResponseSerializer(serializers.ModelSerializer):
         # fields = ['id', 'assess']
 
 
-# class CourseAssessmentSerializer(serializers.ModelSerializer):
-#     assessments = AssessmentSerializer(many=True, read_only=True)
+class StudentAssessmentScoreSerializer(serializers.ModelSerializer):
+    # student = UserSerializer(fields=['first_name', 'last_name'])#.data['last_name']
+    student_first_name = serializers.ReadOnlyField(source='student.first_name')
+    student_last_name = serializers.ReadOnlyField(source='student.last_name')
+    score = serializers.SerializerMethodField()
 
-#     class Meta:
-#         model = Course
-#         fields = '__all__'
+    def get_score(self, obj):
+        return f"{obj.score}%"
 
+    class Meta:
+        model = StudentAssessmentScore 
+        fields = ['id', 'score', 'student_first_name', 'student_last_name', 'assessment' ]
 
 
 

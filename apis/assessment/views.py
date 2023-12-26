@@ -339,16 +339,8 @@ def submit_assessment_responses(request, assessment_id):
     user = request.user
 
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
-        return Response(
-            {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_student is False:
         logger.error(
@@ -446,6 +438,53 @@ def submit_assessment_responses(request, assessment_id):
         return Response(
             {"error": str(e)},
             status=status.HTTP_412_PRECONDITION_FAILED)
+
+
+@api_view(['GET']) 
+def get_assessment_results(request, assessment_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if user.is_a_student is False and user.is_a_teacher is False:
+        logger.error( "You do not have access to this endpoint.", extra={ 'user': 'Anonymous' } )
+        return Response(  { "error": "You do not have access to this endpoint."}, status.HTTP_403_FORBIDDEN )
+
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error( "Assessment not found.", extra={ 'user': user.id } )
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if user.is_a_student is True:
+        try:
+            # student = Student.objects.get(user=user)
+            assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id, student=request.user)
+            serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
+            
+            logger.info( "Score returned successfully.", extra={ 'user': user.id } )
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except StudentAssessmentScore.DoesNotExist:
+            logger.error( "Accessment results not found.", extra={ 'user': user.id } )
+            return Response({'error': 'Assessment results not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if user.is_a_teacher is True:
+        try:
+            assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id)
+            course = assessment.course
+            if user not in course.instructors.all():
+                return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
+
+            serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
+            
+            logger.info( "Score returned successfully.", extra={ 'user': user.id } )
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        
+        except StudentAssessmentScore.DoesNotExist:
+            logger.error( "Assessment results not found.", extra={ 'user': user.id } )
+            return Response({'error': 'Assessment results not found'}, status=status.HTTP_404_NOT_FOUND)
 
 
 
