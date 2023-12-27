@@ -154,14 +154,9 @@ class StudentViewSet(viewsets.ModelViewSet):
 
     
     def create(self, request, *args, **kwargs):
-        logger.warning(
-            "Method not allowed",
-            extra={
-                'user': "Anonymous"
-            })
-        return Response(
-            {"error": "Method not allowed"},
-            status=status.HTTP_400_BAD_REQUEST)
+        
+        logger.warning( "Method not allowed", extra={ 'user': "Anonymous" })
+        return Response( {"error": "Method not allowed"}, status=status.HTTP_400_BAD_REQUEST)
 
 
     @action(detail=False, methods=['post'])
@@ -671,12 +666,7 @@ def view_course_materials(request, course_id):
     try:
         course = Course.objects.get(id=course_id)
     except Course.DoesNotExist:
-        logger.error(
-            "Course Not Found.",
-            extra={
-                'user': request.user.id
-            }
-        )
+        logger.error( "Course Not Found.", extra={ 'user': request.user.id } )
         return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Check if the authenticated user is a student and is registered for the course

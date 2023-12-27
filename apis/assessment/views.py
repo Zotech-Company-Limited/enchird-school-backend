@@ -62,13 +62,6 @@ def create_assessment(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# ENCRYPTION_KEY = b'enchird_tyron'
-
-# Generate a secure random key
-# ENCRYPTION_KEY = Fernet.generate_key()
-
-# Print or store the generated key securely 
-# print(f"Generated Key: {ENCRYPTION_KEY.decode('utf-8')}")
 
 def encrypt_string(input_string):
     cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
@@ -460,7 +453,6 @@ def get_assessment_results(request, assessment_id):
 
     if user.is_a_student is True:
         try:
-            # student = Student.objects.get(user=user)
             assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id, student=request.user)
             serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
             
@@ -485,6 +477,202 @@ def get_assessment_results(request, assessment_id):
         except StudentAssessmentScore.DoesNotExist:
             logger.error( "Assessment results not found.", extra={ 'user': user.id } )
             return Response({'error': 'Assessment results not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
+class GradeSystemViewSet(viewsets.ModelViewSet):
+
+    queryset = GradeSystem.objects.all()
+    serializer_class = GradeSystemSerializer
+
+
+    def list(self, request, *args, **kwargs):
+        
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        queryset = self.filter_queryset(self.get_queryset())
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        serializer = self.get_serializer(queryset, many=True)
+        logger.info( "Grade System returned successfully.", extra={ 'user': user.id } )
+
+        return Response(serializer.data)
+
+
+    def retrieve(self, request, *args, **kwargs):
+        
+        user = self.request.user
+        
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if user.is_admin is False:
+            logger.error( "You do not have the necessary rights/Not an Admin.", extra={ 'user': user.id } )
+            return Response({ "error": "You do not have the necessary rights/Not an Admin."}, status.HTTP_403_FORBIDDEN )
+        
+        instance = GradeSystem.objects.get(id=kwargs['pk'])
+        serializer = self.get_serializer(instance)
+        logger.info( "Grade details returned successfully!", extra={ 'user': request.user.id } )
+
+        return Response(serializer.data)
+
+
+    def create(self, request, *args, **kwargs):
+        user = request.user
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if user.is_admin is False:
+            logger.error( "You do not have the necessary rights/Not an Admin.", extra={ 'user': user.id } )
+            return Response({ "error": "You do not have the necessary rights/Not an Admin."}, status.HTTP_403_FORBIDDEN )
+        
+        try:
+            with transaction.atomic():
+                print("1")
+                serializer = self.get_serializer(data=request.data)
+                serializer.is_valid(raise_exception=True)
+                self.perform_create(serializer)
+                headers = self.get_success_headers(serializer.data)
+                
+                logger.info( "Grading system recorded successfully!", extra={ 'user': user.id  } )
+                return Response( serializer.data, status.HTTP_201_CREATED, headers=headers)
+    
+        except Exception as e:
+            # Rollback transaction and raise validation error
+            transaction.rollback()
+            logger.error( str(e), extra={ 'user': None } )
+            return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
+
+
+    def update(self, request, *args, **kwargs):
+
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if user.is_admin is False:
+            logger.error( "You do not have the necessary rights/Not an Admin.", extra={ 'user': user.id } )
+            return Response({ "error": "You do not have the necessary rights/Not an Admin."}, status.HTTP_403_FORBIDDEN )
+
+        try:
+            partial = kwargs.pop('partial', False)
+            instance = self.get_object()
+            print(instance)
+            serializer = self.get_serializer( instance, data=request.data, partial=partial)
+            serializer.is_valid(raise_exception=True)
+            
+            self.perform_update(serializer)
+
+            if getattr(instance, '_prefetched_objects_cache', None):
+                instance._prefetched_objects_cache = {}
+
+            logger.info( "Grade details Modified successfully!", extra={ 'user': user.id } )
+            return Response(serializer.data)
+
+        except Exception as e:
+            logger.error( str(e), extra={ 'user': user.id } )
+            return Response( {'message': str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
+            
+        
+    def perform_update(self, serializer):
+        
+        return serializer.save()
+
+
+    def destroy(self, request, *args, **kwargs):
+        
+        logger.warning( "Method not allowed", extra={ 'user': "Anonymous" })
+        return Response( {"error": "Method not allowed"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET']) 
+def calculate_student_grade(request, course_id):
+    try:
+        user = request.user
+        
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        # Retrieve the course
+        try:
+            course = Course.objects.get(id=course_id)
+        except Course.DoesNotExist:
+            logger.error( "Course Not Found.", extra={ 'user': request.user.id } )
+            return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # Check if the authenticated user is a student and is registered for the course
+        try:
+            student = Student.objects.get(user=request.user, is_deleted=False)
+            if course not in student.registered_courses.all():
+                logger.error( "You are not registered for this course.", extra={ 'user': request.user.id } )
+                return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
+        
+        except Student.DoesNotExist:
+            logger.error( "You are not registered as a student.", extra={ 'user': request.user.id } )
+            return Response({'error': 'You are not registered as a student'}, status=status.HTTP_403_FORBIDDEN)
+
+        # Get all assessments for the given course
+        assessments = Assessment.objects.filter(course=course)
+        print(assessments)
+
+        # Retrieve all student's assessments score for the given course
+        assessment_scores = StudentAssessmentScore.objects.filter(student_id=user.id, assessment__course_id=course_id)
+        print(assessment_scores)
+
+        # Check if there are assessments
+        if not assessments.exists():
+            logger.error( "No assessments found for the student in this course.", extra={ 'user': request.user.id } )
+            return Response({"error": "No assessments found for the student in this course."}, status=status.HTTP_404_NOT_FOUND)
+
+        # Get the student's scores for those assessments
+        student_scores = StudentAssessmentScore.objects.filter(
+            student=user,
+            assessment__in=assessments
+        )
+        print(student_scores)
+
+        # Calculate the average score
+        # average_score = student_scores.aggregate(Avg('score'))['score__avg']
+        total_score = sum(assessment.score for assessment in assessment_scores
+        )
+        average_score = total_score / len(assessments)
+
+        # Retrieve the corresponding grade based on the average score
+        grade = get_grade_for_score(average_score)
+
+        response_data = {
+            "student": user.first_name + " " + user.last_name,
+            "course_id": course.course_title,
+            "average_score": average_score,
+            "grade": grade,
+        }
+
+        logger.info( "Student Course Grade info returned successfully .", extra={ 'user': request.user.id } )
+        return Response(response_data, status=status.HTTP_200_OK)
+
+    except Course.DoesNotExist:
+        logger.error( "Course not found.", extra={ 'user': request.user.id } )
+        return Response({'error': 'Course not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+def get_grade_for_score(score):
+    # Get the grade based on the given score
+    try:
+        grade_system = GradeSystem.objects.get(min_score__lte=score, max_score__gte=score)
+        return grade_system.grade
+    except GradeSystem.DoesNotExist:
+        return 'Unknown'
+
 
 
 

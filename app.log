@@ -9641,3 +9641,355 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessme
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:myLogger:Score returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:myLogger:Grade System returned successfully.
+ERROR:django.request:Internal Server Error: /api/grade-system/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'enchird_database.assessment_gradesystem' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 505, in list
+    return Response(serializer.data)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'enchird_database.assessment_gradesystem' doesn't exist")
+INFO:myLogger:Grade System returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Grade System returned successfully.
+INFO:myLogger:Grading system recorded successfully!
+ERROR:myLogger:name 'faculty_serializer' is not defined
+WARNING:django.request:Precondition Failed: /api/grade-system/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:myLogger:Grading system recorded successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+ERROR:myLogger:{'grade': [ErrorDetail(string='grade system with this grade already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/grade-system/
+INFO:myLogger:Grade System returned successfully.
+WARNING:django.request:Method Not Allowed: /api/grade-system/
+INFO:myLogger:Grade details Modified successfully!
+INFO:myLogger:Grade details Modified successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Not Found: /api/courses/1/student/grades
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Not Found: /api/courses/1/student/grades
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Not Found: /api/courses/student/grades
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/courses/1/student/grades
+INFO:myLogger:User Logged in sucessfully.
+ERROR:django.request:Internal Server Error: /api/courses/1/student/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 636, in calculate_student_grade
+    average_score = student_scores.aggregate(Avg('score'))['score__avg']
+NameError: name 'Avg' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/courses/1/student/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 643, in calculate_student_grade
+    total_score = sum(assessment.score for assessment in assessments)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 643, in <genexpr>
+    total_score = sum(assessment.score for assessment in assessments)
+AttributeError: 'Assessment' object has no attribute 'score'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/courses/1/student/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 647, in calculate_student_grade
+    total_score = sum(student_score for assessment in assessment_scores
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 647, in <genexpr>
+    total_score = sum(student_score for assessment in assessment_scores
+NameError: name 'student_score' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/courses/1/student/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 652, in calculate_student_grade
+    grade = self.get_grade_for_score(average_score)
+NameError: name 'self' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Studet Course Grade info returned successfully .
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Studet Course Grade info returned successfully .
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.

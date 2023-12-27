@@ -87,4 +87,11 @@ class StudentAssessmentScore(models.Model):
         return f"Score for {self.student.username} in {self.assessment.title}"
 
 
+class GradeSystem(models.Model):
+    grade = models.CharField(unique=True, max_length=10)
+    min_score = models.IntegerField()
+    max_score = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.grade}: {self.min_score}-{self.max_score}"
 

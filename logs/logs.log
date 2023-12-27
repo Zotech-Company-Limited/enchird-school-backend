@@ -879,3 +879,27 @@ INFO : 2023-12-25 11:13:20,342 : 42 : 342 : Score returned successfully. : views
 INFO : 2023-12-25 11:15:22,886 : 42 : 886 : Score returned successfully. : views : None
 INFO : 2023-12-26 09:50:33,300 : 42 : 300 : User Logged in sucessfully. : login : None
 INFO : 2023-12-26 09:54:12,991 : 42 : 991 : Score returned successfully. : views : None
+INFO : 2023-12-27 15:08:38,911 : 3 : 911 : User Logged in sucessfully. : login : None
+INFO : 2023-12-27 15:14:41,311 : 3 : 311 : Grade System returned successfully. : views : None
+INFO : 2023-12-27 15:16:14,636 : 3 : 636 : Grade System returned successfully. : views : None
+INFO : 2023-12-27 15:19:52,117 : 3 : 117 : Grade System returned successfully. : views : None
+INFO : 2023-12-27 15:20:05,428 : 3 : 428 : Grading system recorded successfully! : views : None
+ERROR : 2023-12-27 15:20 : None : 430 : {views} : [create] : name 'faculty_serializer' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:551]
+INFO : 2023-12-27 15:20:25,928 : 3 : 928 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:20:43,879 : 3 : 879 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:23:46,687 : 3 : 687 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:04,949 : 3 : 949 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:13,591 : 3 : 591 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:22,431 : 3 : 431 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:42,009 : 3 : 9 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:51,125 : 3 : 125 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:25:57,247 : 3 : 247 : Grading system recorded successfully! : views : None
+INFO : 2023-12-27 15:26:14,729 : 3 : 729 : Grading system recorded successfully! : views : None
+ERROR : 2023-12-27 15:32 : None : 137 : {views} : [create] : {'grade': [ErrorDetail(string='grade system with this grade already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:551]
+INFO : 2023-12-27 15:32:42,361 : 3 : 361 : Grade System returned successfully. : views : None
+INFO : 2023-12-27 15:34:21,734 : 3 : 734 : Grade details Modified successfully! : views : None
+INFO : 2023-12-27 15:34:36,018 : 3 : 18 : Grade details Modified successfully! : views : None
+ERROR : 2023-12-27 16:20 : None : 100 : {views} : [calculate_student_grade] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:604]
+INFO : 2023-12-27 16:21:09,809 : 36 : 809 : User Logged in sucessfully. : login : None
+INFO : 2023-12-27 17:07:58,895 : 36 : 895 : Studet Course Grade info returned successfully . : views : None
+INFO : 2023-12-27 17:12:10,606 : 36 : 606 : Studet Course Grade info returned successfully . : views : None

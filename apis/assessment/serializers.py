@@ -9,6 +9,7 @@ class ChoiceSerializer(serializers.ModelSerializer):
         model = Choice
         fields = ['id', 'text', 'is_correct']
 
+
 class SimplifiedChoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Choice
@@ -59,6 +60,11 @@ class StudentAssessmentScoreSerializer(serializers.ModelSerializer):
         model = StudentAssessmentScore 
         fields = ['id', 'score', 'student_first_name', 'student_last_name', 'assessment' ]
 
+
+class GradeSystemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GradeSystem
+        fields = ['id', 'grade', 'max_score', 'min_score']
 
 
 

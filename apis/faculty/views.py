@@ -33,7 +33,7 @@ class FacultyViewSet(viewsets.ModelViewSet):
 
 
     def list(self, request, *args, **kwargs):
-        """Docstring for function."""
+        
         user = self.request.user
 
         if not user.is_authenticated:
@@ -47,20 +47,6 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 {'error': "You must provide valid authentication credentials."},
                 status=status.HTTP_401_UNAUTHORIZED
             )
-
-        # if user.is_admin is False:
-        #     logger.error(
-        #         "You do not have the necessary rights.",
-        #         extra={
-        #             'user': 'Anonymous'
-        #         }
-        #     )
-        #     return Response(
-        #         {
-        #             "error": "You do not have the necessary rights."
-        #         },
-        #         status.HTTP_403_FORBIDDEN
-        #     )
         
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
