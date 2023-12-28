@@ -36,18 +36,7 @@ class FacultyViewSet(viewsets.ModelViewSet):
         
         user = self.request.user
 
-        if not user.is_authenticated:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
-            return Response(
-                {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
-        
+
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
@@ -351,26 +340,6 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         user = self.request.user
 
-        if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={'user': 'Anonymous'}
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
-
-        if not user.is_admin:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={'user': 'Anonymous'}
-            )
-            return Response(
-                {"error": "You do not have the necessary rights."},
-                status=status.HTTP_403_FORBIDDEN
-            )
-
         queryset = self.filter_queryset(self.get_queryset())
         serializer = self.get_serializer(queryset, many=True)
         logger.info(
@@ -382,26 +351,6 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
     def retrieve(self, request, *args, **kwargs):
         user = self.request.user
-
-        if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={'user': request.user.id}
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
-
-        if not user.is_admin:
-            logger.error(
-                "You do not have the necessary rights/Not Admin.",
-                extra={'user': request.user.id}
-            )
-            return Response(
-                {"error": "You do not have the necessary rights/Not Admin."},
-                status=status.HTTP_403_FORBIDDEN
-            )
 
         try:
             instance = Department.objects.get(id=kwargs['pk'], is_deleted=False)

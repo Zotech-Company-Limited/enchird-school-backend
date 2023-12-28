@@ -9993,3 +9993,26 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessme
 INFO:myLogger:Studet Course Grade info returned successfully .
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/admin/faculty/
+ERROR:myLogger:You do not have the necessary rights/Not an Admin.
+WARNING:django.request:Forbidden: /api/admin/faculty/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:myLogger:A faculty with this name already exists.
+WARNING:django.request:Conflict: /api/admin/faculty/
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/admin/faculty/
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/admin/faculty/1/
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/admin/faculty/1/
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/admin/faculty/1/
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/admin/faculty/
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/admin/faculty/
+WARNING:django.request:Forbidden: /api/department/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.

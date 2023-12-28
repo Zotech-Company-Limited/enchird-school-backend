@@ -903,3 +903,13 @@ ERROR : 2023-12-27 16:20 : None : 100 : {views} : [calculate_student_grade] : Yo
 INFO : 2023-12-27 16:21:09,809 : 36 : 809 : User Logged in sucessfully. : login : None
 INFO : 2023-12-27 17:07:58,895 : 36 : 895 : Studet Course Grade info returned successfully . : views : None
 INFO : 2023-12-27 17:12:10,606 : 36 : 606 : Studet Course Grade info returned successfully . : views : None
+INFO : 2023-12-28 12:57:34,974 : 42 : 974 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-28 12:58 : 42 : 523 : {views} : [create] : You do not have the necessary rights/Not an Admin. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:123]
+INFO : 2023-12-28 12:58:28,964 : 3 : 964 : User Logged in sucessfully. : login : None
+WARNING : 2023-12-28 12:58:39,079 : anonymous : 79 : A faculty with this name already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:146]
+ERROR : 2023-12-28 12:59 : Anonymous : 671 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:40]
+ERROR : 2023-12-28 13:00 : None : 49 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:72]
+ERROR : 2023-12-28 13:04 : None : 87 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:72]
+ERROR : 2023-12-28 13:04 : None : 64 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:72]
+ERROR : 2023-12-28 13:04 : Anonymous : 487 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:40]
+ERROR : 2023-12-28 13:04 : Anonymous : 236 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:40]
