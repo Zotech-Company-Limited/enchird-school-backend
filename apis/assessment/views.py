@@ -462,6 +462,7 @@ def get_assessment_results(request, assessment_id):
             logger.error( "Accessment results not found.", extra={ 'user': user.id } )
             return Response({'error': 'Assessment results not found'}, status=status.HTTP_404_NOT_FOUND)
 
+    # Check if teacher is assigned to course
     if user.is_a_teacher is True:
         try:
             assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id)
@@ -635,17 +636,16 @@ def calculate_student_grade(request, course_id):
             logger.error( "No assessments found for the student in this course.", extra={ 'user': request.user.id } )
             return Response({"error": "No assessments found for the student in this course."}, status=status.HTTP_404_NOT_FOUND)
 
-        # Get the student's scores for those assessments
-        student_scores = StudentAssessmentScore.objects.filter(
-            student=user,
-            assessment__in=assessments
-        )
-        print(student_scores)
+        # # Get the student's scores for those assessments
+        # student_scores = StudentAssessmentScore.objects.filter(
+        #     student=user,
+        #     assessment__in=assessments
+        # )
+        # print(student_scores)
 
         # Calculate the average score
         # average_score = student_scores.aggregate(Avg('score'))['score__avg']
-        total_score = sum(assessment.score for assessment in assessment_scores
-        )
+        total_score = sum(assessment.score for assessment in assessment_scores)
         average_score = total_score / len(assessments)
 
         # Retrieve the corresponding grade based on the average score
@@ -673,6 +673,93 @@ def get_grade_for_score(score):
     except GradeSystem.DoesNotExist:
         return 'Unknown'
 
+
+@api_view(['GET'])
+def get_all_students_scores(request, course_id):
+    try:
+        user = request.user
+        
+        #Check if user is authenticated
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' })
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        #Check if user is admin or lecturer
+        if user.is_admin is False and user.is_a_teacher is False:
+            logger.error( "You do not have access to this endpoint.", extra={ 'user': user.id })
+            return Response(  { "error": "You do not have access to this endpoint."}, status.HTTP_403_FORBIDDEN )
+
+        # Retrieve the course
+        try:
+            course = Course.objects.get(id=course_id)
+        except Course.DoesNotExist:
+            logger.error( "Course Not Found.", extra={ 'user': request.user.id } )
+            return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # Check if teacher is assigned to course
+        if user.is_a_teacher is True:
+            if user not in course.instructors.all():
+                logger.error( "You do not have access to this endpoint.", extra={ 'user': 'Anonymous' })
+                return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
+
+
+        # Get all students registered for the course
+        students = Student.objects.filter(registered_courses=course)
+        print(students)
+
+        # Create a list to store each student's information
+        students_data = []
+
+        # Get all assessments for the given course
+        assessments = Assessment.objects.filter(course=course)
+
+        # Iterate through each student and retrieve their scores
+        for student in students:
+            student_data = {
+                "student_reference": student.student_id,
+                "student_name": f"{student.user.first_name} {student.user.last_name}",
+                "average_score": None,  # Initializing the average score field
+                "grade": None,  # Initializing the grade field
+                "assessment_scores": []
+            }
+
+            # Retrieve all student's assessments score for the given course
+            assessment_scores = StudentAssessmentScore.objects.filter(student_id=student.user.id, assessment__course_id=course_id)
+
+            # Retrieve the student's scores for each assessment in the course
+            for assessment in course.assessment_set.all():
+                try:
+                    score = StudentAssessmentScore.objects.get(student=student.user, assessment=assessment)
+                    student_data["assessment_scores"].append({
+                        "assessment_title": assessment.title,
+                        "score": score.score
+                    })
+                except StudentAssessmentScore.DoesNotExist:
+                    # Handle the case where the student has no score for the assessment
+                    student_data["assessment_scores"].append({
+                        "assessment_title": assessment.title,
+                        "score": None
+                    })
+
+            # Calculate and append the student's avewrage score and grade
+            total_score = sum(assessment.score for assessment in assessment_scores)
+
+            average_score = total_score / len(assessments)
+            student_data["average_score"] = average_score
+            student_data["grade"] = get_grade_for_score(average_score)            
+
+            students_data.append(student_data)
+
+        response_data = {
+            "course_id": course.course_title,
+            "students": students_data
+        }
+
+        return Response(response_data, status=status.HTTP_200_OK)
+
+    except Course.DoesNotExist:
+        logger.error( "Cpourse not found.", extra={ 'user': user.id })
+        return Response({'error': 'Course not found.'}, status=status.HTTP_404_NOT_FOUND)
 
 
 

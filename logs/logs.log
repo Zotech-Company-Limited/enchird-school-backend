@@ -913,3 +913,8 @@ ERROR : 2023-12-28 13:04 : None : 87 : {views} : [retrieve] : You must provide v
 ERROR : 2023-12-28 13:04 : None : 64 : {views} : [retrieve] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:72]
 ERROR : 2023-12-28 13:04 : Anonymous : 487 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:40]
 ERROR : 2023-12-28 13:04 : Anonymous : 236 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:40]
+INFO : 2023-12-29 14:54:13,625 : 3 : 625 : User Logged in sucessfully. : login : None
+ERROR : 2023-12-29 15:05 : 3 : 982 : {views} : [calculate_student_grade] : You are not registered as a student. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:623]
+INFO : 2023-12-29 15:05:29,777 : 36 : 777 : User Logged in sucessfully. : login : None
+INFO : 2023-12-29 15:05:36,778 : 36 : 778 : Student Course Grade info returned successfully . : views : None
+INFO : 2023-12-29 15:06:37,970 : 36 : 970 : Student Course Grade info returned successfully . : views : None
