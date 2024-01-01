@@ -63,6 +63,18 @@ def create_assessment(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+def encrypt_float(float_value):
+    # Convert the float to a string for encryption
+    input_string = str(float_value)
+    return encrypt_string(input_string)
+
+
+def decrypt_float(encrypted_text):
+    # Decrypt the string and convert it back to a float
+    decrypted_string = decrypt_string(encrypted_text)
+    return float(decrypted_string)
+
+
 def encrypt_string(input_string):
     cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
 
@@ -93,6 +105,7 @@ def decrypt_string(encrypted_text):
         
         return decrypted_text
     except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+        # Log the error for troubleshooting
         logger.error(f"Decryption error: {str(e)}", extra={'user': 'Anonymous'})
         raise
 
@@ -410,11 +423,12 @@ def submit_assessment_responses(request, assessment_id):
             # Calculate the percentage score
             total_questions = Question.objects.filter(assessment=assessment).count()
             percentage_score = (total_score / total_questions) * 100
+            encrypted_score = encrypt_float(percentage_score)
 
             student_score, created = StudentAssessmentScore.objects.get_or_create(
                 student=user,
                 assessment=assessment,
-                defaults={'score': percentage_score}
+                defaults={'score': encrypted_score}
             )
 
             return Response({'message': 'Responses submitted successfully', 'total_score': f'{percentage_score}%'}, status=status.HTTP_200_OK)

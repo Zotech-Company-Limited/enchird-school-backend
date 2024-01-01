@@ -1,5 +1,10 @@
+import binascii
+import cryptography
 from .models import *
+from django.conf import settings
+from cryptography.fernet import Fernet
 from rest_framework import serializers
+from cryptography.fernet import InvalidToken
 from apis.users.serializers import UserSerializer
 
 
@@ -53,8 +58,35 @@ class StudentAssessmentScoreSerializer(serializers.ModelSerializer):
     student_last_name = serializers.ReadOnlyField(source='student.last_name')
     score = serializers.SerializerMethodField()
 
+    # def get_score(self, obj):
+    #     return f"{obj.score}%"
+
     def get_score(self, obj):
-        return f"{obj.score}%"
+        # Assuming you have a decrypt_string function for decryption
+        score = self.decrypt_float(obj.score)
+        print(score)
+        return f"{score}%"
+
+    def decrypt_float(self, encrypted_text):
+        # Decrypt the string and convert it back to a float
+        decrypted_string = self.decrypt_string(encrypted_text)
+        return float(decrypted_string)
+    
+    def decrypt_string(self, encrypted_text):
+        try:
+            cipher_suite = Fernet(settings.FERNET_KEY.encode('utf-8'))
+
+            # Ensure encrypted_text is converted to bytes
+            encrypted_bytes = encrypted_text.encode('utf-8')
+            
+            # Decrypt the bytes
+            decrypted_text = cipher_suite.decrypt(encrypted_bytes).decode('utf-8')
+            
+            return decrypted_text
+        except (binascii.Error, cryptography.fernet.InvalidToken) as e:
+            # Log the error for troubleshooting
+            logger.error(f"Decryption error: {str(e)}", extra={'user': 'Anonymous'})
+            raise
 
     class Meta:
         model = StudentAssessmentScore 

@@ -918,3 +918,19 @@ ERROR : 2023-12-29 15:05 : 3 : 982 : {views} : [calculate_student_grade] : You a
 INFO : 2023-12-29 15:05:29,777 : 36 : 777 : User Logged in sucessfully. : login : None
 INFO : 2023-12-29 15:05:36,778 : 36 : 778 : Student Course Grade info returned successfully . : views : None
 INFO : 2023-12-29 15:06:37,970 : 36 : 970 : Student Course Grade info returned successfully . : views : None
+INFO : 2024-01-01 09:49:45,511 : 36 : 511 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-01 09:50 : 36 : 51 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:362]
+ERROR : 2024-01-01 09:50 : 36 : 476 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:362]
+ERROR : 2024-01-01 09:50 : 36 : 876 : {views} : [submit_assessment_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:362]
+INFO : 2024-01-01 11:33:42,353 : 36 : 353 : User Logged in sucessfully. : login : None
+INFO : 2024-01-01 11:34:06,378 : 36 : 378 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:39:46,339 : 36 : 339 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:42:09,453 : 36 : 453 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:42:35,784 : 36 : 784 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:44:06,667 : 36 : 667 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:52:22,964 : 36 : 964 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:53:05,591 : 36 : 591 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:53:24,610 : 36 : 610 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:53:46,963 : 36 : 963 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:54:38,248 : 36 : 248 : Score returned successfully. : views : None
+INFO : 2024-01-01 11:55:05,036 : 36 : 36 : Score returned successfully. : views : None
