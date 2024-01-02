@@ -10800,3 +10800,90 @@ Traceback (most recent call last):
 NameError: name 'settings' is not defined
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
 INFO:myLogger:Score returned successfully.
+INFO:myLogger:User Logged in sucessfully.
+ERROR:django.request:Internal Server Error: /api/courses/1/student/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 662, in calculate_student_grade
+    total_score = sum(assessment.score for assessment in assessment_scores)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+INFO:myLogger:Score returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:myLogger:Student Course Grade info returned successfully .
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/courses/1/grades
+ERROR:django.request:Internal Server Error: /api/courses/1/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 753, in get_all_students_scores
+    total_score = sum(assessment.score for assessment in assessment_scores)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/courses/1/grades
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 756, in get_all_students_scores
+    total_score = sum(assessment.score for assessment in assessment_scores)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.

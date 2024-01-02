@@ -650,16 +650,9 @@ def calculate_student_grade(request, course_id):
             logger.error( "No assessments found for the student in this course.", extra={ 'user': request.user.id } )
             return Response({"error": "No assessments found for the student in this course."}, status=status.HTTP_404_NOT_FOUND)
 
-        # # Get the student's scores for those assessments
-        # student_scores = StudentAssessmentScore.objects.filter(
-        #     student=user,
-        #     assessment__in=assessments
-        # )
-        # print(student_scores)
-
         # Calculate the average score
         # average_score = student_scores.aggregate(Avg('score'))['score__avg']
-        total_score = sum(assessment.score for assessment in assessment_scores)
+        total_score = sum(decrypt_float(assessment.score) for assessment in assessment_scores)
         average_score = total_score / len(assessments)
 
         # Retrieve the corresponding grade based on the average score
@@ -678,6 +671,7 @@ def calculate_student_grade(request, course_id):
     except Course.DoesNotExist:
         logger.error( "Course not found.", extra={ 'user': request.user.id } )
         return Response({'error': 'Course not found.'}, status=status.HTTP_404_NOT_FOUND)
+
 
 def get_grade_for_score(score):
     # Get the grade based on the given score
@@ -744,9 +738,12 @@ def get_all_students_scores(request, course_id):
             for assessment in course.assessment_set.all():
                 try:
                     score = StudentAssessmentScore.objects.get(student=student.user, assessment=assessment)
+                    
+                    # Decrypt the score before adding it to the list
+                    decrypted_score = decrypt_float(score.score)
                     student_data["assessment_scores"].append({
                         "assessment_title": assessment.title,
-                        "score": score.score
+                        "score": decrypted_score
                     })
                 except StudentAssessmentScore.DoesNotExist:
                     # Handle the case where the student has no score for the assessment
@@ -756,7 +753,7 @@ def get_all_students_scores(request, course_id):
                     })
 
             # Calculate and append the student's avewrage score and grade
-            total_score = sum(assessment.score for assessment in assessment_scores)
+            total_score = sum(decrypt_float(assessment.score) for assessment in assessment_scores)
 
             average_score = total_score / len(assessments)
             student_data["average_score"] = average_score

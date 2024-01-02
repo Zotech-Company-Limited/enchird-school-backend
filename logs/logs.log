@@ -934,3 +934,7 @@ INFO : 2024-01-01 11:53:24,610 : 36 : 610 : Score returned successfully. : views
 INFO : 2024-01-01 11:53:46,963 : 36 : 963 : Score returned successfully. : views : None
 INFO : 2024-01-01 11:54:38,248 : 36 : 248 : Score returned successfully. : views : None
 INFO : 2024-01-01 11:55:05,036 : 36 : 36 : Score returned successfully. : views : None
+INFO : 2024-01-02 18:52:17,097 : 36 : 97 : User Logged in sucessfully. : login : None
+INFO : 2024-01-02 18:54:12,498 : 36 : 498 : Score returned successfully. : views : None
+INFO : 2024-01-02 19:39:32,911 : 36 : 911 : Student Course Grade info returned successfully . : views : None
+INFO : 2024-01-02 19:40:06,469 : 42 : 469 : User Logged in sucessfully. : login : None
