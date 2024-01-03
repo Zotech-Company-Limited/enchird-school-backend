@@ -6,7 +6,7 @@ from .views import *
 router = DefaultRouter()
 
 # Register the GradeSystemViewSet
-router.register(r'grade-system', GradeSystemViewSet)
+router.register(r'admin/grade-system', GradeSystemViewSet)
 # router.register(r'courses/student/grades', CourseGradeViewSet, basename='course-grades')
 
 

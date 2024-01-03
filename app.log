@@ -10887,3 +10887,12 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Not Found: /api/grade-system/
+WARNING:django.request:Not Found: /api/admin/grade-system/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Forbidden: /api/grade-system/
+WARNING:django.request:Forbidden: /api/grade-system/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+WARNING:django.request:Forbidden: /api/admin/grade-system/
+WARNING:django.request:Forbidden: /api/admin/grade-system/
