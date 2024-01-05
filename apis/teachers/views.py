@@ -158,9 +158,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         reset_token = uuid4()
                     
                         # Verify uniqueness of email address
-                        num = User.objects.all().filter(
-                                email=user_serializer.validated_data['email']
-                            ).count()
+                        num = User.objects.all().filter( email=user_serializer.validated_data['email'] ).count()
                         if num > 0:
                             logger.warning( "A student/teacher with this email address already exists.", extra={ 'user': 'anonymous' })
                             return Response({"error": "A student/teacher with this email address already exists."}, status=status.HTTP_409_CONFLICT)
@@ -174,6 +172,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         user.reset_token = reset_token
                         user.password_requested_at = timezone.now()
                         user.is_admin = False
+                        user.is_active = True
                         password = User.objects.make_random_password()
                         print(password)
                         user.set_password(password)

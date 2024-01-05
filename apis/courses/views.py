@@ -7,6 +7,7 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
+from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
@@ -116,10 +117,8 @@ class CourseViewSet(viewsets.ModelViewSet):
                     'user': 'Anonymous'
                 }
             )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            return Response( {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_admin is False:
             logger.error(
@@ -143,12 +142,8 @@ class CourseViewSet(viewsets.ModelViewSet):
                             course_title=course_serializer.validated_data['course_title']
                         ).count()
                     if title_num > 0:
-                        logger.warning(
-                            "A course with this name already exists.",
-                            extra={
-                                'user': 'anonymous'
-                            }
-                        )
+                        logger.warning( "A course with this name already exists.", 
+                            extra={ 'user': 'anonymous' } )
                         return Response({"error": "A course with this name already exists."},
                                         status=status.HTTP_409_CONFLICT)
 
@@ -168,16 +163,14 @@ class CourseViewSet(viewsets.ModelViewSet):
                     
                     # Create course
                     logging.debug('Your message here')
+                    print("HERE")
                     course = course_serializer.save(created_by=user)
-
-                    headers = self.get_success_headers(course_serializer.data)
+                    print("HERE")
                     
-                    logger.info(
-                        "Course created successfully!",
-                        extra={
-                            'user': user.id
-                        }
-                    )
+                    headers = self.get_success_headers(course_serializer.data)
+                    print("HERE")
+                    
+                    logger.info( "Course created successfully!", extra={ 'user': user.id } )
                     return Response(
                         course_serializer.data,
                         status.HTTP_201_CREATED,
@@ -186,12 +179,7 @@ class CourseViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            )
+            logger.error( str(e), extra={ 'user': None } )
             return Response(
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
@@ -384,14 +372,19 @@ def assign_teacher(request, course_id, teacher_id):
 
     try:
         course = Course.objects.get(id=course_id, is_deleted=False)
-        teacher = User.objects.get(id=teacher_id, is_deleted=False, is_a_teacher=True, is_active=True)
+        teacher = Teacher.objects.get(user__id=teacher_id, user__is_deleted=False, user__is_a_teacher=True, user__is_active=True)
     except Course.DoesNotExist:
         return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
     except User.DoesNotExist:
         return Response({'error': 'Teacher not found or is not an active teacher'}, status=status.HTTP_404_NOT_FOUND)
 
-    course.instructors.add(teacher)
-    course.save()
+    # Check if the teacher is already assigned to the course
+    if teacher.courses.filter(id=course_id).exists():
+        logger.error( "Teacher is already assigned to the course.", extra={ 'user': request.user.id } )
+        return Response({'error': 'Teacher is already assigned to the course'}, status=status.HTTP_400_BAD_REQUEST)
+
+    teacher.courses.add(course)
+    teacher.save()
 
     serializer = CourseSerializer(course)
     return Response(serializer.data)
@@ -427,14 +420,21 @@ def unassign_teacher(request, course_id, teacher_id):
 
     try:
         course = Course.objects.get(id=course_id, is_deleted=False)
-        teacher = User.objects.get(id=teacher_id, is_deleted=False, is_a_teacher=True, is_active=True)
+        teacher = Teacher.objects.get(user__id=teacher_id, user__is_deleted=False, user__is_a_teacher=True, user__is_active=True)
+        
+        # teacher = User.objects.get(id=teacher_id, is_deleted=False, is_a_teacher=True, is_active=True)
     except Course.DoesNotExist:
         return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
     except User.DoesNotExist:
         return Response({'error': 'Teacher not found or is not an active teacher'}, status=status.HTTP_404_NOT_FOUND)
 
-    course.instructors.remove(teacher)
-    course.save()
+    # Check if the teacher is assigned to the course before attempting to remove
+    if not teacher.courses.filter(id=course_id).exists():
+        logger.error( "Tutor is not assigned to the course.", extra={ 'user': request.user.id } )
+        return Response({'error': 'Tutor is not assigned to the course'}, status=status.HTTP_400_BAD_REQUEST)
+
+    teacher.courses.remove(course)
+    teacher.save()
 
     serializer = CourseSerializer(course)
     return Response(serializer.data)

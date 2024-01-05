@@ -1,5 +1,6 @@
 from apis.users.models import User
 from rest_framework import serializers
+from apis.teachers.models import Teacher
 from apis.utils import validate_password
 from django.contrib.auth.models import Permission
 
@@ -24,6 +25,14 @@ class UserSerializer(serializers.ModelSerializer):
     
     def get_groups(self, obj):
         return [group.name for group in obj.groups.all()]
+    
+    def to_representation(self, instance):
+        if isinstance(instance, Teacher):
+            # Handle Teacher instance
+            return {
+                'email': instance.user.email
+            }
+        return super(UserSerializer, self).to_representation(instance)
 
 
 class UserUpdateSerializer(serializers.ModelSerializer):

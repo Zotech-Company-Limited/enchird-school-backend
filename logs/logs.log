@@ -938,3 +938,64 @@ INFO : 2024-01-02 18:52:17,097 : 36 : 97 : User Logged in sucessfully. : login :
 INFO : 2024-01-02 18:54:12,498 : 36 : 498 : Score returned successfully. : views : None
 INFO : 2024-01-02 19:39:32,911 : 36 : 911 : Student Course Grade info returned successfully . : views : None
 INFO : 2024-01-02 19:40:06,469 : 42 : 469 : User Logged in sucessfully. : login : None
+INFO : 2024-01-05 14:08:42,245 : 1 : 245 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-05 14:11 : None : 832 : {views} : [create] : {'faculty': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')], 'department': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:181]
+ERROR : 2024-01-05 14:15 : None : 614 : {views} : [create] : {'faculty': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:438]
+INFO : 2024-01-05 14:15:32,917 : 1 : 917 : Faculty created successfully! : views : None
+INFO : 2024-01-05 14:15:49,852 : 1 : 852 : Department created successfully! : views : None
+INFO : 2024-01-05 14:16:11,541 : None : 541 : Applicant created successfully! : views : None
+INFO : 2024-01-05 14:19:13,600 : 2 : 600 : Student created successfully! : views : None
+ERROR : 2024-01-05 15:36 : None : 530 : {views} : [create] : The field 'instructors' was declared on serializer CourseSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:37 : None : 91 : {views} : [create] : Field name `instructor_details` is not valid for model `Course`. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:39 : None : 932 : {views} : [create] : Field name `prerequisites` is not valid for model `Course`. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:39 : None : 221 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')], 'department': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:40 : None : 512 : {views} : [create] : (1054, "Unknown column 'faculty_id' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:41 : None : 14 : {views} : [create] : (1054, "Unknown column 'faculty_id' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:178]
+ERROR : 2024-01-05 15:41 : None : 818 : {views} : [create] : (1054, "Unknown column 'faculty_id' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:179]
+ERROR : 2024-01-05 15:42 : None : 16 : {views} : [create] : (1054, "Unknown column 'faculty_id' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:181]
+INFO : 2024-01-05 15:45:25,097 : 1 : 97 : Course created successfully! : views : None
+ERROR : 2024-01-05 15:50 : None : 664 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:181]
+INFO : 2024-01-05 15:50:52,250 : 1 : 250 : Course created successfully! : views : None
+INFO : 2024-01-05 15:51:48,825 : 1 : 825 : User Logged in sucessfully. : login : None
+INFO : 2024-01-05 15:52:40,598 : 3 : 598 : Teacher created successfully! : views : None
+INFO : 2024-01-05 15:54:34,840 : 1 : 840 : Course created successfully! : views : None
+ERROR : 2024-01-05 16:00 : None : 490 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+WARNING : 2024-01-05 16:01:36,514 : anonymous : 514 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:165]
+INFO : 2024-01-05 16:13:10,910 : 4 : 910 : Teacher created successfully! : views : None
+ERROR : 2024-01-05 16:15 : None : 507 : {views} : [create] : The field 'faculty' was declared on serializer TeacherSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+INFO : 2024-01-05 16:16:08,376 : 5 : 376 : Teacher created successfully! : views : None
+ERROR : 2024-01-05 16:17 : None : 815 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+WARNING : 2024-01-05 16:35:12,203 : anonymous : 203 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:163]
+ERROR : 2024-01-05 16:35 : None : 231 : {views} : [create] : Got a `TypeError` when calling `Teacher.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Teacher.objects.create()`. You may need to make the field read-only, or override the TeacherSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Teacher() got unexpected keyword arguments: 'is_active'
+ : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:204]
+INFO : 2024-01-05 16:42:36,173 : 7 : 173 : Teacher created successfully! : views : None
+INFO : 2024-01-05 16:50:26,193 : 8 : 193 : Teacher created successfully! : views : None
+WARNING : 2024-01-05 16:51:25,071 : anonymous : 71 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:163]
+INFO : 2024-01-05 16:51:47,042 : 9 : 42 : Teacher created successfully! : views : None
+ERROR : 2024-01-05 16:53 : None : 175 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2024-01-05 16:53:46,532 : 1 : 532 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-05 17:17 : 1 : 407 : {views} : [assign_teacher] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
+ERROR : 2024-01-05 17:22 : None : 701 : {views} : [unassign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:398]
+ERROR : 2024-01-05 17:37 : 1 : 189 : {views} : [unassign_teacher] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
+ERROR : 2024-01-05 17:38 : 1 : 884 : {views} : [assign_teacher] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
+INFO : 2024-01-05 17:49:05,262 : 1 : 262 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:49:18,365 : 1 : 365 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:49:22,292 : 1 : 292 : List of courses returned successfully. : views : None
+ERROR : 2024-01-05 17:49 : 1 : 625 : {views} : [unassign_teacher] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
+INFO : 2024-01-05 17:49:41,877 : 1 : 877 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:51:55,911 : 1 : 911 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:52:08,835 : 1 : 835 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:53:25,752 : 1 : 752 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:53:38,633 : 1 : 633 : List of courses returned successfully. : views : None
+INFO : 2024-01-05 17:54:01,222 : 1 : 222 : List of courses returned successfully. : views : None

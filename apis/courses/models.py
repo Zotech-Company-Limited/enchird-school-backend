@@ -4,9 +4,9 @@ import datetime
 from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
-from apis.teachers.models import Teacher
+# from apis.teachers.models import Teacher
 from django.db.models.signals import post_save
-
+from apis.faculty.models import Faculty, Department
 
 
 
@@ -23,22 +23,13 @@ class Course(models.Model):
     course_title = models.CharField(max_length=100, blank=False,null=False, unique=True)
     course_code = models.CharField(max_length=10, blank=False,null=False, unique=True)
     description = models.TextField(max_length=255, null=True, blank=True)
-    prerequisites = models.CharField(max_length=10, blank=True, null=True)
-    instructors = models.ManyToManyField(
-        User,
-        related_name='instructed_courses'
-    )
-    # Schedule and Location
+    course_level = models.CharField(max_length=3, blank=True, null=True)
     class_schedule = models.CharField(max_length=255, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)
 
-    # Materials and Objectives
-    # course_materials = models.ManyToManyField(CourseMaterial, related_name='courses', blank=True)
     learning_objectives = models.TextField(blank=True, null=True)
 
-    # Assessment and Grading
     assessment_and_grading = models.TextField(blank=True, null=True)
-    office_hours = models.CharField(max_length=255, blank=True, null=True)
     term = models.CharField(max_length=50, blank=True, null=True)
     credits = models.PositiveIntegerField(default=0)
     is_deleted = models.BooleanField(default=False)
@@ -47,6 +38,16 @@ class Course(models.Model):
     created_at = models.DateTimeField(
         db_column="creation_date",
         auto_now_add=True
+    )
+    faculty = models.ForeignKey(
+        Faculty,
+        on_delete=models.CASCADE,
+        related_name='course_faculty'
+    )
+    department = models.ForeignKey(
+        Department,
+        on_delete=models.CASCADE,
+        related_name='course_department'
     )
     created_by = models.ForeignKey(
         User,
