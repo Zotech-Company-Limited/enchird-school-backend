@@ -11545,3 +11545,26 @@ INFO:myLogger:Faculty created successfully!
 ERROR:myLogger:{'name': [ErrorDetail(string='department with this name already exists.', code='unique')]}
 WARNING:django.request:Precondition Failed: /api/department/
 INFO:myLogger:Department created successfully!
+WARNING:django.request:Forbidden: /api/course/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/course/
+ERROR:myLogger:{'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/course/
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:{'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/course/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Method Not Allowed: /api/course/10/
+ERROR:myLogger:{'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/course/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+ERROR:myLogger:{'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/course/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+ERROR:myLogger:{'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/course/

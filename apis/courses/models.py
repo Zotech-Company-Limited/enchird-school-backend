@@ -12,12 +12,6 @@ from apis.faculty.models import Faculty, Department
 
 class Course(models.Model):
 
-    # Course Status
-    COURSE_STATUS_CHOICES = [
-        ('open', 'Open for Enrollment'),
-        ('closed', 'Closed'),
-        ('canceled', 'Canceled'),
-    ]
 
     course_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     course_title = models.CharField(max_length=100, blank=False,null=False, unique=True)
@@ -33,7 +27,7 @@ class Course(models.Model):
     term = models.CharField(max_length=50, blank=True, null=True)
     credits = models.PositiveIntegerField(default=0)
     is_deleted = models.BooleanField(default=False)
-    course_status = models.CharField(max_length=20, choices=COURSE_STATUS_CHOICES, default='Open')
+    course_status = models.CharField(max_length=20, null=True, blank=True)
 
     created_at = models.DateTimeField(
         db_column="creation_date",

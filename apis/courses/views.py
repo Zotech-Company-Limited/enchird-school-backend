@@ -136,6 +136,7 @@ class CourseViewSet(viewsets.ModelViewSet):
         try:
             with transaction.atomic():
                 course_serializer = self.get_serializer(data=request.data)
+                print(course_serializer) 
                 if course_serializer.is_valid(raise_exception=True):
                     # Verify uniqueness of course title
                     title_num = Course.objects.all().filter(
@@ -163,12 +164,9 @@ class CourseViewSet(viewsets.ModelViewSet):
                     
                     # Create course
                     logging.debug('Your message here')
-                    print("HERE")
                     course = course_serializer.save(created_by=user)
-                    print("HERE")
                     
                     headers = self.get_success_headers(course_serializer.data)
-                    print("HERE")
                     
                     logger.info( "Course created successfully!", extra={ 'user': user.id } )
                     return Response(
@@ -179,7 +177,7 @@ class CourseViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
-            logger.error( str(e), extra={ 'user': None } )
+            logger.error( str(e), extra={ 'user': request.user.id } )
             return Response(
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
