@@ -14,7 +14,8 @@ class FacultySerializer(WritableNestedModelSerializer):
     class Meta:
 
         model = Faculty
-        fields = ['id', 'name', 'faculty_id', 'abbrev', 'is_deleted', 'created_at']
+        fields = ['id', 'name', 'faculty_id', 'abbrev', 'description',
+                  'about', 'is_deleted', 'created_at']
         read_only_fields = ['id', 'faculty_id', 'created_at']
 
 
@@ -32,7 +33,8 @@ class DepartmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Department
-        fields = ['id', 'name', 'department_id', 'faculty', 'is_deleted', 'created_at']
+        fields = ['id', 'name', 'department_id', 'faculty', 'about',
+                  'description', 'is_deleted', 'created_at']
         read_only_fields = ['id', 'department_id', 'created_at']
 
 

@@ -10,6 +10,8 @@ class Faculty(models.Model):
     faculty_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     name = models.CharField(max_length=100, blank=False,null=False, unique=True)
     abbrev = models.CharField(max_length=10, blank=False, null=False)
+    description = models.CharField(max_length=244, blank=True, null=True)
+    about = models.CharField(max_length=244, blank=True, null=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",
@@ -38,6 +40,8 @@ def update_faculty_id(instance, **kwargs):
 class Department(models.Model):
     department_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     name = models.CharField(max_length=100, blank=False, null=False, unique=True)
+    description = models.CharField(max_length=244, blank=True, null=True)
+    about = models.CharField(max_length=244, blank=True, null=True)
     faculty = models.ForeignKey(
         Faculty,
         on_delete=models.CASCADE,

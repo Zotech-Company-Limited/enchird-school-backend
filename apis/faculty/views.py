@@ -147,12 +147,12 @@ class FacultyViewSet(viewsets.ModelViewSet):
                         ).count()
                     if num > 0:
                         logger.warning(
-                            "A faculty with this name already exists.",
+                            "A faculty with this abbreviation already exists.",
                             extra={
                                 'user': 'anonymous'
                             }
                         )
-                        return Response({"error": "A faculty with this name already exists."},
+                        return Response({"error": "A faculty with this abbreviation already exists."},
                                         status=status.HTTP_409_CONFLICT)
 
                     # Create user

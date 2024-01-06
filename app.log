@@ -11525,3 +11525,23 @@ Traceback (most recent call last):
     raise e.__class__(
 ValueError: Field 'id' expected a number but got 'h'.
 INFO:myLogger:List of courses returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+WARNING:django.request:Forbidden: /api/admin/faculty/
+INFO:myLogger:User Logged in sucessfully.
+WARNING:myLogger:A faculty with this name already exists.
+WARNING:django.request:Conflict: /api/admin/faculty/
+WARNING:myLogger:A faculty with this name already exists.
+WARNING:django.request:Conflict: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:myLogger:Faculty created successfully!
+ERROR:myLogger:{'name': [ErrorDetail(string='department with this name already exists.', code='unique')]}
+WARNING:django.request:Precondition Failed: /api/department/
+INFO:myLogger:Department created successfully!

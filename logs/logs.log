@@ -17,19 +17,19 @@ ERROR : 2023-10-26 02:21 : None : 1 : {views} : [create] : null value in column 
 DETAIL:  Failing row contains (1, null, SM20A320, null, null). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
 ERROR : 2023-10-26 02:22 : None : 966 : {views} : [create] : 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
 ERROR : 2023-10-26 02:24 : None : 781 : {views} : [create] : 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:217]
-ERROR : 2023-10-26 02:25 : None : 355 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+ERROR : 2023-10-26 02:25 : None : 355 : {views} : [create] : null value in column "is_tutor" of relation "users" violates not-null constraint
 DETAIL:  Failing row contains (3, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:25:26.343885+00, 2023-10-26 01:25:26.343885+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:216]
 ERROR : 2023-10-26 02:27 : None : 207 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:218]
 ERROR : 2023-10-26 02:27 : None : 285 : {views} : [create] : create_user() got an unexpected keyword argument 'date_of_birth' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:218]
-ERROR : 2023-10-26 02:29 : None : 146 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+ERROR : 2023-10-26 02:29 : None : 146 : {views} : [create] : null value in column "is_tutor" of relation "users" violates not-null constraint
 DETAIL:  Failing row contains (4, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:29:53.131074+00, 2023-10-26 01:29:53.131074+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:220]
-ERROR : 2023-10-26 02:30 : None : 687 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+ERROR : 2023-10-26 02:30 : None : 687 : {views} : [create] : null value in column "is_tutor" of relation "users" violates not-null constraint
 DETAIL:  Failing row contains (5, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 01:30:51.682873+00, 2023-10-26 01:30:51.682873+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-ERROR : 2023-10-26 02:34 : None : 454 : {views} : [create] : User() got unexpected keyword arguments: 'is_student', 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:34 : None : 454 : {views} : [create] : User() got unexpected keyword arguments: 'is_student', 'is_tutor' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-26 02:34 : None : 981 : {views} : [create] : create_user() got an unexpected keyword argument 'is_studentt' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-ERROR : 2023-10-26 02:35 : None : 702 : {views} : [create] : User() got unexpected keyword arguments: 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-ERROR : 2023-10-26 02:36 : None : 899 : {views} : [create] : User() got unexpected keyword arguments: 'is_teacher' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-ERROR : 2023-10-26 08:47 : None : 875 : {views} : [create] : null value in column "is_teacher" of relation "users" violates not-null constraint
+ERROR : 2023-10-26 02:35 : None : 702 : {views} : [create] : User() got unexpected keyword arguments: 'is_tutor' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 02:36 : None : 899 : {views} : [create] : User() got unexpected keyword arguments: 'is_tutor' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
+ERROR : 2023-10-26 08:47 : None : 875 : {views} : [create] : null value in column "is_tutor" of relation "users" violates not-null constraint
 DETAIL:  Failing row contains (6, , null, f, null, priscarionmbeng@gmail.com, , null, Mbeng, Priscarion, null, f, f, f, null, student, 2023-10-26 07:47:51.858202+00, 2023-10-26 07:47:51.858202+00, null, null, f). : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-26 08:49 : None : 357 : {views} : [create] : Cannot assign "7": "Student.user" must be a "User" instance. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-26 08:58 : None : 46 : {views} : [create] : Cannot assign "8": "Student.user" must be a "User" instance. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
@@ -42,7 +42,7 @@ ERROR : 2023-10-26 09:12 : None : 248 : {views} : [create] : Password must be a 
 INFO : 2023-10-26 09:13:23,943 : 14 : 943 : Student created successfully! : views : None
 ERROR : 2023-10-26 09:33 : None : 227 : {views} : [create] : {'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-26 09:36 : None : 822 : {views} : [create] : {'user': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-WARNING : 2023-10-26 09:37:09,209 : anonymous : 209 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:161]
+WARNING : 2023-10-26 09:37:09,209 : anonymous : 209 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:161]
 ERROR : 2023-10-26 09:43 : None : 570 : {views} : [create] : create_user() got an unexpected keyword argument 'is_student' : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-26 09:44 : None : 605 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
 DETAIL:  Key (student_id)=(SM20A320) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
@@ -81,7 +81,7 @@ WARNING : 2023-10-26 17:45:10,177 : 14 : 177 : You cannot view another client's 
 INFO : 2023-10-26 17:48:08,580 : 14 : 580 : Client details returned successfully! : views : None
 WARNING : 2023-10-26 17:49:14,268 : 14 : 268 : You cannot view another client's information : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:116]
 ERROR : 2023-10-26 23:30 : 14 : 554 : {views} : [update] : You cannot edit another student's information : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:258]
-WARNING : 2023-10-26 23:51:03,410 : anonymous : 410 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:293]
+WARNING : 2023-10-26 23:51:03,410 : anonymous : 410 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:293]
 WARNING : 2023-10-26 23:53:32,631 : anonymous : 631 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:293]
 WARNING : 2023-10-27 00:05:15,391 : anonymous : 391 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:294]
 WARNING : 2023-10-27 11:16:08,302 : anonymous : 302 : A account with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:294]
@@ -92,7 +92,7 @@ INFO : 2023-10-27 11:43:05,671 : 14 : 671 : Student modified successfully! : vie
 INFO : 2023-10-27 11:52:31,820 : 14 : 820 : Student modified successfully! : views : None
 INFO : 2023-10-27 11:52:45,449 : 14 : 449 : Student modified successfully! : views : None
 INFO : 2023-10-27 11:53:06,738 : 14 : 738 : Student modified successfully! : views : None
-WARNING : 2023-10-27 11:55:08,177 : anonymous : 177 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+WARNING : 2023-10-27 11:55:08,177 : anonymous : 177 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
 INFO : 2023-10-27 11:56:02,043 : 18 : 43 : Student created successfully! : views : None
 ERROR : 2023-10-27 13:45 : Anonymous : 562 : {views} : [list] : You do not have the necessary rights. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:56]
 INFO : 2023-10-27 13:47:22,683 : 14 : 683 : Student details returned successfully! : views : None
@@ -104,7 +104,7 @@ ERROR : 2023-10-27 13:56 : None : 51 : {views} : [create] : {'password': [ErrorD
 ERROR : 2023-10-27 13:57 : None : 226 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-27 13:59 : None : 996 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 ERROR : 2023-10-27 13:59 : None : 297 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
-WARNING : 2023-10-27 13:59:26,392 : anonymous : 392 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+WARNING : 2023-10-27 13:59:26,392 : anonymous : 392 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
 ERROR : 2023-10-27 13:59 : None : 598 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
 DETAIL:  Key (student_id)=(SM20A320) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:221]
 INFO : 2023-10-27 14:00:01,933 : 20 : 933 : Student created successfully! : views : None
@@ -133,8 +133,8 @@ INFO : 2023-10-28 19:23:04,255 : 2 : 255 : User Logged in sucessfully. : login :
 INFO : 2023-10-28 19:23:24,459 : 2 : 459 : User Logged in sucessfully. : login : None
 INFO : 2023-10-28 19:23:42,037 : 2 : 37 : User Logged in sucessfully. : login : None
 INFO : 2023-10-28 19:25:00,044 : 2 : 44 : User Logged in sucessfully. : login : None
-WARNING : 2023-10-28 19:49:20,432 : anonymous : 432 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
-WARNING : 2023-10-28 19:51:48,052 : anonymous : 52 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+WARNING : 2023-10-28 19:49:20,432 : anonymous : 432 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
+WARNING : 2023-10-28 19:51:48,052 : anonymous : 52 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:165]
 INFO : 2023-10-28 19:53:52,176 : 22 : 176 : Student created successfully! : views : None
 INFO : 2023-10-28 20:07:38,816 : 23 : 816 : Student created successfully! : views : None
 INFO : 2023-10-28 20:24:47,283 : 14 : 283 : User Logged in sucessfully. : login : None
@@ -151,14 +151,14 @@ INFO : 2023-10-28 20:51:52,647 : 2 : 647 : Students list returned successfully. 
 INFO : 2023-10-28 20:53:04,183 : 2 : 183 : Students list returned successfully. : views : None
 INFO : 2023-10-28 20:54:41,033 : 2 : 33 : Students list returned successfully. : views : None
 INFO : 2023-10-30 16:58:54,430 : 2 : 430 : User Logged in sucessfully. : login : None
-WARNING : 2023-10-30 16:59:20,938 : anonymous : 938 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
+WARNING : 2023-10-30 16:59:20,938 : anonymous : 938 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
 ERROR : 2023-10-30 16:59 : None : 948 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
 DETAIL:  Key (student_id)=() already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
 INFO : 2023-10-30 17:04:28,668 : 25 : 668 : Student created successfully! : views : None
 INFO : 2023-11-01 18:50:28,043 : 2 : 43 : User Logged in sucessfully. : login : None
 INFO : 2023-11-01 19:03:03,987 : 2 : 987 : User Logged in sucessfully. : login : None
 INFO : 2023-11-01 19:12:37,062 : 2 : 62 : User Logged in sucessfully. : login : None
-WARNING : 2023-11-01 19:20:22,964 : anonymous : 964 : A student/teacher with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
+WARNING : 2023-11-01 19:20:22,964 : anonymous : 964 : A student/tutor with this email address already exists. : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:167]
 ERROR : 2023-11-01 19:20 : None : 297 : {views} : [create] : duplicate key value violates unique constraint "students_student_id_key"
 DETAIL:  Key (student_id)=() already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\students\views.py:views.py:226]
 INFO : 2023-11-01 19:23:08,302 : 27 : 302 : Student created successfully! : views : None
@@ -196,20 +196,20 @@ INFO : 2023-11-02 00:28:04,379 : 25 : 379 : Student marked as deleted successful
 ERROR : 2023-11-02 20:43 : None : 2 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
 ERROR : 2023-11-02 20:43 : None : 929 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
 INFO : 2023-11-02 20:43:37,812 : 2 : 812 : User Logged in sucessfully. : login : None
-ERROR : 2023-11-02 20:50 : None : 392 : {views} : [create] : name 'student_serializer' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+ERROR : 2023-11-02 20:50 : None : 392 : {views} : [create] : name 'student_serializer' is not defined : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:140]
 ERROR : 2023-11-02 20:52 : None : 341 : {views} : [create] : duplicate key value violates unique constraint "users_email_key"
-DETAIL:  Key (email)=(teacher@teacher.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+DETAIL:  Key (email)=(tutor@tutor.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:140]
 ERROR : 2023-11-02 20:54 : None : 768 : {views} : [create] : duplicate key value violates unique constraint "users_email_key"
-DETAIL:  Key (email)=(teachr@teacher.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:140]
+DETAIL:  Key (email)=(teachr@tutor.com) already exists. : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:140]
 INFO : 2023-11-02 20:54:47,966 : 38 : 966 : Teacher created successfully! : views : None
 INFO : 2023-11-02 20:59:31,320 : 39 : 320 : Teacher created successfully! : views : None
 INFO : 2023-11-03 19:37:04,043 : 2 : 43 : User Logged in sucessfully. : login : None
 INFO : 2023-11-03 19:37:57,876 : 2 : 876 : Students list returned successfully. : views : None
-INFO : 2023-11-03 19:38:16,547 : 2 : 547 : List of teachers returned successfully. : views : None
+INFO : 2023-11-03 19:38:16,547 : 2 : 547 : List of tutors returned successfully. : views : None
 INFO : 2023-11-03 19:45:03,349 : 2 : 349 : Teacher details returned successfully! : views : None
 INFO : 2023-11-03 20:27:54,390 : 2 : 390 : User Logged in sucessfully. : login : None
-WARNING : 2023-11-03 20:28:07,113 : 2 : 113 : You do not have the necessary rights! (Not a teacher) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:258]
-WARNING : 2023-11-03 20:28:27,985 : 2 : 985 : You do not have the necessary rights! (Not a teacher) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:258]
+WARNING : 2023-11-03 20:28:07,113 : 2 : 113 : You do not have the necessary rights! (Not a tutor) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:258]
+WARNING : 2023-11-03 20:28:27,985 : 2 : 985 : You do not have the necessary rights! (Not a tutor) : views : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:258]
 ERROR : 2023-11-03 20:29 : None : 73 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
 ERROR : 2023-11-03 20:30 : None : 866 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
 ERROR : 2023-11-03 20:30 : None : 617 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:74]
@@ -234,7 +234,7 @@ ERROR : 2023-11-06 23:05 : None : 964 : {views} : [create] : (1062, "Duplicate e
 INFO : 2023-11-06 23:23:01,875 : 4 : 875 : Student created successfully! : views : None
 ERROR : 2023-11-06 23:43 : None : 150 : {login} : [post] : No active account found with the given credentials : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\users\login.py:login.py:69]
 INFO : 2023-11-06 23:44:00,666 : 3 : 666 : User Logged in sucessfully. : login : None
-ERROR : 2023-11-06 23:45 : None : 356 : {views} : [create] : {'email': [ErrorDetail(string='This field is required.', code='required')], 'first_name': [ErrorDetail(string='This field is required.', code='required')], 'last_name': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\teachers\views.py:views.py:238]
+ERROR : 2023-11-06 23:45 : None : 356 : {views} : [create] : {'email': [ErrorDetail(string='This field is required.', code='required')], 'first_name': [ErrorDetail(string='This field is required.', code='required')], 'last_name': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\ENCHIRD_LMS_PROJECT\LMS_Project\Backend\enchird_backend\apis\tutors\views.py:views.py:238]
 INFO : 2023-11-06 23:46:41,187 : 3 : 187 : Refresh Token is required. : logout : None
 INFO : 2023-11-06 23:48:14,983 : 3 : 983 : Invalid Token. : logout : None
 INFO : 2023-11-06 23:48:43,693 : 3 : 693 : Invalid Token. : logout : None
@@ -258,7 +258,7 @@ INFO : 2023-11-07 02:52:46,437 : 3 : 437 : User Logged in sucessfully. : login :
 INFO : 2023-11-07 02:53:47,781 : 3 : 781 : User Logged in sucessfully. : login : None
 INFO : 2023-11-07 02:53:56,422 : 3 : 422 : User Logged in sucessfully. : login : None
 INFO : 2023-11-07 02:54:15,959 : 3 : 959 : User Logged in sucessfully. : login : None
-INFO : 2023-11-07 03:01:35,876 : 3 : 876 : List of teachers returned successfully. : views : None
+INFO : 2023-11-07 03:01:35,876 : 3 : 876 : List of tutors returned successfully. : views : None
 INFO : 2023-11-07 03:02:33,746 : 3 : 746 : User Logged in sucessfully. : login : None
 INFO : 2023-11-07 03:05:24,292 : 3 : 292 : User Logged in sucessfully. : login : None
 INFO : 2023-11-07 17:40:40,160 : 10 : 160 : Student created successfully! : views : None
@@ -272,16 +272,16 @@ ERROR : 2023-11-10 22:38 : None : 980 : {views} : [create] : {'confirm_password'
 ERROR : 2023-11-10 22:39 : None : 231 : {views} : [create] : {'password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
 ERROR : 2023-11-10 22:39 : None : 686 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least one symbol()[]{}|\\`~!@#$%^&*_-+=;:\'",<>./?', code='password_no_symbol')], 'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
 ERROR : 2023-11-10 22:40 : None : 760 : {views} : [create] : {'confirm_password': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:243]
-WARNING : 2023-11-10 22:42:05,814 : anonymous : 814 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+WARNING : 2023-11-10 22:42:05,814 : anonymous : 814 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
 INFO : 2023-11-10 22:55:32,876 : 14 : 876 : Student created successfully! : views : None
 INFO : 2023-11-10 23:17:41,589 : 15 : 589 : Student created successfully! : views : None
-WARNING : 2023-11-10 23:36:18,691 : anonymous : 691 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+WARNING : 2023-11-10 23:36:18,691 : anonymous : 691 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
 INFO : 2023-11-11 01:08:37,574 : 3 : 574 : User Logged in sucessfully. : login : None
 ERROR : 2023-11-11 01:08 : None : 203 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:86]
 ERROR : 2023-11-11 01:12 : None : 740 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:89]
 ERROR : 2023-11-11 01:13 : None : 821 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:91]
 ERROR : 2023-11-11 01:14 : None : 61 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:92]
-WARNING : 2023-11-11 01:16:39,575 : anonymous : 575 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+WARNING : 2023-11-11 01:16:39,575 : anonymous : 575 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
 ERROR : 2023-11-11 01:16 : None : 107 : {views} : [create] : (1062, "Duplicate entry 'user3' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
 INFO : 2023-11-11 01:17:03,033 : 17 : 33 : Student created successfully! : views : None
 ERROR : 2023-11-11 01:17 : None : 108 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:91]
@@ -294,7 +294,7 @@ INFO : 2023-11-11 01:34:06,830 : 18 : 830 : User Logged in sucessfully. : login 
 ERROR : 2023-11-11 01:34 : None : 653 : {views} : [create] : (1062, "Duplicate entry 'user9' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
 INFO : 2023-11-11 01:35:03,772 : 20 : 772 : Student created successfully! : views : None
 ERROR : 2023-11-11 01:35 : None : 2 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:94]
-WARNING : 2023-11-11 01:41:43,565 : anonymous : 565 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
+WARNING : 2023-11-11 01:41:43,565 : anonymous : 565 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:163]
 ERROR : 2023-11-11 01:41 : None : 192 : {views} : [create] : (1062, "Duplicate entry 'user8' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:235]
 INFO : 2023-11-11 01:42:00,963 : 22 : 963 : Student created successfully! : views : None
 INFO : 2023-11-11 01:42:33,336 : 22 : 336 : User Logged in sucessfully. : login : None
@@ -302,7 +302,7 @@ ERROR : 2023-11-11 09:49 : None : 961 : {views} : [create] : (1062, "Duplicate e
 INFO : 2023-11-11 09:49:59,620 : 24 : 620 : Student created successfully! : views : None
 ERROR : 2023-11-11 10:04 : 24 : 998 : {views} : [get] : Email Verified Successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:30]
 INFO : 2023-11-11 11:14:09,406 : 25 : 406 : Student created successfully! : views : None
-WARNING : 2023-11-11 11:31:23,563 : anonymous : 563 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-11 11:31:23,563 : anonymous : 563 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
 ERROR : 2023-11-11 12:59 : None : 718 : {reset_password} : [post] : {'email': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\reset_password.py:reset_password.py:92]
 ERROR : 2023-11-11 13:00 : None : 396 : {reset_password} : [post] : unsupported operand type(s) for +: 'NoneType' and 'datetime.timedelta' : [in C:\enchird_LMS\enchird-school-backend\apis\users\reset_password.py:reset_password.py:92]
 INFO : 2023-11-11 13:01:04,929 : 25 : 929 : Reset password link sent to email. : reset_password : None
@@ -316,22 +316,22 @@ INFO : 2023-11-11 21:10:09,330 : 25 : 330 : Reset password link sent to email. :
 INFO : 2023-11-11 21:12:02,351 : 25 : 351 : Reset password link sent to email. : reset_password : None
 INFO : 2023-11-11 22:49:39,077 : 25 : 77 : Reset password link sent to email. : reset_password : None
 ERROR : 2023-11-12 08:13 : None : 647 : {views} : [create] : {'password': [ErrorDetail(string='The password must contain at least 1 digit, 0-9.', code='password_no_number')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
-WARNING : 2023-11-12 08:14:27,701 : anonymous : 701 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:14:27,701 : anonymous : 701 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
 ERROR : 2023-11-12 08:14 : None : 913 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
 ERROR : 2023-11-12 08:20 : None : 321 : {views} : [create] : name 'logger' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
 WARNING : 2023-11-12 08:20:59,879 : anonymous : 879 : The password must be at least 8 characters. : utils : [in C:\enchird_LMS\enchird-school-backend\apis\utils.py:utils.py:15]
 ERROR : 2023-11-12 08:20 : None : 881 : {views} : [create] : name 'Response' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
 WARNING : 2023-11-12 08:21:25,413 : anonymous : 413 : The password must be at least 8 characters. : utils : [in C:\enchird_LMS\enchird-school-backend\apis\utils.py:utils.py:16]
-WARNING : 2023-11-12 08:21:25,417 : anonymous : 417 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:21:25,417 : anonymous : 417 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
 ERROR : 2023-11-12 08:25 : None : 298 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:247]
-WARNING : 2023-11-12 08:29:38,995 : anonymous : 995 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
-WARNING : 2023-11-12 08:29:55,518 : anonymous : 518 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
-WARNING : 2023-11-12 08:30:24,059 : anonymous : 59 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
-WARNING : 2023-11-12 08:39:37,478 : anonymous : 478 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:173]
+WARNING : 2023-11-12 08:29:38,995 : anonymous : 995 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:29:55,518 : anonymous : 518 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:30:24,059 : anonymous : 59 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:166]
+WARNING : 2023-11-12 08:39:37,478 : anonymous : 478 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:173]
 ERROR : 2023-11-12 08:44 : None : 795 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
 ERROR : 2023-11-12 08:45 : None : 282 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
 ERROR : 2023-11-12 08:45 : None : 14 : {views} : [create] : {'password': [ErrorDetail(string='The password must be at least 8 characters', code='password_no_length')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:252]
-WARNING : 2023-11-12 09:12:40,525 : anonymous : 525 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
+WARNING : 2023-11-12 09:12:40,525 : anonymous : 525 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
 INFO : 2023-11-12 09:49:24,649 : 25 : 649 : Reset password link sent to email. : reset_password : None
 INFO : 2023-11-14 08:26:21,315 : 3 : 315 : User Logged in sucessfully. : login : None
 ERROR : 2023-11-14 08:28 : None : 711 : {views} : [create] : You must call `.is_valid()` before accessing `.validated_data`. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:211]
@@ -355,27 +355,27 @@ INFO : 2023-11-14 09:24:26,442 : 3 : 442 : Faculty marked as deleted successfull
 ERROR : 2023-11-14 09:24 : 3 : 530 : {views} : [update] : No Faculty matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:307]
 INFO : 2023-11-15 07:52:27,293 : 3 : 293 : User Logged in sucessfully. : login : None
 INFO : 2023-11-15 07:54:28,968 : 26 : 968 : Teacher created successfully! : views : None
-WARNING : 2023-11-15 08:08:31,362 : anonymous : 362 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:175]
-WARNING : 2023-11-15 08:08:38,934 : anonymous : 934 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:175]
-WARNING : 2023-11-15 08:09:14,720 : anonymous : 720 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:175]
-ERROR : 2023-11-15 08:09 : None : 899 : {views} : [create] : (1062, "Duplicate entry 'teacher1' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
+WARNING : 2023-11-15 08:08:31,362 : anonymous : 362 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:175]
+WARNING : 2023-11-15 08:08:38,934 : anonymous : 934 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:175]
+WARNING : 2023-11-15 08:09:14,720 : anonymous : 720 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:175]
+ERROR : 2023-11-15 08:09 : None : 899 : {views} : [create] : (1062, "Duplicate entry 'tutor1' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
 INFO : 2023-11-15 08:10:59,509 : 28 : 509 : Teacher created successfully! : views : None
-ERROR : 2023-11-15 08:12 : None : 124 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
-ERROR : 2023-11-15 08:13 : None : 929 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
-ERROR : 2023-11-15 08:13 : None : 662 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
-ERROR : 2023-11-15 08:15 : None : 689 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
-ERROR : 2023-11-15 08:16 : None : 375 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:238]
+ERROR : 2023-11-15 08:12 : None : 124 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
+ERROR : 2023-11-15 08:13 : None : 929 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
+ERROR : 2023-11-15 08:13 : None : 662 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
+ERROR : 2023-11-15 08:15 : None : 689 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
+ERROR : 2023-11-15 08:16 : None : 375 : {views} : [create] : {'faculty': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:238]
 INFO : 2023-11-15 08:20:38,990 : 29 : 990 : Teacher created successfully! : views : None
-WARNING : 2023-11-15 09:08:18,805 : anonymous : 805 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+WARNING : 2023-11-15 09:08:18,805 : anonymous : 805 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
 INFO : 2023-11-15 09:10:39,628 : 30 : 628 : Student created successfully! : views : None
-WARNING : 2023-11-15 09:13:17,196 : anonymous : 196 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+WARNING : 2023-11-15 09:13:17,196 : anonymous : 196 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
 INFO : 2023-11-15 09:13:40,945 : 31 : 945 : Student created successfully! : views : None
-WARNING : 2023-11-15 09:29:28,307 : anonymous : 307 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+WARNING : 2023-11-15 09:29:28,307 : anonymous : 307 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
 INFO : 2023-11-15 09:29:47,608 : 32 : 608 : Student created successfully! : views : None
 INFO : 2023-11-15 09:31:25,187 : 33 : 187 : Student created successfully! : views : None
 ERROR : 2023-11-15 09:34 : 33 : 467 : {views} : [get] : Email Verified Successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:31]
 ERROR : 2023-11-15 20:55 : None : 666 : {views} : [create] : {'phone': [ErrorDetail(string='user with this phone already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:257]
-WARNING : 2023-11-15 20:56:18,801 : anonymous : 801 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
+WARNING : 2023-11-15 20:56:18,801 : anonymous : 801 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
 ERROR : 2023-11-15 20:56 : None : 708 : {views} : [create] : (1062, "Duplicate entry 'user' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:257]
 INFO : 2023-11-15 20:57:17,077 : 35 : 77 : Student created successfully! : views : None
 ERROR : 2023-11-15 22:23 : None : 315 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:234]
@@ -384,9 +384,9 @@ ERROR : 2023-11-15 22:27 : None : 886 : {views} : [create] : 'UserSerializer' ob
 INFO : 2023-11-15 22:28:10,112 : 36 : 112 : Student created successfully! : views : None
 ERROR : 2023-11-15 22:29 : None : 531 : {login} : [post] : {'non_field_errors': [ErrorDetail(string='Unable to log in with provided credentials.', code='authorization')]} : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:92]
 INFO : 2023-11-15 22:29:56,370 : 3 : 370 : User Logged in sucessfully. : login : None
-WARNING : 2023-11-15 22:30:58,795 : anonymous : 795 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:175]
-ERROR : 2023-11-15 22:31 : None : 214 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:221]
-ERROR : 2023-11-15 22:31 : None : 851 : {views} : [create] : (1062, "Duplicate entry 'teacher2' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:221]
+WARNING : 2023-11-15 22:30:58,795 : anonymous : 795 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:175]
+ERROR : 2023-11-15 22:31 : None : 214 : {views} : [create] : 'UserSerializer' object is not callable : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:221]
+ERROR : 2023-11-15 22:31 : None : 851 : {views} : [create] : (1062, "Duplicate entry 'tutor2' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:221]
 INFO : 2023-11-15 22:32:12,808 : 38 : 808 : Teacher created successfully! : views : None
 ERROR : 2023-11-15 22:48 : Anonymous : 695 : {views} : [get] : Invalid verification token. : [in C:\enchird_LMS\enchird-school-backend\apis\users\views.py:views.py:17]
 INFO : 2023-11-15 22:59:24,572 : 39 : 572 : Teacher created successfully! : views : None
@@ -459,8 +459,8 @@ ERROR : 2023-11-17 13:38 : 3 : 655 : {views} : [destroy] : Course not Found. : [
 ERROR : 2023-11-17 13:39 : 3 : 272 : {views} : [destroy] : Course not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:332]
 INFO : 2023-11-17 13:39:09,572 : 3 : 572 : Course marked as deleted successfully : views : None
 INFO : 2023-11-17 13:48:09,090 : 3 : 90 : Course created successfully! : views : None
-ERROR : 2023-11-17 20:16 : None : 430 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
-ERROR : 2023-11-17 20:17 : None : 669 : {views} : [assign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
+ERROR : 2023-11-17 20:16 : None : 430 : {views} : [assign_tutor] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
+ERROR : 2023-11-17 20:17 : None : 669 : {views} : [assign_tutor] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:362]
 INFO : 2023-11-17 20:17:52,878 : 3 : 878 : User Logged in sucessfully. : login : None
 ERROR : 2023-11-19 16:38 : Anonymous : 234 : {views} : [register_course] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:379]
 INFO : 2023-11-19 16:39:37,826 : 3 : 826 : User Logged in sucessfully. : login : None
@@ -584,7 +584,7 @@ ERROR : 2023-12-13 11:27 : None : 314 : {views} : [register_student] : 'int' obj
 INFO : 2023-12-13 12:21:30,420 : 3 : 420 : User Logged in sucessfully. : login : None
 ERROR : 2023-12-13 12:24 : None : 750 : {views} : [register_student] : 'int' object has no attribute 'id' : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:266]
 ERROR : 2023-12-13 12:24 : 3 : 364 : {views} : [register_student] : {'phone': [ErrorDetail(string='user with this phone already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:259]
-WARNING : 2023-12-13 12:32:27,283 : anonymous : 283 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:196]
+WARNING : 2023-12-13 12:32:27,283 : anonymous : 283 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:196]
 ERROR : 2023-12-13 12:50 : None : 947 : {views} : [register_student] : name 'reset_token' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:265]
 ERROR : 2023-12-13 12:52 : None : 659 : {views} : [register_student] : 'Applicant' object has no attribute 'faculty' : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:269]
 ERROR : 2023-12-13 12:52 : None : 864 : {views} : [register_student] : (1048, "Column 'user_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:269]
@@ -744,12 +744,12 @@ TypeError: Applicant() got unexpected keyword arguments: 'department'
  : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:176]
 INFO : 2023-12-15 12:04:07,131 : None : 131 : Applicant created successfully! : views : None
 INFO : 2023-12-15 17:53:03,777 : 3 : 777 : User Logged in sucessfully. : login : None
-WARNING : 2023-12-15 17:54:01,572 : anonymous : 572 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
-WARNING : 2023-12-15 17:57:34,153 : anonymous : 153 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+WARNING : 2023-12-15 17:54:01,572 : anonymous : 572 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+WARNING : 2023-12-15 17:57:34,153 : anonymous : 153 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
 ERROR : 2023-12-15 17:58 : None : 545 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:181]
 INFO : 2023-12-15 17:58:54,219 : None : 219 : Applicant created successfully! : views : None
 ERROR : 2023-12-15 17:59 : 55 : 614 : {views} : [accept] : {'faculty': [ErrorDetail(string='Incorrect type. Expected pk value, received Faculty.', code='incorrect_type')]} : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:249]
-WARNING : 2023-12-15 18:00:28,522 : anonymous : 522 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
+WARNING : 2023-12-15 18:00:28,522 : anonymous : 522 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:198]
 INFO : 2023-12-15 18:01:14,977 : 56 : 977 : Student created successfully! : views : None
 ERROR : 2023-12-15 18:22 : colonelpirate@gmail.com : 257 : {views} : [accept] : Applicant has already been accepted. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:180]
 ERROR : 2023-12-15 18:22 : colonelpirate@gmail.com : 264 : {views} : [accept] : Applicant Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:176]
@@ -760,7 +760,7 @@ ERROR : 2023-12-15 18:24 : 3 : 464 : {views} : [accept] : {'picture': [ErrorDeta
 INFO : 2023-12-15 18:25:20,748 : 57 : 748 : Student created successfully! : views : None
 ERROR : 2023-12-15 18:45 : colonelpirate@gmail.com : 112 : {views} : [reject] : Applicant Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:289]
 INFO : 2023-12-15 18:46:30,447 : 3 : 447 : User Logged in sucessfully. : login : None
-WARNING : 2023-12-15 18:46:43,264 : None : 264 : An applicant/student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:149]
+WARNING : 2023-12-15 18:46:43,264 : None : 264 : An applicant/student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:149]
 ERROR : 2023-12-15 18:47 : None : 641 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:181]
 INFO : 2023-12-15 18:47:17,663 : None : 663 : Applicant created successfully! : views : None
 ERROR : 2023-12-15 18:47 : 3 : 845 : {views} : [reject] : name 'send_student_reject_mail' is not defined : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:316]
@@ -959,13 +959,13 @@ INFO : 2024-01-05 15:50:52,250 : 1 : 250 : Course created successfully! : views 
 INFO : 2024-01-05 15:51:48,825 : 1 : 825 : User Logged in sucessfully. : login : None
 INFO : 2024-01-05 15:52:40,598 : 3 : 598 : Teacher created successfully! : views : None
 INFO : 2024-01-05 15:54:34,840 : 1 : 840 : Course created successfully! : views : None
-ERROR : 2024-01-05 16:00 : None : 490 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
-WARNING : 2024-01-05 16:01:36,514 : anonymous : 514 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:165]
+ERROR : 2024-01-05 16:00 : None : 490 : {views} : [create] : {'date_of_birth': [ErrorDetail(string='Date has wrong format. Use one of these formats instead: YYYY-MM-DD.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:206]
+WARNING : 2024-01-05 16:01:36,514 : anonymous : 514 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:165]
 INFO : 2024-01-05 16:13:10,910 : 4 : 910 : Teacher created successfully! : views : None
-ERROR : 2024-01-05 16:15 : None : 507 : {views} : [create] : The field 'faculty' was declared on serializer TeacherSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+ERROR : 2024-01-05 16:15 : None : 507 : {views} : [create] : The field 'faculty' was declared on serializer TeacherSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:206]
 INFO : 2024-01-05 16:16:08,376 : 5 : 376 : Teacher created successfully! : views : None
 ERROR : 2024-01-05 16:17 : None : 815 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
-WARNING : 2024-01-05 16:35:12,203 : anonymous : 203 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:163]
+WARNING : 2024-01-05 16:35:12,203 : anonymous : 203 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:163]
 ERROR : 2024-01-05 16:35 : None : 231 : {views} : [create] : Got a `TypeError` when calling `Teacher.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Teacher.objects.create()`. You may need to make the field read-only, or override the TeacherSerializer.create() method to handle this correctly.
 Original exception was:
  Traceback (most recent call last):
@@ -978,24 +978,30 @@ Original exception was:
   File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
     raise TypeError(
 TypeError: Teacher() got unexpected keyword arguments: 'is_active'
- : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:204]
+ : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:204]
 INFO : 2024-01-05 16:42:36,173 : 7 : 173 : Teacher created successfully! : views : None
 INFO : 2024-01-05 16:50:26,193 : 8 : 193 : Teacher created successfully! : views : None
-WARNING : 2024-01-05 16:51:25,071 : anonymous : 71 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:163]
+WARNING : 2024-01-05 16:51:25,071 : anonymous : 71 : A student/tutor with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\tutors\views.py:views.py:163]
 INFO : 2024-01-05 16:51:47,042 : 9 : 42 : Teacher created successfully! : views : None
 ERROR : 2024-01-05 16:53 : None : 175 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
 INFO : 2024-01-05 16:53:46,532 : 1 : 532 : User Logged in sucessfully. : login : None
-ERROR : 2024-01-05 17:17 : 1 : 407 : {views} : [assign_teacher] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
-ERROR : 2024-01-05 17:22 : None : 701 : {views} : [unassign_teacher] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:398]
-ERROR : 2024-01-05 17:37 : 1 : 189 : {views} : [unassign_teacher] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
-ERROR : 2024-01-05 17:38 : 1 : 884 : {views} : [assign_teacher] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
+ERROR : 2024-01-05 17:17 : 1 : 407 : {views} : [assign_tutor] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
+ERROR : 2024-01-05 17:22 : None : 701 : {views} : [unassign_tutor] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:398]
+ERROR : 2024-01-05 17:37 : 1 : 189 : {views} : [unassign_tutor] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
+ERROR : 2024-01-05 17:38 : 1 : 884 : {views} : [assign_tutor] : Teacher is already assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:383]
 INFO : 2024-01-05 17:49:05,262 : 1 : 262 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:49:18,365 : 1 : 365 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:49:22,292 : 1 : 292 : List of courses returned successfully. : views : None
-ERROR : 2024-01-05 17:49 : 1 : 625 : {views} : [unassign_teacher] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
+ERROR : 2024-01-05 17:49 : 1 : 625 : {views} : [unassign_tutor] : Tutor is not assigned to the course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:433]
 INFO : 2024-01-05 17:49:41,877 : 1 : 877 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:51:55,911 : 1 : 911 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:52:08,835 : 1 : 835 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:53:25,752 : 1 : 752 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:53:38,633 : 1 : 633 : List of courses returned successfully. : views : None
 INFO : 2024-01-05 17:54:01,222 : 1 : 222 : List of courses returned successfully. : views : None
+INFO : 2024-01-06 10:13:27,749 : 1 : 749 : User Logged in sucessfully. : login : None
+WARNING : 2024-01-06 10:13:48,012 : anonymous : 12 : A faculty with this name already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:149]
+WARNING : 2024-01-06 10:13:59,421 : anonymous : 421 : A faculty with this name already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:149]
+INFO : 2024-01-06 10:14:43,911 : 1 : 911 : Faculty created successfully! : views : None
+ERROR : 2024-01-06 10:15 : None : 806 : {views} : [create] : {'name': [ErrorDetail(string='department with this name already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:438]
+INFO : 2024-01-06 10:15:52,443 : 1 : 443 : Department created successfully! : views : None
