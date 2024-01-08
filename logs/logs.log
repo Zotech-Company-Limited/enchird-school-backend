@@ -1013,3 +1013,43 @@ INFO : 2024-01-06 19:20:49,886 : 1 : 886 : User Logged in sucessfully. : login :
 ERROR : 2024-01-06 19:22 : 1 : 683 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:179]
 ERROR : 2024-01-06 19:38 : 1 : 989 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:180]
 ERROR : 2024-01-06 19:44 : 1 : 138 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:180]
+ERROR : 2024-01-06 19:57 : 1 : 656 : {views} : [view_course_materials] : Course Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:669]
+ERROR : 2024-01-06 20:08 : 1 : 578 : {views} : [create] : {'course_code': [ErrorDetail(string='course with this course code already exists.', code='unique')], 'course_title': [ErrorDetail(string='course with this course title already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:180]
+INFO : 2024-01-06 20:08:24,162 : 1 : 162 : Course created successfully! : views : None
+INFO : 2024-01-08 09:34:34,971 : None : 971 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:40:20,266 : 1 : 266 : User Logged in sucessfully. : login : None
+INFO : 2024-01-08 09:41:29,696 : 1 : 696 : List of courses returned successfully. : views : None
+INFO : 2024-01-08 09:42:57,658 : None : 658 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:43:20,124 : None : 124 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:43:45,472 : None : 472 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:46:39,114 : None : 114 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:47:54,743 : None : 743 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:48:09,064 : None : 64 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:48:40,030 : None : 30 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:48:45,509 : None : 509 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:48:59,633 : None : 633 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:49:25,088 : None : 88 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 09:49:40,191 : None : 191 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:14:42,536 : 1 : 536 : User Logged in sucessfully. : login : None
+INFO : 2024-01-08 14:17:41,749 : 1 : 749 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:18:04,460 : 1 : 460 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:18:24,835 : 1 : 835 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:18:48,526 : 1 : 526 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:19:27,864 : 1 : 864 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:20:06,338 : 1 : 338 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:20:28,582 : 1 : 582 : Faculty created successfully! : views : None
+INFO : 2024-01-08 14:25:45,277 : None : 277 : List of faculty members returned successfully. : views : None
+INFO : 2024-01-08 14:26:36,428 : 1 : 428 : List of faculty members returned successfully. : views : None
+INFO : 2024-01-08 14:44:59,551 : None : 551 : List of departments returned successfully. : views : None
+ERROR : 2024-01-08 14:47 : None : 339 : {views} : [create] : 'faculty' : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:454]
+ERROR : 2024-01-08 14:47 : None : 106 : {views} : [create] : 'faculty' : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:454]
+ERROR : 2024-01-08 14:48 : None : 277 : {views} : [create] : The field 'faculty_details' was declared on serializer DepartmentSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:454]
+ERROR : 2024-01-08 14:49 : None : 246 : {views} : [create] : The field 'faculty_details' was declared on serializer DepartmentSerializer, but has not been included in the 'fields' option. : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:454]
+INFO : 2024-01-08 14:50:23,450 : 1 : 450 : Department created successfully! : views : None
+INFO : 2024-01-08 14:51:22,742 : None : 742 : List of faculty members returned successfully. : views : None
+INFO : 2024-01-08 14:52:05,650 : None : 650 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:53:29,431 : None : 431 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:53:49,110 : None : 110 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:54:38,223 : None : 223 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:58:37,194 : None : 194 : List of departments returned successfully. : views : None
+INFO : 2024-01-08 14:59:27,934 : None : 934 : List of departments returned successfully. : views : None

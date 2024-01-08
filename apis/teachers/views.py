@@ -9,6 +9,7 @@ from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 from django.shortcuts import render
+from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
@@ -32,6 +33,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
     queryset = Teacher.objects.all().filter(
                 is_deleted=False,
                 ).order_by('-created_at')
+    pagination_class = PaginationClass
     serializer_class = TeacherSerializer
 
     def get_permissions(self):
@@ -50,40 +52,30 @@ class TeacherViewSet(viewsets.ModelViewSet):
         if not user.is_authenticated:
             logger.error(
                 "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+                extra={ 'user': 'Anonymous' }  )
             return Response(
                 {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_superuser is False:
             logger.error(
                 "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+                extra={ 'user': 'Anonymous' } )
             return Response(
-                {
-                    "error": "You do not have the necessary rights."
-                },
-                status.HTTP_403_FORBIDDEN
-            )
+                { "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
+            logger.info(
+                "List of teachers returned successfully.",
+                extra={ 'user': user.id } )
             return self.get_paginated_response(serializer.data)
+        
         serializer = self.get_serializer(queryset, many=True)
         logger.info(
             "List of teachers returned successfully.",
-            extra={
-                'user': user.id
-            }
-        )
+            extra={ 'user': user.id } )
 
         return Response(serializer.data)
 

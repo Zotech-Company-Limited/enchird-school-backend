@@ -10,6 +10,7 @@ from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
 from django.shortcuts import render
+from core.views import PaginationClass
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
@@ -32,6 +33,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
                 is_deleted=False,
                 ).order_by('-created_at')
     serializer_class = ApplicantSerializer
+    pagination_class = PaginationClass
+    
 
 
     def list(self, request, *args, **kwargs):
@@ -39,16 +42,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         user = self.request.user
 
         if not user.is_authenticated:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
-            return Response(
-                {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
@@ -60,7 +55,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
                 applicant_id = data['applicant_id']
                 achievement_documents = AchievementDocument.objects.filter(applicant__applicant_id=applicant_id)
                 data['past_achievement_documents'] = AchievementDocumentSerializer(achievement_documents, many=True).data
-                
+            
+            logger.info("List of applicants returned successfully.", extra={'user': user.id})
             return self.get_paginated_response(serializer.data)
         serializer = self.get_serializer(queryset, many=True)
 
@@ -70,12 +66,7 @@ class ApplicantViewSet(viewsets.ModelViewSet):
             achievement_documents = AchievementDocument.objects.filter(applicant__applicant_id=applicant_id)
             data['past_achievement_documents'] = AchievementDocumentSerializer(achievement_documents, many=True).data
 
-        logger.info(
-            "List of applicants returned successfully.",
-            extra={
-                'user': user.id
-            }
-        )
+        logger.info("List of applicants returned successfully.", extra={'user': user.id})
 
         return Response(serializer.data)
 

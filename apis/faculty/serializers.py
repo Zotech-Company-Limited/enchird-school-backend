@@ -20,7 +20,6 @@ class FacultySerializer(WritableNestedModelSerializer):
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
-    # faculty = FacultySerializer()  # Nested serializer for Faculty
     faculty = serializers.PrimaryKeyRelatedField(
         queryset=Faculty.objects.all().filter(
             is_deleted=False
@@ -30,12 +29,19 @@ class DepartmentSerializer(serializers.ModelSerializer):
         required=False,
         write_only=True
     )
+    faculty_details = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Department
-        fields = ['id', 'name', 'department_id', 'faculty', 'about',
-                  'description', 'is_deleted', 'created_at']
-        read_only_fields = ['id', 'department_id', 'created_at']
+        fields = ['id', 'name', 'department_id', 'faculty_details',
+                  'faculty', 'about', 'description', 'is_deleted', 'created_at']
+        read_only_fields = ['id', 'department_id', 'created_at', 'faculty_details']
+
+    def get_faculty_details(self, obj):
+        faculty = obj.faculty
+        if faculty:
+            return FacultySerializer(faculty).data
+        return None
 
 
 class FacultyMemberSerializer(WritableNestedModelSerializer):

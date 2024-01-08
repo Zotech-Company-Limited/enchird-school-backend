@@ -7,6 +7,7 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
+from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
@@ -55,15 +56,11 @@ class CourseViewSet(viewsets.ModelViewSet):
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
+            logger.info("List of courses returned successfully.", extra={'user': user.id})
             return self.get_paginated_response(serializer.data)
+        
         serializer = self.get_serializer(queryset, many=True)
-        logger.info(
-            "List of courses returned successfully.",
-            extra={
-                'user': user.id
-            }
-        )
-
+        logger.info("List of courses returned successfully.", extra={'user': user.id})
         return Response(serializer.data)
 
 

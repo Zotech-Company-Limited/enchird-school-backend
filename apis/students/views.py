@@ -10,6 +10,7 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
+from core.views import PaginationClass
 from apis.students.models import Student
 from apis.utils import validate_password
 from django.core.mail import EmailMessage
@@ -42,6 +43,7 @@ class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all().filter(
                 is_deleted=False,
                 ).order_by('-created_at')
+    pagination_class = PaginationClass
     serializer_class = StudentSerializer
 
     def get_permissions(self):
@@ -59,43 +61,32 @@ class StudentViewSet(viewsets.ModelViewSet):
         user = self.request.user
 
         if not user.is_authenticated:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
             return Response(
                 {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_admin is False and user.is_superuser is False:
             logger.error(
                 "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+                extra={ 'user': 'Anonymous' } )
             return Response(
-                {
-                    "error": "You do not have the necessary rights."
-                },
-                status.HTTP_403_FORBIDDEN
-            )
+                { "error": "You do not have the necessary rights." },
+                status.HTTP_403_FORBIDDEN )
         
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
+            logger.info(
+                "Students list returned successfully.",
+                extra={ 'user': user.id } )
             return self.get_paginated_response(serializer.data)
+        
         serializer = self.get_serializer(queryset, many=True)
         logger.info(
             "Students list returned successfully.",
-            extra={
-                'user': user.id
-            }
-        )
+            extra={ 'user': user.id } )
 
         return Response(serializer.data)
 

@@ -9,6 +9,7 @@ from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 from django.shortcuts import render
+from core.views import PaginationClass
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
@@ -30,26 +31,23 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 is_deleted=False,
                 ).order_by('-created_at')
     serializer_class = FacultySerializer
+    pagination_class = PaginationClass
 
 
     def list(self, request, *args, **kwargs):
         
         user = self.request.user
 
-
         queryset = self.filter_queryset(self.get_queryset())
+        # Use pagination
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
+            logger.info( "List of faculty members returned successfully.", extra={'user': user.id} )
             return self.get_paginated_response(serializer.data)
+        
         serializer = self.get_serializer(queryset, many=True)
-        logger.info(
-            "List of faculties returned successfully.",
-            extra={
-                'user': user.id
-            }
-        )
-
+        logger.info( "List of faculty members returned successfully.", extra={'user': user.id} )
         return Response(serializer.data)
 
 
@@ -335,12 +333,30 @@ class FacultyViewSet(viewsets.ModelViewSet):
 
 class DepartmentViewSet(viewsets.ModelViewSet):
     queryset = Department.objects.all().filter(is_deleted=False).order_by('-created_at')
+    pagination_class = PaginationClass
     serializer_class = DepartmentSerializer
 
     def list(self, request, *args, **kwargs):
         user = self.request.user
+        
+        faculty_name = request.query_params.get('faculty_name', None)
+        if faculty_name is not None:
+            queryset = Department.objects.all().filter(
+                faculty__name__icontains=faculty_name
+                ).order_by('-created_at')
+        else:
+            queryset = self.filter_queryset(self.get_queryset())
+        
+        # Using pagination
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            logger.info(
+                "List of departments returned successfully.",
+                extra={'user': user.id}
+            )
+            return self.get_paginated_response(serializer.data)
 
-        queryset = self.filter_queryset(self.get_queryset())
         serializer = self.get_serializer(queryset, many=True)
         logger.info(
             "List of departments returned successfully.",
@@ -552,6 +568,7 @@ class DepartmentViewSet(viewsets.ModelViewSet):
             {"message": "Department marked as Deleted"},
             status=status.HTTP_200_OK
         )
+
 
 
 class FacultyMemberViewSet(viewsets.ModelViewSet):
