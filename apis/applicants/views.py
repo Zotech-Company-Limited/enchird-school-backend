@@ -3,12 +3,14 @@ import string
 import logging
 import datetime
 import requests
+import django_filters
 from io import BytesIO
 from apis.utils import *
 from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
+from rest_framework import filters
 from django.shortcuts import render
 from core.views import PaginationClass
 from rest_framework import status, viewsets
@@ -26,15 +28,19 @@ from .serializers import ApplicantSerializer, AchievementDocumentSerializer
 logger = logging.getLogger("myLogger")
 
 
+# class ApplicantFilter(django_filters.FilterSet):
+#     class Meta:
+#         model = Applicant
+#         fields = {
+#             'created_at': ['exact', 'gte', 'lte'],
+#         }
+
 # Create your views here.
 class ApplicantViewSet(viewsets.ModelViewSet):
-
-    queryset = Applicant.objects.all().filter(
-                is_deleted=False,
-                ).order_by('-created_at')
+    
+    queryset = Applicant.objects.all().filter(is_deleted=False).order_by('-created_at')
     serializer_class = ApplicantSerializer
     pagination_class = PaginationClass
-    
 
 
     def list(self, request, *args, **kwargs):
@@ -45,7 +51,34 @@ class ApplicantViewSet(viewsets.ModelViewSet):
             logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
             return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
-        queryset = self.filter_queryset(self.get_queryset())
+        order_by_created_at = self.request.query_params.get('order_by_created_at', None)
+        faculty_name = request.query_params.get('faculty_name', None)
+        department_name = request.query_params.get('department_name', None)
+        status = request.query_params.get('status', None)
+        gender = request.query_params.get('gender', None)
+        
+        queryset = Applicant.objects.filter(is_deleted=False)
+        
+        if order_by_created_at:
+            queryset = queryset.order_by('-created_at') if order_by_created_at == 'desc' else queryset.order_by('created_at')
+
+        if faculty_name: 
+            queryset = queryset.filter(faculty__name__icontains=faculty_name)
+
+        if department_name:
+            queryset = queryset.filter(department__name__icontains=department_name)
+
+        if gender:
+            queryset = queryset.filter(gender=gender)
+            
+        if status:
+            queryset = queryset.filter(status=status) 
+            
+        if not order_by_created_at:
+            queryset = queryset.order_by('-created_at')
+
+        queryset = queryset 
+        
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)

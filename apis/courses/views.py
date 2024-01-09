@@ -33,6 +33,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all().filter(
                 is_deleted=False,
                 ).order_by('-created_at')
+    pagination_class = PaginationClass
     serializer_class = CourseSerializer
 
 

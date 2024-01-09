@@ -40,7 +40,7 @@ class ApplicantSerializer(serializers.ModelSerializer):
         required=False,
         write_only=True
     )
-    department_details = DepartmentSerializer(source='faculty', read_only=True)
+    department_details = DepartmentSerializer(source='department', read_only=True)
 
     class Meta:
         model = Applicant
