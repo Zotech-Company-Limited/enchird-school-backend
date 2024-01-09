@@ -1,5 +1,7 @@
+from apis.faculty.models import *
 from apis.users.models import User
 from rest_framework import serializers
+from apis.faculty.serializers import *
 from .models import Course, CourseMaterial
 from apis.users.serializers import UserSerializer
 # from apis.courses.serializers import CourseSerializer
@@ -10,14 +12,46 @@ from apis.users.serializers import UserSerializer
 class CourseSerializer(serializers.ModelSerializer):
     
     instructor_details = UserSerializer(many=True, read_only=True, source='tutors') 
+    faculty_details = serializers.SerializerMethodField(read_only=True)
+    faculty = serializers.PrimaryKeyRelatedField(
+        queryset=Faculty.objects.all().filter(
+            is_deleted=False
+        ),
+        allow_null=True,
+        allow_empty=True,
+        required=False,
+        write_only=True
+    )
+    department_details = serializers.SerializerMethodField(read_only=True)
+    department = serializers.PrimaryKeyRelatedField(
+        queryset=Department.objects.all().filter(
+            is_deleted=False
+        ),
+        allow_null=True,
+        allow_empty=True,
+        required=False,
+        write_only=True
+    )
 
     class Meta:
         model = Course
-        fields = ['id', 'course_id', 'course_code', 'course_title', 'description', 'faculty', #'instructors',
-                    'instructor_details', 'class_schedule', 'location', 'course_level', #'course_materials', 
-                    'learning_objectives', 'assessment_and_grading', 'term', 'department', 
-                    'credits', 'is_deleted', 'course_status', 'created_at', 'created_by', 'modified_by']
-        read_only_fields = ['id', 'course_id', 'instructor_details']
+        fields = ['id', 'course_id', 'course_code', 'course_title', 'faculty_details', 
+                    'faculty', 'instructor_details', 'class_schedule', 'description', #'course_materials', 
+                    'course_level', 'term', 'department', 'department_details', 'location', 'credits',
+                    'is_deleted', 'course_status', 'created_at', 'created_by', 'modified_by']
+        read_only_fields = ['id', 'course_id', 'instructor_details'] 
+
+    def get_faculty_details(self, obj):
+        faculty = obj.faculty
+        if faculty:
+            return FacultySerializer(faculty).data
+        return None
+    
+    def get_department_details(self, obj):
+        department = obj.department
+        if department:
+            return DepartmentSerializer(department).data
+        return None
 
     def to_representation(self, instance):
         representation = super(CourseSerializer, self).to_representation(instance)

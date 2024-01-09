@@ -12,18 +12,14 @@ from apis.faculty.models import Faculty, Department
 
 class Course(models.Model):
 
-
     course_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     course_title = models.CharField(max_length=100, blank=False,null=False, unique=True)
     course_code = models.CharField(max_length=10, blank=False,null=False, unique=True)
     description = models.TextField(max_length=255, null=True, blank=True)
-    course_level = models.CharField(max_length=3, blank=True, null=True)
+    course_level = models.CharField(max_length=4, blank=True, null=True)
     class_schedule = models.CharField(max_length=255, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)
 
-    learning_objectives = models.TextField(blank=True, null=True)
-
-    assessment_and_grading = models.TextField(blank=True, null=True)
     term = models.CharField(max_length=50, blank=True, null=True)
     credits = models.PositiveIntegerField(default=0)
     is_deleted = models.BooleanField(default=False)

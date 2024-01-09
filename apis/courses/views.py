@@ -43,16 +43,30 @@ class CourseViewSet(viewsets.ModelViewSet):
         if not user.is_authenticated:
             logger.error(
                 "You do not have the necessary rights.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+                extra={ 'user': 'Anonymous' })
             return Response(
                 {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+                status=status.HTTP_401_UNAUTHORIZED )
+            
+        faculty_name = request.query_params.get('faculty_name', None)
+        department_name = request.query_params.get('department_name', None)
+        course_level = request.query_params.get('course_level', None)
 
-        queryset = self.filter_queryset(self.get_queryset())
+        queryset = Course.objects.filter(is_deleted=False)
+
+        if faculty_name:
+            queryset = queryset.filter(faculty__name__icontains=faculty_name)
+
+        if department_name:
+            queryset = queryset.filter(department__name__icontains=department_name)
+
+        if course_level:
+            queryset = queryset.filter(course_level=course_level)
+
+        queryset = queryset.order_by('-created_at')
+
+
+        # queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)

@@ -4,6 +4,12 @@ from django.db.models.signals import post_save
 from apis.users.models import User
 
 # Create your models here.
+class Level(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+    
 
 class Faculty(models.Model):
 
@@ -12,6 +18,7 @@ class Faculty(models.Model):
     abbrev = models.CharField(max_length=10, blank=False, null=False)
     description = models.CharField(max_length=244, blank=True, null=True)
     about = models.CharField(max_length=244, blank=True, null=True)
+    levels = models.ManyToManyField(Level, blank=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",

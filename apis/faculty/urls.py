@@ -6,7 +6,7 @@ from .views import *
 router = DefaultRouter()
 
 # Register the FacultyViewSet
-router.register(r'admin/faculty', FacultyViewSet)
+router.register(r'admin/faculty', FacultyViewSet, basename='faculty')
 router.register(r'department', DepartmentViewSet)
 router.register(r'admin/faculty-member', FacultyMemberViewSet)
 

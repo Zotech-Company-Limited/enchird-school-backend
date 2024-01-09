@@ -6,16 +6,24 @@ from drf_writable_nested import WritableNestedModelSerializer
 
 
 
+class LevelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Level
+        fields = ['id', 'name']
+        
+        
+
 class FacultySerializer(WritableNestedModelSerializer):
 
     name = serializers.CharField(allow_null=False, required=True)
     abbrev = serializers.CharField(required=True)
+    levels = LevelSerializer(many=True, required=False)
 
     class Meta:
 
         model = Faculty
         fields = ['id', 'name', 'faculty_id', 'abbrev', 'description',
-                  'about', 'is_deleted', 'created_at']
+                   'levels', 'about', 'is_deleted', 'created_at']
         read_only_fields = ['id', 'faculty_id', 'created_at']
 
 

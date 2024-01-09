@@ -2,8 +2,10 @@ import string
 import random
 import logging
 import datetime
+from .models import *
 from uuid import uuid4
 from apis.utils import *
+from .serializers import *
 from django.db.models import Q
 from django.conf import settings
 from django.db import transaction
@@ -12,14 +14,13 @@ from django.shortcuts import render
 from core.views import PaginationClass
 from rest_framework import status, viewsets
 from rest_framework.response import Response
+from rest_framework.decorators import action
 from django.contrib.auth import get_user_model
 from apis.users.models import User, AnonymousUser
 from core.email import send_faculty_verification_email
-from .models import Faculty, Department, Faculty_Member
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .serializers import FacultySerializer, DepartmentSerializer, FacultyMemberSerializer
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
 logger = logging.getLogger("myLogger")
@@ -52,7 +53,7 @@ class FacultyViewSet(viewsets.ModelViewSet):
 
 
     def retrieve(self, request, *args, **kwargs):
-        """Docstring for function."""
+        
         user = self.request.user
         print(user)
         if not user.is_authenticated:
@@ -97,31 +98,21 @@ class FacultyViewSet(viewsets.ModelViewSet):
         if not user.is_authenticated:
             logger.error(
                 "You must provide valid authentication credentials.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
+                extra={ 'user': 'Anonymous' } )
             return Response(
                 {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_admin is False:
             logger.error(
                 "You do not have the necessary rights/Not an Admin.",
-                extra={
-                    'user': user.id
-                }
-            )
+                extra={ 'user': user.id } )
             return Response(
-                {
-                    "error": "You do not have the necessary rights/Not an Admin."
-                },
-                status.HTTP_403_FORBIDDEN
-            )
+                { "error": "You do not have the necessary rights/Not an Admin." }, status.HTTP_403_FORBIDDEN )
         
         try:
             with transaction.atomic():
+                levels_data = request.data.get('levels', [])
                 faculty_serializer = self.get_serializer(data=request.data)
                 if faculty_serializer.is_valid(raise_exception=True):
                 
@@ -146,15 +137,12 @@ class FacultyViewSet(viewsets.ModelViewSet):
                     if num > 0:
                         logger.warning(
                             "A faculty with this abbreviation already exists.",
-                            extra={
-                                'user': 'anonymous'
-                            }
-                        )
+                            extra={ 'user': 'anonymous' } )
                         return Response({"error": "A faculty with this abbreviation already exists."},
                                         status=status.HTTP_409_CONFLICT)
 
                     # Create user
-                    self.perform_create(faculty_serializer, user)
+                    self.perform_create(faculty_serializer, user, levels_data)
                     
                     headers = self.get_success_headers(faculty_serializer.data)
                     
@@ -182,9 +170,16 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
-    def perform_create(self, serializer, user):
+    def perform_create(self, serializer, user, levels_data):
 
-        return serializer.save(created_by=user)
+        faculty_instance = serializer.save(created_by=user)
+
+        # Add levels to the faculty instance
+        for level_data in levels_data:
+            level_serializer = LevelSerializer(data=level_data)
+            if level_serializer.is_valid():
+                level_instance, _ = Level.objects.get_or_create(**level_serializer.validated_data)
+                faculty_instance.levels.add(level_instance)
 
 
     def update(self, request, *args, **kwargs):
@@ -194,31 +189,24 @@ class FacultyViewSet(viewsets.ModelViewSet):
         if not user.is_authenticated:
             logger.error(
                 "You must provide valid authentication credentials.",
-                extra={
-                    'user': request.user.id
-                }
-            )
+                extra={ 'user': request.user.id } )
             return Response(
                 {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if request.user.is_admin is False:
             logger.warning(
                 "You do not have the necessary rights! (Not admin)",
-                extra={
-                    'user': request.user.id
-                }
-            )
+                extra={ 'user': request.user.id } )
             return Response(
                 {"error": "You do not have the necessary rights (Not admin)"},
-                status.HTTP_403_FORBIDDEN
-            )
+                status.HTTP_403_FORBIDDEN )
 
         try:
             partial = kwargs.pop('partial', True)
             instance = self.get_object()
             print(instance)
+            levels_data = request.data.get('levels', [])
             serializer = self.get_serializer(
                 instance, data=request.data,
                 partial=partial)
@@ -256,7 +244,7 @@ class FacultyViewSet(viewsets.ModelViewSet):
                     {'message': "A Faculty already exists with this abbreviation."},
                     status=status.HTTP_409_CONFLICT)
             
-            self.perform_update(serializer)
+            self.perform_update(serializer, levels_data)
 
             if getattr(instance, '_prefetched_objects_cache', None):
                 instance._prefetched_objects_cache = {}
@@ -281,13 +269,20 @@ class FacultyViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_412_PRECONDITION_FAILED)
             
         
-    def perform_update(self, serializer):
-        """Docstring for function."""
-        return serializer.save()
+    def perform_update(self, serializer, levels_data):
+        instance =  serializer.save()
+        
+         # Update levels for the faculty instance
+        instance.levels.clear()
+        for level_data in levels_data:
+            level_serializer = LevelSerializer(data=level_data)
+            if level_serializer.is_valid():
+                level_instance, _ = Level.objects.get_or_create(**level_serializer.validated_data)
+                instance.levels.add(level_instance)
 
 
     def destroy(self, request, *args, **kwargs):
-        """Docstring for function."""
+        
         user = self.request.user
 
         if not user.is_authenticated:
@@ -330,6 +325,29 @@ class FacultyViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK)
 
 
+    @action(detail=True, methods=['GET'], url_path='levels')
+    def list_levels(self, request, *args, **kwargs):
+        """
+        Retrieve the list of levels associated with a faculty.
+        """
+        try: 
+            faculty = self.get_object()
+            print(faculty)
+            levels = faculty.levels.all()  # Assuming 'levels' is the related name in the Faculty model
+
+            level_serializer = LevelSerializer(levels, many=True)
+            logger.info(
+                f"List of levels for faculty '{faculty.name}' retrieved successfully.",
+                extra={'user': request.user.id, 'faculty_id': faculty.id}
+            )
+            return Response(level_serializer.data)
+        except Exception as e:
+            logger.error(
+                f"Failed to retrieve levels for faculty '{faculty.name}': {str(e)}",
+                extra={'user': request.user.id, 'faculty_id': faculty.id}
+            )
+            return Response({"error": "Failed to retrieve levels for faculty."}, status=500)
+
 
 class DepartmentViewSet(viewsets.ModelViewSet):
     queryset = Department.objects.all().filter(is_deleted=False).order_by('-created_at')
@@ -339,11 +357,12 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         user = self.request.user
         
-        faculty_name = request.query_params.get('faculty_name', None)
-        if faculty_name is not None:
+        faculty_id = request.query_params.get('faculty_id', None)
+        if faculty_id is not None:
             queryset = Department.objects.all().filter(
-                faculty__name__icontains=faculty_name
-                ).order_by('-created_at')
+                faculty_id=faculty_id,
+                is_deleted=False
+            ).order_by('-created_at')
         else:
             queryset = self.filter_queryset(self.get_queryset())
         
@@ -364,6 +383,7 @@ class DepartmentViewSet(viewsets.ModelViewSet):
         )
 
         return Response(serializer.data)
+
 
     def retrieve(self, request, *args, **kwargs):
         user = self.request.user
@@ -413,7 +433,6 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
         try:
             with transaction.atomic():
-                print("here")
                 department_serializer = self.get_serializer(data=request.data)
                 print(department_serializer)
                 if department_serializer.is_valid(raise_exception=True):
