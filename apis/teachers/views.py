@@ -160,6 +160,15 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         
                         # Create Teacher
                         teacher = teacher_serializer.save(user=user)
+                        
+                        # Add associated faculties, courses, and departments
+                        faculties = request.data.get('faculties', [])
+                        courses = request.data.get('courses', [])
+                        departments = request.data.get('departments', [])
+                        
+                        teacher.faculties.set(faculties)
+                        teacher.courses.set(courses)
+                        teacher.departments.set(departments)
 
                         user.reset_token = reset_token
                         user.password_requested_at = timezone.now()
@@ -205,12 +214,12 @@ class TeacherViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_412_PRECONDITION_FAILED)
 
     def perform_create(self, serializer):
-        """Docstring for function."""
+        
         return serializer.save()
 
 
     def update(self, request, *args, **kwargs):
-        """Docstring for function."""
+        
         user = self.request.user
 
         if request.user.is_a_teacher is False:
@@ -259,6 +268,15 @@ class TeacherViewSet(viewsets.ModelViewSet):
         teacher_serializer = self.get_serializer(teacher)
         if user_serializer.is_valid() is True:
             self.perform_update(user_serializer)
+            
+            # Update associated faculties, courses, and departments
+            faculties = request.data.get('faculties', [])
+            courses = request.data.get('courses', [])
+            departments = request.data.get('departments', [])
+            
+            instance.faculties.set(faculties)
+            instance.courses.set(courses)
+            instance.departments.set(departments)
 
             if getattr(instance, '_prefetched_objects_cache', None):
                 instance._prefetched_objects_cache = {}

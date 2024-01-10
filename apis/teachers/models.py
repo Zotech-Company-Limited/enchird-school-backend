@@ -4,8 +4,8 @@ from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
 from apis.courses.models import Course
-from apis.faculty.models import Faculty
 from django.db.models.signals import post_save
+from apis.faculty.models import Faculty, Department
 
 
 
@@ -23,10 +23,15 @@ class Teacher(models.Model):
         related_name='tutors'
         
     )
-    faculty = models.ForeignKey(
+    faculties = models.ManyToManyField(
         Faculty,
-        on_delete=models.PROTECT,
-        null=True
+        related_name='teachers',
+        blank=True
+    )
+    departments = models.ManyToManyField(
+        Department,
+        related_name='teachers',
+        blank=True
     )
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(

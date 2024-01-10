@@ -1125,3 +1125,14 @@ INFO : 2024-01-09 11:34:32,463 : 1 : 463 : List of applicants returned successfu
 INFO : 2024-01-09 11:35:39,912 : 1 : 912 : List of applicants returned successfully. : views : None
 INFO : 2024-01-09 11:35:46,351 : 1 : 351 : List of applicants returned successfully. : views : None
 INFO : 2024-01-09 11:35:57,510 : 1 : 510 : List of applicants returned successfully. : views : None
+INFO : 2024-01-10 05:37:59,611 : 1 : 611 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-10 06:06 : None : 817 : {views} : [create] : {'courses': [ErrorDetail(string='Invalid pk "1" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+WARNING : 2024-01-10 06:07:52,830 : anonymous : 830 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:155]
+ERROR : 2024-01-10 06:09 : None : 53 : {views} : [create] : (1062, "Duplicate entry 'sajeste' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+INFO : 2024-01-10 06:09:33,115 : 11 : 115 : Teacher created successfully! : views : None
+INFO : 2024-01-10 06:14:46,550 : 1 : 550 : List of teachers returned successfully. : views : None
+INFO : 2024-01-10 06:15:48,461 : 1 : 461 : List of teachers returned successfully. : views : None
+INFO : 2024-01-10 06:16:12,970 : 1 : 970 : List of teachers returned successfully. : views : None
+INFO : 2024-01-10 06:18:07,946 : 1 : 946 : List of teachers returned successfully. : views : None
+INFO : 2024-01-10 06:18:12,354 : 1 : 354 : List of teachers returned successfully. : views : None
+INFO : 2024-01-10 06:18:44,722 : 1 : 722 : List of teachers returned successfully. : views : None
