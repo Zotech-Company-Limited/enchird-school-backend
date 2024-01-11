@@ -357,10 +357,11 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         user = self.request.user
         
-        faculty_id = request.query_params.get('faculty_id', None)
-        if faculty_id is not None:
+        faculty_name = request.query_params.get('faculty_name', None)
+        
+        if faculty_name is not None:
             queryset = Department.objects.all().filter(
-                faculty_id=faculty_id,
+                faculty__name__icontains=faculty_name,
                 is_deleted=False
             ).order_by('-created_at')
         else:

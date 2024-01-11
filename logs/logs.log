@@ -1136,3 +1136,7 @@ INFO : 2024-01-10 06:16:12,970 : 1 : 970 : List of teachers returned successfull
 INFO : 2024-01-10 06:18:07,946 : 1 : 946 : List of teachers returned successfully. : views : None
 INFO : 2024-01-10 06:18:12,354 : 1 : 354 : List of teachers returned successfully. : views : None
 INFO : 2024-01-10 06:18:44,722 : 1 : 722 : List of teachers returned successfully. : views : None
+INFO : 2024-01-11 13:05:47,072 : 1 : 72 : User Logged in sucessfully. : login : None
+INFO : 2024-01-11 13:06:26,141 : None : 141 : List of departments returned successfully. : views : None
+INFO : 2024-01-11 13:07:57,345 : 1 : 345 : List of courses returned successfully. : views : None
+INFO : 2024-01-11 13:19:01,600 : None : 600 : List of departments returned successfully. : views : None
