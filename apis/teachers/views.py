@@ -63,7 +63,31 @@ class TeacherViewSet(viewsets.ModelViewSet):
                 extra={ 'user': 'Anonymous' } )
             return Response(
                 { "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
-        queryset = self.filter_queryset(self.get_queryset())
+        
+        order_by_created_at = self.request.query_params.get('order_by_created_at', None)
+        faculty_name = request.query_params.get('faculty_name', None)
+        department_name = request.query_params.get('department_name', None)
+        gender = request.query_params.get('gender', None)
+        
+        queryset = Teacher.objects.filter(is_deleted=False)
+
+        if order_by_created_at:
+            queryset = queryset.order_by('-created_at') if order_by_created_at == 'desc' else queryset.order_by('created_at')
+
+        if faculty_name: 
+            queryset = queryset.filter(faculties__name__icontains=faculty_name)
+
+        if department_name:
+            queryset = queryset.filter(departments__name__icontains=department_name)
+
+        if gender:
+            queryset = queryset.filter(user__gender=gender)
+            
+        if not order_by_created_at:
+            queryset = queryset.order_by('-created_at')
+
+        queryset = queryset 
+        
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)

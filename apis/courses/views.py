@@ -58,7 +58,8 @@ class CourseViewSet(viewsets.ModelViewSet):
         if faculty_name:
             queryset = queryset.filter(faculty__name__icontains=faculty_name)
 
-        if department_name:
+        if department_name: 
+            
             queryset = queryset.filter(department__name__icontains=department_name)
 
         if course_level:
