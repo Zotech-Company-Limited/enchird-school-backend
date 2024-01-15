@@ -51,7 +51,7 @@ class ApplicantViewSet(viewsets.ModelViewSet):
             logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
             return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
-        order_by_created_at = self.request.query_params.get('order_by_created_at', None)
+        order = self.request.query_params.get('order', None)
         faculty_name = request.query_params.get('faculty_name', None)
         department_name = request.query_params.get('department_name', None)
         status = request.query_params.get('status', None)
@@ -59,8 +59,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         
         queryset = Applicant.objects.filter(is_deleted=False)
         
-        if order_by_created_at:
-            queryset = queryset.order_by('-created_at') if order_by_created_at == 'desc' else queryset.order_by('created_at')
+        if order:
+            queryset = queryset.order_by('-created_at') if order == 'desc' else queryset.order_by('created_at')
 
         if faculty_name: 
             queryset = queryset.filter(faculty__name__icontains=faculty_name)
@@ -74,7 +74,7 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         if status:
             queryset = queryset.filter(status=status) 
             
-        if not order_by_created_at:
+        if not order:
             queryset = queryset.order_by('-created_at')
 
         queryset = queryset 

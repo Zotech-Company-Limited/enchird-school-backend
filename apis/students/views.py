@@ -73,8 +73,31 @@ class StudentViewSet(viewsets.ModelViewSet):
             return Response(
                 { "error": "You do not have the necessary rights." },
                 status.HTTP_403_FORBIDDEN )
-        
+            
         queryset = self.filter_queryset(self.get_queryset())
+            
+        # Apply filters based on query parameters
+        gender = self.request.query_params.get('gender', None)
+        faculty = self.request.query_params.get('faculty', None)
+        department = self.request.query_params.get('department', None)
+        order = self.request.query_params.get('order', None)
+        
+        if gender:
+            queryset = queryset.filter(user__gender=gender)
+
+        if faculty:
+            queryset = queryset.filter(faculty__name__icontains=faculty)
+
+        if department:
+            queryset = queryset.filter(department__name__icontains=department)
+        
+        if order:
+            queryset = queryset.order_by('-created_at') if order == 'desc' else queryset.order_by('created_at')
+            
+        if not order:
+            queryset = queryset.order_by('-created_at')
+
+        # queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
