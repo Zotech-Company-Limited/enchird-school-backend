@@ -13046,3 +13046,4 @@ ERROR:myLogger:Cannot resolve keyword 'faculties' into field. Choices are: facul
 WARNING:django.request:Precondition Failed: /api/admin/faculty/
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:myLogger:Faculty created successfully!

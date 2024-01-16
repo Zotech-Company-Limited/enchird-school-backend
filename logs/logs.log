@@ -1194,3 +1194,4 @@ ERROR : 2024-01-16 05:36 : None : 434 : {views} : [create] : {'levels': [{'name'
 ERROR : 2024-01-16 05:37 : None : 272 : {views} : [create] : Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:163]
 ERROR : 2024-01-16 05:42 : None : 824 : {views} : [create] : Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:163]
 ERROR : 2024-01-16 05:42 : None : 178 : {views} : [create] : Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:163]
+INFO : 2024-01-16 05:44:11,834 : 1 : 834 : Faculty created successfully! : views : None
