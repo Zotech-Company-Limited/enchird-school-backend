@@ -1195,3 +1195,9 @@ ERROR : 2024-01-16 05:37 : None : 272 : {views} : [create] : Cannot resolve keyw
 ERROR : 2024-01-16 05:42 : None : 824 : {views} : [create] : Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:163]
 ERROR : 2024-01-16 05:42 : None : 178 : {views} : [create] : Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:163]
 INFO : 2024-01-16 05:44:11,834 : 1 : 834 : Faculty created successfully! : views : None
+INFO : 2024-01-16 05:51:41,803 : None : 803 : List of faculty members returned successfully. : views : None
+INFO : 2024-01-16 06:06:27,582 : None : 582 : List of departments returned successfully. : views : None
+INFO : 2024-01-16 06:12:07,002 : 1 : 2 : Students list returned successfully. : views : None
+INFO : 2024-01-16 06:12:40,475 : 1 : 475 : Students list returned successfully. : views : None
+INFO : 2024-01-16 06:12:48,356 : 1 : 356 : Students list returned successfully. : views : None
+INFO : 2024-01-16 06:14:59,924 : 1 : 924 : Students list returned successfully. : views : None

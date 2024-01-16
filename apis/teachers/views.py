@@ -246,29 +246,22 @@ class TeacherViewSet(viewsets.ModelViewSet):
         
         user = self.request.user
 
-        if request.user.is_a_teacher is False:
-            logger.warning(
-                "You do not have the necessary rights! (Not a teacher)",
-                extra={
-                    'user': request.user.id
-                }
-            )
-            return Response(
-                {"error": "You do not have the necessary rights (Not a teacher)"},
-                status.HTTP_403_FORBIDDEN
-            )
-        
-        if request.user.id != int(kwargs['pk']):
+        # Check if the user is either a teacher or a superadmin
+        if not (user.is_a_teacher or user.is_staff):
             logger.error(
-                "You cannot edit another teacher's information",
-                extra={
-                    'user': request.user.id
-                }
-            )
+                "You do not have the necessary rights! (Not a teacher or superadmin)",
+                extra={'user': request.user.id} )
             return Response(
-                {"error": "You cannot edit another teacher's information"},
-                status.HTTP_400_BAD_REQUEST
-            )
+                {"error": "You do not have the necessary rights (Not a teacher or superadmin)"},
+                status.HTTP_403_FORBIDDEN )
+        
+        if user.is_a_teacher:
+            if request.user.id != int(kwargs['pk']):
+                logger.error(
+                    "You cannot edit another teacher's information",
+                    extra={ 'user': request.user.id } )
+                return Response( {"error": "You cannot edit another teacher's information"},
+                    status.HTTP_400_BAD_REQUEST )
 
         partial = kwargs.pop('partial', True)
         instance = User.objects.get(id=kwargs['pk'])
@@ -278,12 +271,8 @@ class TeacherViewSet(viewsets.ModelViewSet):
         except Teacher.DoesNotExist:
             logger.warning(
                 "Teacher not found",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "Teacher not found"},
+                extra={ 'user': user.id } )
+            return Response( {"error": "Teacher not found"},
                 status=status.HTTP_400_BAD_REQUEST)
         
         user_serializer = UserUpdateSerializer(

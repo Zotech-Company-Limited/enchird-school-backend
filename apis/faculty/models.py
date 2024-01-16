@@ -47,6 +47,7 @@ def update_faculty_id(instance, **kwargs):
 class Department(models.Model):
     department_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     name = models.CharField(max_length=100, blank=False, null=False, unique=True)
+    abbrev = models.CharField(max_length=10, blank=False, null=False)
     description = models.CharField(max_length=244, blank=True, null=True)
     about = models.CharField(max_length=244, blank=True, null=True)
     faculty = models.ForeignKey(
