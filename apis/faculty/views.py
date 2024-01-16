@@ -173,13 +173,22 @@ class FacultyViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer, user, levels_data):
 
         faculty_instance = serializer.save(created_by=user)
-
+        
         # Add levels to the faculty instance
         for level_data in levels_data:
-            level_serializer = LevelSerializer(data=level_data)
-            if level_serializer.is_valid():
-                level_instance, _ = Level.objects.get_or_create(**level_serializer.validated_data)
+            level_name = level_data.get('name')
+            
+            # Check for uniqueness within the current faculty
+            if not Level.objects.filter(name=level_name, faculty=faculty_instance).exists():
+                level_instance, _ = Level.objects.get_or_create(name=level_name)
                 faculty_instance.levels.add(level_instance)
+
+        # Add levels to the faculty instance
+        # for level_data in levels_data:
+        #     level_serializer = LevelSerializer(data=level_data)
+        #     if level_serializer.is_valid():
+        #         level_instance, _ = Level.objects.get_or_create(**level_serializer.validated_data)
+        #         faculty_instance.levels.add(level_instance)
 
 
     def update(self, request, *args, **kwargs):

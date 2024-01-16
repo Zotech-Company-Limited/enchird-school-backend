@@ -12884,3 +12884,165 @@ INFO:myLogger:Students list returned successfully.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\change_password.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\change_password.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\change_password.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\change_password.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\change_password.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Not Found: /api/change-password/
+WARNING:django.request:Not Found: /api/change-password/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\urls.py changed, reloading.
+WARNING:django.request:Forbidden: /api/change-password/
+ERROR:myLogger:Incorrect Password
+WARNING:django.request:Bad Request: /api/change-password/
+INFO:myLogger:Password Modified Sucessfully
+ERROR:myLogger:Incorrect Password
+WARNING:django.request:Bad Request: /api/change-password/
+INFO:myLogger:Password Modified Sucessfully
+INFO:myLogger:User Logged in sucessfully.
+INFO:myLogger:List of faculty members returned successfully.
+WARNING:django.request:Forbidden: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:myLogger:List of teachers returned successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\serializers.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/teacher/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 218, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'users.nationality' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\request.py", line 227, in user
+    self._authenticate()
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "C:\enchird_LMS\venv\lib\site-packages\knox\auth.py", line 53, in authenticate
+    user, auth_token = self.authenticate_credentials(auth[1])
+  File "C:\enchird_LMS\venv\lib\site-packages\knox\auth.py", line 67, in authenticate_credentials
+    if self._cleanup_token(auth_token):
+  File "C:\enchird_LMS\venv\lib\site-packages\knox\auth.py", line 99, in _cleanup_token
+    for other_token in auth_token.user.auth_token_set.all():
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 236, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 199, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'users.nationality' in 'field list'")
+INFO:myLogger:List of teachers returned successfully.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/admin/faculty/
+INFO:myLogger:User Logged in sucessfully.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+ERROR:myLogger:{'levels': [{'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}, {'name': [ErrorDetail(string='level with this name already exists.', code='unique')]}]}
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+ERROR:myLogger:Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+ERROR:myLogger:Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+ERROR:myLogger:Cannot resolve keyword 'faculties' into field. Choices are: faculty, id, name
+WARNING:django.request:Precondition Failed: /api/admin/faculty/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.

@@ -128,6 +128,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=255, null=True, blank=True)
     is_a_student = models.BooleanField(default=False)
     is_a_teacher = models.BooleanField(default=False)
+    nationality = models.CharField(max_length=255)
     is_faculty_member = models.BooleanField(default=False)
     date_of_birth = models.DateField(null=True, blank=True)
     gender = models.CharField(

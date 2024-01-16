@@ -17,14 +17,29 @@ class FacultySerializer(WritableNestedModelSerializer):
 
     name = serializers.CharField(allow_null=False, required=True)
     abbrev = serializers.CharField(required=True)
-    levels = LevelSerializer(many=True, required=False)
+    levels = LevelSerializer(many=True, required=False, read_only=True)
 
     class Meta:
 
         model = Faculty
         fields = ['id', 'name', 'faculty_id', 'abbrev', 'description',
                    'levels', 'about', 'is_deleted', 'created_at']
-        read_only_fields = ['id', 'faculty_id', 'created_at']
+        read_only_fields = ['id', 'faculty_id', 'created_at', 'levels']
+
+    # def create(self, validated_data):
+    #     levels_data = validated_data.pop('levels', [])
+    #     faculty = super().create(validated_data)
+
+    #     # Add levels to the faculty instance
+    #     for level_data in levels_data:
+    #         level_name = level_data.get('name')
+            
+    #         # Check for uniqueness within the current faculty
+    #         if not Level.objects.filter(name=level_name, faculty=faculty).exists():
+    #             level_instance, _ = Level.objects.get_or_create(name=level_name)
+    #             faculty.levels.add(level_instance)
+
+    #     return faculty
 
 
 class DepartmentSerializer(serializers.ModelSerializer):

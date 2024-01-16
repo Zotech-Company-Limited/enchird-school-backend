@@ -18,7 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = User
-        fields = ['id', 'reference', 'phone', 'email', 'username', 'first_name', 
+        fields = ['id', 'reference', 'phone', 'email', 'username', 'first_name', 'nationality',
                    'last_name', 'gender', 'date_of_birth', 'is_active', 'is_admin', 'role',
                    'is_a_student', 'is_a_teacher', 'groups', 'picture', 'is_faculty_member']
         read_only_fields = ['is_active', 'reference', 'is_a_student', 'is_a_teacher', 'is_admin', 'is_superuser']
@@ -36,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserUpdateSerializer(serializers.ModelSerializer):
-    """Docstring for class."""
+    
 
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
@@ -85,5 +85,9 @@ class ResetPasswordSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=100, required=True)
 
 
+class ChangePasswordSerializer(serializers.Serializer):
 
+    old_password = serializers.CharField(max_length=100)
+    new_password = serializers.CharField(max_length=100)
+    
 
