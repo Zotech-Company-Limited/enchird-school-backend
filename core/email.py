@@ -1,14 +1,16 @@
-import smtplib, ssl
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email.mime.multipart import MIMEMultipart
-from email import encoders
 import os
 import smtplib
-from django.conf import settings
+import smtplib, ssl
 from io import BytesIO
+from email import encoders
+from django.conf import settings
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 from django.core.mail import send_mail
+from email.mime.multipart import MIMEMultipart
 from django.template.loader import render_to_string
+from core.templates.emails.email_templates import student_accept_html
+
 
 port = 465  # For SSL
 smtp_server = settings.EMAIL_HOST 
@@ -86,17 +88,30 @@ def send_student_accept_mail(user, temp_password, faculty):
             # Log in to your SMTP server using your credentials
             server.login(sender_email, password)
 
+            # Construct the path to your HTML template
+            template_path = 'emails\student_accept_template.html'
+            template_path = os.path.join(settings.BASE_DIR, 'core', 'templates', template_path)
+            
+            accept_html = student_accept_html.format(first_name=user.first_name, password=password, phone=user.phone)
+            
+            # Render the HTML template with dynamic data
+            email_content = render_to_string(template_path, {
+                'user': user,
+                'temp_password': temp_password,
+                'faculty': faculty,
+                'html': accept_html,
+            })
+
             # Create the email message
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
             msg['Subject'] = "Enchird Application Decision"
 
-            # Include the verification link in the email body
-            email_body = f"Hello {user.first_name}, \n\nCongratulations!! You have been accepted into {faculty}. \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
+            # Attach the HTML content to the email
+            msg.attach(MIMEText(email_content, 'html'))  # Use 'html' as the subtype
 
-            msg.attach(MIMEText(email_body, 'plain'))
-
+            # Send the email
             server.sendmail(sender_email, user.email, msg.as_string())
 
             # Close the connection
@@ -106,7 +121,7 @@ def send_student_accept_mail(user, temp_password, faculty):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return False
-
+    
 
 def send_student_reject_mail(user, department):
     try:

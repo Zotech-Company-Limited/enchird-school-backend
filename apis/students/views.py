@@ -27,6 +27,7 @@ from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from apis.courses.serializers import CourseMaterialSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from core.templates.emails.email_templates import student_accept_html
 from core.email import send_student_accept_mail, send_student_reject_mail
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
@@ -115,7 +116,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 
 
     def retrieve(self, request, *args, **kwargs):
-        """Docstring for function."""
+         
         user = self.request.user
         print(user)
         if not user.is_authenticated:
@@ -213,6 +214,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                     'phone': applicant.phone,
                     'date_of_birth': applicant.date_of_birth,
                     'picture': applicant.profile_picture,
+                    'nationality': applicant.nationality,
                 } 
 
                 user_serializer = UserSerializer(data=user_data)
@@ -261,6 +263,20 @@ class StudentViewSet(viewsets.ModelViewSet):
 
                         # Send acceptance email.
                         faculty = applicant.faculty.name
+                        # try:
+                        #     # print(objet)
+                        #     email_subject = 'WaziEats Account'
+                        #     accept_html = student_accept_html.format(first_name=objet.first_name, password=password, phone=objet.phone)
+                        #     content = {
+                        #         # 'text': signup_text,
+                        #         'html': accept_html,
+                        #         'subject': email_subject
+                        #     }
+                        #     send_htmltext(objet, content)
+                        #     print("YET")
+                        # except Exception as e:
+                        #     print("An error occurred:", str(e))
+                        # notif_act(request, objet, password)
                         try:
                             send_student_accept_mail(user, password, faculty)
                         except Exception as e:
