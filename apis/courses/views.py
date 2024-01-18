@@ -7,19 +7,22 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
+from rest_framework import generics
 from core.views import PaginationClass
+from apis.students.models import Student
 from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
-from apis.courses.models import Course, CourseMaterial
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
+from rest_framework.pagination import PageNumberPagination
+from .models import Course, CourseMaterial, ChatGroup, Message
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from apis.users.serializers import UserSerializer, UserUpdateSerializer
-from apis.courses.serializers import CourseSerializer, CourseMaterialSerializer
+from .serializers import CourseSerializer, CourseMaterialSerializer, MessageSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -146,6 +149,7 @@ class CourseViewSet(viewsets.ModelViewSet):
                 },
                 status.HTTP_403_FORBIDDEN
             )
+        
         try:
             with transaction.atomic():
                 course_serializer = self.get_serializer(data=request.data)
@@ -179,6 +183,10 @@ class CourseViewSet(viewsets.ModelViewSet):
                     logging.debug('Your message here')
                     course = course_serializer.save(created_by=user)
                     
+                    # Create a chat group associated with the course
+                    chat_group_name = f'Course_{course.course_title}'
+                    chat_group = ChatGroup.objects.create(name=chat_group_name, course=course)
+
                     headers = self.get_success_headers(course_serializer.data)
                     
                     logger.info( "Course created successfully!", extra={ 'user': user.id } )
@@ -480,28 +488,12 @@ def add_course_material(request, course_id):
         return Response({'error': 'Course Not Found'}, status=status.HTTP_404_NOT_FOUND)
     
     if user.is_a_teacher is False:
-        logger.warning(
-            "You do not have the necessary rights! (Not a lecturer)",
-            extra={
-                'user': request.user.id
-            }
-        )
-        return Response(
-            {"error": "You do not have the necessary rights (Not a lecturer)"},
-            status.HTTP_403_FORBIDDEN
-        )
+        logger.warning( "You do not have the necessary rights! (Not a lecturer)", extra={ 'user': request.user.id } )
+        return Response( {"error": "You do not have the necessary rights (Not a lecturer)"}, status.HTTP_403_FORBIDDEN )
 
     if user not in course.instructors.all():
-        logger.warning(
-            "You are not a lecturer of this course",
-            extra={
-                'user': request.user.id
-            }
-        )
-        return Response(
-            {"error": "You are not a lecturer of this course."},
-            status.HTTP_403_FORBIDDEN
-        )
+        logger.warning( "You are not a lecturer of this course", extra={ 'user': request.user.id } )
+        return Response( {"error": "You are not a lecturer of this course."}, status.HTTP_403_FORBIDDEN )
     
     if request.method == 'POST':
         material_file = request.FILES.get('material')
@@ -592,8 +584,108 @@ def remove_course_material(request, course_material_id):
     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['POST'])
+def send_message(request, course_id, *args, **kwargs):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id})
+        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+    try:
+        course = Course.objects.get(id=course_id)
+    except Course.DoesNotExist:
+        logger.error( "Course not found.", extra={ 'user': request.user.id})
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the authenticated user is a student and is registered for the course
+    if user.is_a_student:
+        try:
+            student = Student.objects.get(user=request.user, is_deleted=False)
+            if course not in student.registered_courses.all():
+                logger.error( "You are not registered for this course.", extra={ 'user': request.user.id } )
+                return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
+        
+        except Student.DoesNotExist:
+            logger.error( "Student does not exist.", extra={ 'user': request.user.id })    
+            return Response({'error': 'Student does not exist'}, status=status.HTTP_403_FORBIDDEN)
+
+    # Check if the authenticated user is a teacher and is assigned to the course
+    elif user.is_a_teacher:
+        print(course.tutors.all())
+        try:
+            teacher = Teacher.objects.get(user=request.user, is_deleted=False)
+            if teacher not in course.tutors.all():
+                logger.warning( "You are not a lecturer of this course", extra={ 'user': request.user.id } )
+                return Response( {"error": "You are not a lecturer of this course."}, status.HTTP_403_FORBIDDEN )
+        
+        except Teacher.DoesNotExist:
+            logger.error( "Teacher Does not exist.", extra={ 'user': request.user.id })    
+            return Response({'error': 'Teacher Does Not Exist'}, status=status.HTTP_403_FORBIDDEN)
+    
+    else:
+        logger.warning( "Invalid user type", extra={ 'user': request.user.id } )
+        return Response({'error': 'Invalid user type'}, status=status.HTTP_403_FORBIDDEN)
+    
+    try:
+        chat_group = ChatGroup.objects.get(course=course)
+        print(chat_group)
+        
+    except ChatGroup.DoesNotExist:
+        logger.error( "GroupChat Does Not Exist.", extra={ 'user': request.user.id })    
+        return Response({'error': 'GroupChat Does Not Exist'}, status=status.HTTP_403_FORBIDDEN)
+
+    # Create the message
+    data = {
+        'content': request.data.get('content', ''),
+        'group': chat_group.id,  
+        'attachment': request.data.get('attachment', None),  
+        'response_to': request.data.get('response_to', None),  
+    }
+
+    serializer = MessageSerializer(data=data)
+    if serializer.is_valid():
+        serializer.save(sender=user)
+        logger.info( "Message sent successfully", extra={ 'user': request.user.id } )
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        logger.warning( serializer.errors, extra={ 'user': request.user.id })
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+class MessagePagination(PageNumberPagination):
+    page_size = 20  # Adjust as needed
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+    
+    
+class MessageListAPIView(generics.ListAPIView):
+    serializer_class = MessageSerializer
+    pagination_class = MessagePagination
 
+    def get_queryset(self):
+        group_id = self.kwargs['group_id']  
+        try:
+            group = ChatGroup.objects.get(id=group_id)
+            messages = Message.objects.filter(group=group).order_by('-timestamp')
+            return messages
+        except ChatGroup.DoesNotExist:
+            logger.error("Group not found.", extra={'user': self.request.user.id})
+            return Message.objects.none()  # Return an empty queryset if the group doesn't exist
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            page = self.paginate_queryset(queryset)
+
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data)
+        except Exception as e:
+            logger.error(f"Error retrieving message list: {str(e)}", extra={'user': request.user.id})
+            return Response({'error': 'An error occurred while retrieving messages.'}, status=500)
 
 

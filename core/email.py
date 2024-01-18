@@ -9,7 +9,7 @@ from email.mime.base import MIMEBase
 from django.core.mail import send_mail
 from email.mime.multipart import MIMEMultipart
 from django.template.loader import render_to_string
-from core.templates.emails.email_templates import student_accept_html
+from core.email_templates import student_accept_html
 
 
 port = 465  # For SSL
@@ -89,30 +89,39 @@ def send_student_accept_mail(user, temp_password, faculty):
             server.login(sender_email, password)
 
             # Construct the path to your HTML template
-            template_path = 'emails\student_accept_template.html'
-            template_path = os.path.join(settings.BASE_DIR, 'core', 'templates', template_path)
+            # template_path = 'emails\student_accept_template.html'
+            # template_path = os.path.join(settings.BASE_DIR, 'core', 'templates', template_path)
             
             accept_html = student_accept_html.format(first_name=user.first_name, password=password, phone=user.phone)
+            print("1")
             
             # Render the HTML template with dynamic data
-            email_content = render_to_string(template_path, {
-                'user': user,
-                'temp_password': temp_password,
-                'faculty': faculty,
+            email_content = {
+                # 'user': user,
+                # 'temp_password': temp_password,
+                # 'faculty': faculty,
                 'html': accept_html,
-            })
+                'subject': "Enchird ApplicatiDecision"
+            }
+            print("2")
 
             # Create the email message
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
-            msg['Subject'] = "Enchird Application Decision"
+            msg['Subject'] = "Enchird Application Decis"
+            print("3")
+            
 
             # Attach the HTML content to the email
-            msg.attach(MIMEText(email_content, 'html'))  # Use 'html' as the subtype
+            msg.attach(MIMEText(email_content['html'], 'html'))  # Use 'html' as the subtype
+            print("4")
+            
 
             # Send the email
             server.sendmail(sender_email, user.email, msg.as_string())
+            print("7")
+            
 
             # Close the connection
             server.quit()

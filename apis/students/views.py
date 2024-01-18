@@ -21,13 +21,13 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
+from core.email_templates import student_accept_html
 from apis.courses.models import Course, CourseMaterial
 from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
 from apis.courses.serializers import CourseMaterialSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from core.templates.emails.email_templates import student_accept_html
 from core.email import send_student_accept_mail, send_student_reject_mail
 from apis.users.serializers import UserSerializer, UserPasswordSerializer, UserUpdateSerializer
 
@@ -186,8 +186,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                 if not request.user.is_authenticated or not request.user.is_admin:
                     logger.error("You do not have permission to perform this action.", extra={'user': 'Anonymous'})
                     return Response({'error': 'You do not have permission to perform this action.'}, status=status.HTTP_403_FORBIDDEN)
-                 
-                
+
                 # Get applicant information from the request data (assuming 'applicant_id' is provided)
                 applicant_id = request.data.get('applicant_id')
                 try:
@@ -371,6 +370,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                 {"error": "You do not have the necessary rights"},
                 status.HTTP_403_FORBIDDEN
             )
+
         
         if request.user.id != int(kwargs['pk']):
             logger.error(
@@ -709,8 +709,10 @@ def view_course_materials(request, course_id):
                     'user': request.user.id
                 }
             )
+            logger.error( "You are not registered for this course.", extra={ 'user': request.user.id })
             return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
     except Student.DoesNotExist:
+        logger.error( "You are not registered for this course.", extra={ 'user': request.user.id })
         return Response({'error': 'You are not registered as a student'}, status=status.HTTP_403_FORBIDDEN)
 
     if request.method == 'GET':

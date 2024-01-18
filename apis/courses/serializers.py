@@ -2,8 +2,8 @@ from apis.faculty.models import *
 from apis.users.models import User
 from rest_framework import serializers
 from apis.faculty.serializers import *
-from .models import Course, CourseMaterial
 from apis.users.serializers import UserSerializer
+from .models import Course, CourseMaterial, Message, ChatGroup
 # from apis.courses.serializers import CourseSerializer
 
 
@@ -77,4 +77,40 @@ class CourseMaterialSerializer(serializers.ModelSerializer):
         representation['course'] = instance.course.course_title if instance.course else None
 
         return representation
+
+
+class ChatGroupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatGroup
+        fields = '__all__'
+
+
+class MessageSerializer(serializers.ModelSerializer):
+    sender = UserSerializer(read_only=True)
+    group = serializers.PrimaryKeyRelatedField(
+        queryset=ChatGroup.objects.all(), 
+        allow_null=True,
+        allow_empty=True,
+        required=False,
+        write_only=True
+    )
+    group_info = serializers.SerializerMethodField(read_only=True)
+    response_to_info = serializers.SerializerMethodField(read_only=True)
+    # group_info = ChatGroupSerializer(read_only=True)
+    
+    class Meta:
+        model = Message
+        fields = ['id', 'content', 'sender', 'group_info', 'group', 'attachment', 'response_to', 'response_to_info', 'timestamp']
+
+    def get_group_info(self, obj):
+        group = obj.group
+        if group:
+            return ChatGroupSerializer(group).data
+        return None 
+    
+    def get_response_to_info(self, obj):
+        response_to = obj.response_to
+        if response_to:
+            return self.__class__(response_to).data
+        return None
 

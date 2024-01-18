@@ -1222,3 +1222,42 @@ INFO : 2024-01-17 20:25:59,857 : 16 : 857 : Student created successfully! : view
 INFO : 2024-01-17 20:28:24,292 : 17 : 292 : Student created successfully! : views : None
 INFO : 2024-01-17 21:53:07,088 : 18 : 88 : Student created successfully! : views : None
 INFO : 2024-01-17 21:54:28,325 : 19 : 325 : Student created successfully! : views : None
+INFO : 2024-01-18 08:32:05,746 : 1 : 746 : User Logged in sucessfully. : login : None
+INFO : 2024-01-18 08:33:24,904 : 20 : 904 : Student created successfully! : views : None
+INFO : 2024-01-18 08:42:04,966 : 21 : 966 : Student created successfully! : views : None
+INFO : 2024-01-18 08:45:30,450 : 22 : 450 : Student created successfully! : views : None
+INFO : 2024-01-18 08:47:21,022 : 23 : 22 : Student created successfully! : views : None
+INFO : 2024-01-18 09:19:29,807 : 24 : 807 : Student created successfully! : views : None
+INFO : 2024-01-18 09:29:33,360 : 25 : 360 : Student created successfully! : views : None
+INFO : 2024-01-18 09:38:53,557 : 26 : 557 : Student created successfully! : views : None
+INFO : 2024-01-18 09:40:13,745 : 27 : 745 : Student created successfully! : views : None
+INFO : 2024-01-18 11:10:53,834 : 28 : 834 : Student created successfully! : views : None
+INFO : 2024-01-18 11:12:05,029 : 29 : 29 : Student created successfully! : views : None
+INFO : 2024-01-18 11:22:25,807 : 30 : 807 : Student created successfully! : views : None
+INFO : 2024-01-18 14:37:53,132 : 1 : 132 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-18 14:39 : 1 : 136 : {views} : [create] : {'department': [ErrorDetail(string='Invalid pk "4" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:198]
+INFO : 2024-01-18 14:39:58,029 : 1 : 29 : Course created successfully! : views : None
+WARNING : 2024-01-18 16:15:18,093 : 1 : 93 : Invalid user type : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:618]
+ERROR : 2024-01-18 16:18 : None : 994 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-18 16:18 : None : 136 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-18 16:24 : None : 923 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-18 16:38 : None : 533 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2024-01-18 16:49:20,673 : 9 : 673 : User Logged in sucessfully. : login : None
+INFO : 2024-01-18 16:57:21,192 : 9 : 192 : Teacher info modified successfully! : views : None
+INFO : 2024-01-18 16:59:13,596 : 9 : 596 : Teacher info modified successfully! : views : None
+INFO : 2024-01-18 17:49:12,924 : 1 : 924 : User Logged in sucessfully. : login : None
+INFO : 2024-01-18 17:49:26,812 : 9 : 812 : User Logged in sucessfully. : login : None
+INFO : 2024-01-18 17:50:18,301 : 9 : 301 : User Logged in sucessfully. : login : None
+WARNING : 2024-01-18 18:28:47,321 : 9 : 321 : You are not a lecturer of this course : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:614]
+INFO : 2024-01-18 18:58:17,459 : 1 : 459 : User Logged in sucessfully. : login : None
+WARNING : 2024-01-18 19:04:51,846 : 9 : 846 : You are not a lecturer of this course : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:614]
+WARNING : 2024-01-18 19:18:11,407 : 9 : 407 : You are not a lecturer of this course : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:615]
+ERROR : 2024-01-18 20:15 : 9 : 798 : {views} : [send_message] : GroupChat Does Not Exist. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:633]
+INFO : 2024-01-18 20:25:19,159 : 9 : 159 : Message sent successfully : views : None
+WARNING : 2024-01-18 20:36:17,471 : 9 : 471 : {'group': {'non_field_errors': [ErrorDetail(string='Invalid data. Expected a dictionary, but got int.', code='invalid')]}} : views : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:651]
+INFO : 2024-01-18 20:38:33,648 : 9 : 648 : Message sent successfully : views : None
+INFO : 2024-01-18 20:53:09,612 : 9 : 612 : Message sent successfully : views : None
+INFO : 2024-01-18 20:56:47,367 : 9 : 367 : Message sent successfully : views : None
+INFO : 2024-01-18 20:58:12,936 : 9 : 936 : Message sent successfully : views : None
+INFO : 2024-01-18 21:03:43,409 : 9 : 409 : Message sent successfully : views : None
+INFO : 2024-01-18 21:13:29,068 : 9 : 68 : Message sent successfully : views : None

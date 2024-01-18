@@ -1,7 +1,10 @@
+import textwrap
+
+student_accept_html = textwrap.dedent("""\
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <style>
       @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
       @import url("https://fonts.googleapis.com/css?family=Kurale:400|Inter:400,700|Barlow:700");
@@ -284,3 +287,6 @@
     </div>
   </body>
 </html>
+
+""")
+

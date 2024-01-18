@@ -36,14 +36,14 @@ class TeacherViewSet(viewsets.ModelViewSet):
     pagination_class = PaginationClass
     serializer_class = TeacherSerializer
 
-    def get_permissions(self):
-        if self.action in ['create', 'list', 'retrieve', 'delete', 'update']:
-            # Allow unauthenticated access for create
-            permission_classes = [IsAuthenticated]
-        # else:
-        #     # Require authentication and permissions for other actions
-        #     permission_classes = [IsAuthenticated]  # You can add more permissions as needed
-        return [permission() for permission in permission_classes]
+    # def get_permissions(self):
+    #     if self.action in ['create', 'list', 'retrieve', 'delete', 'update']:
+    #         # Allow unauthenticated access for create
+    #         permission_classes = [IsAuthenticated]
+    #     # else:
+    #     #     # Require authentication and permissions for other actions
+    #     #     permission_classes = [IsAuthenticated]  # You can add more permissions as needed
+    #     return [permission() for permission in permission_classes]
 
 
     def list(self, request, *args, **kwargs):
@@ -109,42 +109,17 @@ class TeacherViewSet(viewsets.ModelViewSet):
         user = self.request.user
         print(user)
         if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={
-                    'user': request.user.id
-                }
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
         
         if user.is_admin is False and user.is_a_teacher is False:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={
-                    'user': request.user.id
-                }
-            )
-            return Response(
-                {
-                    "error": "You do not have the necessary rights."
-                },
-                status.HTTP_403_FORBIDDEN
-            )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': request.user.id } )
+            return Response( { "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
         
         if user.is_a_teacher is True and str(user.id) != kwargs['pk']:
-            logger.warning(
-                "You cannot view another teacher's information",
-                extra={
-                    'user': request.user.id
-                }
-            )
+            logger.warning( "You cannot view another teacher's information", extra={ 'user': request.user.id } )
             return Response(
-                {"error": "You cannot view another teacher's information"},
-                status.HTTP_403_FORBIDDEN
-            )
+                {"error": "You cannot view another teacher's information"}, status.HTTP_403_FORBIDDEN )
 
         instance = Teacher.objects.get(user=kwargs['pk'])
         serializer = self.get_serializer(instance)
@@ -287,9 +262,9 @@ class TeacherViewSet(viewsets.ModelViewSet):
             courses = request.data.get('courses', [])
             departments = request.data.get('departments', [])
             
-            instance.faculties.set(faculties)
-            instance.courses.set(courses)
-            instance.departments.set(departments)
+            teacher.faculties.set(faculties)
+            teacher.courses.set(courses)
+            teacher.departments.set(departments)
 
             if getattr(instance, '_prefetched_objects_cache', None):
                 instance._prefetched_objects_cache = {}
@@ -310,7 +285,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
             return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def perform_update(self, serializer):
-        """Docstring for function."""
+         
         return serializer.save()
 
 

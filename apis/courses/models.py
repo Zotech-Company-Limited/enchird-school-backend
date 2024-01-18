@@ -19,7 +19,6 @@ class Course(models.Model):
     course_level = models.CharField(max_length=4, blank=True, null=True)
     class_schedule = models.CharField(max_length=255, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)
-
     term = models.CharField(max_length=50, blank=True, null=True)
     credits = models.PositiveIntegerField(default=0)
     is_deleted = models.BooleanField(default=False)
@@ -77,7 +76,8 @@ class CourseMaterial(models.Model):
             ).hexdigest(),
             filename)
 
-    material_file = models.FileField(upload_to=course_material_directory_path)
+    # material_file = models.FileField(upload_to=course_material_directory_path)
+    material_file = models.CharField(max_length=255, null=True, blank=True) 
     description = models.TextField(blank=True, null=True)
     uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
     uploaded_at = models.DateTimeField(auto_now_add=True)
@@ -88,4 +88,25 @@ class CourseMaterial(models.Model):
         return f"CourseMaterial: {self.material_file.name}"
 
 
+class ChatGroup(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
 
+    def __str__(self):
+        return self.name
+
+
+class Message(models.Model):
+    content = models.TextField()
+    sender = models.ForeignKey(User, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
+    # attachment = models.FileField(upload_to='message_attachments/', null=True, blank=True)
+    attachment = models.CharField(max_length=255, null=True, blank=True) 
+    response_to = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='responses')
+
+    def __str__(self):
+        return f'{self.sender.username}: {self.content}'
+    
+    
+    

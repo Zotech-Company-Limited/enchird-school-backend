@@ -21,7 +21,6 @@ class Teacher(models.Model):
     courses = models.ManyToManyField(
         Course,
         related_name='tutors'
-        
     )
     faculties = models.ManyToManyField(
         Faculty,
