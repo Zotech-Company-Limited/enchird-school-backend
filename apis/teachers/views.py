@@ -258,14 +258,27 @@ class TeacherViewSet(viewsets.ModelViewSet):
         if user_serializer.is_valid() is True:
             self.perform_update(user_serializer)
             
+            # # Check if "faculties", "courses", and "departments" are present in the request data
+            # if 'faculties' in request.data:
+            #     faculties = request.data['faculties']
+            #     teacher.faculties.set(faculties)
+
+            # if 'courses' in request.data:
+            #     courses = request.data['courses']
+            #     teacher.courses.set(courses)
+
+            # if 'departments' in request.data:
+            #     departments = request.data['departments']
+            #     teacher.departments.set(departments)
+                
             # Update associated faculties, courses, and departments
-            faculties = request.data.get('faculties', [])
-            courses = request.data.get('courses', [])
-            departments = request.data.get('departments', [])
+            # faculties = request.data.get('faculties', [])
+            # courses = request.data.get('courses', [])
+            # departments = request.data.get('departments', [])
             
-            teacher.faculties.set(faculties)
-            teacher.courses.set(courses)
-            teacher.departments.set(departments)
+            # teacher.faculties.set(faculties)
+            # teacher.courses.set(courses)
+            # teacher.departments.set(departments)
 
             if getattr(instance, '_prefetched_objects_cache', None):
                 instance._prefetched_objects_cache = {}

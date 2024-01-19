@@ -1275,3 +1275,10 @@ INFO : 2024-01-19 13:44:43,810 : 9 : 810 : User Logged in sucessfully. : login :
 WARNING : 2024-01-19 13:45:39,214 : 9 : 214 : Course Not Found : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:507]
 ERROR : 2024-01-19 13:46 : 9 : 893 : {views} : [students_for_course] : You are not assigned to the specified course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:514]
 ERROR : 2024-01-19 13:46 : 9 : 577 : {views} : [students_for_course] : You are not assigned to the specified course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:514]
+ERROR : 2024-01-19 14:18 : 9 : 758 : {views} : [update] : {'picture': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:280]
+INFO : 2024-01-19 14:20:50,316 : 9 : 316 : Teacher info modified successfully! : views : None
+INFO : 2024-01-19 14:22:46,509 : 9 : 509 : Teacher details returned successfully! : views : None
+INFO : 2024-01-19 14:29:20,423 : 9 : 423 : Teacher info modified successfully! : views : None
+INFO : 2024-01-19 14:30:35,620 : 9 : 620 : Teacher info modified successfully! : views : None
+INFO : 2024-01-19 14:30:43,413 : 9 : 413 : Teacher info modified successfully! : views : None
+INFO : 2024-01-19 14:31:06,737 : 9 : 737 : Teacher info modified successfully! : views : None

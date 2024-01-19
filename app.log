@@ -13918,3 +13918,17 @@ ERROR:myLogger:You are not assigned to the specified course.
 WARNING:django.request:Forbidden: /api/student/students_for_course/
 ERROR:myLogger:You are not assigned to the specified course.
 WARNING:django.request:Forbidden: /api/student/students_for_course/
+WARNING:django.request:Forbidden: /api/teacher/9/
+WARNING:django.request:Forbidden: /api/teacher/9/
+ERROR:myLogger:{'picture': [ErrorDetail(string='The submitted data was not a file. Check the encoding type on the form.', code='invalid')]}
+WARNING:django.request:Bad Request: /api/teacher/9/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\serializers.py changed, reloading.
+INFO:myLogger:Teacher info modified successfully!
+INFO:myLogger:Teacher details returned successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
+INFO:myLogger:Teacher info modified successfully!
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py changed, reloading.
+INFO:myLogger:Teacher info modified successfully!
+INFO:myLogger:Teacher info modified successfully!
+INFO:myLogger:Teacher info modified successfully!

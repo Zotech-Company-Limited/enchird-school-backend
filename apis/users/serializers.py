@@ -39,13 +39,12 @@ class UserUpdateSerializer(serializers.ModelSerializer):
     
 
     first_name = serializers.CharField(required=True)
+    picture = serializers.CharField(allow_null=True, required=False)
     last_name = serializers.CharField(required=True)
-    picture = serializers.ImageField(allow_null=True, required=False)
     groups = serializers.SerializerMethodField()
     date_of_birth = serializers.DateField(required=False, allow_null=True)
 
     class Meta:
-        """Docstring for class."""
 
         model = User
         fields = ['id', 'reference', 'phone', 'picture', 'first_name', 
@@ -55,7 +54,6 @@ class UserUpdateSerializer(serializers.ModelSerializer):
 
 
 class UserPasswordSerializer(serializers.Serializer):
-    """Docstring for class."""
 
     password = serializers.CharField(
         max_length=100,
