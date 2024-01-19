@@ -12,6 +12,7 @@ from django.utils import timezone
 from django.db import transaction
 from core.views import PaginationClass
 from apis.students.models import Student
+from apis.teachers.models import Teacher
 from apis.utils import validate_password
 from django.core.mail import EmailMessage
 from rest_framework import status, viewsets
@@ -477,6 +478,50 @@ class StudentViewSet(viewsets.ModelViewSet):
         return Response(
             {"message": "Student marked as Deleted"},
             status=status.HTTP_200_OK)
+
+
+    @action(detail=False, methods=['get'])
+    def students_for_course(self, request):
+        user = self.request.user
+
+        # Check if the user is a teacher
+        if not user.is_authenticated or not user.is_a_teacher:
+            logger.error(
+                "You do not have the necessary rights. (Not a teacher)",
+                extra={'user': request.user.id} )
+            return Response(
+                {"error": "You do not have the necessary rights (Not a teacher)"},
+                status.HTTP_403_FORBIDDEN )
+
+        # Get the course_id from the query parameters
+        course_id = request.query_params.get('course_id', None)
+        
+        if not course_id:
+            return Response(
+                {"error": "Please provide a valid course_id parameter."},
+                status.HTTP_400_BAD_REQUEST )
+
+        try:
+            course = Course.objects.get(id=course_id, is_deleted=False)
+        except Course.DoesNotExist:
+            logger.warning( "Course Not Found", extra={ 'user': request.user.id } )
+            return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+            
+        # Check if the teacher is assigned to the specified course
+        try:
+            teacher = Teacher.objects.get(user=user, courses__id=course_id)
+        except Teacher.DoesNotExist:
+            logger.error( "You are not assigned to the specified course.", extra={'user': request.user.id} )
+            return Response(
+                {"error": "You are not assigned to the specified course."}, status.HTTP_403_FORBIDDEN )
+
+        # Retrieve the students registered for the specified course
+        students = Student.objects.filter(registered_courses__id=course_id)
+
+        # Serialize the data and return the response
+        serializer = StudentSerializer(students, many=True)
+        return Response(serializer.data)
+
 
 
 @api_view(['POST'])

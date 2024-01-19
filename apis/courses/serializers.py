@@ -101,6 +101,8 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = ['id', 'content', 'sender', 'group_info', 'group', 'attachment', 'response_to', 'response_to_info', 'timestamp']
+        read_only_fields = ['sender', 'response_to_info']
+        write_only_fields = ['response_to']
 
     def get_group_info(self, obj):
         group = obj.group

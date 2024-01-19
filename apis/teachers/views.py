@@ -13,6 +13,7 @@ from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
+from rest_framework.decorators import action
 from django.contrib.auth import get_user_model
 from apis.users.models import User, AnonymousUser
 from core.email import send_teacher_verification_email
@@ -336,5 +337,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
         return Response(
             {"message": "Student marked as Deleted"},
             status=status.HTTP_200_OK)
+
+
 
 

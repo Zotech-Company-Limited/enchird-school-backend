@@ -381,9 +381,7 @@ def assign_teacher(request, course_id, teacher_id):
         logger.warning(
             "You do not have the necessary rights! (Not admin)",
             extra={
-                'user': request.user.id
-            }
-        )
+                'user': request.user.id } )
         return Response(
             {"error": "You do not have the necessary rights (Not admin)"},
             status.HTTP_403_FORBIDDEN
@@ -393,8 +391,10 @@ def assign_teacher(request, course_id, teacher_id):
         course = Course.objects.get(id=course_id, is_deleted=False)
         teacher = Teacher.objects.get(user__id=teacher_id, user__is_deleted=False, user__is_a_teacher=True, user__is_active=True)
     except Course.DoesNotExist:
+        logger.warning( "Course Not Found", extra={ 'user': request.user.id } )
         return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
     except User.DoesNotExist:
+        logger.warning( "Teacher not found or is not an active teacher", extra={ 'user': request.user.id } )
         return Response({'error': 'Teacher not found or is not an active teacher'}, status=status.HTTP_404_NOT_FOUND)
 
     # Check if the teacher is already assigned to the course

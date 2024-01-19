@@ -101,7 +101,6 @@ class Message(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
-    # attachment = models.FileField(upload_to='message_attachments/', null=True, blank=True)
     attachment = models.CharField(max_length=255, null=True, blank=True) 
     response_to = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='responses')
 

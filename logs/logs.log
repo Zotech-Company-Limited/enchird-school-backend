@@ -1261,3 +1261,17 @@ INFO : 2024-01-18 20:56:47,367 : 9 : 367 : Message sent successfully : views : N
 INFO : 2024-01-18 20:58:12,936 : 9 : 936 : Message sent successfully : views : None
 INFO : 2024-01-18 21:03:43,409 : 9 : 409 : Message sent successfully : views : None
 INFO : 2024-01-18 21:13:29,068 : 9 : 68 : Message sent successfully : views : None
+INFO : 2024-01-18 22:02:27,122 : 9 : 122 : User Logged in sucessfully. : login : None
+INFO : 2024-01-18 22:09:36,126 : 9 : 126 : Message sent successfully : views : None
+INFO : 2024-01-18 22:11:59,258 : 9 : 258 : Message sent successfully : views : None
+INFO : 2024-01-19 11:03:34,406 : 9 : 406 : User Logged in sucessfully. : login : None
+WARNING : 2024-01-19 11:07:10,753 : 9 : 753 : You cannot view another teacher's information : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:120]
+WARNING : 2024-01-19 11:07:40,627 : 9 : 627 : You cannot view another teacher's information : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:120]
+WARNING : 2024-01-19 11:08:08,679 : 9 : 679 : You cannot view another teacher's information : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:120]
+WARNING : 2024-01-19 11:09:04,907 : 9 : 907 : You cannot view another teacher's information : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:120]
+INFO : 2024-01-19 11:09:47,046 : 9 : 46 : Teacher details returned successfully! : views : None
+WARNING : 2024-01-19 13:44:15,255 : 9 : 255 : Course Not Found : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:507]
+INFO : 2024-01-19 13:44:43,810 : 9 : 810 : User Logged in sucessfully. : login : None
+WARNING : 2024-01-19 13:45:39,214 : 9 : 214 : Course Not Found : views : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:507]
+ERROR : 2024-01-19 13:46 : 9 : 893 : {views} : [students_for_course] : You are not assigned to the specified course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:514]
+ERROR : 2024-01-19 13:46 : 9 : 577 : {views} : [students_for_course] : You are not assigned to the specified course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:514]
