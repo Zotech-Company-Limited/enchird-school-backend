@@ -1,3 +1,4 @@
+import string
 import random
 import hashlib
 import datetime
@@ -91,7 +92,15 @@ class CourseMaterial(models.Model):
 class ChatGroup(models.Model):
     name = models.CharField(max_length=255, unique=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
-
+    code = models.CharField(max_length=10, unique=True, blank=False, null=False)
+    members = models.ManyToManyField(User, blank=True, related_name='chat_groups')
+    
+    def save(self, *args, **kwargs):
+        # Generate a random code when a group is created
+        if not self.code:
+            self.code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+        super().save(*args, **kwargs)
+        
     def __str__(self):
         return self.name
 

@@ -3,11 +3,13 @@ import string
 import logging
 import datetime
 from apis.utils import *
+from .serializers import *
 from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
 from rest_framework import generics
+from apis.users.serializers import *
 from core.views import PaginationClass
 from apis.students.models import Student
 from apis.teachers.models import Teacher
@@ -21,8 +23,6 @@ from django.contrib.auth.models import Group, Permission
 from rest_framework.pagination import PageNumberPagination
 from .models import Course, CourseMaterial, ChatGroup, Message
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from apis.users.serializers import UserSerializer, UserUpdateSerializer
-from .serializers import CourseSerializer, CourseMaterialSerializer, MessageSerializer
 
 
 logger = logging.getLogger("myLogger")
@@ -183,10 +183,6 @@ class CourseViewSet(viewsets.ModelViewSet):
                     logging.debug('Your message here')
                     course = course_serializer.save(created_by=user)
                     
-                    # Create a chat group associated with the course
-                    chat_group_name = f'Course_{course.course_title}'
-                    chat_group = ChatGroup.objects.create(name=chat_group_name, course=course)
-
                     headers = self.get_success_headers(course_serializer.data)
                     
                     logger.info( "Course created successfully!", extra={ 'user': user.id } )
@@ -584,6 +580,40 @@ def remove_course_material(request, course_material_id):
     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['POST'])
+def create_group(request, course_id):
+    user = request.user
+    try:
+        course = Course.objects.get(id=course_id)
+        teacher = Teacher.objects.get(user=user)
+    except Course.DoesNotExist:
+        logger.error( "Course Not Found.", extra={ 'user': user.id })
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Teacher.DoesNotExist:
+        logger.error( "Teacher Not Found.", extra={ 'user': user.id })
+        return Response({'error': 'Teacher not found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    print(course.tutors.all())
+
+    if not request.user.is_a_teacher or teacher not in course.tutors.all():
+        logger.error( "You are not authorized to create a group for this course.", extra={ 'user': user.id })
+        return Response({'error': 'You are not authorized to create a group for this course'}, status=status.HTTP_403_FORBIDDEN)
+
+    num = ChatGroup.objects.filter(name=request.data.get('name')).count()
+    if num > 0:
+        logger.warning( "A group with this name already exists.", extra={'user': 'anonymous'} )
+        return Response( {"error": "A group with this name already exists."}, status=status.HTTP_409_CONFLICT )
+        
+    serializer = ChatGroupSerializer(data={'course': course.id, 'name': request.data.get('name')})
+    if serializer.is_valid():
+        serializer.save()
+        logger.error( "Group created successfully.", extra={ 'user': user.id })
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        logger.error( serializer.errors, extra={ 'user': user.id })
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
 @api_view(['POST'])
 def send_message(request, course_id, *args, **kwargs):
     user = request.user

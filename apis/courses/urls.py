@@ -18,4 +18,5 @@ urlpatterns = [
     path('assign_teacher/<int:teacher_id>/course/<str:course_id>/', assign_teacher, name='assign_teacher'),
     path('unassign_teacher/<int:teacher_id>/course/<str:course_id>/', unassign_teacher, name='unassign_teacher'),
     path('remove_course_material/<int:course_material_id>/', remove_course_material, name='remove_course_material'),
+    path('courses/<int:course_id>/create-group/', create_group, name='create_group'),
 ]

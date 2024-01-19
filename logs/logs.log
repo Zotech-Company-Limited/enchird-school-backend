@@ -1282,3 +1282,9 @@ INFO : 2024-01-19 14:29:20,423 : 9 : 423 : Teacher info modified successfully! :
 INFO : 2024-01-19 14:30:35,620 : 9 : 620 : Teacher info modified successfully! : views : None
 INFO : 2024-01-19 14:30:43,413 : 9 : 413 : Teacher info modified successfully! : views : None
 INFO : 2024-01-19 14:31:06,737 : 9 : 737 : Teacher info modified successfully! : views : None
+ERROR : 2024-01-19 15:55 : 9 : 568 : {views} : [create_group] : You are not authorized to create a group for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:593]
+INFO : 2024-01-19 15:56:34,525 : 1 : 525 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-19 16:06 : 9 : 466 : {views} : [create_group] : You are not authorized to create a group for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:593]
+ERROR : 2024-01-19 16:07 : 9 : 977 : {views} : [create_group] : You are not authorized to create a group for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:594]
+ERROR : 2024-01-19 16:09 : 9 : 130 : {views} : [create_group] : {'name': [ErrorDetail(string='This field may not be null.', code='null')], 'code': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:613]
+ERROR : 2024-01-19 16:11 : 9 : 835 : {views} : [create_group] : Group created successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:610]

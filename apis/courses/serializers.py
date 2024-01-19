@@ -82,8 +82,9 @@ class CourseMaterialSerializer(serializers.ModelSerializer):
 class ChatGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChatGroup
-        fields = '__all__'
-
+        fields = ['id', 'name', 'course', 'code']
+        read_only_fields = ['code']
+        
 
 class MessageSerializer(serializers.ModelSerializer):
     sender = UserSerializer(read_only=True)
