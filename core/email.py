@@ -4,12 +4,12 @@ import smtplib, ssl
 from io import BytesIO
 from email import encoders
 from django.conf import settings
-from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
 from django.core.mail import send_mail
 from email.mime.multipart import MIMEMultipart
 from django.template.loader import render_to_string
-from core.email_templates import student_accept_html
+from core.email_templates import student_accept_html, student_reject_html
 
 
 port = 465  # For SSL
@@ -79,7 +79,7 @@ def send_student_verification_email(user, reset_token):
         return False
 
 
-def send_student_accept_mail(user, temp_password, faculty):
+def send_student_accept_mail(user, temp_password, faculty, department):
     try:
         context = ssl.create_default_context()
 
@@ -88,40 +88,26 @@ def send_student_accept_mail(user, temp_password, faculty):
             # Log in to your SMTP server using your credentials
             server.login(sender_email, password)
 
-            # Construct the path to your HTML template
-            # template_path = 'emails\student_accept_template.html'
-            # template_path = os.path.join(settings.BASE_DIR, 'core', 'templates', template_path)
-            
-            accept_html = student_accept_html.format(first_name=user.first_name, password=password, phone=user.phone)
-            print("1")
+            accept_html = student_accept_html.format(department=department, faculty=faculty, first_name=user.first_name, last_name=user.last_name, password=temp_password)
             
             # Render the HTML template with dynamic data
             email_content = {
-                # 'user': user,
-                # 'temp_password': temp_password,
-                # 'faculty': faculty,
                 'html': accept_html,
-                'subject': "Enchird ApplicatiDecision"
             }
-            print("2")
 
             # Create the email message
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
-            msg['Subject'] = "Enchird Application Decis"
-            print("3")
+            msg['Subject'] = "Enchird Application Decision"
             
 
             # Attach the HTML content to the email
             msg.attach(MIMEText(email_content['html'], 'html'))  # Use 'html' as the subtype
-            print("4")
             
 
             # Send the email
-            server.sendmail(sender_email, user.email, msg.as_string())
-            print("7")
-            
+            server.sendmail(sender_email, user.email, msg.as_string())            
 
             # Close the connection
             server.quit()
@@ -132,7 +118,7 @@ def send_student_accept_mail(user, temp_password, faculty):
         return False
     
 
-def send_student_reject_mail(user, department):
+def send_student_reject_mail(user, faculty, department):
     try:
         context = ssl.create_default_context()
 
@@ -140,19 +126,33 @@ def send_student_reject_mail(user, department):
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             # Log in to your SMTP server using your credentials
             server.login(sender_email, password)
+            print("1")
+            
+            
+            reject_html = student_reject_html.format(department=department, faculty=faculty, first_name=user.first_name, last_name=user.last_name)
+            print("2")
+            
+            # Render the HTML template with dynamic data
+            email_content = {
+                'html': reject_html,
+            }
+            print("3") 
+            
 
             # Create the email message
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
             msg['Subject'] = "Enchird Application Decision"
-
-            # Include the verification link in the email body
-            email_body = f"Hello {user.first_name}, \n\nWe regret to inform you that your application for admission has been carefully reviewed, and we are unable to offer you a place in the {department} program at our institution. \n\nWe appreciate your interest and wish you the best in your future endeavors."
-
-            msg.attach(MIMEText(email_body, 'plain'))
+            print("4")
+            
+            msg.attach(MIMEText(email_content['html'], 'html'))
+            print("7")
+            
 
             server.sendmail(sender_email, user.email, msg.as_string())
+            print("8")
+            
 
             # Close the connection
             server.quit()

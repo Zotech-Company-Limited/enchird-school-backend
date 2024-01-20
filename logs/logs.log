@@ -1288,3 +1288,17 @@ ERROR : 2024-01-19 16:06 : 9 : 466 : {views} : [create_group] : You are not auth
 ERROR : 2024-01-19 16:07 : 9 : 977 : {views} : [create_group] : You are not authorized to create a group for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:594]
 ERROR : 2024-01-19 16:09 : 9 : 130 : {views} : [create_group] : {'name': [ErrorDetail(string='This field may not be null.', code='null')], 'code': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:613]
 ERROR : 2024-01-19 16:11 : 9 : 835 : {views} : [create_group] : Group created successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:610]
+ERROR : 2024-01-19 17:20 : colonelpirate@gmail.com : 208 : {views} : [accept] : Applicant has already been accepted. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:200]
+INFO : 2024-01-19 17:21:39,384 : 31 : 384 : Student created successfully! : views : None
+INFO : 2024-01-19 17:42:15,442 : 32 : 442 : Student created successfully! : views : None
+INFO : 2024-01-19 17:43:47,852 : 33 : 852 : Student created successfully! : views : None
+ERROR : 2024-01-19 17:58 : 1 : 214 : {views} : [reject] : send_student_reject_mail() missing 1 required positional argument: 'department' : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:334]
+ERROR : 2024-01-19 17:58 : 1 : 233 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+ERROR : 2024-01-19 18:00 : 1 : 639 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+INFO : 2024-01-20 11:55:07,726 : 1 : 726 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-20 11:58 : 1 : 643 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+ERROR : 2024-01-20 12:00 : 1 : 997 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+ERROR : 2024-01-20 12:02 : 1 : 66 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+ERROR : 2024-01-20 12:04 : 1 : 665 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
+ERROR : 2024-01-20 12:06 : colonelpirate@gmail.com : 870 : {views} : [reject] : Unfortunately applicant had earlier been rejected. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:314]
+ERROR : 2024-01-20 12:07 : 1 : 390 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:336]

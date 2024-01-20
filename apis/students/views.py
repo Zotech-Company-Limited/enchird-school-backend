@@ -263,22 +263,10 @@ class StudentViewSet(viewsets.ModelViewSet):
 
                         # Send acceptance email.
                         faculty = applicant.faculty.name
-                        # try:
-                        #     # print(objet)
-                        #     email_subject = 'WaziEats Account'
-                        #     accept_html = student_accept_html.format(first_name=objet.first_name, password=password, phone=objet.phone)
-                        #     content = {
-                        #         # 'text': signup_text,
-                        #         'html': accept_html,
-                        #         'subject': email_subject
-                        #     }
-                        #     send_htmltext(objet, content)
-                        #     print("YET")
-                        # except Exception as e:
-                        #     print("An error occurred:", str(e))
-                        # notif_act(request, objet, password)
+                        department = applicant.department.name
+                         
                         try:
-                            send_student_accept_mail(user, password, faculty)
+                            send_student_accept_mail(user, password, faculty, department)
                         except Exception as e:
                             print(e)
                             logger.error( e,  extra={ 'user': user.id } )
@@ -300,15 +288,8 @@ class StudentViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            )
-            return Response(
-                {"error": str(e)},
-                status=status.HTTP_412_PRECONDITION_FAILED)
+            logger.error( str(e), extra={ 'user': None } )
+            return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
 
 
     @action(detail=True, methods=['post'])
@@ -344,14 +325,14 @@ class StudentViewSet(viewsets.ModelViewSet):
                 applicant.save()
 
                 # Send rejection email.
+                faculty = applicant.faculty.name
                 department = applicant.department.name
                 try:
-                    send_student_reject_mail(user, department)
+                    send_student_reject_mail(applicant, faculty, department)
                 except Exception as e:
                     print(e)
                     logger.error( e,  extra={ 'user': user.id } )
                 
-
                 logger.error("Applicant rejected successfully.", extra={'user': request.user.id})
                 return Response({'message': 'Applicant rejected successfully.'}, status=status.HTTP_200_OK)
 
@@ -385,21 +366,15 @@ class StudentViewSet(viewsets.ModelViewSet):
                 status.HTTP_400_BAD_REQUEST
             )
 
+
         partial = kwargs.pop('partial', True)
         instance = User.objects.get(id=kwargs['pk'])
         print(instance)
         try:
             student = Student.objects.get(user=kwargs['pk'], is_deleted=False)
         except Student.DoesNotExist:
-            logger.warning(
-                "Student not found",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "Student not found"},
-                status=status.HTTP_400_BAD_REQUEST)
+            logger.warning( "Student not found", extra={ 'user': user.id } )
+            return Response( {"error": "Student not found"}, status=status.HTTP_400_BAD_REQUEST)
         
         user_serializer = UserUpdateSerializer(
             instance, data=request.data,
