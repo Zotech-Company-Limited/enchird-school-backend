@@ -126,33 +126,23 @@ def send_student_reject_mail(user, faculty, department):
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             # Log in to your SMTP server using your credentials
             server.login(sender_email, password)
-            print("1")
-            
             
             reject_html = student_reject_html.format(department=department, faculty=faculty, first_name=user.first_name, last_name=user.last_name)
-            print("2")
             
             # Render the HTML template with dynamic data
             email_content = {
                 'html': reject_html,
             }
-            print("3") 
-            
 
             # Create the email message
             msg = MIMEMultipart()
             msg['From'] = sender_email
             msg['To'] = user.email
             msg['Subject'] = "Enchird Application Decision"
-            print("4")
             
             msg.attach(MIMEText(email_content['html'], 'html'))
-            print("7")
-            
 
             server.sendmail(sender_email, user.email, msg.as_string())
-            print("8")
-            
 
             # Close the connection
             server.quit()

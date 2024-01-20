@@ -504,41 +504,18 @@ def register_course(request, course_id):
     user = request.user
 
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
-        return Response(
-            {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_student is False:
-        logger.error(
-            "Only students can register courses.",
-            extra={
-                'user': user.id
-            }
-        )
-        return Response(
-            {
-                "error": "Only students can register courses."
-            },
-            status.HTTP_403_FORBIDDEN
-        )
+        logger.error( "Only students can register courses.", extra={ 'user': user.id } )
+        return Response( { "error": "Only students can register courses." }, status.HTTP_403_FORBIDDEN )
     
     try:
         student = Student.objects.get(user=request.user)
-        course = Course.objects.get(id=course_id, course_status='open')
+        course = Course.objects.get(id=course_id)
     except Student.DoesNotExist:
-        logger.info(
-            "Student not found.",
-            extra={
-                'user': user.id
-            }
-        )
+        logger.info( "Student not found.", extra={ 'user': user.id } )
         return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
     except Course.DoesNotExist:
         logger.error(

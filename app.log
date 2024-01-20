@@ -14064,3 +14064,7 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students
 ERROR:myLogger:Unfortunately applicant had earlier been rejected.
 WARNING:django.request:Bad Request: /api/admin/reject-application/
 ERROR:myLogger:Applicant rejected successfully.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\core\email.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
