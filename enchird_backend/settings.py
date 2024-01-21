@@ -30,14 +30,13 @@ SECRET_KEY = 'django-insecure-j_tya--8(3c9l^%yx@@nv3*47^7%-bx22jlbwq_qo3q-nuqvae
 FERNET_KEY = '4aBCu0mbi2XbC_ItJZz0iFa6V81xAkIjpRasQnbF_8Q='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['enchird.biz',
                   'https://enchird.biz',
                   '127.0.0.1',
                   'localhost'
 ]
-
 
 # Application definition
 
@@ -262,6 +261,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_URL = '/media/'
+
+if DEBUG:
+    
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+else:
+
+  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
