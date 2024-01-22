@@ -4,12 +4,12 @@ import smtplib, ssl
 from io import BytesIO
 from email import encoders
 from django.conf import settings
+from core.email_templates import *
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from django.core.mail import send_mail
 from email.mime.multipart import MIMEMultipart
 from django.template.loader import render_to_string
-from core.email_templates import student_accept_html, student_reject_html
 
 
 port = 465  # For SSL
@@ -161,6 +161,13 @@ def send_teacher_verification_email(user, temp_password):
         with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
             # Log in to your SMTP server using your credentials
             server.login(sender_email, password)
+            
+            tutor_html = tutor_creation_html.format(first_name=user.first_name, last_name=user.last_name, email=user.email, password=temp_password)
+            
+            # Render the HTML template with dynamic data
+            email_content = {
+                'html': tutor_html,
+            }
 
             # Create the email message
             msg = MIMEMultipart()
@@ -168,11 +175,8 @@ def send_teacher_verification_email(user, temp_password):
             msg['To'] = user.email
             msg['Subject'] = "Enchird Teacher Account Creation"
 
-            # Include the verification link in the email body
-            email_body = f"Hello {user.first_name}, \n\nUse the temporary password below to login to your account.\nChange it immediately after login.\n\nPassword: {temp_password}"
-
-            msg.attach(MIMEText(email_body, 'plain'))
-
+            msg.attach(MIMEText(email_content['html'], 'html'))
+            
             server.sendmail(sender_email, user.email, msg.as_string())
 
             # Close the connection
@@ -182,6 +186,42 @@ def send_teacher_verification_email(user, temp_password):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return False
+
+
+def send_student_application_email(user):
+    try:
+        context = ssl.create_default_context()
+
+        # Create a connection to the SMTP server using SSL
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            # Log in to your SMTP server using your credentials
+            server.login(sender_email, password)
+            
+            student_html = student_application_html.format(department=user.department.name, first_name=user.first_name, last_name=user.last_name, email=user.email)
+            
+            # Render the HTML template with dynamic data
+            email_content = {
+                'html': student_html,
+            }
+
+            # Create the email message
+            msg = MIMEMultipart()
+            msg['From'] = sender_email
+            msg['To'] = user.email
+            msg['Subject'] = "Enchird Student Application"
+
+            msg.attach(MIMEText(email_content['html'], 'html'))
+            
+            server.sendmail(sender_email, user.email, msg.as_string())
+
+            # Close the connection
+            server.quit()
+
+        return True
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return False
+
 
 
 def send_faculty_verification_email(user, temp_password):

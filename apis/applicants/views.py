@@ -19,6 +19,7 @@ from django.contrib.auth import get_user_model
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
 from .models import Applicant, AchievementDocument
+from core.email import send_student_application_email
 from apis.students.serializers import StudentSerializer
 from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import Group, Permission
@@ -28,12 +29,6 @@ from .serializers import ApplicantSerializer, AchievementDocumentSerializer
 logger = logging.getLogger("myLogger")
 
 
-# class ApplicantFilter(django_filters.FilterSet):
-#     class Meta:
-#         model = Applicant
-#         fields = {
-#             'created_at': ['exact', 'gte', 'lte'],
-#         }
 
 # Create your views here.
 class ApplicantViewSet(viewsets.ModelViewSet):
@@ -196,90 +191,25 @@ class ApplicantViewSet(viewsets.ModelViewSet):
 
                     headers = self.get_success_headers(applicant_serializer.data)
                     
+                    try:
+                        send_student_application_email(applicant)
+                    except Exception as e:
+                        logger.error( e, extra={ 'user': user.id })
+                        
                     logger.info( "Applicant created successfully!", extra={ 'user': user.id } )
                     return Response( serialized_data, status.HTTP_201_CREATED, headers=headers)
         
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            )
-            return Response(
-                {"error": str(e)},
-                status=status.HTTP_412_PRECONDITION_FAILED)
+            logger.error( str(e), extra={ 'user': None })
+            return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
 
 
-    # def update(self, request, *args, **kwargs):
-        
-    #     user = self.request.user
-    #     if not user.is_authenticated:
-    #         logger.error(
-    #             "You must provide valid authentication credentials.",
-    #             extra={
-    #                 'user': 'Anonymous'
-    #             }
-    #         )
-    #         return Response(
-    #             {"error": "You must provide valid authentication credentials."},
-    #             status=status.HTTP_401_UNAUTHORIZED
-    #         )
-
-    #     if request.user.is_admin is False:
-    #         logger.warning(
-    #             "You do not have the necessary rights!",
-    #             extra={
-    #                 'user': request.user.id
-    #             }
-    #         )
-    #         return Response(
-    #             {"error": "You do not have the necessary rights"},
-    #             status.HTTP_403_FORBIDDEN
-    #         )
-
-    #     partial = kwargs.pop('partial', True)
-    #     try:
-    #         instance = Applicant.objects.get(id=kwargs['pk'])
-    #     except Applicant.DoesNotExist:
-    #         logger.error(
-    #             "Applicant not Found.",
-    #             extra={
-    #                 'user': user.id
-    #             }
-    #         )
-    #         return Response(
-    #             {"error": "Applicant Not Found."},
-    #             status=status.HTTP_404_NOT_FOUND
-    #         )
-    #     print(instance)
-        
-    #     applicant_serializer = self.get_serializer(instance, 
-    #             data=request.data,
-    #             partial=partial)
-    #     if applicant_serializer.is_valid() is True:
-
-    #         applicant_serializer.save(modified_by=user)
-
-    #         if getattr(instance, '_prefetched_objects_cache', None):
-    #             instance._prefetched_objects_cache = {}
-    #         logger.info(
-    #             "Applicant Info modified successfully!",
-    #             extra={
-    #                 'user': request.user.id
-    #             }
-    #         )
-    #         return Response(applicant_serializer.data)
-    #     else:
-    #         logger.error(
-    #             str(applicant_serializer.errors),
-    #             extra={
-    #                 'user': request.user.id
-    #             }
-    #         )
-    #         return Response(applicant_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def update(self, request, *args, **kwargs):
+                
+        logger.warning( "Method not allowed", extra={ 'user': "Anonymous" })
+        return Response( {"error": "Method not allowed"}, status=status.HTTP_400_BAD_REQUEST)
 
 
     def destroy(self, request, *args, **kwargs):

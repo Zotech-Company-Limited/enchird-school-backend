@@ -206,3 +206,201 @@ student_reject_html = """\
 
 
 
+tutor_creation_html = """\
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enchird</title>
+</head>
+
+<body>
+    <main style="max-width: 600px; padding: 40px; color: #1F201F; font-family: Inter; line-height: 24px;">
+        <p>Dear <strong>{first_name} {last_name}</strong></p>
+
+        <div>
+            <p style="margin-block: 25px;">
+                Welcome to <strong>[Your School/Institution]</strong>! We are excited to have you on board as a teacher.
+                Below are your login credentials to access our system:
+            </p>
+
+            <div>
+                <p style="margin: 0;">Email: <strong>{email}</strong></p>
+                <p style="margin: 0;">Temporary Password: <strong>{password}</strong></p>
+            </div>
+
+            <p style="margin-block: 25px;">
+                Please use the provided credentials to log in to our system at <strong>[Login URL]</strong>.
+
+            </p>
+        </div>
+
+        <div>
+            <p style="margin-block: 25px;">Upon your first login, you will be prompted to change your password. Ensure
+                that your new password meets our security requirements.
+
+            </p>
+
+            <p style="margin-block: 25px;">
+                If you encounter any issues or have questions, feel free to reach out to our support team at
+                <strong>[Support Email/Contact]</strong>.
+
+            </p>
+        </div>
+
+        <div>
+            <p style="margin-block: 20px;">Best regards,</p>
+
+            <div>
+                <p style="margin: 0; margin-block-end: 2px;"><strong>[Your Full Name]</strong></p>
+                <p style="margin: 0; margin-block-end: 2px;"><strong>[Your Title]</strong> </p>
+                <p style="margin: 0; margin-block-end: 2px;"><strong>[Faculty/Department Name]</strong> </p>
+                <p style="margin: 0; margin-block-end: 2px;"><strong>[University Name]</strong> </p>
+                <p style="margin: 0; margin-block-end: 2px;"><strong>[Contact Information]</strong> </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; font-size: 16px;">
+            <p style="margin: 0; margin-block-end: 10px;"><a href=""
+                    style="color:black; font-weight: bold; ">Enchird</a></p>
+            <p style="margin: 0; margin-block-end: 10px;">Brings you closer to learning</p>
+            <p style="margin: 0; margin-block-end: 10px;">Copyright &copy; 2024</p>
+        </div>
+    </main>
+</body>
+
+</html>
+
+"""
+
+
+
+student_application_html = """\
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enchird</title>
+</head>
+
+<body>
+    <main style="max-width: 600px; padding: 40px; color: #1F201F; font-family: Inter; line-height: 24px;">
+        <p>Dear <strong>{first_name} {last_name}</strong></p>
+
+        <div>
+            <p style="margin-block: 30px;">
+                I trust this email finds you in good health and high spirits. I am
+                writing to acknowledge receipt of your application for the
+                <strong>{department}</strong> program at
+                <strong>[University Name]</strong>. We appreciate your interest in
+                joining our academic community.
+            </p>
+
+            <p style="margin-block: 30px;">
+                We understand that choosing the right institution and program is a
+                significant decision, and we are honored that you have considered
+                <strong>[University Name]</strong> for your studies in
+                <strong>{department}</strong>. Your application is currently
+                under review by our admissions committee.
+            </p>
+
+            <p style="margin-block: 30px;">
+                Here are a few important points regarding the application process:
+            </p>
+        </div>
+
+        <ol>
+            <li>
+                <p>
+                    <strong>Timeline:</strong> The admissions committee is diligently
+                    reviewing applications, and we aim to notify all applicants of their
+                    admission status by <strong>[Expected Decision Date]</strong>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <strong>Communication:</strong>
+                    All communication regarding your application will be sent to the email address provided in your
+                    application form. Please ensure that this email address is regularly monitored.
+
+
+                </p>
+            </li>
+
+            <li>
+                <p><strong>Addtional Information:</strong> If there are any missing documents or if the admissions
+                    committee requires further information, we will contact you promptly. Please check your email
+                    regularly and respond promptly to any requests.
+                </p>
+            </li>
+        </ol>
+
+        <div>
+            <p style="margin-block: 30px;">We appreciate your patience during this process. If you have any questions or
+                need clarification on any
+                aspect of the application process, feel free to reach out to our <strong>[Admissions Office/Student
+                    Services]</strong> at
+                <strong>[contact email/phone number]</strong>.
+            </p>
+
+            <p style="margin-block: 30px;">
+                Thank you for considering <strong>[University Name]</strong> for your academic journey. We wish you the
+                best of luck with your application and look forward to the possibility of welcoming you to our
+                <strong>{department}</strong> program.
+
+            </p>
+        </div>
+
+        <div>
+            <p style="margin-block: 30px;">Kind regards,</p>
+
+            <div>
+                <p style="margin: 0; margin-block-end: 10px;"><strong>[Your Full Name]</strong></p>
+                <p style="margin: 0; margin-block-end: 10px;"><strong>[Your Title]</strong> </p>
+                <p style="margin: 0; margin-block-end: 10px;"><strong>[Faculty/Department Name]</strong> </p>
+                <p style="margin: 0; margin-block-end: 10px;"><strong>[University Name]</strong> </p>
+                <p style="margin: 0; margin-block-end: 10px;"><strong>[Contact Information]</strong> </p>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-block: 30px;">
+            <div style="margin-block: 24px;">
+                <h4 style="font-size: 24px; color: black; font-weight: bold; margin: 0; margin-block-end: 10px;">Browse
+                    Our Faculties</h4>
+                <button
+                    style="width: 100%; padding-block: 24px; background-color: #2218A7; border: 0; border-radius: 4px; color:white; cursor: pointer;">See
+                    Faculties</button>
+            </div>
+
+            <div style="margin-block: 24px;">
+                <h4 style="font-size: 24px; color: black; font-weight: bold; margin: 0; margin-block-end: 10px;">Browse
+                    Our Departments</h4>
+                <button
+                    style="width: 100%; padding-block: 24px; background-color: #2218A7; border: 0; border-radius: 4px; color:white; cursor: pointer;">See
+                    Departments</button>
+            </div>
+        </div>
+
+        <div style="text-align: center; font-size: 20px;">
+            <p style="margin: 0; margin-block-end: 10px;"><a href=""
+                    style="color:black; font-weight: bold; ">Enchird</a></p>
+            <p style="margin: 0; margin-block-end: 10px;">Brings you closer to learning</p>
+            <p style="margin: 0; margin-block-end: 10px;">Copyright &copy; 2024</p>
+        </div>
+    </main>
+</body>
+
+</html>
+
+"""
+
+
+
+
+

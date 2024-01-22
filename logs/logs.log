@@ -1302,3 +1302,15 @@ ERROR : 2024-01-20 12:02 : 1 : 66 : {views} : [reject] : Applicant rejected succ
 ERROR : 2024-01-20 12:04 : 1 : 665 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:337]
 ERROR : 2024-01-20 12:06 : colonelpirate@gmail.com : 870 : {views} : [reject] : Unfortunately applicant had earlier been rejected. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:314]
 ERROR : 2024-01-20 12:07 : 1 : 390 : {views} : [reject] : Applicant rejected successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:336]
+INFO : 2024-01-22 16:56:36,046 : 1 : 46 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-22 17:01 : None : 895 : {views} : [create] : {'departments': [ErrorDetail(string='Invalid pk "4" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+ERROR : 2024-01-22 17:02 : None : 784 : {views} : [create] : {'departments': [ErrorDetail(string='Invalid pk "4" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+ERROR : 2024-01-22 17:05 : None : 534 : {views} : [create] : {'departments': [ErrorDetail(string='Invalid pk "4" - object does not exist.', code='does_not_exist')]} : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:206]
+WARNING : 2024-01-22 17:05:23,746 : anonymous : 746 : A student/teacher with this email address already exists. : views : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:155]
+ERROR : 2024-01-22 17:07 : 34 : 295 : {views} : [create] : send_teacher_verification_email() missing 2 required positional arguments: 'faculty' and 'department' : [in C:\enchird_LMS\enchird-school-backend\apis\teachers\views.py:views.py:195]
+INFO : 2024-01-22 17:07:33,297 : 34 : 297 : Teacher created successfully! : views : None
+INFO : 2024-01-22 17:12:13,537 : 35 : 537 : Teacher created successfully! : views : None
+INFO : 2024-01-22 17:39:21,102 : None : 102 : Applicant created successfully! : views : None
+ERROR : 2024-01-22 17:41 : None : 774 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:205]
+INFO : 2024-01-22 17:41:33,222 : None : 222 : Applicant created successfully! : views : None
+INFO : 2024-01-22 17:42:44,027 : None : 27 : Applicant created successfully! : views : None

@@ -175,7 +175,6 @@ class TeacherViewSet(viewsets.ModelViewSet):
                         user.is_admin = False
                         user.is_active = True
                         password = User.objects.make_random_password()
-                        print(password)
                         user.set_password(password)
                         user.save()
                         print(user)
@@ -203,15 +202,8 @@ class TeacherViewSet(viewsets.ModelViewSet):
         except Exception as e:
             # Rollback transaction and raise validation error
             transaction.rollback()
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            )
-            return Response(
-                {"error": str(e)},
-                status=status.HTTP_412_PRECONDITION_FAILED)
+            logger.error( str(e), extra={ 'user': None } )
+            return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
 
     def perform_create(self, serializer):
         
@@ -257,28 +249,6 @@ class TeacherViewSet(viewsets.ModelViewSet):
         teacher_serializer = self.get_serializer(teacher)
         if user_serializer.is_valid() is True:
             self.perform_update(user_serializer)
-            
-            # # Check if "faculties", "courses", and "departments" are present in the request data
-            # if 'faculties' in request.data:
-            #     faculties = request.data['faculties']
-            #     teacher.faculties.set(faculties)
-
-            # if 'courses' in request.data:
-            #     courses = request.data['courses']
-            #     teacher.courses.set(courses)
-
-            # if 'departments' in request.data:
-            #     departments = request.data['departments']
-            #     teacher.departments.set(departments)
-                
-            # Update associated faculties, courses, and departments
-            # faculties = request.data.get('faculties', [])
-            # courses = request.data.get('courses', [])
-            # departments = request.data.get('departments', [])
-            
-            # teacher.faculties.set(faculties)
-            # teacher.courses.set(courses)
-            # teacher.departments.set(departments)
 
             if getattr(instance, '_prefetched_objects_cache', None):
                 instance._prefetched_objects_cache = {}
@@ -304,7 +274,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
 
     def destroy(self, request, *args, **kwargs):
-        """Docstring for function."""
+         
         user = self.request.user
         if not user.is_a_student:
             logger.warning(
