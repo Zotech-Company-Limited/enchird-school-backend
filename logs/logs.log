@@ -1326,3 +1326,11 @@ ERROR : 2024-01-23 09:20 : 2 : 408 : {views} : [join_group] : Group code is requ
 ERROR : 2024-01-23 09:21 : 2 : 596 : {views} : [join_group] : Group Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:705]
 ERROR : 2024-01-23 09:21 : 2 : 292 : {views} : [join_group] : You are not registered for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:722]
 INFO : 2024-01-23 09:26:10,150 : 2 : 150 : Student successfully registered course. : views : None
+ERROR : 2024-01-23 09:55 : 2 : 931 : {views} : [join_group] : Student joined group {group.name}. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:730]
+ERROR : 2024-01-23 10:13 : 2 : 6 : {views} : [send_message] : Chat group not found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:677]
+ERROR : 2024-01-23 10:15 : 2 : 564 : {views} : [send_message] : You have not joined the group. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:696]
+ERROR : 2024-01-23 10:17 : 2 : 525 : {views} : [send_message] : You have not joined the group. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:698]
+ERROR : 2024-01-23 10:22 : 2 : 521 : {views} : [join_group] : Student joined group {group.name}. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:664]
+ERROR : 2024-01-23 10:25 : 2 : 783 : {views} : [join_group] : You are already a member of this group. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:658]
+ERROR : 2024-01-23 10:28 : 2 : 938 : {views} : [send_message] : You have not joined the group. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:705]
+INFO : 2024-01-23 10:29:54,821 : 2 : 821 : Message sent successfully : views : None

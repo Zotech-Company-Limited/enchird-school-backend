@@ -24,7 +24,6 @@ class Student(models.Model):
         null=True
     )
     registered_courses = models.ManyToManyField(Course, related_name='students', blank=True)
-    registered_groups = models.ManyToManyField(ChatGroup, related_name='student_members', blank=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",

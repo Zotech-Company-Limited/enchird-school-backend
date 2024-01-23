@@ -606,82 +606,18 @@ def create_group(request, course_id):
         
     serializer = ChatGroupSerializer(data={'course': course.id, 'name': request.data.get('name')})
     if serializer.is_valid():
-        serializer.save()
+        group = serializer.save()
+
+        # Add the teacher to the group members
+        group.members.add(user)
+        group.save()
+        
         logger.error( "Group created successfully.", extra={ 'user': user.id })
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
         logger.error( serializer.errors, extra={ 'user': user.id })
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    
-@api_view(['POST'])
-def send_message(request, course_id, *args, **kwargs):
-    user = request.user
-    
-    if not user.is_authenticated:
-        logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id})
-        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
-
-    try:
-        course = Course.objects.get(id=course_id)
-    except Course.DoesNotExist:
-        logger.error( "Course not found.", extra={ 'user': request.user.id})
-        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
-
-    # Check if the authenticated user is a student and is registered for the course
-    if user.is_a_student:
-        try:
-            student = Student.objects.get(user=request.user, is_deleted=False)
-            if course not in student.registered_courses.all():
-                logger.error( "You are not registered for this course.", extra={ 'user': request.user.id } )
-                return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
-        
-        except Student.DoesNotExist:
-            logger.error( "Student does not exist.", extra={ 'user': request.user.id })    
-            return Response({'error': 'Student does not exist'}, status=status.HTTP_403_FORBIDDEN)
-
-    # Check if the authenticated user is a teacher and is assigned to the course
-    elif user.is_a_teacher:
-        print(course.tutors.all())
-        try:
-            teacher = Teacher.objects.get(user=request.user, is_deleted=False)
-            if teacher not in course.tutors.all():
-                logger.warning( "You are not a lecturer of this course", extra={ 'user': request.user.id } )
-                return Response( {"error": "You are not a lecturer of this course."}, status.HTTP_403_FORBIDDEN )
-        
-        except Teacher.DoesNotExist:
-            logger.error( "Teacher Does not exist.", extra={ 'user': request.user.id })    
-            return Response({'error': 'Teacher Does Not Exist'}, status=status.HTTP_403_FORBIDDEN)
-    
-    else:
-        logger.warning( "Invalid user type", extra={ 'user': request.user.id } )
-        return Response({'error': 'Invalid user type'}, status=status.HTTP_403_FORBIDDEN)
-    
-    try:
-        chat_group = ChatGroup.objects.get(course=course)
-        print(chat_group)
-        
-    except ChatGroup.DoesNotExist:
-        logger.error( "GroupChat Does Not Exist.", extra={ 'user': request.user.id })    
-        return Response({'error': 'GroupChat Does Not Exist'}, status=status.HTTP_403_FORBIDDEN)
-
-    # Create the message
-    data = {
-        'content': request.data.get('content', ''),
-        'group': chat_group.id,  
-        'attachment': request.data.get('attachment', None),  
-        'response_to': request.data.get('response_to', None),  
-    }
-
-    serializer = MessageSerializer(data=data)
-    if serializer.is_valid():
-        serializer.save(sender=user)
-        logger.info( "Message sent successfully", extra={ 'user': request.user.id } )
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    else:
-        logger.warning( serializer.errors, extra={ 'user': request.user.id })
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(['POST'])
 def join_group(request):
@@ -722,13 +658,94 @@ def join_group(request):
         logger.error( "You are not registered for this course.", extra={ 'user': request.user.id})
         return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
 
-    # Update the student's registered groups
-    student.registered_groups.add(group)
-    student.save()
+    # Check if student is already member of group
+    if user in group.members.all():
+        logger.error( "You are already a member of this group.", extra={ 'user': request.user.id})
+        return Response({'error': 'You are already a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+    # Update the group members
+    group.members.add(user)
+    group.save()
 
     serializer = ChatGroupSerializer(group)
     logger.error( "Student joined group {group.name}.", extra={ 'user': request.user.id})
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+ 
+@api_view(['POST'])
+def send_message(request, group_id, *args, **kwargs):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id})
+        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+    try:
+        chat_group = ChatGroup.objects.get(id=group_id)
+    except ChatGroup.DoesNotExist:
+        logger.error( "Chat group not found.", extra={ 'user': request.user.id})
+        return Response({'error': 'Chat group not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        course = Course.objects.get(id=chat_group.course.id)
+    except Course.DoesNotExist:
+        logger.error( "Course not found.", extra={ 'user': request.user.id})
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the authenticated user is a student and is registered for the course
+    if user.is_a_student:
+        try:
+            student = Student.objects.get(user=request.user, is_deleted=False)
+            if course not in student.registered_courses.all():
+                logger.error( "You are not registered for this course.", extra={ 'user': request.user.id } )
+                return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
+        
+            # Check if the student has joined the group
+            print(chat_group.members.all())
+            if user not in chat_group.members.all():
+                logger.error("You have not joined the group.", extra={'user': request.user.id})
+                return Response({'error': 'You have not joined the group.'}, status=status.HTTP_403_FORBIDDEN)
+
+        except Student.DoesNotExist:
+            logger.error( "Student does not exist.", extra={ 'user': request.user.id })    
+            return Response({'error': 'Student does not exist'}, status=status.HTTP_403_FORBIDDEN)
+
+    # Check if the authenticated user is a teacher and is assigned to the course
+    elif user.is_a_teacher:
+        print(course.tutors.all())
+        try:
+            teacher = Teacher.objects.get(user=request.user, is_deleted=False)
+            if teacher not in course.tutors.all():
+                logger.warning( "You are not a lecturer of this course", extra={ 'user': request.user.id } )
+                return Response( {"error": "You are not a lecturer of this course."}, status.HTTP_403_FORBIDDEN )
+        
+        except Teacher.DoesNotExist:
+            logger.error( "Teacher Does not exist.", extra={ 'user': request.user.id })    
+            return Response({'error': 'Teacher Does Not Exist'}, status=status.HTTP_403_FORBIDDEN)
+    
+    else:
+        logger.warning( "Invalid user type", extra={ 'user': request.user.id } )
+        return Response({'error': 'Invalid user type'}, status=status.HTTP_403_FORBIDDEN)
+    
+    
+    # Create the message
+    data = {
+        'content': request.data.get('content', ''),
+        'group': chat_group.id,  
+        'attachment': request.data.get('attachment', None),  
+        'response_to': request.data.get('response_to', None),  
+    }
+
+    serializer = MessageSerializer(data=data)
+    if serializer.is_valid():
+        serializer.save(sender=user)
+        logger.info( "Message sent successfully", extra={ 'user': request.user.id } )
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        logger.warning( serializer.errors, extra={ 'user': request.user.id })
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 

@@ -116,5 +116,8 @@ class Message(models.Model):
     def __str__(self):
         return f'{self.sender.username}: {self.content}'
     
-    
+    class Meta:
+        db_table = "group_messages"
+        
+        
     
