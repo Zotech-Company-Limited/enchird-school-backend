@@ -1314,3 +1314,15 @@ INFO : 2024-01-22 17:39:21,102 : None : 102 : Applicant created successfully! : 
 ERROR : 2024-01-22 17:41 : None : 774 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:205]
 INFO : 2024-01-22 17:41:33,222 : None : 222 : Applicant created successfully! : views : None
 INFO : 2024-01-22 17:42:44,027 : None : 27 : Applicant created successfully! : views : None
+ERROR : 2024-01-22 18:03 : None : 194 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-22 18:08 : None : 904 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-22 18:10 : None : 400 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-22 18:10 : None : 137 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-22 18:11 : None : 401 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-23 08:59 : None : 510 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+ERROR : 2024-01-23 09:01 : None : 298 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:95]
+INFO : 2024-01-23 09:02:42,697 : 2 : 697 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-23 09:20 : 2 : 408 : {views} : [join_group] : Group code is required in the request body. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:698]
+ERROR : 2024-01-23 09:21 : 2 : 596 : {views} : [join_group] : Group Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:705]
+ERROR : 2024-01-23 09:21 : 2 : 292 : {views} : [join_group] : You are not registered for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:722]
+INFO : 2024-01-23 09:26:10,150 : 2 : 150 : Student successfully registered course. : views : None

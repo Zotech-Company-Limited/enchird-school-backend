@@ -683,6 +683,55 @@ def send_message(request, course_id, *args, **kwargs):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['POST'])
+def join_group(request):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': request.user.id})
+        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+    # Get code from request body
+    code = request.data.get('code', None)
+    
+    if not code:
+        logger.error( "Group code is required in the request body.", extra={ 'user': request.user.id})
+        return Response({'error': 'Group code is required in the request body'}, status=status.HTTP_400_BAD_REQUEST)
+
+    # Get group from code 
+    try:
+        group = ChatGroup.objects.get(code=code)
+    except ChatGroup.DoesNotExist:
+        logger.error( "Group Not Found.", extra={ 'user': request.user.id})
+        return Response({'error': 'Group not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if user making request is a student
+    if not request.user.is_a_student:
+        logger.error( "Only students can join groups.", extra={ 'user': request.user.id})
+        return Response({'error': 'Only students can join groups'}, status=status.HTTP_403_FORBIDDEN)
+    
+    # Check if student is registered for the course in question
+    try:
+        student = Student.objects.get(user=request.user, is_deleted=False)
+    except Student.DoesNotExist:
+        logger.error( "Student Not found or deleted.", extra={ 'user': request.user.id})
+        return Response({'error': 'Student not found or deleted'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the student is registered for the corresponding course
+    if group.course not in student.registered_courses.all():
+        logger.error( "You are not registered for this course.", extra={ 'user': request.user.id})
+        return Response({'error': 'You are not registered for this course'}, status=status.HTTP_403_FORBIDDEN)
+
+    # Update the student's registered groups
+    student.registered_groups.add(group)
+    student.save()
+
+    serializer = ChatGroupSerializer(group)
+    logger.error( "Student joined group {group.name}.", extra={ 'user': request.user.id})
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
 class MessagePagination(PageNumberPagination):
     page_size = 20  # Adjust as needed
     page_size_query_param = 'page_size'

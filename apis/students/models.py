@@ -3,8 +3,8 @@ import hashlib
 from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
-from apis.courses.models import Course
 from django.db.models.signals import post_save
+from apis.courses.models import Course, ChatGroup
 from apis.faculty.models import Faculty, Department
 
 
@@ -24,6 +24,7 @@ class Student(models.Model):
         null=True
     )
     registered_courses = models.ManyToManyField(Course, related_name='students', blank=True)
+    registered_groups = models.ManyToManyField(ChatGroup, related_name='student_members', blank=True)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         db_column="creation_date",
