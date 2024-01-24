@@ -1,6 +1,7 @@
 import logging
 from .models import *
 from .serializers import *
+from django.db.models import Q
 from rest_framework import generics
 from django.shortcuts import render
 from apis.teachers.models import Teacher
@@ -271,8 +272,66 @@ def send_direct_message(request, receiver_id):
         logger.warning(serializer.errors, extra={'user': user.id})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+
+@api_view(['GET'])
+def list_user_messages(request, user_id):
+    user = request.user
+
+    # Check authentication
+    if not user.is_authenticated:
+        logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})
+        return Response({"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+    # Retrieve the other user
+    try:
+        other_user = User.objects.get(id=user_id)
+    except User.DoesNotExist:
+        logger.error("User not found.", extra={'user': user.id})
+        return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the authenticated user can view messages with the other user
+    if not user.is_admin and not user.is_a_teacher:
+        logger.warning("You are not authorized to view messages with this user.", extra={'user': user.id})
+        return Response({"error": "You are not authorized to view messages with this user."}, status=status.HTTP_403_FORBIDDEN)
+
+    # Retrieve messages between the authenticated user and the other user
+    messages = DirectMessage.objects.filter(
+        Q(sender=user, receiver=other_user) | 
+        Q(sender=other_user, receiver=user)
+    ).order_by('-timestamp')
+
+    # Serialize the messages
+    serializer = DirectMessageSerializer(messages, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def inbox_messages(request):
+    user = request.user
     
-class MyInbox(generics.ListAPIView):
-    pass
+    # Check authentication
+    if not user.is_authenticated:
+        logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})
+        return Response({"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+    # Check if the user is an admin or tutor
+    if not user.is_admin and not user.is_a_teacher:
+        logger.warning("You are not authorized to view inbox messages.", extra={'user': user.id})
+        return Response({"error": "You are not authorized to view inbox messages."}, status=status.HTTP_403_FORBIDDEN)
+
+    # Retrieve inbox messages for the user, including both sent and received messages, ordering by the latest first
+    inbox_messages = DirectMessage.objects.filter(
+        Q(sender=user) | Q(receiver=user)
+    ).order_by('-timestamp')
+
+    # Serialize the inbox messages
+    serializer = DirectMessageSerializer(inbox_messages, many=True)
+    return Response(serializer.data)
+
+
+
+# class MyInbox(generics.ListAPIView):
+#     pass
 
 

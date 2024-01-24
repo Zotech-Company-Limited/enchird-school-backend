@@ -367,15 +367,22 @@ class DepartmentViewSet(viewsets.ModelViewSet):
         user = self.request.user
         
         faculty_name = request.query_params.get('faculty_name', None)
+        keyword = request.query_params.get('keyword', None)
+        print(keyword)
         
         if faculty_name is not None:
             queryset = Department.objects.all().filter(
                 faculty__name__icontains=faculty_name,
                 is_deleted=False
             ).order_by('-created_at')
+        elif keyword is not None:
+            queryset = Department.objects.all().filter(
+                name__icontains=keyword,
+                is_deleted=False
+            ).order_by('-created_at')
         else:
             queryset = self.filter_queryset(self.get_queryset())
-        
+        print(queryset)
         # Using pagination
         page = self.paginate_queryset(queryset)
         if page is not None:
