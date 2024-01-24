@@ -42,16 +42,13 @@ class CourseViewSet(viewsets.ModelViewSet):
         user = self.request.user
 
         if not user.is_authenticated:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={ 'user': 'Anonymous' })
-            return Response(
-                {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' })
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
             
         faculty_name = request.query_params.get('faculty_name', None)
         department_name = request.query_params.get('department_name', None)
         course_level = request.query_params.get('course_level', None)
+        keyword = request.query_params.get('keyword', None)
 
         queryset = Course.objects.filter(is_deleted=False)
 
@@ -64,6 +61,12 @@ class CourseViewSet(viewsets.ModelViewSet):
 
         if course_level:
             queryset = queryset.filter(course_level=course_level)
+            
+        if keyword is not None:
+            queryset = Course.objects.all().filter( 
+                course_title__icontains=keyword,
+                is_deleted=False
+            ).order_by('-created_at')
 
         queryset = queryset.order_by('-created_at')
 

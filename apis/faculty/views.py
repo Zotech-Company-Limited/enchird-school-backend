@@ -38,17 +38,26 @@ class FacultyViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         
         user = self.request.user
+        
+        keyword = request.query_params.get('keyword', None)
 
-        queryset = self.filter_queryset(self.get_queryset())
+        if keyword is not None:
+            queryset = Faculty.objects.all().filter(
+                Q(name__icontains=keyword) | Q(abbrev__icontains=keyword),
+                is_deleted=False
+            ).order_by('-created_at')
+        else:
+            queryset = self.filter_queryset(self.get_queryset())
+        
         # Use pagination
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
-            logger.info( "List of faculty members returned successfully.", extra={'user': user.id} )
+            logger.info( "List of faculties returned successfully.", extra={'user': user.id})
             return self.get_paginated_response(serializer.data)
         
         serializer = self.get_serializer(queryset, many=True)
-        logger.info( "List of faculty members returned successfully.", extra={'user': user.id} )
+        logger.info( "List of faculties returned successfully.", extra={'user': user.id})
         return Response(serializer.data)
 
 
@@ -368,7 +377,6 @@ class DepartmentViewSet(viewsets.ModelViewSet):
         
         faculty_name = request.query_params.get('faculty_name', None)
         keyword = request.query_params.get('keyword', None)
-        print(keyword)
         
         if faculty_name is not None:
             queryset = Department.objects.all().filter(
@@ -376,13 +384,13 @@ class DepartmentViewSet(viewsets.ModelViewSet):
                 is_deleted=False
             ).order_by('-created_at')
         elif keyword is not None:
-            queryset = Department.objects.all().filter(
-                name__icontains=keyword,
+            queryset = Department.objects.all().filter( 
+                Q(name__icontains=keyword) | Q(abbrev__icontains=keyword),
                 is_deleted=False
             ).order_by('-created_at')
         else:
             queryset = self.filter_queryset(self.get_queryset())
-        print(queryset)
+        
         # Using pagination
         page = self.paginate_queryset(queryset)
         if page is not None:

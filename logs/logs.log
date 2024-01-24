@@ -1363,3 +1363,25 @@ INFO : 2024-01-24 13:29:16,696 : None : 696 : List of departments returned succe
 INFO : 2024-01-24 13:29:23,785 : None : 785 : List of departments returned successfully. : views : None
 INFO : 2024-01-24 13:29:37,011 : None : 11 : List of departments returned successfully. : views : None
 INFO : 2024-01-24 13:29:50,059 : None : 59 : List of departments returned successfully. : views : None
+INFO : 2024-01-24 13:47:12,472 : None : 472 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 13:47:37,557 : None : 557 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 13:49:17,326 : None : 326 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 13:53:57,240 : None : 240 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 13:55:19,391 : None : 391 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 14:02:33,550 : None : 550 : List of faculties returned successfully. : views : None
+INFO : 2024-01-24 14:02:43,358 : None : 358 : List of faculties returned successfully. : views : None
+ERROR : 2024-01-24 14:18 : Anonymous : 538 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:45]
+INFO : 2024-01-24 14:20:37,668 : 1 : 668 : List of courses returned successfully. : views : None
+INFO : 2024-01-24 14:21:59,273 : 1 : 273 : List of courses returned successfully. : views : None
+INFO : 2024-01-24 14:23:52,035 : 1 : 35 : List of courses returned successfully. : views : None
+INFO : 2024-01-24 14:38:16,565 : 1 : 565 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 14:41:16,658 : 1 : 658 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 14:41:41,499 : 1 : 499 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 14:49:34,968 : 1 : 968 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 14:50:27,382 : 1 : 382 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 14:50:37,785 : 1 : 785 : List of applicants returned successfully. : views : None
+INFO : 2024-01-24 18:24:52,777 : 1 : 777 : User Logged in sucessfully. : login : None
+INFO : 2024-01-24 18:26:13,792 : 1 : 792 : Students list returned successfully. : views : None
+INFO : 2024-01-24 18:30:52,974 : 1 : 974 : Students list returned successfully. : views : None
+INFO : 2024-01-24 18:43:51,807 : 1 : 807 : List of teachers returned successfully. : views : None
+INFO : 2024-01-24 18:44:10,229 : 1 : 229 : List of teachers returned successfully. : views : None

@@ -43,14 +43,20 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         user = self.request.user
 
         if not user.is_authenticated:
-            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
             return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+        
+        if not user.is_admin:
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            return Response( {'error': "You do not have the necessary right."}, status=status.HTTP_401_UNAUTHORIZED )
 
-        order = self.request.query_params.get('order', None)
-        faculty_name = request.query_params.get('faculty_name', None)
         department_name = request.query_params.get('department_name', None)
+        faculty_name = request.query_params.get('faculty_name', None)
+        order = self.request.query_params.get('order', None)
+        keyword = request.query_params.get('keyword', None)
         status = request.query_params.get('status', None)
         gender = request.query_params.get('gender', None)
+        
         
         queryset = Applicant.objects.filter(is_deleted=False)
         
@@ -68,6 +74,27 @@ class ApplicantViewSet(viewsets.ModelViewSet):
             
         if status:
             queryset = queryset.filter(status=status) 
+            
+        if keyword is not None:
+            # Split the keyword into individual words
+            words = keyword.split()
+
+            # Create a Q object for each word in both fields
+            name_queries = Q()
+            abbrev_queries = Q()
+
+            for word in words: 
+                name_queries |= Q(first_name__icontains=word)
+                abbrev_queries |= Q(last_name__icontains=word)
+
+            # Combining the queries with OR conditions
+            combined_query = (name_queries | abbrev_queries)
+
+            # Apply the combined query along with other filters
+            queryset = Applicant.objects.filter(
+                combined_query,
+                is_deleted=False
+            ).order_by('-created_at')
             
         if not order:
             queryset = queryset.order_by('-created_at')
@@ -103,30 +130,18 @@ class ApplicantViewSet(viewsets.ModelViewSet):
 
         user = self.request.user
         if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if not user.is_admin:
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            return Response( {'error': "You do not have the necessary right."}, status=status.HTTP_401_UNAUTHORIZED )
 
         try: 
             instance = Applicant.objects.get(id=kwargs['pk'])
         except Applicant.DoesNotExist:
-            logger.error(
-                "Applicant not Found.",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "Applicant Not Found."},
-                status=status.HTTP_404_NOT_FOUND
-            )
+            logger.error( "Applicant not Found.", extra={ 'user': user.id } )
+            return Response( {"error": "Applicant Not Found."}, status=status.HTTP_404_NOT_FOUND )
 
         # Retrieve achievement documents related to the applicant
         achievement_documents = AchievementDocument.objects.filter(applicant=instance)

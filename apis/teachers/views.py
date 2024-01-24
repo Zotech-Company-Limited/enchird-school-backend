@@ -37,37 +37,22 @@ class TeacherViewSet(viewsets.ModelViewSet):
     pagination_class = PaginationClass
     serializer_class = TeacherSerializer
 
-    # def get_permissions(self):
-    #     if self.action in ['create', 'list', 'retrieve', 'delete', 'update']:
-    #         # Allow unauthenticated access for create
-    #         permission_classes = [IsAuthenticated]
-    #     # else:
-    #     #     # Require authentication and permissions for other actions
-    #     #     permission_classes = [IsAuthenticated]  # You can add more permissions as needed
-    #     return [permission() for permission in permission_classes]
-
 
     def list(self, request, *args, **kwargs):
         user = self.request.user
 
         if not user.is_authenticated:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={ 'user': 'Anonymous' }  )
-            return Response(
-                {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' }  )
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_superuser is False:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={ 'user': 'Anonymous' } )
-            return Response(
-                { "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            return Response( { "error": "You do not have the necessary rights."}, status.HTTP_403_FORBIDDEN )
         
-        order = self.request.query_params.get('order', None)
-        faculty_name = request.query_params.get('faculty_name', None)
         department_name = request.query_params.get('department_name', None)
+        faculty_name = request.query_params.get('faculty_name', None)
+        order = self.request.query_params.get('order', None)
+        keyword = request.query_params.get('keyword', None)
         gender = request.query_params.get('gender', None)
         
         queryset = Teacher.objects.filter(is_deleted=False)
@@ -83,6 +68,27 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
         if gender:
             queryset = queryset.filter(user__gender=gender)
+            
+        if keyword is not None:
+            # Split the keyword into individual words
+            words = keyword.split()
+
+            # Create a Q object for each word in both fields
+            name_queries = Q()
+            abbrev_queries = Q()
+
+            for word in words: 
+                name_queries |= Q(user__first_name__icontains=word)
+                abbrev_queries |= Q(user__last_name__icontains=word)
+
+            # Combining the queries with OR conditions
+            combined_query = (name_queries | abbrev_queries)
+
+            # Apply the combined query along with other filters
+            queryset = Teacher.objects.filter(
+                combined_query,
+                is_deleted=False
+            ).order_by('-created_at')
             
         if not order:
             queryset = queryset.order_by('-created_at')

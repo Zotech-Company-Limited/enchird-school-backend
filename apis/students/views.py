@@ -64,25 +64,21 @@ class StudentViewSet(viewsets.ModelViewSet):
 
         if not user.is_authenticated:
             logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
-            return Response(
-                {'error': "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED )
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
         if user.is_admin is False and user.is_superuser is False:
-            logger.error(
-                "You do not have the necessary rights.",
-                extra={ 'user': 'Anonymous' } )
-            return Response(
-                { "error": "You do not have the necessary rights." },
-                status.HTTP_403_FORBIDDEN )
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+            return Response( { "error": "You do not have the necessary rights." }, status.HTTP_403_FORBIDDEN )
             
         queryset = self.filter_queryset(self.get_queryset())
             
         # Apply filters based on query parameters
-        gender = self.request.query_params.get('gender', None)
-        faculty = self.request.query_params.get('faculty', None)
         department = self.request.query_params.get('department', None)
+        faculty = self.request.query_params.get('faculty', None)
+        gender = self.request.query_params.get('gender', None)
         order = self.request.query_params.get('order', None)
+        keyword = request.query_params.get('keyword', None)
+        
         
         if gender:
             queryset = queryset.filter(user__gender=gender)
@@ -95,6 +91,27 @@ class StudentViewSet(viewsets.ModelViewSet):
         
         if order:
             queryset = queryset.order_by('-created_at') if order == 'desc' else queryset.order_by('created_at')
+            
+        if keyword is not None:
+            # Split the keyword into individual words
+            words = keyword.split()
+
+            # Create a Q object for each word in both fields
+            name_queries = Q()
+            abbrev_queries = Q()
+
+            for word in words: 
+                name_queries |= Q(user__first_name__icontains=word)
+                abbrev_queries |= Q(user__last_name__icontains=word)
+
+            # Combining the queries with OR conditions
+            combined_query = (name_queries | abbrev_queries)
+
+            # Apply the combined query along with other filters
+            queryset = Student.objects.filter(
+                combined_query,
+                is_deleted=False
+            ).order_by('-created_at')
             
         if not order:
             queryset = queryset.order_by('-created_at')
