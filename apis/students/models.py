@@ -3,8 +3,8 @@ import hashlib
 from django.db import models
 from apis.users.models import User
 from django.dispatch import receiver
+from apis.courses.models import Course
 from django.db.models.signals import post_save
-from apis.courses.models import Course, ChatGroup
 from apis.faculty.models import Faculty, Department
 
 

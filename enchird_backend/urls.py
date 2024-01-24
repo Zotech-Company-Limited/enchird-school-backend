@@ -36,6 +36,7 @@ urlpatterns = [
     path('api/', include('apis.courses.urls')),
     path('api/', include('apis.applicants.urls')),
     path('api/', include('apis.assessment.urls')),
+    path('api/', include('apis.messaging.urls')),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),
     # path('api/', include((router.urls, 'api'))),

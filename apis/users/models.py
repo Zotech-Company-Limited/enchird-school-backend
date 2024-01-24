@@ -204,29 +204,15 @@ class CustomAnonymousUser(AnonymousUser):
 
 
 
-# class IsSuperuser(permissions.BasePermission):
-#     def has_permission(self, request, view):
-#         return request.user.groups.filter(name='Superuser').exists()
-
-
-# class IsMemberOfAnyGroup(permissions.BasePermission):
-#     def has_permission(self, request, view):
-#         # Define a list of group names that you want to allow access for
-#         allowed_groups = ['Superuser']
-        
-#         # Create a Q object to check for membership in any of the allowed groups
-#         q_objects = Q()
-#         for group_name in allowed_groups:
-#             q_objects |= Q(groups__name=group_name)
-
-#         # Check if the user is a member of any of the allowed groups
-#         return request.user.groups.filter(q_objects).exists()
-
-
 @receiver(post_save, sender=User, dispatch_uid="update_user_reference")
 def update_user_reference(instance, **kwargs):
     if not instance.reference:
         instance.reference = 'USR_' + str(instance.id).zfill(8)
         instance.save()
+
+
+
+
+
 
 

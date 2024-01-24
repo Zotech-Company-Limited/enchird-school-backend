@@ -1,5 +1,3 @@
-import string
-import random
 import hashlib
 import datetime
 from django.db import models
@@ -89,35 +87,5 @@ class CourseMaterial(models.Model):
         return f"CourseMaterial: {self.material_file.name}"
 
 
-class ChatGroup(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
-    code = models.CharField(max_length=10, unique=True, blank=False, null=False)
-    members = models.ManyToManyField(User, blank=True, related_name='chat_groups')
     
-    def save(self, *args, **kwargs):
-        # Generate a random code when a group is created
-        if not self.code:
-            self.code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
-        super().save(*args, **kwargs)
-        
-    def __str__(self):
-        return self.name
 
-
-class Message(models.Model):
-    content = models.TextField()
-    sender = models.ForeignKey(User, on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
-    group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
-    attachment = models.CharField(max_length=255, null=True, blank=True) 
-    response_to = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='responses')
-
-    def __str__(self):
-        return f'{self.sender.username}: {self.content}'
-    
-    class Meta:
-        db_table = "group_messages"
-        
-        
-    
