@@ -461,26 +461,14 @@ def add_course_material(request, course_id):
 
     if not user.is_authenticated:
         logger.error(
-            "You must provide valid authentication credentials.",
-            extra={
-                'user': request.user.id
-            }
-        )
-        return Response(
-            {"error": "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+            "You must provide valid authentication credentials.", extra={ 'user': request.user.id } )
+        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
 
     try:
         course = Course.objects.get(id=course_id)
     except Course.DoesNotExist:
-        logger.warning(
-            "Course Not Found",
-            extra={
-                'user': request.user.id
-            }
-        )
+        logger.warning( "Course Not Found", extra={ 'user': request.user.id } )
         return Response({'error': 'Course Not Found'}, status=status.HTTP_404_NOT_FOUND)
     
     if user.is_a_teacher is False:
@@ -580,6 +568,51 @@ def remove_course_material(request, course_material_id):
     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['GET'])
+def tutor_course_search(request):
+    user = request.user
 
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_teacher:
+        logger.error( "Only tutors can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only tutors can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    try:
+        tutor = Teacher.objects.get(user=user)
+    except Teacher.DoesNotExist:
+        logger.warning( "Teacher Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Teacher Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    # Get courses assigned to the tutor
+    assigned_courses = tutor.courses.all()
+
+    # Filter courses based on any additional search parameters if needed
+    keyword = request.query_params.get('keyword', None)
+    
+    if keyword:
+        assigned_courses = assigned_courses.filter(course_title__icontains=keyword)
+        
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_courses = paginator.paginate_queryset(assigned_courses, request)
+
+
+    # Serialize the courses
+    course_serializer = CourseSerializer(paginated_courses, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'courses': course_serializer.data,
+    }
+
+    return Response(response_data)
+
+    
 
 

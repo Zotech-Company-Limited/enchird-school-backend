@@ -10,7 +10,7 @@ from apis.users.serializers import UserSerializer
 class ChatGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChatGroup
-        fields = ['id', 'name', 'course', 'code']
+        fields = ['id', 'name', 'course', 'code', 'created_at']
         read_only_fields = ['code']
         
 

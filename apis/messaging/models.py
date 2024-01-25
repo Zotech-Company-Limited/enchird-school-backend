@@ -28,6 +28,10 @@ class ChatGroup(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
     code = models.CharField(max_length=10, unique=True, blank=False, null=False)
     members = models.ManyToManyField(User, blank=True, related_name='chat_groups')
+    created_at = models.DateTimeField(
+        db_column="creation_date",
+        auto_now_add=True
+    )
     
     def save(self, *args, **kwargs):
         # Generate a random code when a group is created

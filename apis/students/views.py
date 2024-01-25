@@ -749,4 +749,79 @@ def view_course_materials(request, course_id):
     return Response({'error': 'Invalid request method'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['GET'])
+def tutor_student_search(request, course_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_teacher:
+        logger.error( "Only tutors can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only tutors can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    # Get the course associated with the given course ID
+    try:
+        course = Course.objects.get(id=course_id)
+    except Course.DoesNotExist:
+        logger.error( "Course not found.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'Course not found'}, status=404)
+
+    try:
+        tutor = Teacher.objects.get(user=user)
+    except Teacher.DoesNotExist:
+        logger.warning( "Tutor Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Tutor Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    # Check if the tutor is assigned to the course
+    if not tutor.courses.filter(id=course_id).exists():
+        logger.error( "Tutor is not assigned to this course.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'Tutor is not assigned to this course'}, status=403)
+
+    # Get the students registered for the course
+    registered_students = course.students.all()
+    print(registered_students)
+    
+    # Filter students based on any additional search parameters if needed
+    keyword = request.query_params.get('keyword', None)
+
+    if keyword is not None:
+        # Split the keyword into individual words
+        words = keyword.split()
+
+        # Create a Q object for each word in both fields
+        name_queries = Q()
+        abbrev_queries = Q()
+
+        for word in words: 
+            name_queries |= Q(user__first_name__icontains=word)
+            abbrev_queries |= Q(user__last_name__icontains=word)
+
+        # Combining the queries with OR conditions
+        combined_query = (name_queries | abbrev_queries)
+
+        # Apply the combined query along with other filters
+        registered_students = registered_students.filter(
+            combined_query
+        ).order_by('-created_at')
+
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_students = paginator.paginate_queryset(registered_students, request)
+
+    # Serialize the paginated students
+    student_serializer = StudentSerializer(paginated_students, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'students': student_serializer.data,
+    }
+
+    return Response(response_data)
+
+
 

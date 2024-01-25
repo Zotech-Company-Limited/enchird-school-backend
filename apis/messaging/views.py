@@ -4,6 +4,7 @@ from .serializers import *
 from django.db.models import Q
 from rest_framework import generics
 from django.shortcuts import render
+from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from apis.students.models import Student
 from rest_framework import status, viewsets
@@ -329,6 +330,60 @@ def inbox_messages(request):
     serializer = DirectMessageSerializer(inbox_messages, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+def tutor_group_search(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_teacher:
+        logger.error( "Only tutors can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only tutors can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    try:
+        tutor = Teacher.objects.get(user=user)
+    except Teacher.DoesNotExist:
+        logger.warning( "Tutor Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Tutor Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    # Get groups created by the tutor
+    created_groups = ChatGroup.objects.filter(course__tutors=tutor)
+
+    # Filter groups based on any additional search parameters if needed
+    keyword = request.query_params.get('keyword', None)
+
+    if keyword is not None:
+        # Split the keyword into individual words
+        words = keyword.split()
+
+        # Create a Q object for each word in both fields
+        name_queries = Q()
+
+        for word in words: 
+            name_queries |= Q(name__icontains=word)
+
+        # Apply the query along with other filters
+        created_groups = created_groups.filter(name_queries).order_by('-created_at')
+        
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_groups = paginator.paginate_queryset(created_groups, request)
+
+    # Serialize the groups
+    group_serializer = ChatGroupSerializer(paginated_groups, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'groups': group_serializer.data,
+    }
+
+    return Response(response_data)
 
 
 # class MyInbox(generics.ListAPIView):

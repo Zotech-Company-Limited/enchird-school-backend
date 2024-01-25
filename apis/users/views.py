@@ -4,6 +4,7 @@ from apis.courses.models import Course
 from apis.teachers.models import Teacher
 from apis.students.models import Student
 from rest_framework.views import APIView
+from apis.messaging.models import ChatGroup
 from rest_framework import status, viewsets
 from apis.applicants.models import Applicant
 from rest_framework.response import Response
@@ -12,6 +13,7 @@ from apis.faculty.models import Faculty, Department
 from apis.courses.serializers import CourseSerializer
 from apis.teachers.serializers import TeacherSerializer
 from apis.students.serializers import StudentSerializer
+from apis.messaging.serializers import ChatGroupSerializer
 from apis.applicants.serializers import ApplicantSerializer
 from apis.faculty.serializers import FacultySerializer, DepartmentSerializer
 from .models import User  # Replace with your user model
@@ -51,7 +53,7 @@ class EmailVerificationView(APIView):
 
 
 @api_view(['GET'])
-def search_view(request):
+def admin_general_search(request):
     user = request.user
 
     if not user.is_authenticated:
@@ -110,6 +112,70 @@ def search_view(request):
     }
 
     return Response(response_data)
+
+
+@api_view(['GET'])
+def tutor_general_search(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_teacher:
+        logger.error( "Only tutors can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only tutors can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    try:
+        tutor = Teacher.objects.get(user=user)
+    except Teacher.DoesNotExist:
+        logger.warning( "Tutor Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Tutor Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    # Get groups created by the tutor
+    created_groups = ChatGroup.objects.filter(course__tutors=tutor)
+
+    # Get the courses assigned to the tutor
+    assigned_courses = tutor.courses.all()
+    
+    # Get the students registered to the tutor's courses
+    registered_students = Student.objects.filter(registered_courses__in=assigned_courses)
+
+    keyword = request.query_params.get('keyword', None)
+    
+    # Split the keyword into individual words
+    keywords = keyword.split()
+    
+    # Create Q objects for each model and field
+    group_queries = Q()
+    course_queries = Q()
+    student_queries = Q()
+        
+    for word in keywords:
+        group_queries |= Q(name__icontains=word)
+        course_queries |= Q(course_title__icontains=word)
+        student_queries |= Q(user__first_name__icontains=word) | Q(user__last_name__icontains=word)
+    
+    # Apply the combined queries along with other filters
+    group_queryset = created_groups.filter(group_queries).order_by('-created_at')
+    course_queryset = assigned_courses.filter(course_queries, is_deleted=False).order_by('-created_at')
+    student_queryset = registered_students.filter(student_queries, is_deleted=False).order_by('-created_at')
+    
+    # Serialize the results
+    course_serializer = CourseSerializer(course_queryset, many=True)
+    group_serializer = ChatGroupSerializer(group_queryset, many=True)
+    student_serializer = StudentSerializer(student_queryset, many=True)
+
+    # Create the response
+    response_data = {
+        'students': student_serializer.data,
+        'courses': course_serializer.data,
+        'groups': group_serializer.data,
+    }
+
+    return Response(response_data)
+
+
 
 
 

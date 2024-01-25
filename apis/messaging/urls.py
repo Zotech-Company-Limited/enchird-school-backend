@@ -16,6 +16,7 @@ urlpatterns = [
     path('courses/<int:course_id>/create-group/', create_group, name='create_group'),
     path('groups/<int:group_id>/send-message/', send_message, name='send_message'),
     path('messages/<int:user_id>/', list_user_messages, name='list_user_messages'),
+    path('tutor-search/group/', tutor_group_search, name='tutor_group_search'),
     path('inbox/', inbox_messages, name='inbox_messages'),
     path('join-group/', join_group, name='join_group'),
 ]

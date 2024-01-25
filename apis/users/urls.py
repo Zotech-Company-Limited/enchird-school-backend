@@ -18,9 +18,10 @@ router = DefaultRouter()
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('admin/search/', search_view, name='search_view'),
     path('auth/login/', LoginView.as_view(), name='Login'),
     path('auth/logout/', knox_views.LogoutView.as_view(), name='Logout'),
+    path('admin/search/', admin_general_search, name='admin_general_search'),
+    path('tutor-search/', tutor_general_search, name='tutor_general_search'),
     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name="Logout all sessions"),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset_password/<verification_token>/', ResetPasswordView.as_view(), name="verify-email"),
