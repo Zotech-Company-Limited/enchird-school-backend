@@ -1385,3 +1385,4 @@ INFO : 2024-01-24 18:26:13,792 : 1 : 792 : Students list returned successfully. 
 INFO : 2024-01-24 18:30:52,974 : 1 : 974 : Students list returned successfully. : views : None
 INFO : 2024-01-24 18:43:51,807 : 1 : 807 : List of teachers returned successfully. : views : None
 INFO : 2024-01-24 18:44:10,229 : 1 : 229 : List of teachers returned successfully. : views : None
+INFO : 2024-01-25 01:25:17,396 : 1 : 396 : User Logged in sucessfully. : login : None

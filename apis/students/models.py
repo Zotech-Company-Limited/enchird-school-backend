@@ -43,3 +43,5 @@ def update_student_reference(instance, **kwargs):
     if not instance.student_id:
         instance.student_id = 'STU_' + str(instance.id).zfill(8)
         instance.save()
+        
+        

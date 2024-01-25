@@ -1,7 +1,7 @@
 from .logout import Logout
 from django.urls import path
 from .login import LoginView
-from apis.users.views import *
+from .views import *
 from apis.users.login import *
 from knox import views as knox_views
 from django.urls import path, include
@@ -18,6 +18,7 @@ router = DefaultRouter()
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('admin/search/', search_view, name='search_view'),
     path('auth/login/', LoginView.as_view(), name='Login'),
     path('auth/logout/', knox_views.LogoutView.as_view(), name='Logout'),
     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name="Logout all sessions"),
