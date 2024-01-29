@@ -41,6 +41,8 @@ ALLOWED_HOSTS = ['enchird.biz',
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,6 +79,7 @@ ROOT_URLCONF = 'enchird_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 'DIRS': ['templates'], 
         'DIRS': [os.path.join(BASE_DIR, 'core', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -90,8 +93,14 @@ TEMPLATES = [
     },
 ]
 
+ASGI_APPLICATION = 'enchird_backend.asgi.application'
+
 WSGI_APPLICATION = 'enchird_backend.wsgi.application'
 
+
+CHANNEL_LAYERS = {
+    "default": {"BACKEND": "channels.layers.InMemoryChannelLayer"},
+}
 
 
 REST_FRAMEWORK = { 

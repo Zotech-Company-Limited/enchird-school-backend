@@ -10,10 +10,14 @@ router = DefaultRouter()
 # router.register(r'course', CourseViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls)), 
+    path('messaging/', CreateRoom, name='create-room'),
+    path('messaging/<str:group_name>/<str:username>/', MessageView, name='room'),
+    
     path('send-direct-message/<int:receiver_id>/', send_direct_message, name='send_direct_message'),
     path('groups/<int:group_id>/messages/', MessageListAPIView.as_view(), name='message-list'),
     path('courses/<int:course_id>/create-group/', create_group, name='create_group'),
+    path('student-search/group/', student_group_search, name='student_group_search'),
     path('groups/<int:group_id>/send-message/', send_message, name='send_message'),
     path('messages/<int:user_id>/', list_user_messages, name='list_user_messages'),
     path('tutor-search/group/', tutor_group_search, name='tutor_group_search'),

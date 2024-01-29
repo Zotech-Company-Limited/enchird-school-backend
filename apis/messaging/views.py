@@ -3,12 +3,12 @@ from .models import *
 from .serializers import *
 from django.db.models import Q
 from rest_framework import generics
-from django.shortcuts import render
 from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from apis.students.models import Student
 from rest_framework import status, viewsets
 from rest_framework.response import Response
+from django.shortcuts import render, redirect
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
 from rest_framework.pagination import PageNumberPagination
@@ -274,7 +274,6 @@ def send_direct_message(request, receiver_id):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
 @api_view(['GET'])
 def list_user_messages(request, user_id):
     user = request.user
@@ -305,6 +304,7 @@ def list_user_messages(request, user_id):
     # Serialize the messages
     serializer = DirectMessageSerializer(messages, many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def inbox_messages(request):
@@ -386,7 +386,108 @@ def tutor_group_search(request):
     return Response(response_data)
 
 
-# class MyInbox(generics.ListAPIView):
-#     pass
+@api_view(['GET'])
+def student_group_search(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_student:
+        logger.error( "Only students can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only students can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    try:
+        student = Student.objects.get(user=user)
+    except Student.DoesNotExist:
+        logger.warning( "Student Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Student Not Found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    # Get groups the student is a member of
+    member_groups =  ChatGroup.objects.filter(members=user)
+    
+    # Filter groups based on any additional search parameters if needed
+    keyword = request.query_params.get('keyword', None)
+
+    if keyword is not None:
+        # Split the keyword into individual words
+        words = keyword.split()
+
+        # Create a Q object for each word in both fields
+        name_queries = Q()
+
+        for word in words: 
+            name_queries |= Q(name__icontains=word)
+
+        # Apply the query along with other filters
+        created_groups = member_groups.filter(name_queries).order_by('-created_at')
+        
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_groups = paginator.paginate_queryset(member_groups, request)
+
+    # Serialize the groups
+    group_serializer = ChatGroupSerializer(paginated_groups, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'groups': group_serializer.data,
+    }
+
+    return Response(response_data)
+
+
+
+def CreateRoom(request):
+    
+    if request.method == 'POST':
+        username = request.POST['username']
+        room = request.POST['room']
+        print(room)
+
+        try:
+            get_room = ChatGroup.objects.get(name=room)
+            return redirect('room', group_name=room, username=username)
+
+        except ChatGroup.DoesNotExist:
+            new_room = ChatGroup(name = room)
+            new_room.save()
+            return redirect('room', group_name=room, username=username)
+
+    return render(request, 'index.html')
+
+
+def MessageView(request, group_name, username):
+    
+    get_room = ChatGroup.objects.get(name=group_name)
+    print(get_room)
+
+    if request.method == 'POST':
+        message = request.POST['message']
+
+        print(message)
+
+        new_message = GroupMessage(group=get_room, sender=username, content=message)
+        new_message.save()
+        
+    # Fetch previous messages
+    previous_messages = GroupMessage.objects.filter(group=get_room)
+
+
+    get_messages= GroupMessage.objects.filter(group=get_room)
+    print(get_messages)
+    
+    context = {
+        "messages": get_messages,
+        "user": username,
+        "group_name": group_name,
+    }
+    return render(request, '_message.html', context)
+
+
 
 

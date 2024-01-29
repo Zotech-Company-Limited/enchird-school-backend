@@ -12,6 +12,7 @@ from django.db import transaction
 from apis.users.serializers import *
 from core.views import PaginationClass
 from apis.teachers.models import Teacher
+from apis.students.models import Student
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
@@ -583,7 +584,7 @@ def tutor_course_search(request):
     try:
         tutor = Teacher.objects.get(user=user)
     except Teacher.DoesNotExist:
-        logger.warning( "Teacher Not Found", extra={ 'user': request.user.id } )
+        logger.error( "Teacher Not Found", extra={ 'user': request.user.id } )
         return Response({'error': 'Teacher Not Found'}, status=status.HTTP_404_NOT_FOUND)
     
     # Get courses assigned to the tutor
@@ -614,5 +615,52 @@ def tutor_course_search(request):
     return Response(response_data)
 
     
+@api_view(['GET'])
+def student_course_search(request):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_a_student:
+        logger.error( "Only students can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only students can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
 
+    try:
+        student = Student.objects.get(user=user)
+    except Student.DoesNotExist:
+        logger.error( "Student Not Found", extra={ 'user': request.user.id } )
+        return Response({'error': 'Student not found'}, status=404)
+    
+    # Get courses registered by the student
+    registered_courses = student.registered_courses.all()
+
+    # Filter courses based on the keyword if provided
+    keyword = request.query_params.get('keyword')
+    
+    if keyword:
+        query = Q()
+        for word in keyword.split():
+            query |= Q(course_title__icontains=word) | Q(course_code__icontains=word)
+        registered_courses = registered_courses.filter(query)
+
+    # Perform pagination
+    paginator = PaginationClass()
+    paginated_courses = paginator.paginate_queryset(registered_courses, request)
+
+    # Serialize the courses
+    course_serializer = CourseSerializer(paginated_courses, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'courses': course_serializer.data,
+    }
+    
+    return Response(response_data)
+    
+    
 

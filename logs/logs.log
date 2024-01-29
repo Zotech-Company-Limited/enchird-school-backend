@@ -1394,3 +1394,5 @@ ERROR : 2024-01-25 14:43 : 9 : 431 : {views} : [register_course] : Only students
 INFO : 2024-01-25 14:44:18,376 : 2 : 376 : User Logged in sucessfully. : login : None
 ERROR : 2024-01-25 14:45 : 2 : 338 : {views} : [register_course] : Student is already registed for this course. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:548]
 ERROR : 2024-01-25 15:31 : 9 : 267 : {views} : [create_group] : Group created successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:54]
+INFO : 2024-01-26 12:06:57,712 : 2 : 712 : User Logged in sucessfully. : login : None
+ERROR : 2024-01-26 12:42 : 2 : 146 : {views} : [join_group] : Student joined group {group.name}. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:110]

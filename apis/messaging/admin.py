@@ -14,8 +14,8 @@ class DirectMessageAdmin(admin.ModelAdmin):
 
 @admin.register(ChatGroup)
 class ChatGroupAdmin(admin.ModelAdmin):
-    list_display = ('name', 'course', 'code')
-    search_fields = ('name', 'course__name', 'code')
+    list_display = ('name', 'code')#, 'course')
+    search_fields = ('name', 'code',)# 'course__name')
 
 @admin.register(GroupMessage)
 class GroupMessageAdmin(admin.ModelAdmin):

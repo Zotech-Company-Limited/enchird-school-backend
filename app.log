@@ -15805,3 +15805,1639 @@ NameError: name 'student_queryset' is not defined
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\views.py changed, reloading.
 INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\users\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:myLogger:User Logged in sucessfully.
+WARNING:django.request:Forbidden: /api/student-search/course/
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+WARNING:django.request:Forbidden: /api/student-search/group/
+ERROR:django.request:Internal Server Error: /api/student-search/group/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 408, in student_group_search
+    member_groups = student.chat_groups.all()
+AttributeError: 'Student' object has no attribute 'chat_groups'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/student-search/group/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 424, in student_group_search
+    created_groups = created_groups.filter(name_queries).order_by('-created_at')
+UnboundLocalError: local variable 'created_groups' referenced before assignment
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+WARNING:django.request:Forbidden: /api/join-group/
+ERROR:myLogger:Student joined group {group.name}.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\wsgi.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57757]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57757]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57757]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57757]
+ERROR:django.channels.server:[35;1mHTTP GET /messageing/ 500 [0.65, 127.0.0.1:57757][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57772]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57772]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57772]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57772]
+ERROR:django.channels.server:[35;1mHTTP GET /messaging/ 500 [0.52, 127.0.0.1:57772][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57779]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57779]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57779]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57779]
+ERROR:django.channels.server:[35;1mHTTP GET /api/messaging/ 500 [0.91, 127.0.0.1:57779][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57779]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57779]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57779]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57779]
+ERROR:django.channels.server:[35;1mHTTP GET /api/messaging/ 500 [0.96, 127.0.0.1:57779][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57789]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57789]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57789]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57789]
+ERROR:django.channels.server:[35;1mHTTP GET /admin/students/student/ 500 [0.16, 127.0.0.1:57789][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57865]
+ERROR:daphne.server:Exception inside application: No application configured for scope type 'http'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 64, in __call__
+    raise ValueError(
+ValueError: No application configured for scope type 'http'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 57865]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57865]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57865]
+ERROR:django.channels.server:[35;1mHTTP POST /api/auth/login/ 500 [0.83, 127.0.0.1:57865][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 460, in CreateRoom
+    return render(request, 'index.html')
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 460, in CreateRoom
+    return render(request, 'index.html')
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 460, in CreateRoom
+    return render(request, 'index.html')
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 460, in CreateRoom
+    return render(request, 'index.html')
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 460, in CreateRoom
+    return render(request, 'index.html')
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\admin.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(room_name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: course, course_id, created_at, id, members, messages, name
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(room_name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: course, course_id, created_at, id, members, messages, name
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(room_name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: course, course_id, created_at, id, members, messages, name
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 457, in CreateRoom
+    new_room.save()
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py", line 38, in save
+    if not self.code:
+AttributeError: 'ChatGroup' object has no attribute 'code'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.IntegrityError: (1048, "Column 'course_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 457, in CreateRoom
+    new_room.save()
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py", line 40, in save
+    super().save(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1048, "Column 'course_id' cannot be null")
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\admin.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\admin.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.IntegrityError: (1364, "Field 'course_id' doesn't have a default value")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 457, in CreateRoom
+    new_room.save()
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py", line 40, in save
+    super().save(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1364, "Field 'course_id' doesn't have a default value")
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 452, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 458, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' not found. 'room' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 454, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' not found. 'room' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 453, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 459, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' with keyword arguments '{'name': 'room12', 'username': 'room'}' not found. 1 pattern(s) tried: ['api/(?P<room_name>[^/]+)/(?P<username>[^/]+)/\\Z']
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 454, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' with keyword arguments '{'name': 'room1', 'username': 'room'}' not found. 1 pattern(s) tried: ['api/(?P<room_name>[^/]+)/(?P<username>[^/]+)/\\Z']
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 453, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 459, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' with keyword arguments '{'name': 'room11', 'username': 'room'}' not found. 1 pattern(s) tried: ['api/(?P<room_name>[^/]+)/(?P<username>[^/]+)/\\Z']
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 453, in CreateRoom
+    get_room = ChatGroup.objects.get(name=room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apis.messaging.models.ChatGroup.DoesNotExist: ChatGroup matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 459, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' with keyword arguments '{'name': 'room17', 'username': 'room'}' not found. 1 pattern(s) tried: ['api/messaging/(?P<room_name>[^/]+)/(?P<username>[^/]+)/\\Z']
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 520, in MessageView
+    return render(request, 'message.html', context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: message.html
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 476, in MessageView
+    get_messages= GroupMessage.objects.filter(room=get_room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room' into field. Choices are: attachment, content, group, group_id, id, sender, timestamp
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 476, in MessageView
+    get_messages= GroupMessage.objects.filter(room=get_room)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room' into field. Choices are: attachment, content, group, group_id, id, sender, timestamp
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 473, in MessageView
+    new_message = GroupMessage(group=get_room, sender=username, message=message)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: GroupMessage() got unexpected keyword arguments: 'message'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 473, in MessageView
+    new_message = GroupMessage(group=get_room, sender=username, message=message)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: GroupMessage() got unexpected keyword arguments: 'message'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 478, in MessageView
+    print(get_messages)
+NameError: name 'get' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 478, in MessageView
+    print(get_messages)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 377, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 588, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py", line 56, in __str__
+    return f'{self.sender.username}: {self.content}'
+AttributeError: 'str' object has no attribute 'username'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+ERROR:django.request:Internal Server Error: /api/messaging/room173/room/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 478, in MessageView
+    print(get_messages)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 377, in __repr__
+    return "<%s %r>" % (self.__class__.__name__, data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 588, in __repr__
+    return "<%s: %s>" % (self.__class__.__name__, self)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py", line 57, in __str__
+    return f'{self.sender}: {self.content}'
+AttributeError: 'str' object has no attribute 'username'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50841]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50841]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50841]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50841]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [1.54, 127.0.0.1:50841][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:50845]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50845] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50845] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:50845]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50845] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51529]
+INFO:django.channels.server:[mHTTP GET /admin/messaging/groupmessage/ 200 [0.96, 127.0.0.1:51529][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51529]
+INFO:django.channels.server:[mHTTP GET /admin/jsi18n/ 200 [0.16, 127.0.0.1:51529][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51529]
+INFO:django.channels.server:[mHTTP GET /admin/messaging/groupmessage/ 200 [0.22, 127.0.0.1:51529][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51529]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51529]
+INFO:django.channels.server:[mHTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:51529][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64412]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64412]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64412]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64412]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [0.61, 127.0.0.1:64412][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:64415]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64415] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64415] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:64415]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64415] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64415]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64415]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:64415]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64524]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64524]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64524]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64524]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [0.29, 127.0.0.1:64524][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:64527]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64527] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64527] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:64527]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64527] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64527]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64527]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:64527]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64579]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64579]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64579]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64579]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [0.11, 127.0.0.1:64579][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:64582]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64582] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64582] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:64582]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64582] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64582]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64582]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:64582]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64707]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64707]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64707]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64707]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [0.62, 127.0.0.1:64707][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:64710]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64710] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64710] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:64710]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64710] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64710]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64710]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:64710]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64839]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64839]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64839]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64839]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/room/ 200 [0.22, 127.0.0.1:64839][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:64842]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64842] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64842] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:64842]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64842] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64918]
+INFO:django.channels.server:[mHTTP GET /api/messaging/ 200 [0.13, 127.0.0.1:64918][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64918]
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64918]
+WARNING:django.channels.server:[33mHTTP GET /favicon.ico 404 [0.25, 127.0.0.1:64918][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64918]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64918]
+INFO:django.channels.server:[mHTTP POST /api/messaging/ 200 [0.13, 127.0.0.1:64918][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 65487]
+ERROR:django.request:Internal Server Error: /api/messaging/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 454, in CreateRoom
+    return redirect('room', name=room, username=username)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'room' with keyword arguments '{'name': 'room173', 'username': 'tyron'}' not found. 1 pattern(s) tried: ['api/messaging/(?P<room_name>[^/]+)/(?P<username>[^/]+)/\\Z']
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 65487]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 65487]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 65487]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 65487]
+ERROR:django.channels.server:[35;1mHTTP POST /api/messaging/ 500 [0.73, 127.0.0.1:65487][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP 302 response started for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 49801]
+INFO:django.channels.server:[32mHTTP POST /api/messaging/ 302 [0.34, 127.0.0.1:49801][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 49801]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 49801]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.11, 127.0.0.1:49801][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50178]
+INFO:django.channels.server:[mHTTP GET /api/messaging/ 200 [0.07, 127.0.0.1:50178][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:50201]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50201] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50201] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:50201]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50201] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP 302 response started for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50178]
+INFO:django.channels.server:[32mHTTP POST /api/messaging/ 302 [0.16, 127.0.0.1:50178][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50178]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50178]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/bryan/ 200 [0.13, 127.0.0.1:50178][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:50205]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50205] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50205] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:50205]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50205] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 50201]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50201]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:50201]
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50205]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:50205]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50666]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50666]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50666]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50666]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.08, 127.0.0.1:50666][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:50688]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50688] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50688] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:50688]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50688] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50697]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50697]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50697]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50697]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/bryan/ 200 [0.09, 127.0.0.1:50697][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:50701]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50701] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50701] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:50701]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50701] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 50701]
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+ERROR:daphne.server:Exception inside application: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 30, in send_message
+    await self.create_message(data=data)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 41, in create_message
+    get_room_by_name = ChatGroup.objects.get(room_name=data['room_name'])
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'room_name' into field. Choices are: code, created_at, id, members, messages, name
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50688]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:50688]
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50701]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:50701]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/bryan/ 200 [0.23, 127.0.0.1:51486][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:51493]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 51493] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51493] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:51493]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51493] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51533]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51533]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51533]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51533]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.08, 127.0.0.1:51533][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:51545]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 51545] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51545] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:51545]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51545] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 51545]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51493]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51545]
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 51493]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51493]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51545]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:51838]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 51838] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51838] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:51838]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51838] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 301 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[32mHTTP GET /api/messaging 301 [0.14, 127.0.0.1:51486][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[mHTTP GET /api/messaging/ 200 [0.07, 127.0.0.1:51486][0m
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 51838]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:51838]
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 302 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[32mHTTP POST /api/messaging/ 302 [0.34, 127.0.0.1:51486][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/paffy/ 200 [0.09, 127.0.0.1:51486][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:51969]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 51969] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51969] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:51969]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51969] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51486]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51486]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/paffy/ 200 [0.09, 127.0.0.1:51486][0m
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 51969]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:51969]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:52034]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 52034] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 52034] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:52034]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 52034] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 52034]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51493]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 51545]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 52034]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 52217]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 52217]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52217]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52217]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.08, 127.0.0.1:52217][0m
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 51545]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/notification/room173/ [127.0.0.1:51545]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:52229]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 52229] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 52229] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:52229]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 52229] accepted by application
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61431]
+ERROR:django.request:Internal Server Error: /api/messaging/room173/paffy/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 478, in MessageView
+    previous_messages = GroupMessage.objects.filter(group=chat_group)
+NameError: name 'chat_group' is not defined
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 61431]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 61431]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61431]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61431]
+ERROR:django.channels.server:[35;1mHTTP GET /api/messaging/room173/paffy/ 500 [0.37, 127.0.0.1:61431][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61496]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/paffy/ 200 [0.41, 127.0.0.1:61496][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:61501]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 61501] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61501] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:61501]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61501] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61526]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 61526]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61526]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61526]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.09, 127.0.0.1:61526][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:61530]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 61530] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61530] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:61530]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61530] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 61501]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 61501]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 61530]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61496]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61496]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/bryan/ 200 [0.08, 127.0.0.1:61496][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/notification/room173/ [127.0.0.1:61558]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 61558] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61558] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/notification/room173/ [127.0.0.1:61558]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61558] accepted by application
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\routing.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\routing.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\routing.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\routing.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 56275]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 56275]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56275]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56275]
+INFO:django.channels.server:[mHTTP GET /api/messaging/room173/tyron/ 200 [0.68, 127.0.0.1:56275][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/group/room173/ [127.0.0.1:56279]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 56279] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56279] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/group/room173/ [127.0.0.1:56279]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56279] accepted by application
