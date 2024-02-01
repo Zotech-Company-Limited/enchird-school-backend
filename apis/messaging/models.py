@@ -49,7 +49,7 @@ class GroupMessage(models.Model):
     sender = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
     group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
-    attachment = models.CharField(max_length=255, null=True, blank=True) 
+    attachment = models.CharField(max_length=255, null=True, blank=True)
     # response_to = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='responses')
 
     def __str__(self):

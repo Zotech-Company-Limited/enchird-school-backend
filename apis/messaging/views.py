@@ -461,30 +461,64 @@ def CreateRoom(request):
     return render(request, 'index.html')
 
 
-def MessageView(request, group_name, username):
+def MessageView(request, user_id, other_user):
     
-    get_room = ChatGroup.objects.get(name=group_name)
-    print(get_room)
+    user = User.objects.get(id=user_id)
+    
+    other_user = User.objects.get(id=other_user)
+    # print(get_room)
 
     if request.method == 'POST':
         message = request.POST['message']
 
         print(message)
 
-        new_message = GroupMessage(group=get_room, sender=username, content=message)
+        new_message = DirectMessage(sender=user, content=message)
         new_message.save()
         
     # Fetch previous messages
-    previous_messages = GroupMessage.objects.filter(group=get_room)
+    previous_messages = DirectMessage.objects.filter(
+        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
+    )
+
+    get_messages = DirectMessage.objects.filter(
+        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
+    )
+    # get_messages= GroupMessage.objects.filter(group=get_room)
+    # print(get_messages)
+    
+    context = {
+        "messages": get_messages,
+        "user": user.id, 
+        "other_user": other_user.id,
+    }
+    return render(request, 'direct_message.html', context)
 
 
-    get_messages= GroupMessage.objects.filter(group=get_room)
+def GroupMessageView(request, group_id, username):
+    
+    get_group = ChatGroup.objects.get(id=group_id)
+    print(get_group)
+
+    if request.method == 'POST':
+        message = request.POST['message']
+
+        print(message)
+
+        new_message = GroupMessage(group=get_group, sender=username, content=message)
+        new_message.save()
+        
+    # Fetch previous messages
+    previous_messages = GroupMessage.objects.filter(group=get_group)
+
+
+    get_messages= GroupMessage.objects.filter(group=get_group)
     print(get_messages)
     
     context = {
         "messages": get_messages,
         "user": username,
-        "group_name": group_name,
+        "group_id": group_id,
     }
     return render(request, '_message.html', context)
 

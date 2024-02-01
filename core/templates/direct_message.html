@@ -55,7 +55,7 @@
 
     /// Determine the WebSocket protocol based on the application's URL
     const websocketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
-    const wsEndpoint = `${websocketProtocol}://${window.location.host}/ws/group/{{group_id}}/{{user}}/`;
+    const wsEndpoint = `${websocketProtocol}://${window.location.host}/ws/chat/{{other_user}}/{{user}}/`;
 
     // Create a new WebSocket connection
     const socket = new WebSocket(wsEndpoint);
@@ -74,17 +74,10 @@
     document.getElementById('message-form').addEventListener('submit', function(event){
         event.preventDefault();
         const message = document.getElementById('msg').value;
-        
-        console.log('Sending WebSocket message:', JSON.stringify({
-            'message': message,
-            'group_id': '{{group_id}}',
-            'sender': '{{user}}',
-        }));
-        
         socket.send(
             JSON.stringify({
                 'message': message,
-                'group_id': '{{group_id}}',
+                'other_user': '{{other_user}}',
                 'sender': '{{user}}',
             })
         );
@@ -92,7 +85,7 @@
 
     // Response from consumer on the server
     socket.addEventListener("message", (event) => {
-        const messageData = JSON.parse(event.data);//['message'];
+        const messageData = JSON.parse(event.data)['message'];
         console.log(messageData);
 
         var sender = messageData['sender'];
