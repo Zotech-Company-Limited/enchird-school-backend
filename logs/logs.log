@@ -1396,3 +1396,22 @@ ERROR : 2024-01-25 14:45 : 2 : 338 : {views} : [register_course] : Student is al
 ERROR : 2024-01-25 15:31 : 9 : 267 : {views} : [create_group] : Group created successfully. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:54]
 INFO : 2024-01-26 12:06:57,712 : 2 : 712 : User Logged in sucessfully. : login : None
 ERROR : 2024-01-26 12:42 : 2 : 146 : {views} : [join_group] : Student joined group {group.name}. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:110]
+INFO : 2024-02-01 16:20:55,881 : 1 : 881 : User Logged in sucessfully. : login : None
+INFO : 2024-02-01 16:22:06,963 : 9 : 963 : User Logged in sucessfully. : login : None
+INFO : 2024-02-01 16:22:47,023 : 9 : 23 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-01 16:59 : 1 : 568 : {views} : [create] : {'course_code': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:198]
+ERROR : 2024-02-01 17:16 : 1 : 117 : {views} : [create] : {'book_title': [ErrorDetail(string='This field is required.', code='required')]} : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:483]
+ERROR : 2024-02-01 17:17 : 1 : 879 : {views} : [create] : 'course_title' : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:483]
+ERROR : 2024-02-01 17:19 : 1 : 234 : {views} : [create] : 'course_title' : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:483]
+ERROR : 2024-02-01 17:19 : 1 : 893 : {views} : [create] : 'course_title' : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:483]
+INFO : 2024-02-01 17:20:38,373 : 1 : 373 : Book created successfully! : views : None
+INFO : 2024-02-01 17:37:44,175 : 9 : 175 : List of books returned successfully. : views : None
+INFO : 2024-02-01 17:45:04,547 : 9 : 547 : Book details returned successfully! : views : None
+ERROR : 2024-02-01 17:46 : Anonymous : 813 : {views} : [list] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:374]
+INFO : 2024-02-01 17:46:57,614 : 9 : 614 : List of books returned successfully. : views : None
+INFO : 2024-02-01 17:47:06,421 : 9 : 421 : List of books returned successfully. : views : None
+INFO : 2024-02-01 17:47:15,095 : 9 : 95 : List of books returned successfully. : views : None
+INFO : 2024-02-01 18:05:16,652 : 1 : 652 : Book Info modified successfully! : views : None
+ERROR : 2024-02-01 18:05 : 9 : 44 : {views} : [update] : You cannot edit a document uploaded by another tutor/admin : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:490]
+ERROR : 2024-02-01 18:13 : 9 : 381 : {views} : [destroy] : You cannot delete a document uploaded by another tutor/admin : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:539]
+INFO : 2024-02-01 18:14:04,213 : 1 : 213 : Library Book marked as deleted successfully : views : None

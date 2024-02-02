@@ -23686,3 +23686,533 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messagin
 INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
 INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63636]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63636]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63636]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63636]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.87, 127.0.0.1:63636][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63714]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63714]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63714]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63714]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.25, 127.0.0.1:63714][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63714]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63714]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63714]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63714]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.03, 127.0.0.1:63714][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52783]
+WARNING:django.request:Forbidden: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 52783]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52783]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52783]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 403 [0.06, 127.0.0.1:52783][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52783]
+ERROR:myLogger:{'course_code': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 52783]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52783]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52783]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 412 [0.62, 127.0.0.1:52783][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54283]
+ERROR:myLogger:{'book_title': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING:django.request:Precondition Failed: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 54283]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54283]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54283]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 412 [0.45, 127.0.0.1:54283][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54381]
+ERROR:myLogger:'course_title'
+WARNING:django.request:Precondition Failed: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 54381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54381]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 412 [0.10, 127.0.0.1:54381][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54465]
+ERROR:myLogger:'course_title'
+WARNING:django.request:Precondition Failed: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 54465]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54465]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54465]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 412 [0.18, 127.0.0.1:54465][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54465]
+ERROR:myLogger:'course_title'
+WARNING:django.request:Precondition Failed: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 54465]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54465]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54465]
+WARNING:django.channels.server:[31;1mHTTP POST /api/library-book/ 412 [0.07, 127.0.0.1:54465][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54548]
+DEBUG:root:Your message here
+INFO:myLogger:Book created successfully!
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 54548]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54548]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54548]
+INFO:django.channels.server:[mHTTP POST /api/library-book/ 201 [0.33, 127.0.0.1:54548][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60068]
+WARNING:django.request:Forbidden: /api/library/book/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 60068]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60068]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60068]
+WARNING:django.channels.server:[31;1mHTTP GET /api/library/book/ 403 [0.05, 127.0.0.1:60068][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60068]
+INFO:myLogger:List of books returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60068]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60068]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60068]
+INFO:django.channels.server:[mHTTP GET /api/library/book/ 200 [0.16, 127.0.0.1:60068][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62752]
+WARNING:django.request:Forbidden: /api/library/book/1/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 62752]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62752]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62752]
+WARNING:django.channels.server:[31;1mHTTP GET /api/library/book/1/ 403 [0.07, 127.0.0.1:62752][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62752]
+INFO:myLogger:Book details returned successfully!
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62752]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62752]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62752]
+INFO:django.channels.server:[mHTTP GET /api/library/book/1/ 200 [0.15, 127.0.0.1:62752][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62870]
+ERROR:myLogger:You do not have the necessary rights.
+WARNING:django.request:Unauthorized: /api/library/book/
+DEBUG:daphne.http_protocol:HTTP 401 response started for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62870]
+WARNING:django.channels.server:[31;1mHTTP GET /api/library/book/?keyword=Medicine 401 [0.05, 127.0.0.1:62870][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62870]
+INFO:myLogger:List of books returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62870]
+INFO:django.channels.server:[mHTTP GET /api/library/book/?keyword=Medicine 200 [0.13, 127.0.0.1:62870][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62870]
+INFO:myLogger:List of books returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62870]
+INFO:django.channels.server:[mHTTP GET /api/library/book/?keyword=f 200 [0.09, 127.0.0.1:62870][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62870]
+INFO:myLogger:List of books returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62870]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62870]
+INFO:django.channels.server:[mHTTP GET /api/library/book/?keyword=first 200 [0.06, 127.0.0.1:62870][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'PUT' request for ['127.0.0.1', 64221]
+WARNING:django.request:Not Found: /api/library-book/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64221]
+WARNING:django.channels.server:[33mHTTP PUT /api/library-book/ 404 [1.04, 127.0.0.1:64221][0m
+DEBUG:daphne.http_protocol:HTTP b'PUT' request for ['127.0.0.1', 64221]
+WARNING:django.request:Not Found: /api/library-book/1/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64221]
+WARNING:django.channels.server:[33mHTTP PUT /api/library-book/1/ 404 [0.10, 127.0.0.1:64221][0m
+DEBUG:daphne.http_protocol:HTTP b'PUT' request for ['127.0.0.1', 64221]
+INFO:myLogger:Book Info modified successfully!
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64221]
+INFO:django.channels.server:[mHTTP PUT /api/library/book/1/ 200 [0.40, 127.0.0.1:64221][0m
+DEBUG:daphne.http_protocol:HTTP b'PUT' request for ['127.0.0.1', 64221]
+ERROR:myLogger:You cannot edit a document uploaded by another tutor/admin
+WARNING:django.request:Bad Request: /api/library/book/1/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64221]
+WARNING:django.channels.server:[31;1mHTTP PUT /api/library/book/1/ 400 [0.07, 127.0.0.1:64221][0m
+DEBUG:daphne.http_protocol:HTTP b'DELETE' request for ['127.0.0.1', 64221]
+WARNING:django.request:Forbidden: /api/library/book/1/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64221]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64221]
+WARNING:django.channels.server:[31;1mHTTP DELETE /api/library/book/1/ 403 [0.06, 127.0.0.1:64221][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'DELETE' request for ['127.0.0.1', 64900]
+WARNING:django.request:Forbidden: /api/library/book/1/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64900]
+WARNING:django.channels.server:[31;1mHTTP DELETE /api/library/book/1/ 403 [0.05, 127.0.0.1:64900][0m
+DEBUG:daphne.http_protocol:HTTP b'DELETE' request for ['127.0.0.1', 64900]
+ERROR:myLogger:You cannot delete a document uploaded by another tutor/admin
+WARNING:django.request:Bad Request: /api/library/book/1/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64900]
+WARNING:django.channels.server:[31;1mHTTP DELETE /api/library/book/1/ 400 [0.11, 127.0.0.1:64900][0m
+DEBUG:daphne.http_protocol:HTTP b'DELETE' request for ['127.0.0.1', 64900]
+INFO:myLogger:Library Book marked as deleted successfully
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64900]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64900]
+INFO:django.channels.server:[mHTTP DELETE /api/library/book/1/ 200 [0.21, 127.0.0.1:64900][0m

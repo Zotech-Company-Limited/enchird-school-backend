@@ -367,22 +367,11 @@ class StudentViewSet(viewsets.ModelViewSet):
                 extra={ 'user': request.user.id } )
             return Response(
                 {"error": "You do not have the necessary rights"},
-                status.HTTP_403_FORBIDDEN
-            )
-
+                status.HTTP_403_FORBIDDEN )
         
         if request.user.id != int(kwargs['pk']):
-            logger.error(
-                "You cannot edit another student's information",
-                extra={
-                    'user': request.user.id
-                }
-            )
-            return Response(
-                {"error": "You cannot edit another student's information"},
-                status.HTTP_400_BAD_REQUEST
-            )
-
+            logger.error( "You cannot edit another student's information", extra={ 'user': request.user.id } )
+            return Response( {"error": "You cannot edit another student's information"}, status.HTTP_400_BAD_REQUEST )
 
         partial = kwargs.pop('partial', True)
         instance = User.objects.get(id=kwargs['pk'])

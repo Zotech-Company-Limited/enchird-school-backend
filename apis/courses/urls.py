@@ -9,6 +9,7 @@ router = DefaultRouter()
 
 # Register the StudentViewSet with a base name 'student'
 router.register(r'course', CourseViewSet)
+router.register(r'library/book', LibraryBookViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

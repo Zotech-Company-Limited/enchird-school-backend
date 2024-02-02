@@ -357,6 +357,198 @@ class CourseViewSet(viewsets.ModelViewSet):
             status=status.HTTP_200_OK)
 
 
+class LibraryBookViewSet(viewsets.ModelViewSet):
+    
+    queryset = LibraryBook.objects.all().filter(
+                is_deleted=False,
+                ).order_by('-created_at')
+    pagination_class = PaginationClass
+    serializer_class = LibraryBookSerializer
+
+
+    def list(self, request, *args, **kwargs):
+
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' })
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+            
+        keyword = request.query_params.get('keyword', None)
+
+        queryset = LibraryBook.objects.filter(is_deleted=False)
+
+        if keyword is not None:
+            queryset = LibraryBook.objects.all().filter( 
+                book_title__icontains=keyword,
+                is_deleted=False
+            ).order_by('-created_at')
+
+        queryset = queryset.order_by('-created_at')
+
+
+        # queryset = self.filter_queryset(self.get_queryset())
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            logger.info("List of books returned successfully.", extra={'user': user.id})
+            return self.get_paginated_response(serializer.data)
+        
+        serializer = self.get_serializer(queryset, many=True)
+        logger.info("List of books returned successfully.", extra={'user': user.id})
+        return Response(serializer.data)
+
+
+    def retrieve(self, request, *args, **kwargs):
+
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        try: 
+            instance = LibraryBook.objects.get(id=kwargs['pk'])
+        except LibraryBook.DoesNotExist:
+            logger.error( "Book not Found.", extra={ 'user': user.id } )
+            return Response( {"error": "Book Not Found."}, status=status.HTTP_404_NOT_FOUND )
+
+
+        serializer = self.get_serializer(instance)
+        logger.info(
+            "Book details returned successfully!",
+            extra={ 'user': request.user.id } )
+        return Response(serializer.data)
+
+    
+    def create(self, request, *args, **kwargs):
+        
+        user = request.user
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={'user': 'Anonymous' })
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if user.is_admin is False and user.is_a_teacher is False:
+            logger.error( "You do not have the necessary rights/Not an Admin.", extra={ 'user': user.id } )
+            return Response( { "error": "You do not have the necessary rights/Not an Admin." }, status.HTTP_403_FORBIDDEN )
+        
+        try:
+            with transaction.atomic():
+                book_serializer = self.get_serializer(data=request.data)
+                print(book_serializer) 
+                if book_serializer.is_valid(raise_exception=True):
+                    # Verify uniqueness of book title
+                    title_num = LibraryBook.objects.all().filter(
+                            book_title=book_serializer.validated_data['book_title']
+                        ).count()
+                    if title_num > 0:
+                        logger.warning( "A book with this name already exists.", 
+                            extra={ 'user': 'anonymous' } )
+                        return Response({"error": "A book with this name already exists."},
+                                        status=status.HTTP_409_CONFLICT)
+
+                    # Create course
+                    logging.debug('Your message here')
+                    book = book_serializer.save(created_by=user)
+                    
+                    headers = self.get_success_headers(book_serializer.data)
+                    
+                    logger.info( "Book created successfully!", extra={ 'user': user.id } )
+                    return Response(
+                        book_serializer.data,
+                        status.HTTP_201_CREATED,
+                        headers=headers)
+        
+        except Exception as e:
+            # Rollback transaction and raise validation error
+            transaction.rollback()
+            logger.error( str(e), extra={ 'user': request.user.id } )
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_412_PRECONDITION_FAILED)
+
+
+    def update(self, request, *args, **kwargs):
+        
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+
+        if request.user.is_admin is False and not user.is_a_teacher:
+            logger.warning( "You do not have the necessary rights!", extra={ 'user': request.user.id } )
+            return Response( {"error": "You do not have the necessary rights"}, status.HTTP_403_FORBIDDEN )
+        
+        try:
+            instance = LibraryBook.objects.get(id=kwargs['pk'])
+        except LibraryBook.DoesNotExist:
+            logger.error( "Library Book not Found.",  extra={ 'user': user.id } )
+            return Response( {"error": "Library Book Not Found."}, status=status.HTTP_404_NOT_FOUND )
+        print(instance)
+
+        if request.user.id != instance.created_by.id: #int(kwargs['pk']):
+            logger.error( "You cannot edit a document uploaded by another tutor/admin", extra={ 'user': request.user.id } )
+            return Response( {"error": "You cannot edit a document uploaded by another tutor/admin"}, status.HTTP_400_BAD_REQUEST )
+
+        partial = kwargs.pop('partial', True)
+        
+        book_serializer = self.get_serializer(instance, 
+                data=request.data,
+                partial=partial)
+        if book_serializer.is_valid() is True:
+
+            number = LibraryBook.objects.all().filter(
+                ~Q(id=kwargs['pk']),
+                book_title=book_serializer.validated_data['book_title'],
+                is_deleted=False
+            ).count()
+            if number >= 1:
+                logger.error( "A book already exists with this name.", extra={ 'user': request.user.id } )
+                return Response( {'message': "A book already exists with this name."}, status=status.HTTP_409_CONFLICT)
+
+            book_serializer.save(modified_by=user)
+
+            if getattr(instance, '_prefetched_objects_cache', None):
+                instance._prefetched_objects_cache = {}
+            logger.info( "Book Info modified successfully!", extra={ 'user': request.user.id } )
+            return Response(book_serializer.data)
+        else:
+            logger.error( str(book_serializer.errors), extra={ 'user': request.user.id } )
+            return Response(book_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+    def destroy(self, request, *args, **kwargs):
+
+        user = self.request.user
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        if not user.is_admin and not user.is_a_teacher:
+            logger.warning( "You do not have the necessary rights!", extra={ 'user': user.id } )
+            return Response( {"error": "You do not have the necessary rights"}, status.HTTP_403_FORBIDDEN )
+
+        try:
+            instance = LibraryBook.objects.get(id=kwargs['pk'])
+        except LibraryBook.DoesNotExist:
+            logger.error( "Library Book not Found.", extra={ 'user': user.id } )
+            return Response( {"error": "Library Book Not Found."}, status=status.HTTP_404_NOT_FOUND )
+        
+        if request.user.id != instance.created_by.id: #int(kwargs['pk']):
+            logger.error( "You cannot delete a document uploaded by another tutor/admin", extra={ 'user': request.user.id } )
+            return Response( {"error": "You cannot delete a document uploaded by another tutor/admin"}, status.HTTP_400_BAD_REQUEST )
+
+        instance.is_deleted = True
+        instance.save()
+
+        logger.info( "Library Book marked as deleted successfully", extra={ 'user': user.id } )
+        return Response(
+            {"message": "Course marked as Deleted"},
+            status=status.HTTP_200_OK)
+
+
+
 
 @api_view(['POST'])
 def assign_teacher(request, course_id, teacher_id):
@@ -663,4 +855,6 @@ def student_course_search(request):
     return Response(response_data)
     
     
+
+
 

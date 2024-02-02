@@ -87,5 +87,39 @@ class CourseMaterial(models.Model):
         return f"CourseMaterial: {self.material_file.name}"
 
 
+class LibraryBook(models.Model):
     
+    book_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
+    book_title = models.CharField(max_length=100, blank=False,null=False, unique=True)
+    book_file = models.CharField(max_length=255, null=True, blank=True) 
+    is_deleted = models.BooleanField(default=False)
+    created_at = models.DateTimeField(
+        db_column="creation_date",
+        auto_now_add=True
+    )
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True
+    )
+    modified_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True,
+        related_name='book_modifier'
+    )
+    
+    def __str__(self):
+        return self.book_title
+
+    class Meta:
+        db_table = "library_book"
+    
+@receiver(post_save, sender=LibraryBook, dispatch_uid="update_book_id")
+def update_book_id(instance, **kwargs):
+    if not instance.book_id:
+        instance.book_id = 'BK' + str(instance.id).zfill(8)
+        instance.save()
+
+
 

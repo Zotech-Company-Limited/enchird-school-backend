@@ -78,4 +78,21 @@ class CourseMaterialSerializer(serializers.ModelSerializer):
         return representation
 
 
+class LibraryBookSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = LibraryBook
+        fields = ['id', 'book_id', 'book_title', 'is_deleted', 'book_file',
+                    'created_at', 'created_by', 'modified_by']
+        read_only_fields = ['id', 'book_id'] 
+
+    def to_representation(self, instance):
+        representation = super(LibraryBookSerializer, self).to_representation(instance)
+
+        # Override the created_by field to only include the user's email
+        representation['created_by'] = instance.created_by.email if instance.created_by else None
+        representation['modified_by'] = instance.modified_by.email if instance.modified_by else None
+
+        return representation
+
 
