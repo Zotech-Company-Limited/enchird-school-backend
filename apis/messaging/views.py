@@ -2,7 +2,11 @@ import logging
 from .models import *
 from .serializers import *
 from django.db.models import Q
+from django.utils import timezone
+from knox.models import AuthToken
+from knox.settings import CONSTANTS
 from rest_framework import generics
+from django.http import JsonResponse
 from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from apis.students.models import Student
@@ -461,12 +465,63 @@ def CreateRoom(request):
     return render(request, 'index.html')
 
 
-def MessageView(request, user_id, other_user):
+def MessageView(request, other_user, token):
+    
+    try:
+        knox_object = AuthToken.objects.filter(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH]).first()
+        user = knox_object.user
+        
+        # Check if the Knox object exists and if the token is expired
+        if knox_object and knox_object.expiry:
+            current_time = timezone.now()
+
+            # Compare the expiry timestamp with the current time
+            if knox_object.expiry < current_time:
+                # The token is not expired
+                return JsonResponse({'message': 'Token is expired'})
+        else:
+            # The Knox object is not found (invalid token)
+            return JsonResponse({'error': 'Invalid token or Knox object not found'}, status=400)
+
+    except AuthToken.DoesNotExist:
+        logger.error( "User not found", extra={ 'user': user.id })
+        return
+                       
+    other_user = User.objects.get(id=other_user)
+
+    if request.method == 'POST':
+        message = request.POST['message']
+
+        print(message)
+
+        new_message = DirectMessage(sender=user, content=message)
+        new_message.save()
+        
+    # Fetch previous messages
+    previous_messages = DirectMessage.objects.filter(
+        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
+    )
+
+    get_messages = DirectMessage.objects.filter(
+        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
+    )
+    # print(get_messages)
+    
+    context = {
+        "token": token,
+        "user": user.id, 
+        "messages": get_messages,
+        "other_user": other_user.id,
+    }
+    return render(request, 'direct_message.html', context)
+
+
+def AdminMessageView(request, other_user, user_id):
     
     user = User.objects.get(id=user_id)
-    
+    print(user)
     other_user = User.objects.get(id=other_user)
-    # print(get_room)
+    print(other_user)
 
     if request.method == 'POST':
         message = request.POST['message']
@@ -485,14 +540,15 @@ def MessageView(request, user_id, other_user):
         Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
     )
     # get_messages= GroupMessage.objects.filter(group=get_room)
-    # print(get_messages)
+    print(get_messages)
     
     context = {
         "messages": get_messages,
         "user": user.id, 
         "other_user": other_user.id,
     }
-    return render(request, 'direct_message.html', context)
+    return render(request, 'direct_admin.html', context)
+
 
 
 def GroupMessageView(request, group_id, username):
@@ -513,7 +569,7 @@ def GroupMessageView(request, group_id, username):
 
 
     get_messages= GroupMessage.objects.filter(group=get_group)
-    print(get_messages)
+    # print(get_messages)
     
     context = {
         "messages": get_messages,

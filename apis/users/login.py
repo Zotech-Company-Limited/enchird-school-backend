@@ -24,12 +24,12 @@ logger = logging.getLogger("myLogger")
 
 
 class LoginView(APIView):
-    """Docstring for class."""
+     
     serializer_class = CustomAuthTokenSerializer
 
 
     def post(self, request,  *args, **kwargs):
-        """Docstring for function."""
+         
         try:
             serializer = LoginSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
@@ -46,29 +46,18 @@ class LoginView(APIView):
                 data=data,
                 context={'request': request}
             )
-            print("3")
             serializer.is_valid(raise_exception=True)
-            print("4")
             
             user = serializer.validated_data['user']
 
             user.reset_token = None
-            print("4")
 
             if user.reset_token is not None:
                 logger.error(
                     "Please validate your account",
-                    extra={
-                        'vendor': user.vendor,
-                        'user': user.id
-                    }
-                )
+                    extra={ 'user': user.id } )
                 return Response(
-                    {
-                        "message": "Please validate your account"
-                    },
-                    status.HTTP_400_BAD_REQUEST
-                )
+                    { "message": "Please validate your account" }, status.HTTP_400_BAD_REQUEST )
             
             user.last_login = timezone.now()
             user.save()
@@ -104,12 +93,7 @@ class LoginView(APIView):
             )
         
         except Exception as e:
-            logger.error(
-                str(e),
-                extra={
-                    'user': None
-                }
-            ) 
+            logger.error( str(e), extra={ 'user': None } ) 
             return Response(
                 {'error': str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)

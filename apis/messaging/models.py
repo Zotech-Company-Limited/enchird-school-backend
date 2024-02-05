@@ -45,8 +45,8 @@ class ChatGroup(models.Model):
 
 class GroupMessage(models.Model):
     content = models.TextField()
-    # sender = models.ForeignKey(User, on_delete=models.CASCADE)
-    sender = models.CharField(max_length=255)
+    sender = models.ForeignKey(User, on_delete=models.CASCADE)
+    # sender = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
     group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
     attachment = models.CharField(max_length=255, null=True, blank=True)

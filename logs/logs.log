@@ -1415,3 +1415,16 @@ INFO : 2024-02-01 18:05:16,652 : 1 : 652 : Book Info modified successfully! : vi
 ERROR : 2024-02-01 18:05 : 9 : 44 : {views} : [update] : You cannot edit a document uploaded by another tutor/admin : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:490]
 ERROR : 2024-02-01 18:13 : 9 : 381 : {views} : [destroy] : You cannot delete a document uploaded by another tutor/admin : [in C:\enchird_LMS\enchird-school-backend\apis\courses\views.py:views.py:539]
 INFO : 2024-02-01 18:14:04,213 : 1 : 213 : Library Book marked as deleted successfully : views : None
+INFO : 2024-02-03 12:02:10,638 : 1 : 638 : User Logged in sucessfully. : login : None
+INFO : 2024-02-03 16:04:28,454 : 1 : 454 : User Logged in sucessfully. : login : None
+INFO : 2024-02-03 16:04:49,817 : 9 : 817 : User Logged in sucessfully. : login : None
+INFO : 2024-02-03 19:20:28,892 : 9 : 892 : User Logged in sucessfully. : login : None
+INFO : 2024-02-03 19:20:43,427 : 1 : 427 : User Logged in sucessfully. : login : None
+INFO : 2024-02-03 21:30:40,762 : 1 : 762 : User Logged in sucessfully. : login : None
+INFO : 2024-02-04 08:00:17,049 : 1 : 49 : User Logged in sucessfully. : login : None
+INFO : 2024-02-04 08:37:58,437 : 9 : 437 : User Logged in sucessfully. : login : None
+INFO : 2024-02-04 17:10:57,559 : 9 : 559 : User Logged in sucessfully. : login : None
+INFO : 2024-02-04 17:25:14,456 : 1 : 456 : User Logged in sucessfully. : login : None
+INFO : 2024-02-04 20:07:04,113 : 1 : 113 : User Logged in sucessfully. : login : None
+INFO : 2024-02-05 07:18:50,332 : 1 : 332 : User Logged in sucessfully. : login : None
+INFO : 2024-02-05 08:51:09,550 : 9 : 550 : User Logged in sucessfully. : login : None
