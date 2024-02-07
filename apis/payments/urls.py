@@ -14,4 +14,5 @@ urlpatterns = [
     # path('', include(router.urls)),
     path('checkout/', StripeCheckoutSession.as_view(), name='checkout_session'),
     path('webhook/', stripe_webhook_view, name='stripe-webhook'),
+    path('student-payments/', successful_payments, name='student-payments'),
 ]

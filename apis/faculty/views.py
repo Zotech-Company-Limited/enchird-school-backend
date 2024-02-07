@@ -843,4 +843,185 @@ class FacultyMemberViewSet(viewsets.ModelViewSet):
 
 
 
+class JobViewSet(viewsets.ModelViewSet):
+    queryset = Job.objects.all().filter(is_deleted=False).order_by('-created_at')
+    pagination_class = PaginationClass
+    serializer_class = JobSerializer
+
+    def list(self, request, *args, **kwargs):
+        user = self.request.user
+        
+        keyword = request.query_params.get('keyword', None)
+        
+        if keyword is not None:
+            queryset = Job.objects.all().filter( 
+                title__icontains=keyword,
+                is_deleted=False
+            ).order_by('-created_at')
+        else:
+            queryset = self.filter_queryset(self.get_queryset())
+        
+        # Using pagination
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            logger.info(
+                "List of jobs returned successfully.",
+                extra={'user': user.id}
+            )
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        logger.info(
+            "List of Jobs returned successfully.",
+            extra={'user': user.id}
+        )
+
+        return Response(serializer.data)
+
+
+    def retrieve(self, request, *args, **kwargs):
+        user = self.request.user
+
+        try:
+            instance = Job.objects.get(id=kwargs['pk'], is_deleted=False)
+            serializer = self.get_serializer(instance)
+            logger.info(
+                "Job details returned successfully!",
+                extra={'user': request.user.id}
+            )
+            return Response(serializer.data)
+
+        except Job.DoesNotExist:
+            logger.info( "Job Not Found", extra={'user': user.id} )
+            return Response( {"message": "Job Not Found"}, status=status.HTTP_404_NOT_FOUND )
+
+
+    def create(self, request, *args, **kwargs):
+        user = request.user
+
+        if not user.is_authenticated:
+            logger.error(
+                "You must provide valid authentication credentials.",
+                extra={'user': 'Anonymous'}
+            )
+            return Response(
+                {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        if not user.is_admin:
+            logger.error( "You do not have the necessary rights/Not an Admin.",
+                extra={'user': user.id} )
+            return Response( {"error": "You do not have the necessary rights/Not an Admin."},
+                status=status.HTTP_403_FORBIDDEN )
+
+        try:
+            with transaction.atomic():
+                job_serializer = self.get_serializer(data=request.data)
+                print(job_serializer)
+                if job_serializer.is_valid(raise_exception=True):
+                    
+                    self.perform_create(job_serializer, user)
+
+                    headers = self.get_success_headers(job_serializer.data)
+
+                    logger.info(
+                        "Job Opportunity created successfully!",
+                        extra={'user': user.id}
+                    )
+                    return Response(
+                        job_serializer.data,
+                        status=status.HTTP_201_CREATED,
+                        headers=headers
+                    )
+
+        except Exception as e:
+            # Rollback transaction and raise validation error
+            transaction.rollback()
+            logger.error(  str(e), extra={'user': None})
+            return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED )
+
+    def perform_create(self, serializer, user):
+        return serializer.save(created_by=user)
+
+    def update(self, request, *args, **kwargs):
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.",
+                extra={'user': request.user.id} )
+            return Response( {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED )
+
+        if request.user.is_admin is False:
+            logger.warning( "You do not have the necessary rights! (Not admin)",
+                extra={'user': request.user.id} )
+            return Response( {"error": "You do not have the necessary rights! (Not admin)"},
+                status.HTTP_403_FORBIDDEN )
+
+        try:
+            partial = kwargs.pop('partial', True)
+            instance = self.get_object()
+            serializer = self.get_serializer(instance, data=request.data, partial=partial)
+            serializer.is_valid(raise_exception=True)
+
+            self.perform_update(serializer)
+
+            if getattr(instance, '_prefetched_objects_cache', None):
+                instance._prefetched_objects_cache = {}
+
+            logger.info(
+                "Job details modified successfully!",
+                extra={'user': user.id}
+            )
+            return Response(serializer.data)
+
+        except Exception as e:
+            logger.error( str(e), extra={'user': user.id} )
+            return Response( {'message': str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
+
+    def perform_update(self, serializer):
+        return serializer.save()
+
+    def destroy(self, request, *args, **kwargs):
+        user = self.request.user
+
+        if not user.is_authenticated:
+            logger.error(
+                "You must provide valid authentication credentials.",
+                extra={'user': request.user.id}
+            )
+            return Response(
+                {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        if not user.is_admin:
+            logger.warning(
+                "You do not have the necessary rights!",
+                extra={'user': user.id}
+            )
+            return Response(
+                {"error": "You do not have the necessary rights"},
+                status.HTTP_403_FORBIDDEN
+            )
+
+        instance = self.get_object()
+        instance.is_deleted = True
+        instance.save()
+
+        logger.info(
+            "Job marked as deleted successfully",
+            extra={'user': user.id}
+        )
+        return Response(
+            {"message": "Job marked as Deleted"},
+            status=status.HTTP_200_OK
+        )
+
+
+
+
+
 

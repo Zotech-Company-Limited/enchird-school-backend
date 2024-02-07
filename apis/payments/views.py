@@ -6,10 +6,13 @@ from rest_framework import status
 from apis.users.models import User
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from core.views import PaginationClass
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from .serializers import UserPaymentSerializer
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.exceptions import ValidationError
 
 logger = logging.getLogger("myLogger")
 
@@ -40,6 +43,15 @@ class StripeCheckoutSession(APIView):
 
         amount = serializer.validated_data['amount']
         
+        sucs_url = request.data.get('success_url')
+        canc_url = request.data.get('cancel_url')
+        
+        if not sucs_url or not canc_url:
+            error_message = "Both success_url and cancel_url are required in the request body."
+            logger.error(error_message, extra={'user': user.id})
+            raise ValidationError({'error': error_message}, code=status.HTTP_400_BAD_REQUEST)
+
+        
         try:
             checkout_session = stripe.checkout.Session.create(
                 line_items=[
@@ -57,14 +69,15 @@ class StripeCheckoutSession(APIView):
                     },
                 ],
                 mode='payment',
-                success_url='http://127.0.0.1:8000/api/messaging',
-                cancel_url='http://127.0.0.1:8000/api/messaging',
+                success_url= sucs_url, #'http://127.0.0.1:8000/api/messaging',
+                cancel_url= canc_url, #'http://127.0.0.1:8000/api/messaging',
                 customer_email=user.email,
                 
             )
             # Create a new UserPayment instance
             user_payment = UserPayment(user=user)
             user_payment.amount = amount
+            user_payment.payment_method = "stripe"
             user_payment.stripe_checkout_id = checkout_session.id
             
             # Save the instance to the database
@@ -100,9 +113,11 @@ def stripe_webhook_view(request):
         )
     except ValueError as e:
         # Invalid payload
+        logger.error( str(e), extra={ 'user': 'Anonymous' } )
         return HttpResponse(status=400)
     except stripe.error.SignatureVerificationError as e:
         # Invalid signature
+        logger.error( str(e), extra={ 'user': 'Anonymous' } )
         return HttpResponse(status=400)
     
     # Handle the checkout.session.completed event
@@ -111,10 +126,6 @@ def stripe_webhook_view(request):
         session = event['data']['object'] #['id']
         customer_email = session['customer_details']['email']
         checkout_id = session['id']
-        print(checkout_id) 
-        
-        print("tyron")
-        print(customer_email)
         
         try:
             user = User.objects.get(email=customer_email)
@@ -125,15 +136,70 @@ def stripe_webhook_view(request):
             user_payment.save()
             
         except User.DoesNotExist:
-            logger.error( "User not Found.", extra={ 'user': user.id } )
+            logger.error( "User not Found.", extra={ 'Anonymous' } )
             # return Response( {"error": "Applicant Not Found."}, status=status.HTTP_404_NOT_FOUND )
         except UserPayment.DoesNotExist:
             logger.error( "User did not initiate a payment.", extra={ 'user': user.id } )
             
 
         print(session)
+        
+    if event['type'] == 'checkout.session.expired':
+        session = event['data']['object']  
+        customer_email = session['customer_details']['email']
+        checkout_id = session['id']
+        
+        try:
+            user = User.objects.get(email=customer_email)
+            user_payment = UserPayment.objects.get(stripe_checkout_id=checkout_id)
+            
+            user_payment.status = "failed"
+            user_payment.save()
+            
+        except User.DoesNotExist:
+            logger.error( "User not Found.", extra={ 'Anonymous' })
+            # return Response( {"error": "Applicant Not Found."}, status=status.HTTP_404_NOT_FOUND )
+        except UserPayment.DoesNotExist:
+            logger.error( "User did not initiate a payment.", extra={ 'user': user.id } )
+            
 
     # Passed signature verification
     return HttpResponse(status=200)
+
+
+@api_view(['GET'])
+def successful_payments(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if not user.is_admin:
+        logger.error( "Only admins can make this request.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "Only admins can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    queryset = UserPayment.objects.filter(
+        status="successful", 
+        has_paid=True).order_by('-created_at')
+    
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_payments = paginator.paginate_queryset(queryset, request)
+
+    # Serialize the paginated students
+    payment_serializer = UserPaymentSerializer(paginated_payments, many=True)
+
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'courses': payment_serializer.data,
+    }
+
+    return Response(response_data)
+
+    
 
 

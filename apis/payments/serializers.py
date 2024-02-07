@@ -24,7 +24,7 @@ class UserPaymentSerializer(serializers.ModelSerializer):
         fields = ['id', 'user', 'user_profile', 'has_paid', 'amount', 'stripe_checkout_id']
         read_only_fields = ['user_profile', 'user', 'stripe_checkout_id', 'has_paid']
         # write_only_fields = ['user']
-        depth = 1
+        # depth = 1
         
     def get_user_profile(self, obj):
         sender = obj.user

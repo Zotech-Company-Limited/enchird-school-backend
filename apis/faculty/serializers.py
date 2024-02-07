@@ -85,6 +85,11 @@ class FacultyMemberSerializer(WritableNestedModelSerializer):
         read_only_fields = ['user', 'faculty_member_id', 'faculty_details', 'department_details']
 
 
-
+class JobSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Job
+        fields = ['id', 'title', 'description', 'location', 'position_type', 'employment_type', 'created_by', 'created_at']
+        read_only_fields = ['id']
 
 

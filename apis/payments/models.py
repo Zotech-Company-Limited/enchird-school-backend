@@ -11,13 +11,17 @@ class UserPayment(models.Model):
         ('successful', 'Successful'),
         ('failed', 'Failed'),
     ]
+    STATUS_CHOICES = [
+        ('stripe', 'Stripe'),
+        ('paypal', 'Paypal'),
+    ]
 
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     has_paid = models.BooleanField(default=False)
     amount = models.DecimalField(max_digits=10, decimal_places=2, blank=False, null=False)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
-    # amount = models.PositiveBigIntegerField(blank=False, null=False)
-    stripe_checkout_id = models.CharField(max_length=300, blank=False, null=False)
+    payment_method = models.CharField(max_length=10, choices=STATUS_CHOICES, default='stripe')
+    stripe_checkout_id = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

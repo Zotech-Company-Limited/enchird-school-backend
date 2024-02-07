@@ -121,3 +121,37 @@ def update_faculty_member_id(instance, **kwargs):
         instance.save()
 
 
+class Job(models.Model):
+    POSITION_CHOICES = [
+        ('remote', 'Remote'),
+        ('on_site', 'On Site'),
+        ('hybrid', 'Hybrid'),
+    ]
+
+    EMPLOYMENT_CHOICES = [
+        ('part_time', 'Part-Time'),
+        ('contract', 'Contract'),
+        ('full_time', 'Full-Time'),
+    ]
+
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    location = models.CharField(max_length=100)
+    position_type = models.CharField(max_length=20, choices=POSITION_CHOICES)
+    employment_type = models.CharField(max_length=20, choices=EMPLOYMENT_CHOICES)
+    is_deleted = models.BooleanField(default=False)
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True,
+        related_name='opportunity_creator'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        db_table = "opportunities"
+    
+    

@@ -1452,3 +1452,19 @@ INFO : 2024-02-06 23:20:47,259 : 2 : 259 : User Logged in sucessfully. : login :
 ERROR : 2024-02-07 00:54 : 1 : 730 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:126]
 ERROR : 2024-02-07 01:20 : 1 : 237 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:131]
 ERROR : 2024-02-07 01:33 : 2 : 99 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:130]
+ERROR : 2024-02-07 02:04 : None : 195 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+ERROR : 2024-02-07 02:06 : None : 942 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+ERROR : 2024-02-07 02:07 : None : 992 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+ERROR : 2024-02-07 02:08 : None : 527 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+ERROR : 2024-02-07 02:09 : None : 79 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+ERROR : 2024-02-07 02:09 : None : 603 : {login} : [post] : Unable to log in with provided credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\users\login.py:login.py:84]
+INFO : 2024-02-07 02:10:22,550 : 1 : 550 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-07 02:22 : None : 434 : {views} : [stripe_webhook_view] : User not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:128]
+ERROR : 2024-02-07 02:25 : None : 401 : {views} : [stripe_webhook_view] : User not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:128]
+INFO : 2024-02-07 03:25:46,439 : 2 : 439 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-07 03:32 : 2 : 224 : {views} : [post] : Both success_url and cancel_url are required in the request body. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:49]
+INFO : 2024-02-07 03:53:13,678 : 1 : 678 : User Logged in sucessfully. : login : None
+INFO : 2024-02-07 04:22:32,827 : None : 827 : List of jobs returned successfully. : views : None
+INFO : 2024-02-07 04:27:36,392 : 1 : 392 : Job Opportunity created successfully! : views : None
+INFO : 2024-02-07 04:31:54,693 : None : 693 : Job details returned successfully! : views : None
+INFO : 2024-02-07 04:35:26,132 : 1 : 132 : Job details modified successfully! : views : None
