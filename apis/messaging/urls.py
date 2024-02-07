@@ -10,10 +10,9 @@ router = DefaultRouter()
 # router.register(r'course', CourseViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)), 
+    path('', include(router.urls)),
     path('messaging/', CreateRoom, name='create-room'),
     path('chat-messaging/<str:other_user>/<str:token>/', MessageView, name='chat'),
-    # path('admin/chat-messaging/<str:other_user>/<str:user_id>/', AdminMessageView, name='chat'),
     path('group-messaging/<str:group_id>/<str:username>/', GroupMessageView, name='room'),
     
     path('send-direct-message/<int:receiver_id>/', send_direct_message, name='send_direct_message'),

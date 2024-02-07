@@ -55,4 +55,6 @@ EMAIL_HOST_PASSWORD='qamgdgifrpkuikdn'
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
+STRIPE_SECRET_KEY = "sk_test_51OgXepCpGGidDqruGkH0m0MOcY9sV2b7x705PYaeX6TpVvHZzqAEMo2LparLIBohDDkNUHn7Mf0zDdPT0SABkZiS00L34VogCY"
 
+WEBHOOK_SECRET = "whsec_adfa434b2296982dae737e2bd798b52f27bc232cea8a5e93bce79026b41d5380"

@@ -4,13 +4,13 @@ from .serializers import *
 from django.db.models import Q
 from django.utils import timezone
 from knox.models import AuthToken
+from rest_framework import status
 from knox.settings import CONSTANTS
 from rest_framework import generics
 from django.http import JsonResponse
 from core.views import PaginationClass
 from apis.teachers.models import Teacher
 from apis.students.models import Student
-from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.shortcuts import render, redirect
 from rest_framework.decorators import api_view
@@ -514,40 +514,6 @@ def MessageView(request, other_user, token):
         "other_user": other_user.id,
     }
     return render(request, 'direct_message.html', context)
-
-
-def AdminMessageView(request, other_user, user_id):
-    
-    user = User.objects.get(id=user_id)
-    print(user)
-    other_user = User.objects.get(id=other_user)
-    print(other_user)
-
-    if request.method == 'POST':
-        message = request.POST['message']
-
-        print(message)
-
-        new_message = DirectMessage(sender=user, content=message)
-        new_message.save()
-        
-    # Fetch previous messages
-    previous_messages = DirectMessage.objects.filter(
-        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
-    )
-
-    get_messages = DirectMessage.objects.filter(
-        Q(sender=user, receiver=other_user) | Q(sender=other_user, receiver=user)
-    )
-    # get_messages= GroupMessage.objects.filter(group=get_room)
-    print(get_messages)
-    
-    context = {
-        "messages": get_messages,
-        "user": user.id, 
-        "other_user": other_user.id,
-    }
-    return render(request, 'direct_admin.html', context)
 
 
 

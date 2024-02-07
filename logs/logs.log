@@ -1428,3 +1428,27 @@ INFO : 2024-02-04 17:25:14,456 : 1 : 456 : User Logged in sucessfully. : login :
 INFO : 2024-02-04 20:07:04,113 : 1 : 113 : User Logged in sucessfully. : login : None
 INFO : 2024-02-05 07:18:50,332 : 1 : 332 : User Logged in sucessfully. : login : None
 INFO : 2024-02-05 08:51:09,550 : 9 : 550 : User Logged in sucessfully. : login : None
+INFO : 2024-02-05 14:22:12,798 : 9 : 798 : User Logged in sucessfully. : login : None
+INFO : 2024-02-05 14:31:10,350 : 1 : 350 : User Logged in sucessfully. : login : None
+INFO : 2024-02-06 17:31:54,185 : 1 : 185 : User Logged in sucessfully. : login : None
+INFO : 2024-02-06 17:32:10,987 : 9 : 987 : User Logged in sucessfully. : login : None
+INFO : 2024-02-06 17:33:08,395 : 9 : 395 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-06 18:03 : 1 : 890 : {views} : [checkout_session] : Unexpected error communicating with Stripe.  If this problem persists,
+let us know at support@stripe.com.
+
+(Network error: ConnectionError: HTTPSConnectionPool(host='api.stripe.com', port=443): Max retries exceeded with url: /v1/checkout/sessions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002822417D8E0>: Failed to resolve 'api.stripe.com' ([Errno 11001] getaddrinfo failed)"))) : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:45]
+ERROR : 2024-02-06 18:10 : 1 : 675 : {views} : [checkout_session] : Request req_vJjjTK5ESufUCj: Invalid string: {:"0"=>"None"} : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:45]
+INFO : 2024-02-06 21:29:58,687 : 9 : 687 : User Logged in sucessfully. : login : None
+INFO : 2024-02-06 21:30:21,270 : 1 : 270 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-06 21:54 : 1 : 441 : {views} : [post] : int() argument must be a string, a bytes-like object or a number, not 'tuple' : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:62]
+ERROR : 2024-02-06 21:58 : 1 : 3 : {views} : [post] : int() argument must be a string, a bytes-like object or a number, not 'tuple' : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:62]
+ERROR : 2024-02-06 21:59 : 1 : 450 : {views} : [post] : Request req_QpModzVRnS8Cmi: Invalid URL: index.html. URLs must begin with http or https. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:62]
+ERROR : 2024-02-06 22:00 : 1 : 984 : {views} : [post] : Request req_GuZ29uxtEjVz7x: You must specify either `product` or `product_data` when creating a price. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:63]
+ERROR : 2024-02-06 22:07 : 1 : 892 : {views} : [post] : Request req_iYUgCGnW6cy1KA: Received unknown parameter: line_items[0][product_data] : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:64]
+ERROR : 2024-02-06 22:10 : 1 : 571 : {views} : [post] : Request req_fD57VRjcRSOuGF: Received unknown parameter: line_items[0][product_data] : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:64]
+INFO : 2024-02-06 22:52:46,237 : 1 : 237 : List of applicants returned successfully. : views : None
+ERROR : 2024-02-06 23:20 : Anonymous : 306 : {views} : [post] : Only students can make this request. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:32]
+INFO : 2024-02-06 23:20:47,259 : 2 : 259 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-07 00:54 : 1 : 730 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:126]
+ERROR : 2024-02-07 01:20 : 1 : 237 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:131]
+ERROR : 2024-02-07 01:33 : 2 : 99 : {views} : [stripe_webhook_view] : User did not initiate a payment. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:130]

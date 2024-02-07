@@ -10,8 +10,6 @@ from django.db.models import Q
 from django.conf import settings
 from django.utils import timezone
 from django.db import transaction
-from rest_framework import filters
-from django.shortcuts import render
 from core.views import PaginationClass
 from rest_framework import status, viewsets
 from rest_framework.response import Response

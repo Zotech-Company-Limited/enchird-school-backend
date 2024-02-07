@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'apis.assessment',
     'apis.applicants',
     'apis.messaging',
+    'apis.payments',
     'apis.teachers',
     'apis.students',
     'apis.courses',

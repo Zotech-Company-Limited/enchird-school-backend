@@ -30,13 +30,14 @@ app_name = 'api'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('apis.students.urls')),  # This includes the student app's URLs under /api/
-    path('api/', include('apis.teachers.urls')),
-    path('api/', include('apis.faculty.urls')),
-    path('api/', include('apis.users.urls')),
-    path('api/', include('apis.courses.urls')),
     path('api/', include('apis.applicants.urls')),
     path('api/', include('apis.assessment.urls')),
     path('api/', include('apis.messaging.urls')),
+    path('api/', include('apis.payments.urls')),
+    path('api/', include('apis.teachers.urls')),
+    path('api/', include('apis.courses.urls')),
+    path('api/', include('apis.faculty.urls')),
+    path('api/', include('apis.users.urls')),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),
     # path('api/', include((router.urls, 'api'))),

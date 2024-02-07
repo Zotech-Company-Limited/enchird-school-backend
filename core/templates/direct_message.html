@@ -58,6 +58,7 @@
     /// Determine the WebSocket protocol based on the application's URL
     {% comment %} const AuthToken = "3e1c2a5039241908f79f035355a86ceecdc383fc63007138c3958301254e6541"; {% endcomment %}
     const websocketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
+    {% comment %} const wsEndpoint = `${websocketProtocol}://enchird.biz/ws/chat/{{other_user}}/?token={{ token }}`; {% endcomment %}
     const wsEndpoint = `${websocketProtocol}://${window.location.host}/ws/chat/{{other_user}}/?token={{ token }}`;
 
     // Create a new WebSocket connection
@@ -71,6 +72,11 @@
     // Socket disconnect event
     socket.onclose = (event) => {
         console.log("WebSocket connection closed!");
+    };
+
+    // WebSocket error event
+    socket.onerror = (event) => {
+        console.error("WebSocket connection error:", event);
     };
 
     // Form submit listener
