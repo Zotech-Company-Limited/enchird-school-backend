@@ -38,6 +38,7 @@ urlpatterns = [
     path('api/', include('apis.courses.urls')),
     path('api/', include('apis.faculty.urls')),
     path('api/', include('apis.users.urls')),
+    path('paypal/', include('paypal.standard.ipn.urls')),
     path('verify-email/<verification_token>/', EmailVerificationView.as_view(), name="verify-email"),
     path('reset-password/', ResetPasswordView.as_view(), name="reset-password"),
     # path('api/', include((router.urls, 'api'))),

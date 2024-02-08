@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "corsheaders",
+    "corsheaders", 
     'core',
     'apis.assessment',
     'apis.applicants',
@@ -62,6 +62,8 @@ INSTALLED_APPS = [
     'apis.users',
     'rest_framework',
     'knox',
+    'paypal.standard.ipn',
+    
 ]
 
 MIDDLEWARE = [

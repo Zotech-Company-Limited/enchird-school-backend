@@ -12,7 +12,9 @@ router = DefaultRouter()
 
 urlpatterns = [
     # path('', include(router.urls)),
-    path('checkout/', StripeCheckoutSession.as_view(), name='checkout_session'),
+    path('stripe-checkout/', StripeCheckoutSession.as_view(), name='checkout_session'),
+    # path('paypal-checkout/', paypal_checkout, name='paypal_payment'),
+    path('paypal-checkout/', PayPalPaymentView.as_view(), name='paypal_payment'),
     path('webhook/', stripe_webhook_view, name='stripe-webhook'),
     path('student-payments/', successful_payments, name='student-payments'),
 ]

@@ -1468,3 +1468,4 @@ INFO : 2024-02-07 04:22:32,827 : None : 827 : List of jobs returned successfully
 INFO : 2024-02-07 04:27:36,392 : 1 : 392 : Job Opportunity created successfully! : views : None
 INFO : 2024-02-07 04:31:54,693 : None : 693 : Job details returned successfully! : views : None
 INFO : 2024-02-07 04:35:26,132 : 1 : 132 : Job details modified successfully! : views : None
+INFO : 2024-02-08 10:00:41,414 : 2 : 414 : User Logged in sucessfully. : login : None

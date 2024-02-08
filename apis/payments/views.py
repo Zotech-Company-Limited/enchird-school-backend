@@ -1,18 +1,22 @@
+import uuid
 import stripe
 import logging
 from .models import *
+from .serializers import *
+from django.urls import reverse
 from django.conf import settings
 from rest_framework import status
 from apis.users.models import User
 from django.http import HttpResponse
-from django.shortcuts import redirect
 from core.views import PaginationClass
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.shortcuts import redirect, render
 from rest_framework.decorators import api_view
-from .serializers import UserPaymentSerializer
 from django.views.decorators.csrf import csrf_exempt
+from paypal.standard.forms import PayPalPaymentsForm
 from rest_framework.exceptions import ValidationError
+from .paypal import get_paypal_access_token, create_paypal_order
 
 logger = logging.getLogger("myLogger")
 
@@ -201,5 +205,73 @@ def successful_payments(request):
     return Response(response_data)
 
     
+# def paypal_checkout(request, *args, **kwargs):
+#     # serializer = PayPalPaymentSerializer(data=request.data)
+#     # serializer.is_valid(raise_exception=True)
+
+#     user = request.user
+#     print(user)
+    
+#     host = request.get_host()
+#     # amount = serializer.validated_data['amount']
+    
+#     paypal_checkout = {
+#         'business': settings.PAYPAL_RECEIVER_EMAIL,
+#         'amount': '{:.2f}'.format(9300.0),
+#         'item_name': f'Enchird Fee Payment',
+#         # 'item_name': f'{user.first_name} {user.last_name} - Enchird Fee Payment',
+#         'invoice': uuid.uuid4(),
+#         'currency_code': 'USD', 
+#         'notify_url': f"https://{host}{reverse('paypal-ipn')}",
+#         'return_url': "https://enchird.biz/api/messaging/",
+#         'cancel_url': "https://enchird.biz/api/messaging/",
+#     }
+    
+#     form = PayPalPaymentsForm(initial=paypal_checkout)
+#     print(form)
+#     context = {
+#         'form': form
+#     }
+    
+#     return render(request, 'paypal.html', context)
+    
+#     # return Response({'form': form.as_p()}, status=status.HTTP_200_OK)
+
+
+
+
+class PayPalPaymentView(APIView):
+    def post(self, request, *args, **kwargs):
+        serializer = PayPalPaymentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        user = request.user
+        print(user)
+        
+        # host = request.get_host()
+        amount = serializer.validated_data['amount']
+        
+        client_id = settings.PAYPAL_CLIENT_ID
+        client_secret = settings.PAYPAL_CLIENT_SECRET
+        
+        token_resp = get_paypal_access_token(client_id=client_id, client_secret=client_secret)
+        order_resp = create_paypal_order(client_id=client_id, client_secret=client_secret, amount=amount)
+        
+        print(token_resp)
+        print(order_resp)
+
+        # form = PayPalPaymentsForm(initial=paypal_checkout)
+        # print(form)
+        # context = {
+        #     'form': form
+        # }
+        
+        # # return render(request, 'paypal.html', context)
+        
+        # return Response({'form': form.render()}, status=status.HTTP_200_OK)
+        return Response(order_resp, status=status.HTTP_200_OK)
+
+
+
 
 
