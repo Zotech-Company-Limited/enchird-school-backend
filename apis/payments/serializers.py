@@ -21,8 +21,8 @@ class UserPaymentSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = UserPayment
-        fields = ['id', 'user', 'user_profile', 'has_paid', 'amount', 'stripe_checkout_id']
-        read_only_fields = ['user_profile', 'user', 'stripe_checkout_id', 'has_paid']
+        fields = ['id', 'user', 'user_profile', 'has_paid', 'amount', 'stripe_checkout_id', 'paypal_checkout_id']
+        read_only_fields = ['user_profile', 'user', 'stripe_checkout_id', 'paypal_checkout_id', 'has_paid']
         # write_only_fields = ['user']
         # depth = 1
         

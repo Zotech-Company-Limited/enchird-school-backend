@@ -31,7 +31,7 @@ def get_paypal_access_token(client_id, client_secret):
     
     
     
-def create_paypal_order(client_id, client_secret, amount, currency='USD'):
+def create_paypal_order(user, client_id, client_secret, amount, return_url, cancel_url, currency='USD'):
     # PayPal API credentials
     auth = HTTPBasicAuth(client_id, client_secret)
 
@@ -43,31 +43,54 @@ def create_paypal_order(client_id, client_secret, amount, currency='USD'):
         "intent": "CAPTURE",
         "purchase_units": [
             {
+                "items": [
+                    {
+                        "name": f"{user.first_name} {user.last_name} - Enchird Fee Payment",
+                        "description": user.email,
+                        "quantity": "1",
+                        "unit_amount": {
+                            "currency_code": currency,
+                            "value": str(amount)
+                        }
+                    }
+                ],
                 "amount": {
                     "currency_code": currency,
-                    "value": str(amount)
+                    "value": str(amount),
+                    "breakdown": {
+                        "item_total": {
+                            "currency_code": currency,
+                            "value": str(amount)
+                        }
+                    }
                 },
-                "redirect_urls": {
-                    "return_url": return_url,
-                    "cancel_url": cancel_url
-                }
             }
-        ]
+        ],
+        "application_context": {
+            "return_url": return_url,
+            "cancel_url": cancel_url
+        }
     }
 
     # Make the request to create the order
     response = requests.post(orders_url, auth=auth, json=data, headers={'Content-Type': 'application/json'})
+    print(response)
+    response_data = response.json()
+    print(response_data)
+    
 
-    if response.status_code == 201:
-        # Parse the JSON response to extract the order ID
-        order_id = response.json().get('id')
-        # return order_id
-        print(response.json())
-        return response.json()
-    else:
-        # Print the error details if the request fails
-        print(f"Failed to create order. Status code: {response.status_code}")
-        print(response.text)
-        return None
+    return response
+
+    # if response.status_code == 201:
+    #     # Parse the JSON response to extract the order ID
+    #     order_id = response.json().get('id')
+    #     # return order_id
+    #     print(response.json())
+    #     return response.json()
+    # else:
+    #     # Print the error details if the request fails
+    #     print(f"Failed to create order. Status code: {response.status_code}")
+    #     print(response.text)
+    #     return None
     
     

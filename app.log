@@ -36334,3 +36334,541 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments
 INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
 INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\env.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 62911]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62911]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62911]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62911]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [4.35, 127.0.0.1:62911][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63021]
+INFO:myLogger:List of Registered courses returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63021]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63021]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63021]
+INFO:django.channels.server:[mHTTP GET /api/registered_courses/ 200 [1.45, 127.0.0.1:63021][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63138]
+INFO:myLogger:Student successfully dropped course.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63138]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63138]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63138]
+INFO:django.channels.server:[mHTTP POST /api/drop_course/5/ 200 [0.23, 127.0.0.1:63138][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63138]
+INFO:myLogger:List of Registered courses returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63138]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63138]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63138]
+INFO:django.channels.server:[mHTTP GET /api/registered_courses/ 200 [0.36, 127.0.0.1:63138][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63495]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api.sandbox.paypal.com:443 "POST /v1/oauth2/token HTTP/1.1" 200 918
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 258, in post
+    order_resp = create_paypal_order(client_id=client_id, client_secret=client_secret, amount=amount)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 51, in create_paypal_order
+    "return_url": return_url,
+NameError: name 'return_url' is not defined
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63495]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63495]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63495]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63495]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [6.80, 127.0.0.1:63495][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63547]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api.sandbox.paypal.com:443 "POST /v1/oauth2/token HTTP/1.1" 200 918
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63547]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63547]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63547]
+INFO:django.channels.server:[mHTTP POST /api/paypal-checkout/ 200 [3.55, 127.0.0.1:63547][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 63996]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api.sandbox.paypal.com:443 "POST /v1/oauth2/token HTTP/1.1" 200 918
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63996]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63996]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63996]
+INFO:django.channels.server:[mHTTP POST /api/paypal-checkout/ 200 [4.48, 127.0.0.1:63996][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53358]
+ERROR:myLogger:You must provide valid authentication credentials.
+WARNING:django.request:Unauthorized: /api/paypal-checkout/
+DEBUG:daphne.http_protocol:HTTP 401 response started for ['127.0.0.1', 53358]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53358]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53358]
+WARNING:django.channels.server:[31;1mHTTP POST /api/paypal-checkout/ 401 [0.43, 127.0.0.1:53358][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53358]
+ERROR:myLogger:Both success_url and cancel_url are required in the request body.
+WARNING:django.request:Bad Request: /api/paypal-checkout/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 53358]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53358]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53358]
+WARNING:django.channels.server:[31;1mHTTP POST /api/paypal-checkout/ 400 [0.47, 127.0.0.1:53358][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53485]
+ERROR:myLogger:Both return_url and cancel_url are required in the request body.
+WARNING:django.request:Bad Request: /api/paypal-checkout/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 53485]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53485]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53485]
+WARNING:django.channels.server:[31;1mHTTP POST /api/paypal-checkout/ 400 [0.16, 127.0.0.1:53485][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53485]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 422 587
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 248, in post
+    if order_resp.status_code == 201:
+AttributeError: 'dict' object has no attribute 'status_code'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 53485]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 53485]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53485]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53485]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [3.41, 127.0.0.1:53485][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53675]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 422 587
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 248, in post
+    if order_resp.status_code == 201:
+AttributeError: 'dict' object has no attribute 'status_code'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 53675]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 53675]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53675]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53675]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [4.57, 127.0.0.1:53675][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 53874]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 422 587
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 248, in post
+    if order_resp.status_code == 201:
+AttributeError: 'dict' object has no attribute 'status_code'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 53874]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 53874]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53874]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53874]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [3.45, 127.0.0.1:53874][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54237]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 248, in post
+    if order_resp.status_code == 201:
+AttributeError: 'dict' object has no attribute 'status_code'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 54237]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 54237]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54237]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54237]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [3.95, 127.0.0.1:54237][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54425]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+ERROR:django.request:Internal Server Error: /api/paypal-checkout/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\views.py", line 253, in post
+    user_payment.paypal_checkout_id = order_resp.get("id")
+AttributeError: 'Response' object has no attribute 'get'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 54425]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 54425]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54425]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54425]
+ERROR:django.channels.server:[35;1mHTTP POST /api/paypal-checkout/ 500 [3.47, 127.0.0.1:54425][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54745]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 54745]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54745]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54745]
+INFO:django.channels.server:[mHTTP POST /api/paypal-checkout/ 200 [9.00, 127.0.0.1:54745][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 55302]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55302]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55302]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55302]
+INFO:django.channels.server:[mHTTP POST /api/paypal-checkout/ 200 [6.30, 127.0.0.1:55302][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 56365]
+WARNING:django.request:Forbidden: /api/opportunities/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 56365]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56365]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56365]
+WARNING:django.channels.server:[31;1mHTTP POST /api/opportunities/ 403 [0.81, 127.0.0.1:56365][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 56365]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 56365]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56365]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56365]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.33, 127.0.0.1:56365][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 56770]
+WARNING:django.request:Forbidden: /api/opportunities/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 56770]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56770]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56770]
+WARNING:django.channels.server:[31;1mHTTP POST /api/opportunities/ 403 [0.06, 127.0.0.1:56770][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 56770]
+ERROR:myLogger:(1054, "Unknown column 'company' in 'field list'")
+WARNING:django.request:Precondition Failed: /api/opportunities/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 56770]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56770]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56770]
+WARNING:django.channels.server:[31;1mHTTP POST /api/opportunities/ 412 [0.38, 127.0.0.1:56770][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57001]
+INFO:myLogger:Job Opportunity created successfully!
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 57001]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57001]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57001]
+INFO:django.channels.server:[mHTTP POST /api/opportunities/ 201 [0.36, 127.0.0.1:57001][0m

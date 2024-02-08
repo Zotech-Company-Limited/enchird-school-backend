@@ -1469,3 +1469,13 @@ INFO : 2024-02-07 04:27:36,392 : 1 : 392 : Job Opportunity created successfully!
 INFO : 2024-02-07 04:31:54,693 : None : 693 : Job details returned successfully! : views : None
 INFO : 2024-02-07 04:35:26,132 : 1 : 132 : Job details modified successfully! : views : None
 INFO : 2024-02-08 10:00:41,414 : 2 : 414 : User Logged in sucessfully. : login : None
+INFO : 2024-02-08 20:33:02,453 : 2 : 453 : User Logged in sucessfully. : login : None
+INFO : 2024-02-08 20:34:42,967 : 2 : 967 : List of Registered courses returned successfully. : views : None
+INFO : 2024-02-08 20:36:18,000 : 2 : 0 : Student successfully dropped course. : views : None
+INFO : 2024-02-08 20:36:31,470 : 2 : 470 : List of Registered courses returned successfully. : views : None
+ERROR : 2024-02-08 22:18 : Anonymous : 776 : {views} : [post] : You must provide valid authentication credentials. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:222]
+ERROR : 2024-02-08 22:18 : 2 : 360 : {views} : [post] : Both success_url and cancel_url are required in the request body. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:238]
+ERROR : 2024-02-08 22:19 : 2 : 968 : {views} : [post] : Both return_url and cancel_url are required in the request body. : [in C:\enchird_LMS\enchird-school-backend\apis\payments\views.py:views.py:238]
+INFO : 2024-02-08 22:51:12,325 : 1 : 325 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-08 22:54 : None : 378 : {views} : [create] : (1054, "Unknown column 'company' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:942]
+INFO : 2024-02-08 22:56:52,667 : 1 : 667 : Job Opportunity created successfully! : views : None

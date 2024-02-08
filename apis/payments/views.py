@@ -9,6 +9,7 @@ from rest_framework import status
 from apis.users.models import User
 from django.http import HttpResponse
 from core.views import PaginationClass
+from .paypal import create_paypal_order
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import redirect, render
@@ -16,7 +17,6 @@ from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 from paypal.standard.forms import PayPalPaymentsForm
 from rest_framework.exceptions import ValidationError
-from .paypal import get_paypal_access_token, create_paypal_order
 
 logger = logging.getLogger("myLogger")
 
@@ -31,6 +31,7 @@ class StripeCheckoutSession(APIView):
     
     def post(self, request, *args, **kwargs): 
         user = request.user 
+        print(user)
         
         if not user.is_authenticated:
             logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
@@ -40,7 +41,6 @@ class StripeCheckoutSession(APIView):
             logger.error( "Only students can make this request.", extra={ 'user': 'Anonymous' } )
             return Response( {'error': "Only students can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
 
-        print(user)
         stripe.api_key = settings.STRIPE_SECRET_KEY
         serializer = UserPaymentSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -55,7 +55,6 @@ class StripeCheckoutSession(APIView):
             logger.error(error_message, extra={'user': user.id})
             raise ValidationError({'error': error_message}, code=status.HTTP_400_BAD_REQUEST)
 
-        
         try:
             checkout_session = stripe.checkout.Session.create(
                 line_items=[
@@ -204,43 +203,14 @@ def successful_payments(request):
 
     return Response(response_data)
 
-    
-# def paypal_checkout(request, *args, **kwargs):
-#     # serializer = PayPalPaymentSerializer(data=request.data)
-#     # serializer.is_valid(raise_exception=True)
-
-#     user = request.user
-#     print(user)
-    
-#     host = request.get_host()
-#     # amount = serializer.validated_data['amount']
-    
-#     paypal_checkout = {
-#         'business': settings.PAYPAL_RECEIVER_EMAIL,
-#         'amount': '{:.2f}'.format(9300.0),
-#         'item_name': f'Enchird Fee Payment',
-#         # 'item_name': f'{user.first_name} {user.last_name} - Enchird Fee Payment',
-#         'invoice': uuid.uuid4(),
-#         'currency_code': 'USD', 
-#         'notify_url': f"https://{host}{reverse('paypal-ipn')}",
-#         'return_url': "https://enchird.biz/api/messaging/",
-#         'cancel_url': "https://enchird.biz/api/messaging/",
-#     }
-    
-#     form = PayPalPaymentsForm(initial=paypal_checkout)
-#     print(form)
-#     context = {
-#         'form': form
-#     }
-    
-#     return render(request, 'paypal.html', context)
-    
-#     # return Response({'form': form.as_p()}, status=status.HTTP_200_OK)
-
-
 
 
 class PayPalPaymentView(APIView):
+    
+    queryset = UserPayment.objects.all().filter()
+    serializer_class = UserPaymentSerializer
+    allowed_methods = ['post']
+    
     def post(self, request, *args, **kwargs):
         serializer = PayPalPaymentSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -248,28 +218,46 @@ class PayPalPaymentView(APIView):
         user = request.user
         print(user)
         
+        if not user.is_authenticated:
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        if not user.is_a_student:
+            logger.error( "Only students can make this request.", extra={ 'user': 'Anonymous' } )
+            return Response( {'error': "Only students can make this request."}, status=status.HTTP_401_UNAUTHORIZED )
+
+        
         # host = request.get_host()
         amount = serializer.validated_data['amount']
+        
+        rtn_url = request.data.get('return_url')
+        canc_url = request.data.get('cancel_url')
+        
+        if not rtn_url or not canc_url:
+            error_message = "Both return_url and cancel_url are required in the request body."
+            logger.error(error_message, extra={'user': user.id})
+            raise ValidationError({'error': error_message}, code=status.HTTP_400_BAD_REQUEST)
         
         client_id = settings.PAYPAL_CLIENT_ID
         client_secret = settings.PAYPAL_CLIENT_SECRET
         
-        token_resp = get_paypal_access_token(client_id=client_id, client_secret=client_secret)
-        order_resp = create_paypal_order(client_id=client_id, client_secret=client_secret, amount=amount)
-        
-        print(token_resp)
+        order_resp = create_paypal_order(user=user, client_id=client_id, client_secret=client_secret, amount=amount, return_url=rtn_url, cancel_url=canc_url)
         print(order_resp)
+        order_response = order_resp.json()
+        print(order_response.get("id"))
+        
+        if order_resp.status_code == 201:
+            user_payment = UserPayment(user=user)
+            user_payment.amount = amount
+            user_payment.payment_method = "paypal"
+            user_payment.paypal_checkout_id = order_response.get("id")
+            
+            user_payment.save()
+            
+        # print(token_resp)
+        # print(order_resp)
 
-        # form = PayPalPaymentsForm(initial=paypal_checkout)
-        # print(form)
-        # context = {
-        #     'form': form
-        # }
-        
-        # # return render(request, 'paypal.html', context)
-        
-        # return Response({'form': form.render()}, status=status.HTTP_200_OK)
-        return Response(order_resp, status=status.HTTP_200_OK)
+        return Response(order_response, status=status.HTTP_200_OK)
 
 
 

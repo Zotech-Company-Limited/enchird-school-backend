@@ -136,7 +136,11 @@ class Job(models.Model):
 
     title = models.CharField(max_length=255)
     description = models.TextField()
-    location = models.CharField(max_length=100)
+    location = models.CharField(max_length=200, null=True, blank=True)
+    company = models.CharField(max_length=100, null=True, blank=True)
+    city = models.CharField(max_length=200, null=True, blank=True)
+    salary = models.CharField(max_length=100, null=True, blank=True)
+    experience = models.CharField(max_length=100, null=True, blank=True)
     position_type = models.CharField(max_length=20, choices=POSITION_CHOICES)
     employment_type = models.CharField(max_length=20, choices=EMPLOYMENT_CHOICES)
     is_deleted = models.BooleanField(default=False)
