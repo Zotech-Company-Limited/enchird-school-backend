@@ -339,6 +339,60 @@ def get_assessment_details(request, assessment_id):
     return Response(response_data, status=status.HTTP_200_OK)
 
 
+@api_view(['GET'])
+def list_assessments(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error(
+            "You do not have the necessary rights.",
+            extra={
+                'user': 'Anonymous'
+            }
+        )
+        return Response(
+            {'error': "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+        
+    if user.is_a_teacher is False and user.is_a_student is False:
+        logger.warning(
+            "You do not have the necessary rights! (Not a lecturer nor student)",
+            extra={
+                'user': request.user.id
+            }
+        )
+        return Response(
+            {"error": "You do not have the necessary rights (Not a lecturer nor student)"},
+            status.HTTP_403_FORBIDDEN
+        )
+    if user.is_a_teacher:
+        assessments = Assessment.objects.filter(instructor=user)
+        serializer = AssessmentSerializer(assessments, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif user.is_a_student:
+        try:
+            student = Student.objects.get(user=user)
+        # except Student.DoesNotExist:
+            
+            registered_courses = student.registered_courses.all()
+            assessments = Assessment.objects.filter(course__in=registered_courses)
+            serializer = AssessmentSerializer(assessments, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+       
+        except Student.DoesNotExist:
+            logger.error(
+                "Student not Found.",
+                extra={ 'user': user.id })
+            return Response({'error': 'Student not found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    else:
+        logger.error(
+            "You do not have the necessary rights",
+            extra={ 'user': user.id })
+        return Response({'error': 'You do not have the necessary rights.'}, status=status.HTTP_403_FORBIDDEN)
+       
 @api_view(['POST'])
 @transaction.atomic
 def submit_assessment_responses(request, assessment_id):

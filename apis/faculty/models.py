@@ -140,6 +140,7 @@ class Job(models.Model):
     company = models.CharField(max_length=100, null=True, blank=True)
     city = models.CharField(max_length=200, null=True, blank=True)
     salary = models.CharField(max_length=100, null=True, blank=True)
+    link = models.CharField(max_length=100, null=True, blank=True)
     experience = models.CharField(max_length=100, null=True, blank=True)
     position_type = models.CharField(max_length=20, choices=POSITION_CHOICES)
     employment_type = models.CharField(max_length=20, choices=EMPLOYMENT_CHOICES)

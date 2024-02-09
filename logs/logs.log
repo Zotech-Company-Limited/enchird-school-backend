@@ -1479,3 +1479,12 @@ ERROR : 2024-02-08 22:19 : 2 : 968 : {views} : [post] : Both return_url and canc
 INFO : 2024-02-08 22:51:12,325 : 1 : 325 : User Logged in sucessfully. : login : None
 ERROR : 2024-02-08 22:54 : None : 378 : {views} : [create] : (1054, "Unknown column 'company' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:942]
 INFO : 2024-02-08 22:56:52,667 : 1 : 667 : Job Opportunity created successfully! : views : None
+INFO : 2024-02-09 08:50:59,401 : 1 : 401 : User Logged in sucessfully. : login : None
+INFO : 2024-02-09 08:52:28,700 : 2 : 700 : User Logged in sucessfully. : login : None
+INFO : 2024-02-09 08:52:41,133 : 9 : 133 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-09 09:44 : Anonymous : 106 : {views} : [MessageView] : AuthToken matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:477]
+ERROR : 2024-02-09 09:45 : Anonymous : 216 : {views} : [MessageView] : AuthToken matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:477]
+INFO : 2024-02-09 10:40:11,204 : 1 : 204 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-09 10:41 : None : 743 : {views} : [create] : (1054, "Unknown column 'link' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:942]
+INFO : 2024-02-09 10:43:35,137 : 1 : 137 : Job Opportunity created successfully! : views : None
+ERROR : 2024-02-10 00:18 : Anonymous : 428 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]

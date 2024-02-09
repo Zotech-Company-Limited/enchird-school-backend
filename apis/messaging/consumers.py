@@ -1,5 +1,5 @@
 import json
-import asyncio
+import logging
 from knox.models import AuthToken
 from knox.settings import CONSTANTS
 from apis.users.models import User
@@ -11,6 +11,10 @@ from channels.db import database_sync_to_async
 from channels.exceptions import DenyConnection
 from django.contrib.auth.models import AnonymousUser
 from channels.generic.websocket import AsyncWebsocketConsumer
+
+
+logger = logging.getLogger("myLogger")
+
 
 
 
@@ -121,19 +125,23 @@ class ChatConsumer(SyncConsumer):
             try:
                 other_user = User.objects.get(id=other_usr, is_deleted=False)
             except ChatGroup.DoesNotExist:
+                logger.error(f"User with id={other_usr} not found or is deleted.", extra={'user': "Anonymous"})
                 print(f"User with id={other_usr} not found or is deleted.")
-                raise DenyConnection("User not found or is deleted")
+                raise DenyConnection(f"User with id={other_usr} not found or is deleted.")
             print(other_user)
             # Check if the user is admin or tutor
             if not user.is_a_teacher and not user.is_admin:
+                logger.error("User is not authorized to connect.", extra={'user': user.id})
                 raise DenyConnection("User is not authorized to connect")
 
             # Check if other_user is admin or tutor
             if not other_user.is_a_teacher and not other_user.is_admin:
+                logger.error("User you are trying to message is not authorized to connect", extra={'user': user.id})
                 raise DenyConnection("User you are trying to message is not authorized to connect")
             
             # Check if user is trying to message themselves.
             if user.id == other_user.id:
+                logger.error("You cannot send message to yourself", extra={'user': user.id})
                 raise DenyConnection("You cannot send message to yourself")
             
             self.group_name = self.get_or_create_chat(user.id, other_user.id)
@@ -146,6 +154,7 @@ class ChatConsumer(SyncConsumer):
             print(f'[{self.channel_name}] - You are connected')
             
         except Exception as e:
+            logger.error("An error occured while trying to connect:", extra={'user': user.id})
             print("An error occured while trying to connect:", str(e))
             
     

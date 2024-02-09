@@ -468,8 +468,15 @@ def CreateRoom(request):
 def MessageView(request, other_user, token):
     
     try:
-        knox_object = AuthToken.objects.filter(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH]).first()
-        user = knox_object.user
+        print(token)
+        try:
+            knox_object = AuthToken.objects.get(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH]) #.first()
+            print(knox_object) 
+            user = knox_object.user
+        except Exception as e:
+            logger.error( str(e), extra={ 'user': "Anonymous" })
+            return JsonResponse({'message': str(e)})
+            # print(str(e))
         
         # Check if the Knox object exists and if the token is expired
         if knox_object and knox_object.expiry:
@@ -478,9 +485,11 @@ def MessageView(request, other_user, token):
             # Compare the expiry timestamp with the current time
             if knox_object.expiry < current_time:
                 # The token is not expired
+                logger.error( "Token is expired", extra={ 'user': "Anonymous" })
                 return JsonResponse({'message': 'Token is expired'})
         else:
             # The Knox object is not found (invalid token)
+            logger.error( "Invalid token or Knox object not found", extra={ 'user': "Anonymous" })
             return JsonResponse({'error': 'Invalid token or Knox object not found'}, status=400)
 
     except AuthToken.DoesNotExist:

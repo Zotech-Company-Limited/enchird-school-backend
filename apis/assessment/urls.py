@@ -19,4 +19,6 @@ urlpatterns = [
     path('assessments/<int:assessment_id>/add_question/', create_question_with_choices, name='add_question'),
     path('assessment-results/<int:assessment_id>/', get_assessment_results, name='get_assessment_results'),
     path('assessments/<int:assessment_id>/submit/', submit_assessment_responses, name='submit_assessment_responses'),
+    path('list-assessments/', list_assessments, name='list-assessments'),
+
 ]

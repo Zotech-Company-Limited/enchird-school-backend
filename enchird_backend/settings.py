@@ -101,20 +101,20 @@ ASGI_APPLICATION = 'enchird_backend.asgi.application'
 WSGI_APPLICATION = 'enchird_backend.wsgi.application'
 
 
-CHANNEL_LAYERS = {
-    "default": {"BACKEND": "channels.layers.InMemoryChannelLayer"},
-} 
-
 # CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             # "hosts": [("127.0.0.1", 6379)],
-#             "hosts": [("localhost", 6379)],
+#     "default": {"BACKEND": "channels.layers.InMemoryChannelLayer"},
+# } 
 
-#         },
-#     },
-# }
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            # "hosts": [("127.0.0.1", 6379)],
+            # "hosts": [("localhost", 6379)],
+            "hosts": [('redis://:M7lV86L98rsLDAjsewHvBqKa2XQHy7GE@redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772')],
+        },
+    },
+}
 
 
 REST_FRAMEWORK = { 

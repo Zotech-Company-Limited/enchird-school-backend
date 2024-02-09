@@ -36872,3 +36872,1097 @@ DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 57001]
 DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57001]
 DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57001]
 INFO:django.channels.server:[mHTTP POST /api/opportunities/ 201 [0.36, 127.0.0.1:57001][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 60210]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60210]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60210]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60210]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [4.84, 127.0.0.1:60210][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60242]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/1/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 472, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 60242]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 60242]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60242]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60242]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/1/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [9.52, 127.0.0.1:60242][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60305]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/1/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 472, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 60305]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 60305]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60305]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60305]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/1/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.31, 127.0.0.1:60305][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 60330]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60330]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60330]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60330]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [1.93, 127.0.0.1:60330][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 60330]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60330]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60330]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60330]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [1.67, 127.0.0.1:60330][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60380]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 472, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 60380]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 60380]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60380]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60380]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.28, 127.0.0.1:60380][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60393]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60393]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60393]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60393]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [6.67, 127.0.0.1:60393][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:60404]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 60404] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: tuple index out of range
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 44, in __call__
+    self.channel_layer = get_channel_layer(self.channel_layer_alias)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 357, in get_channel_layer
+    return channel_layers[alias]
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 78, in __getitem__
+    self.backends[key] = self.make_backend(key)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 44, in make_backend
+    return self._make_backend(name, config)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 74, in _make_backend
+    return backend_class(**config)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 127, in __init__
+    self.hosts = decode_hosts(hosts)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\utils.py", line 68, in decode_hosts
+    result.append({"host": entry[0], "port": entry[1]})
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: tuple index out of range
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 60404]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:60404]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP disconnect for None
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62282]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62282]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62282]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62282]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [1.36, 127.0.0.1:62282][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:62295]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 62295] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 62295]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:62295]
+ERROR:daphne.server:Exception inside application: Error processing token: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 243, in connect
+    await self.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 650, in _connect
+    reader, writer = await asyncio.open_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1033, in create_connection
+    raise OSError('Multiple exceptions: {}'.format(
+OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 601, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1040, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1062, in ensure_connection
+    await connection.connect()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 251, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62398]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62398]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62398]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62398]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.14, 127.0.0.1:62398][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:62402]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 62402] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: You must pass a list of Redis hosts, even if there is only one.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 44, in __call__
+    self.channel_layer = get_channel_layer(self.channel_layer_alias)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 357, in get_channel_layer
+    return channel_layers[alias]
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 78, in __getitem__
+    self.backends[key] = self.make_backend(key)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 44, in make_backend
+    return self._make_backend(name, config)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\layers.py", line 74, in _make_backend
+    return backend_class(**config)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 127, in __init__
+    self.hosts = decode_hosts(hosts)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\utils.py", line 58, in decode_hosts
+    raise ValueError(
+ValueError: You must pass a list of Redis hosts, even if there is only one.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: You must pass a list of Redis hosts, even if there is only one.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 62402]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:62402]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62479]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62479]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62479]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62479]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.37, 127.0.0.1:62479][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:62482]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 62482] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 62482] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:62482]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 62482] accepted by application
+ERROR:daphne.server:Exception inside application: Error processing token: Error 10061 connecting to 127.0.0.1:6379. 10061.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 243, in connect
+    await self.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 650, in _connect
+    reader, writer = await asyncio.open_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1025, in create_connection
+    raise exceptions[0]
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1010, in create_connection
+    sock = await self._connect_sock(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 924, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 496, in sock_connect
+    return await fut
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 528, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 6379)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 601, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1040, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1062, in ensure_connection
+    await connection.connect()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 251, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 10061.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error 10061 connecting to 127.0.0.1:6379. 10061.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 62482]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:62482]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\settings.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 62526]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62526]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62526]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62526]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.46, 127.0.0.1:62526][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:62530]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 62530] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 62530] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:62530]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 62530] accepted by application
+ERROR:daphne.server:Exception inside application: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 510, in read_response
+    response = await self._parser.read_response(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 90, in _read_response
+    raw = await self._readline()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\base.py", line 219, in _readline
+    data = await self._stream.readline()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 540, in readline
+    line = await self.readuntil(sep)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 632, in readuntil
+    await self._wait_for_data('readuntil')
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 517, in _wait_for_data
+    await self._waiter
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 848, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 606, in execute_command
+    return await conn.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 593, in _disconnect_raise
+    raise error
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 580, in _send_command_parse_response
+    return await self.parse_response(conn, command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 627, in parse_response
+    response = await connection.read_response()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 524, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 62530]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:62530]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63298]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 63298]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63298]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63298]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.20, 127.0.0.1:63298][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:63303]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 63303] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 63303] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:63303]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 63303] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63395]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 472, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63395]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63395]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63395]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63395]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [3.90, 127.0.0.1:63395][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63609]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 473, in MessageView
+    print(knox_object)
+NameError: name 'knox_o' is not defined
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63609]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63609]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63609]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63609]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.66, 127.0.0.1:63609][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63675]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 474, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63675]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63675]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63675]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63675]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.28, 127.0.0.1:63675][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63841]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 477, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63841]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63841]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63841]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63841]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.81, 127.0.0.1:63841][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63856]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 477, in MessageView
+    user = knox_object.user
+AttributeError: 'NoneType' object has no attribute 'user'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63856]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63856]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63856]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63856]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.35, 127.0.0.1:63856][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 63931]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 477, in MessageView
+    user = knox_object.user
+UnboundLocalError: local variable 'knox_object' referenced before assignment
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 63931]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 63931]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 63931]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 63931]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.20, 127.0.0.1:63931][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64005]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 481, in MessageView
+    current_time = timezone.now()
+UnboundLocalError: local variable 'knox_object' referenced before assignment
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 64005]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 64005]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64005]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64005]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.73, 127.0.0.1:64005][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64210]
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 473, in MessageView
+    knox_object = AuthToken.objects.get(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH]) #.first()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+knox.models.AuthToken.DoesNotExist: AuthToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py", line 477, in MessageView
+    logger.error( str(e), extra={ 'user': user.id })
+UnboundLocalError: local variable 'user' referenced before assignment
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 64210]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 64210]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64210]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64210]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.65, 127.0.0.1:64210][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64280]
+ERROR:myLogger:AuthToken matching query does not exist.
+ERROR:django.request:Internal Server Error: /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 265, in _get_response_async
+    self.check_response(response, callback)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view apis.messaging.views.MessageView didn't return an HttpResponse object. It returned None instead.
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 64280]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64280]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64280]
+ERROR:django.channels.server:[35;1mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 500 [0.47, 127.0.0.1:64280][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64351]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64351]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64351]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64351]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/ec2cd468168410559b666984ff3439b5b6f8771eab2ef170c0ffb1a12d230dad/ 200 [0.11, 127.0.0.1:64351][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64400]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/f3e50fa1e14a18106ad1685dfe0f949f9668e34f0b888eb4e7ba13b11846377c/ 200 [0.82, 127.0.0.1:64400][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:64406]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64406] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64406] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:64406]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64406] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64400]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64400]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.21, 127.0.0.1:64400][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:64422]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 64422] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64422] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:64422]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 64422] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64406]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 64406]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 64422]
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 64422]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 64406]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 64422]
+ERROR:daphne.server:Exception inside application: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 510, in read_response
+    response = await self._parser.read_response(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 90, in _read_response
+    raw = await self._readline()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\base.py", line 219, in _readline
+    data = await self._stream.readline()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 540, in readline
+    line = await self.readuntil(sep)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 632, in readuntil
+    await self._wait_for_data('readuntil')
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 517, in _wait_for_data
+    await self._waiter
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 848, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 246, in _brpop_with_clean
+    result = await connection.bzpopmin(channel, timeout=timeout)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 606, in execute_command
+    return await conn.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 593, in _disconnect_raise
+    raise error
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 580, in _send_command_parse_response
+    return await self.parse_response(conn, command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 627, in parse_response
+    response = await connection.read_response()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 524, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64406]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:64406]
+ERROR:daphne.server:Exception inside application: Error processing token: Error 10060 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 10060.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 243, in connect
+    await self.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 650, in _connect
+    reader, writer = await asyncio.open_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1025, in create_connection
+    raise exceptions[0]
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1010, in create_connection
+    sock = await self._connect_sock(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 924, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 496, in sock_connect
+    return await fut
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 528, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+TimeoutError: [Errno 10060] Connect call failed ('3.123.129.160', 11772)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 601, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1040, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1062, in ensure_connection
+    await connection.connect()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 251, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 10060.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error 10060 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 10060.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 64422]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:64422]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\faculty\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52185]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 52185]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52185]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52185]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.71, 127.0.0.1:52185][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52282]
+WARNING:django.request:Forbidden: /api/opportunities/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 52282]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52282]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52282]
+WARNING:django.channels.server:[31;1mHTTP POST /api/opportunities/ 403 [0.38, 127.0.0.1:52282][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52282]
+ERROR:myLogger:(1054, "Unknown column 'link' in 'field list'")
+WARNING:django.request:Precondition Failed: /api/opportunities/
+DEBUG:daphne.http_protocol:HTTP 412 response started for ['127.0.0.1', 52282]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52282]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52282]
+WARNING:django.channels.server:[31;1mHTTP POST /api/opportunities/ 412 [0.18, 127.0.0.1:52282][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 52432]
+INFO:myLogger:Job Opportunity created successfully!
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 52432]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 52432]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 52432]
+INFO:django.channels.server:[mHTTP POST /api/opportunities/ 201 [1.77, 127.0.0.1:52432][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60156]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60156]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60156]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60156]
+INFO:django.channels.server:[mHTTP GET /api/list-assessments/ 200 [0.43, 127.0.0.1:60156][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 60367]
+WARNING:django.request:Bad Request: /api/create_assessment/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60367]
+WARNING:django.channels.server:[31;1mHTTP POST /api/create_assessment/ 400 [0.17, 127.0.0.1:60367][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60367]
+INFO:django.channels.server:[mHTTP POST /api/create_assessment/ 201 [0.44, 127.0.0.1:60367][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60367]
+INFO:django.channels.server:[mHTTP GET /api/list-assessments/ 200 [0.06, 127.0.0.1:60367][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60367]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60367]
+INFO:django.channels.server:[mHTTP GET /api/list-assessments/ 200 [0.44, 127.0.0.1:60367][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 60429]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 60429]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 60429]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 60429]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [1.82, 127.0.0.1:60429][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61057]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 61057]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61057]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61057]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.07, 127.0.0.1:61057][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61322]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 61322]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 61322]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 61322]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.06, 127.0.0.1:61322][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
