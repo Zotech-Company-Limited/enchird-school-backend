@@ -12,6 +12,7 @@ from django.shortcuts import render
 from apis.courses.models import Course 
 from cryptography.fernet import Fernet
 from apis.students.models import Student
+from apis.teachers.models import Teacher
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from cryptography.fernet import InvalidToken
@@ -238,24 +239,15 @@ def get_assessment_details(request, assessment_id):
     is_student = request.user.is_a_student
     is_instructor = request.user.is_a_teacher
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
         return Response(
             {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+            status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_teacher is False and user.is_a_student is False:
         logger.warning(
             "You do not have the necessary rights! (Not a lecturer nor student)",
-            extra={
-                'user': request.user.id
-            }
-        )
+            extra={ 'user': request.user.id } )
         return Response(
             {"error": "You do not have the necessary rights (Not a lecturer nor student)"},
             status.HTTP_403_FORBIDDEN
@@ -264,22 +256,17 @@ def get_assessment_details(request, assessment_id):
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
-        logger.error(
-            "Assessment not Found.",
-            extra={
-                'user': user.id
-            }
-        )
+        logger.error(  "Assessment not Found.", extra={ 'user': user.id } )
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     if is_instructor:
-        if user not in assessment.course.instructors.all():
+        tutor = Teacher.objects.get(user=user)
+
+        if assessment.course not in tutor.courses.all():
+            # if user not in assessment.course.instructors.all():
             logger.warning(
                 "You are not a lecturer of this course",
-                extra={
-                    'user': request.user.id
-                }
-            )
+                extra={ 'user': request.user.id } )
             return Response(
                 {"error": "You are not a lecturer of this course."},
                 status.HTTP_403_FORBIDDEN

@@ -254,6 +254,7 @@ class StudentViewSet(viewsets.ModelViewSet):
                     user.save()
 
                     applicant.status = 'accepted'
+                    applicant.is_deleted = True
                     applicant.save()
 
                     # Create a Student instance

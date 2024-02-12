@@ -31,7 +31,7 @@ logger = logging.getLogger("myLogger")
 # Create your views here.
 class ApplicantViewSet(viewsets.ModelViewSet):
     
-    queryset = Applicant.objects.all().filter(is_deleted=False).order_by('-created_at')
+    queryset = Applicant.objects.all().exclude(Q(status='rejected') | Q(is_deleted=True)).order_by('-created_at')
     serializer_class = ApplicantSerializer
     pagination_class = PaginationClass
 
@@ -53,10 +53,10 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         order = self.request.query_params.get('order', None)
         keyword = request.query_params.get('keyword', None)
         status = request.query_params.get('status', None)
-        gender = request.query_params.get('gender', None)
+        gender = request.query_params.get('gender', None) 
         
         
-        queryset = Applicant.objects.filter(is_deleted=False)
+        queryset = Applicant.objects.exclude(Q(status='rejected') | Q(is_deleted=True))
         
         if order:
             queryset = queryset.order_by('-created_at') if order == 'desc' else queryset.order_by('created_at')
@@ -91,7 +91,8 @@ class ApplicantViewSet(viewsets.ModelViewSet):
             # Apply the combined query along with other filters
             queryset = Applicant.objects.filter(
                 combined_query,
-                is_deleted=False
+                # status__ne='rejected',
+                is_deleted=False,
             ).order_by('-created_at')
             
         if not order:

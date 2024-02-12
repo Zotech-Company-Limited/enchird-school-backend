@@ -37966,3 +37966,824 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\messagin
 INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
 INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64803]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64803]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64803]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64803]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [12.40, 127.0.0.1:64803][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64803]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64803]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64803]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64803]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/740e28f97f4a2520baf72dea05d7a463a4943b631dc3673487c1d417a363fb43/ 200 [0.07, 127.0.0.1:64803][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 65361]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 65361]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 65361]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 65361]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/24/521789c74786fda0d1a9f9fb2efa67e4b9f2844c46a7cf8c5829bbc49ad25063/ 200 [0.21, 127.0.0.1:65361][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50400]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50400]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50400]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50400]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/24/521789c74786fda0d1a9f9fb2efa67e4b9f2844c46a7cf8c5829bbc49ad25063/ 200 [0.44, 127.0.0.1:50400][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50481]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50481]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50481]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50481]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/f3e50fa1e14a18106ad1685dfe0f949f9668e34f0b888eb4e7ba13b11846377c/ 200 [0.09, 127.0.0.1:50481][0m
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 54391]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 54391]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 54391]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 54391]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.99, 127.0.0.1:54391][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:54944]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 54944] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 54944]
+INFO:django.channels.server:WebSocket DISCONNECT /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:54944]
+INFO:django.channels.server:WebSocket HANDSHAKING /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:55203]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55203] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55203]
+INFO:django.channels.server:WebSocket DISCONNECT /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:55203]
+INFO:django.channels.server:WebSocket HANDSHAKING /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:55278]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55278] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55278]
+INFO:django.channels.server:WebSocket DISCONNECT /api/chat-messaging/9/0e14a7bf10f9da28903ab2c9d7aa051f4fbd440eba36f9fe3b0528f7baa5e568/ [127.0.0.1:55278]
+INFO:django.channels.server:WebSocket HANDSHAKING /chat/ [127.0.0.1:55356]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55356] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'chat/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'chat/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'chat/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55356]
+INFO:django.channels.server:WebSocket DISCONNECT /chat/ [127.0.0.1:55356]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55500]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55500]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/f3e50fa1e14a18106ad1685dfe0f949f9668e34f0b888eb4e7ba13b11846377c/ 200 [0.06, 127.0.0.1:55500][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55500]
+ERROR:myLogger:Token is expired
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55500]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/f3e50fa1e14a18106ad1685dfe0f949f9668e34f0b888eb4e7ba13b11846377c/ 200 [0.09, 127.0.0.1:55500][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 55577]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55577]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55577]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55577]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [1.96, 127.0.0.1:55577][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55500]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/04e5f21100c5352961fcede032cc4796c1b6ce5fb09e916d62112e2beb6d09bd/ 200 [1.76, 127.0.0.1:55500][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55500]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/04e5f21100c5352961fcede032cc4796c1b6ce5fb09e916d62112e2beb6d09bd/ 200 [0.21, 127.0.0.1:55500][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55500]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55500]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/04e5f21100c5352961fcede032cc4796c1b6ce5fb09e916d62112e2beb6d09bd/ 200 [0.17, 127.0.0.1:55500][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:55672]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55672] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55672] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:55672]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55672] accepted by application
+INFO:django.channels.server:WebSocket HANDSHAKING /chat/ [127.0.0.1:55708]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55708] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'chat/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'chat/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'chat/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55708]
+INFO:django.channels.server:WebSocket DISCONNECT /chat/ [127.0.0.1:55708]
+INFO:django.channels.server:WebSocket HANDSHAKING /chat/9/ [127.0.0.1:55797]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55797] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'chat/9/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'chat/9/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'chat/9/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55797]
+INFO:django.channels.server:WebSocket DISCONNECT /chat/9/ [127.0.0.1:55797]
+INFO:django.channels.server:WebSocket HANDSHAKING /chat/9/ [127.0.0.1:55817]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55817] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: No route found for path 'chat/9/'.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 134, in __call__
+    raise ValueError("No route found for path %r." % path)
+ValueError: No route found for path 'chat/9/'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: No route found for path 'chat/9/'.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55817]
+INFO:django.channels.server:WebSocket DISCONNECT /chat/9/ [127.0.0.1:55817]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:55859]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55859] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55859] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:55859]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55859] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 55929]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55929]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55929]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55929]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [2.89, 127.0.0.1:55929][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55963]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55963]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55963]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55963]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/9a4abea704794658383a6dd27156a08271089967bd0ccf704a485f6445663142/ 200 [0.31, 127.0.0.1:55963][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:55967]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 55967] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55967] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:55967]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 55967] accepted by application
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 55859]
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 55967]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 55672]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 55859]
+DEBUG:daphne.ws_protocol:Sent WebSocket packet to client for ['127.0.0.1', 55967]
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 55859]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 56078]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 56078]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 56078]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 56078]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/9a4abea704794658383a6dd27156a08271089967bd0ccf704a485f6445663142/ 200 [0.21, 127.0.0.1:56078][0m
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55967]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/1/ [127.0.0.1:55967]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/1/ [127.0.0.1:56081]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 56081] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56081] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/1/ [127.0.0.1:56081]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56081] accepted by application
+WARNING:daphne.server:Application instance <Task pending name='Task-33' coro=<ASGIStaticFilesHandler.__call__() running at C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py:101> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001527FD81FA0>()]>> for connection <WebSocketProtocol client=['127.0.0.1', 55967] path=b'/ws/chat/1/'> took too long to shut down and was killed.
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 55859]
+DEBUG:daphne.ws_protocol:WebSocket incoming frame on ['127.0.0.1', 55859]
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 55859]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:55859]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:56697]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 56697] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56697] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:56697]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 56697] accepted by application
+WARNING:daphne.server:Application instance <Task pending name='Task-23' coro=<ASGIStaticFilesHandler.__call__() running at C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py:101> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001527FB270A0>()]>> for connection <WebSocketProtocol client=['127.0.0.1', 55859] path=b'/ws/chat/9/'> took too long to shut down and was killed.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 56697]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:56697]
+WARNING:daphne.server:Application instance <Task pending name='Task-84' coro=<ASGIStaticFilesHandler.__call__() running at C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py:101> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001527FD47FA0>()]>> for connection <WebSocketProtocol client=['127.0.0.1', 56697] path=b'/ws/chat/9/'> took too long to shut down and was killed.
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/8/ [127.0.0.1:56770]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 56770] to WebSocket
+ERROR:myLogger:An error occured while trying to connect:
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 56770]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/8/ [127.0.0.1:56770]
+ERROR:daphne.server:Exception inside application: Error processing token: 'ChatConsumer' object has no attribute 'group_name'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 125, in dispatch
+    handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 163, in websocket_disconnect
+    async_to_sync(self.channel_layer.group_discard)(self.group_name, self.channel_name)
+AttributeError: 'ChatConsumer' object has no attribute 'group_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: 'ChatConsumer' object has no attribute 'group_name'
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/8/ [127.0.0.1:56888]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 56888] to WebSocket
+ERROR:myLogger:An error occured while trying to connect:
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 56888]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/8/ [127.0.0.1:56888]
+ERROR:daphne.server:Exception inside application: Error processing token: 'ChatConsumer' object has no attribute 'group_name'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\db.py", line 13, in thread_handler
+    return super().thread_handler(loop, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 125, in dispatch
+    handler(message)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py", line 163, in websocket_disconnect
+    async_to_sync(self.channel_layer.group_discard)(self.group_name, self.channel_name)
+AttributeError: 'ChatConsumer' object has no attribute 'group_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: 'ChatConsumer' object has no attribute 'group_name'
+INFO:daphne.server:HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:60920]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 60920] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 60920] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:60920]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 60920] accepted by application
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/group/1/1/ [127.0.0.1:61424]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 61424] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61424] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/group/1/1/ [127.0.0.1:61424]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 61424] accepted by application
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 61423]
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 61424]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/group/1/1/ [127.0.0.1:61424]
+DEBUG:daphne.http_protocol:HTTP disconnect for ['127.0.0.1', 61423]
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:daphne.server:Application instance <Task pending name='Task-9' coro=<ASGIStaticFilesHandler.__call__() running at C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py:101> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002DB3F5D79D0>()]>> for connection <WebSocketProtocol client=['127.0.0.1', 61424] path=b'/ws/group/1/1/'> took too long to shut down and was killed.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64381]
+WARNING:django.request:Forbidden: /api/assessments/2/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+WARNING:django.channels.server:[31;1mHTTP GET /api/assessments/2/ 403 [1.33, 127.0.0.1:64381][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 64381]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [2.78, 127.0.0.1:64381][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 64381]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [2.55, 127.0.0.1:64381][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64381]
+WARNING:myLogger:You do not have the necessary rights! (Not a lecturer nor student)
+WARNING:django.request:Forbidden: /api/assessments/2/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+WARNING:django.channels.server:[31;1mHTTP GET /api/assessments/2/ 403 [0.36, 127.0.0.1:64381][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64381]
+ERROR:myLogger:Assessment not Found.
+WARNING:django.request:Not Found: /api/assessments/2/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+WARNING:django.channels.server:[33mHTTP GET /api/assessments/2/ 404 [0.11, 127.0.0.1:64381][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 64381]
+ERROR:django.request:Internal Server Error: /api/assessments/1/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 276, in get_assessment_details
+    if user not in assessment.course.instructors.all():
+AttributeError: 'Course' object has no attribute 'instructors'
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 64381]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 64381]
+ERROR:django.channels.server:[35;1mHTTP GET /api/assessments/1/ 500 [2.10, 127.0.0.1:64381][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 65157]
+ERROR:myLogger:Assessment not Found.
+WARNING:django.request:Not Found: /api/assessments/3/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 65157]
+WARNING:django.channels.server:[33mHTTP GET /api/assessments/3/ 404 [0.11, 127.0.0.1:65157][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 65157]
+WARNING:django.request:Not Found: /api/assessments//
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 65157]
+WARNING:django.channels.server:[33mHTTP GET /api/assessments// 404 [0.17, 127.0.0.1:65157][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 65157]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 65157]
+INFO:django.channels.server:[mHTTP GET /api/assessments/1/ 200 [0.11, 127.0.0.1:65157][0m
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:50772]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50772] to WebSocket
+ERROR:daphne.server:Exception inside application: Error processing token: 'NoneType' object has no attribute '_wrapped'
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 183, in __call__
+    await self.resolve_scope(scope)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 176, in resolve_scope
+    scope["user"]._wrapped = await get_user(scope)
+AttributeError: 'NoneType' object has no attribute '_wrapped'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: 'NoneType' object has no attribute '_wrapped'
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50772]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:50772]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:50854]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 50854] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50854] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:50854]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 50854] accepted by application
+ERROR:myLogger:An error occured while trying to connect:
+ERROR:daphne.server:Exception inside application: Error processing token: Error 11001 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 11001.
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 243, in connect
+    await self.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 650, in _connect
+    reader, writer = await asyncio.open_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 52, in open_connection
+    transport, _ = await loop.create_connection(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 986, in create_connection
+    infos = await self._ensure_resolved(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1365, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 601, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1040, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 1062, in ensure_connection
+    await connection.connect()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 251, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 11001.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error 11001 connecting to redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772. 11001.
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 50854]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:50854]
+INFO:django.channels.server:WebSocket HANDSHAKING /ws/chat/9/ [127.0.0.1:51135]
+DEBUG:daphne.http_protocol:Upgraded connection ['127.0.0.1', 51135] to WebSocket
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51135] open and established
+INFO:django.channels.server:WebSocket CONNECT /ws/chat/9/ [127.0.0.1:51135]
+DEBUG:daphne.ws_protocol:WebSocket ['127.0.0.1', 51135] accepted by application
+ERROR:daphne.server:Exception inside application: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 510, in read_response
+    response = await self._parser.read_response(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\resp2.py", line 90, in _read_response
+    raw = await self._readline()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\_parsers\base.py", line 219, in _readline
+    data = await self._stream.readline()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 540, in readline
+    line = await self.readuntil(sep)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 632, in readuntil
+    await self._wait_for_data('readuntil')
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\streams.py", line 517, in _wait_for_data
+    await self._waiter
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\asyncio\selector_events.py", line 848, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 26, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\sessions.py", line 263, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 116, in __call__
+    return await application(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 57, in await_many_dispatch
+    await task
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\utils.py", line 49, in await_many_dispatch
+    result = task.result()
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 353, in receive
+    message_channel, message = await self.receive_single(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 408, in receive_single
+    content = await self._brpop_with_clean(
+  File "C:\enchird_LMS\venv\lib\site-packages\channels_redis\core.py", line 244, in _brpop_with_clean
+    await connection.eval(cleanup_script, 0, channel, backup_queue)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 606, in execute_command
+    return await conn.retry.call_with_retry(
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 593, in _disconnect_raise
+    raise error
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 580, in _send_command_parse_response
+    return await self.parse_response(conn, command_name, **options)
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\client.py", line 627, in parse_response
+    response = await connection.read_response()
+  File "C:\enchird_LMS\venv\lib\site-packages\redis\asyncio\connection.py", line 524, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\contrib\staticfiles\handlers.py", line 101, in __call__
+    return await self.application(scope, receive, send)
+  File "C:\enchird_LMS\venv\lib\site-packages\channels\routing.py", line 62, in __call__
+    return await application(scope, receive, send)
+  File "C:\enchird_LMS\enchird-school-backend\apis\messaging\middleware.py", line 30, in __call__
+    raise ValueError(f"Error processing token: {str(e)}")
+ValueError: Error processing token: Error while reading from redis-11772.c293.eu-central-1-1.ec2.cloud.redislabs.com:11772 : (10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)
+DEBUG:daphne.ws_protocol:WebSocket closed for ['127.0.0.1', 51135]
+INFO:django.channels.server:WebSocket DISCONNECT /ws/chat/9/ [127.0.0.1:51135]
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 55407]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55407]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55407]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55407]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.47, 127.0.0.1:55407][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 55527]
+INFO:myLogger:List of applicants returned successfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 55527]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 55527]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 55527]
+INFO:django.channels.server:[mHTTP GET /api/applicant/ 200 [0.88, 127.0.0.1:55527][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000

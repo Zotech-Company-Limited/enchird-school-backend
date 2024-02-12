@@ -1488,3 +1488,23 @@ INFO : 2024-02-09 10:40:11,204 : 1 : 204 : User Logged in sucessfully. : login :
 ERROR : 2024-02-09 10:41 : None : 743 : {views} : [create] : (1054, "Unknown column 'link' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\faculty\views.py:views.py:942]
 INFO : 2024-02-09 10:43:35,137 : 1 : 137 : Job Opportunity created successfully! : views : None
 ERROR : 2024-02-10 00:18 : Anonymous : 428 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+ERROR : 2024-02-10 01:15 : Anonymous : 947 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+ERROR : 2024-02-10 01:16 : Anonymous : 450 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+ERROR : 2024-02-10 01:24 : Anonymous : 296 : {views} : [MessageView] : AuthToken matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:477]
+ERROR : 2024-02-10 01:47 : Anonymous : 531 : {views} : [MessageView] : AuthToken matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:477]
+ERROR : 2024-02-10 01:49 : Anonymous : 234 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+INFO : 2024-02-10 08:02:41,344 : 1 : 344 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-10 08:18 : Anonymous : 306 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+ERROR : 2024-02-10 08:19 : Anonymous : 757 : {views} : [MessageView] : Token is expired : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:488]
+INFO : 2024-02-10 08:19:45,337 : 1 : 337 : User Logged in sucessfully. : login : None
+INFO : 2024-02-10 08:24:18,850 : 9 : 850 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-10 08:32 : 1 : 544 : {consumers} : [websocket_connect] : An error occured while trying to connect: : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py:consumers.py:157]
+ERROR : 2024-02-10 08:34 : 1 : 195 : {consumers} : [websocket_connect] : An error occured while trying to connect: : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py:consumers.py:157]
+INFO : 2024-02-10 12:56:32,562 : 9 : 562 : User Logged in sucessfully. : login : None
+INFO : 2024-02-10 12:56:57,796 : 1 : 796 : User Logged in sucessfully. : login : None
+WARNING : 2024-02-10 12:57:27,057 : 1 : 57 : You do not have the necessary rights! (Not a lecturer nor student) : views : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:253]
+ERROR : 2024-02-10 12:57 : 9 : 704 : {views} : [get_assessment_details] : Assessment not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:267]
+ERROR : 2024-02-10 13:04 : 9 : 587 : {views} : [get_assessment_details] : Assessment not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:259]
+ERROR : 2024-02-10 13:26 : 1 : 629 : {consumers} : [websocket_connect] : An error occured while trying to connect: : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\consumers.py:consumers.py:157]
+INFO : 2024-02-12 17:04:30,249 : 1 : 249 : User Logged in sucessfully. : login : None
+INFO : 2024-02-12 17:06:03,235 : 1 : 235 : List of applicants returned successfully. : views : None

@@ -63,7 +63,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'paypal.standard.ipn',
-    
 ]
 
 MIDDLEWARE = [
