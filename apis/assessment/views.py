@@ -348,27 +348,42 @@ def get_assessment_details(request, assessment_id):
     assessment_serializer = AssessmentSerializer(assessment)
     questions = Question.objects.filter(assessment=assessment)
     question_serializer = QuestionSerializer(questions, many=True)
+    structural_question_serializer = TextQuestionSerializer(questions, many=True)
     
-    # Retrieve only questions and choices without correct responses
-    question_data = question_serializer.data
-    for question in question_data:
-        choices = Choice.objects.filter(question=question['id'])
-        choice_serializer = SimplifiedChoiceSerializer(choices, many=True)
-        # question['choices'] = choice_serializer.data
-        decrypted_choices = []
+    
+    if assessment.structure == "mcq":
+        # Retrieve only questions and choices without correct responses
+        question_data = question_serializer.data
+        print("mcq")
+        for question in question_data:
+            choices = Choice.objects.filter(question=question['id'])
+            choice_serializer = SimplifiedChoiceSerializer(choices, many=True)
+            # question['choices'] = choice_serializer.data
+            decrypted_choices = []
 
-        for choice in choice_serializer.data:
-            # Assuming 'text' is the encrypted field, decrypt it
-            decrypted_choice_text = decrypt_string(choice['text'])
-            choice['text'] = decrypted_choice_text
-            decrypted_choices.append(choice)
+            for choice in choice_serializer.data:
+                # Assuming 'text' is the encrypted field, decrypt it
+                decrypted_choice_text = decrypt_string(choice['text'])
+                choice['text'] = decrypted_choice_text
+                decrypted_choices.append(choice)
 
-        question['choices'] = decrypted_choices
+            question['choices'] = decrypted_choices
 
-        # Decrypt question text
-        decrypted_question_text = decrypt_string(question['text'])
-        question['text'] = decrypted_question_text
+            # Decrypt question text
+            decrypted_question_text = decrypt_string(question['text'])
+            question['text'] = decrypted_question_text
+        
+    elif assessment.structure == "text":
+        # Retrieve only questions
+        question_data = structural_question_serializer.data
+        print("structural")
+    
+        for question in question_data:
 
+            # Decrypt question text
+            decrypted_question_text = decrypt_string(question['text'])
+            question['text'] = decrypted_question_text
+        
     # You can customize the structure of the response based on your needs
     response_data = {
         'assessment_details': assessment_serializer.data,

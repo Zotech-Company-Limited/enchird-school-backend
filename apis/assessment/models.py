@@ -28,6 +28,7 @@ class Assessment(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     structure = models.CharField(max_length=20, choices=STRUCTURE_CHOICES, default="mcq")
+    duration = models.CharField(max_length=20, blank=True, null=True)
     assessment_type = models.CharField(max_length=20, choices=ASSESSMENT_TYPE_CHOICES, default="ca")
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     instructor = models.ForeignKey(User, on_delete=models.PROTECT)
@@ -50,6 +51,7 @@ class Question(models.Model):
 
     assessment = models.ForeignKey(Assessment, on_delete=models.CASCADE, related_name='questions')
     text = models.TextField()
+    mark_allocated = models.CharField(max_length=20, null=True, blank=True)
     image = models.ImageField(upload_to='question_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -40591,3 +40591,543 @@ DEBUG:apscheduler.scheduler:Looking for jobs to run
 DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:06:39.563359+01:00 (in 29.968600 seconds)
 INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:39 WAT)" (scheduled at 2024-02-15 12:06:09.563359+01:00)
 INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:07:09.563359+01:00 (in 29.994070 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:07:09 WAT)" (scheduled at 2024-02-15 12:06:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:07:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:07:39.563359+01:00 (in 29.987186 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:07:39 WAT)" (scheduled at 2024-02-15 12:07:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:07:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:08:09.563359+01:00 (in 29.982676 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:08:09 WAT)" (scheduled at 2024-02-15 12:07:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:08:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:08:39.563359+01:00 (in 29.995106 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:08:39 WAT)" (scheduled at 2024-02-15 12:08:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:08:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:09:09.563359+01:00 (in 29.991273 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:09:09 WAT)" (scheduled at 2024-02-15 12:08:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:09:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:09:39.563359+01:00 (in 29.956366 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:09:39 WAT)" (scheduled at 2024-02-15 12:09:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:09:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:10:09.563359+01:00 (in 29.985553 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:10:09 WAT)" (scheduled at 2024-02-15 12:09:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:10:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:10:39.563359+01:00 (in 29.988596 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:10:39 WAT)" (scheduled at 2024-02-15 12:10:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:10:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:11:09.563359+01:00 (in 29.984383 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:11:09 WAT)" (scheduled at 2024-02-15 12:10:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:11:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:11:39.563359+01:00 (in 29.994386 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:11:39 WAT)" (scheduled at 2024-02-15 12:11:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:11:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:12:09.563359+01:00 (in 29.990650 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:12:09 WAT)" (scheduled at 2024-02-15 12:11:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:12:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:12:39.563359+01:00 (in 29.988339 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:12:39 WAT)" (scheduled at 2024-02-15 12:12:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:12:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:13:09.563359+01:00 (in 29.988011 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:13:09 WAT)" (scheduled at 2024-02-15 12:12:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:13:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:13:39.563359+01:00 (in 29.982428 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:13:39 WAT)" (scheduled at 2024-02-15 12:13:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:13:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:14:09.563359+01:00 (in 29.992528 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:14:09 WAT)" (scheduled at 2024-02-15 12:13:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:14:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:14:39.563359+01:00 (in 29.984840 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:14:39 WAT)" (scheduled at 2024-02-15 12:14:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:14:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:15:09.563359+01:00 (in 29.987647 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:15:09 WAT)" (scheduled at 2024-02-15 12:14:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:15:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:15:39.563359+01:00 (in 29.979253 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:15:39 WAT)" (scheduled at 2024-02-15 12:15:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:15:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:16:09.563359+01:00 (in 29.990132 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:16:09 WAT)" (scheduled at 2024-02-15 12:15:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:16:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:16:39.563359+01:00 (in 29.973283 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:16:39 WAT)" (scheduled at 2024-02-15 12:16:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:16:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:17:09.563359+01:00 (in 29.982645 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:17:09 WAT)" (scheduled at 2024-02-15 12:16:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:17:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:17:39.563359+01:00 (in 29.981860 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:17:39 WAT)" (scheduled at 2024-02-15 12:17:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:17:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:18:09.563359+01:00 (in 29.195820 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:18:09 WAT)" (scheduled at 2024-02-15 12:17:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:18:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:18:39.563359+01:00 (in 29.987351 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:18:39 WAT)" (scheduled at 2024-02-15 12:18:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:18:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:19:09.563359+01:00 (in 29.986463 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:19:09 WAT)" (scheduled at 2024-02-15 12:18:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:19:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:19:39.563359+01:00 (in 29.981896 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:19:39 WAT)" (scheduled at 2024-02-15 12:19:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:19:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:20:09.563359+01:00 (in 29.979674 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:20:09 WAT)" (scheduled at 2024-02-15 12:19:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:20:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:20:39.563359+01:00 (in 29.992392 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:20:39 WAT)" (scheduled at 2024-02-15 12:20:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:20:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:21:09.563359+01:00 (in 29.984202 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:21:09 WAT)" (scheduled at 2024-02-15 12:20:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:21:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:21:39.563359+01:00 (in 29.964280 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:21:39 WAT)" (scheduled at 2024-02-15 12:21:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:21:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:22:09.563359+01:00 (in 29.989834 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:22:09 WAT)" (scheduled at 2024-02-15 12:21:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:22:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:22:39.563359+01:00 (in 29.989922 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:22:39 WAT)" (scheduled at 2024-02-15 12:22:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:22:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:23:09.563359+01:00 (in 29.984922 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:23:09 WAT)" (scheduled at 2024-02-15 12:22:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:23:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:23:39.563359+01:00 (in 29.981359 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:23:39 WAT)" (scheduled at 2024-02-15 12:23:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:23:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:24:09.563359+01:00 (in 29.980516 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:24:09 WAT)" (scheduled at 2024-02-15 12:23:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:24:09 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:25:48 WAT)" (scheduled at 2024-02-15 12:25:48.616359+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:26:18.616359+01:00 (in 29.981720 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:26:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:26:48.616359+01:00 (in 29.983413 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:26:48 WAT)" (scheduled at 2024-02-15 12:26:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:26:48 WAT)" executed successfully
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:27:18.616359+01:00 (in 29.981587 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:27:18 WAT)" (scheduled at 2024-02-15 12:26:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:27:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:27:48.616359+01:00 (in 29.984871 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:27:48 WAT)" (scheduled at 2024-02-15 12:27:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:27:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:28:18.616359+01:00 (in 29.995866 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:28:18 WAT)" (scheduled at 2024-02-15 12:27:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:28:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:28:48.616359+01:00 (in 29.995469 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:28:48 WAT)" (scheduled at 2024-02-15 12:28:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:28:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:29:18.616359+01:00 (in 29.987989 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:29:18 WAT)" (scheduled at 2024-02-15 12:28:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:29:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:29:48.616359+01:00 (in 29.857807 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:29:48 WAT)" (scheduled at 2024-02-15 12:29:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:29:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:30:18.616359+01:00 (in 29.985057 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:30:18 WAT)" (scheduled at 2024-02-15 12:29:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:30:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:30:48.616359+01:00 (in 29.965983 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:30:48 WAT)" (scheduled at 2024-02-15 12:30:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:30:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:31:18.616359+01:00 (in 29.993023 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:31:18 WAT)" (scheduled at 2024-02-15 12:30:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:31:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:31:48.616359+01:00 (in 29.953306 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:31:48 WAT)" (scheduled at 2024-02-15 12:31:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:31:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:32:18.616359+01:00 (in 29.973547 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:32:18 WAT)" (scheduled at 2024-02-15 12:31:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:32:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:32:48.616359+01:00 (in 29.977885 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:32:48 WAT)" (scheduled at 2024-02-15 12:32:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:32:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:33:18.616359+01:00 (in 29.975771 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:33:18 WAT)" (scheduled at 2024-02-15 12:32:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:33:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:33:48.616359+01:00 (in 29.990341 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:33:48 WAT)" (scheduled at 2024-02-15 12:33:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:33:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:34:18.616359+01:00 (in 29.995070 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:34:18 WAT)" (scheduled at 2024-02-15 12:33:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:34:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:34:48.616359+01:00 (in 29.991641 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:34:48 WAT)" (scheduled at 2024-02-15 12:34:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:34:48 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:35:18.616359+01:00 (in 29.986927 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:35:18 WAT)" (scheduled at 2024-02-15 12:34:48.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:35:18 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:35:48.616359+01:00 (in 29.975814 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:35:48 WAT)" (scheduled at 2024-02-15 12:35:18.616359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:35:48 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:37:36 WAT)" (scheduled at 2024-02-15 12:37:36.019854+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:38:06.019854+01:00 (in 29.865505 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:38:06 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:38:36.019854+01:00 (in 29.975160 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:38:36 WAT)" (scheduled at 2024-02-15 12:38:06.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:38:36 WAT)" executed successfully
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:39:06.019854+01:00 (in 29.993882 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:39:06 WAT)" (scheduled at 2024-02-15 12:38:36.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:39:06 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:39:36.019854+01:00 (in 29.187670 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:39:36 WAT)" (scheduled at 2024-02-15 12:39:06.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:39:36 WAT)" executed successfully
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 49932]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 49932]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [14.20, 127.0.0.1:49932][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:40:06.019854+01:00 (in 29.993710 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:40:06 WAT)" (scheduled at 2024-02-15 12:39:36.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:40:06 WAT)" executed successfully
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 49932]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 49932]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.52, 127.0.0.1:49932][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:40:36.019854+01:00 (in 29.987323 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:40:36 WAT)" (scheduled at 2024-02-15 12:40:06.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:40:36 WAT)" executed successfully
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 49932]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 49932]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 49932]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [3.56, 127.0.0.1:49932][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:41:06.019854+01:00 (in 29.947957 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:41:06 WAT)" (scheduled at 2024-02-15 12:40:36.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:41:06 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:41:36.019854+01:00 (in 29.991212 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:41:36 WAT)" (scheduled at 2024-02-15 12:41:06.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:41:36 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:42:06.019854+01:00 (in 29.955844 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:42:06 WAT)" (scheduled at 2024-02-15 12:41:36.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:42:06 WAT)" executed successfully
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50107]
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:42:36.019854+01:00 (in 29.974353 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:42:36 WAT)" (scheduled at 2024-02-15 12:42:06.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:42:36 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:43:06.019854+01:00 (in 29.979821 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:43:06 WAT)" (scheduled at 2024-02-15 12:42:36.019854+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:43:06 WAT)" executed successfully
+ERROR:django.request:Internal Server Error: /api/assessments/3/
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'assessments.duration' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py", line 310, in get_assessment_details
+    assessment = Assessment.objects.get(pk=assessment_id)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\enchird_LMS\venv\lib\site-packages\MySQLdb\connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'assessments.duration' in 'field list'")
+DEBUG:daphne.http_protocol:HTTP 500 response started for ['127.0.0.1', 50107]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 50107]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 50107]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50107]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50107]
+ERROR:django.channels.server:[35;1mHTTP GET /api/assessments/3/ 500 [46.85, 127.0.0.1:50107][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:45:13 WAT)" (scheduled at 2024-02-15 12:45:13.017420+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:45:43.017420+01:00 (in 29.981515 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:45:43 WAT)" executed successfully
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50391]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50391]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50391]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50391]
+INFO:django.channels.server:[mHTTP GET /api/assessments/3/ 200 [6.11, 127.0.0.1:50391][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:48:26 WAT)" (scheduled at 2024-02-15 12:48:26.220148+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:48:56.220148+01:00 (in 29.931601 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:48:56 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:49:26.220148+01:00 (in 29.978228 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:49:26 WAT)" (scheduled at 2024-02-15 12:48:56.220148+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:49:26 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:49:56.220148+01:00 (in 29.982105 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:49:56 WAT)" (scheduled at 2024-02-15 12:49:26.220148+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:49:56 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:50:26.220148+01:00 (in 29.992196 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:50:26 WAT)" (scheduled at 2024-02-15 12:49:56.220148+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:50:26 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:52:15 WAT)" (scheduled at 2024-02-15 12:52:15.901364+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:52:45.901364+01:00 (in 29.987929 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:52:45 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50997]
+INFO:django.channels.server:[mHTTP GET /api/assessments/3/ 200 [0.68, 127.0.0.1:50997][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 50997]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 50997]
+INFO:django.channels.server:[mHTTP GET /api/assessments/3/ 200 [0.04, 127.0.0.1:50997][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:53:40 WAT)" (scheduled at 2024-02-15 12:53:40.589539+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:54:10.589539+01:00 (in 29.976421 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:54:10 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:54:40.589539+01:00 (in 29.985878 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:54:40 WAT)" (scheduled at 2024-02-15 12:54:10.589539+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:54:40 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:55:08 WAT)" (scheduled at 2024-02-15 12:55:08.011002+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:55:38.011002+01:00 (in 29.926972 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:55:38 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 51301]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 51301]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 51301]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 51301]
+INFO:django.channels.server:[mHTTP GET /api/assessments/3/ 200 [0.14, 127.0.0.1:51301][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:55:53 WAT)" (scheduled at 2024-02-15 12:55:53.460249+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:56:23.460249+01:00 (in 29.985566 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:56:23 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:56:53.460249+01:00 (in 29.974217 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:56:53 WAT)" (scheduled at 2024-02-15 12:56:23.460249+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:56:53 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:58:07 WAT)" (scheduled at 2024-02-15 12:58:07.406237+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:58:37.406237+01:00 (in 29.938636 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:58:37 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:59:07.406237+01:00 (in 29.978153 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:59:07 WAT)" (scheduled at 2024-02-15 12:58:37.406237+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:59:07 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:59:37.406237+01:00 (in 29.989144 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:59:37 WAT)" (scheduled at 2024-02-15 12:59:07.406237+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:59:37 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 13:00:07.406237+01:00 (in 29.979678 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:00:07 WAT)" (scheduled at 2024-02-15 12:59:37.406237+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:00:07 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 13:00:37.406237+01:00 (in 29.988228 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:00:37 WAT)" (scheduled at 2024-02-15 13:00:07.406237+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:00:37 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\env.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:00:52 WAT)" (scheduled at 2024-02-15 13:00:52.913732+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 13:01:22.913732+01:00 (in 29.996909 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:01:22 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 17, in check_paypal_payments
+    for payment in pending_paypal_payments:
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 296, in get_select
+    sql, params = self.compile(col)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 546, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\expressions.py", line 1141, in as_sql
+    sql = ".".join(map(compiler.quote_name_unless_alias, identifiers))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 537, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
