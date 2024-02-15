@@ -41131,3 +41131,72 @@ Traceback (most recent call last):
   File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
     raise ImproperlyConfigured(
 django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 13:01:52.913732+01:00 (in 29.981474 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:01:52 WAT)" (scheduled at 2024-02-15 13:01:22.913732+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:01:52 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 17, in check_paypal_payments
+    for payment in pending_paypal_payments:
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 296, in get_select
+    sql, params = self.compile(col)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 546, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\expressions.py", line 1141, in as_sql
+    sql = ".".join(map(compiler.quote_name_unless_alias, identifiers))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 537, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 13:02:22.913732+01:00 (in 29.951286 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:02:22 WAT)" (scheduled at 2024-02-15 13:01:52.913732+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 13:02:22 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 17, in check_paypal_payments
+    for payment in pending_paypal_payments:
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 296, in get_select
+    sql, params = self.compile(col)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 546, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\expressions.py", line 1141, in as_sql
+    sql = ".".join(map(compiler.quote_name_unless_alias, identifiers))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 537, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\backends\dummy\base.py", line 20, in complain
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\env.py changed, reloading.
