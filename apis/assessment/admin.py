@@ -1,5 +1,5 @@
+from .models import *
 from django.contrib import admin
-from .models import Assessment, Question, Choice
 
 
 
@@ -22,3 +22,12 @@ class ChoiceAdmin(admin.ModelAdmin):
     list_display = ('question', 'text', 'is_correct')
     search_fields = ('question__text', 'text')
     list_filter = ('question__text', 'is_correct')
+    
+    
+class StudentAssessmentScoreAdmin(admin.ModelAdmin):
+    list_display = ('student', 'assessment', 'score')
+
+admin.site.register(StudentAssessmentScore, StudentAssessmentScoreAdmin)
+    
+    
+    

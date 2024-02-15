@@ -882,4 +882,29 @@ def get_all_students_scores(request, course_id):
         return Response({'error': 'Course not found.'}, status=status.HTTP_404_NOT_FOUND)
 
 
+@api_view(['GET'])
+def list_ca_assessment_results(request, type, *args, **kwargs):
+    user = request.user
+    print(type)
+
+    if not user.is_authenticated:
+        logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})
+        return Response({"error": "You must provide valid authentication credentials."},
+                        status=status.HTTP_401_UNAUTHORIZED)
+
+    try:
+        student = Student.objects.get(user=user, is_deleted=False)
+    except Student.DoesNotExist:
+        logger.error("You are not registered as a student.", extra={'user': user.id})
+        return Response({'error': 'You are not registered as a student'}, status=status.HTTP_403_FORBIDDEN)
+
+    assessment_results = StudentAssessmentScore.objects.filter(student=student.user,
+                                                                assessment__assessment_type=type)
+
+    serializer = StudentStructuralScoreSerializer(assessment_results, many=True)
+
+    logger.info("CA Assessment results returned successfully.", extra={'user': user.id})
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
 

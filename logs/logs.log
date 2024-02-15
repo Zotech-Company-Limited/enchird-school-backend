@@ -1522,3 +1522,14 @@ INFO : 2024-02-15 09:10:22,960 : 2 : 960 : User Logged in sucessfully. : login :
 INFO : 2024-02-15 12:39:30,007 : 2 : 7 : User Logged in sucessfully. : login : None
 INFO : 2024-02-15 12:39:56,961 : 1 : 961 : User Logged in sucessfully. : login : None
 INFO : 2024-02-15 12:40:18,373 : 9 : 373 : User Logged in sucessfully. : login : None
+INFO : 2024-02-15 15:42:23,852 : 2 : 852 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 15:50:55,725 : 2 : 725 : CA Assessment results returned successfully. : views : None
+ERROR : 2024-02-15 15:50 : Anonymous : 733 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:107]
+INFO : 2024-02-15 16:09:51,663 : 2 : 663 : CA Assessment results returned successfully. : views : None
+ERROR : 2024-02-15 16:09 : Anonymous : 703 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:107]
+INFO : 2024-02-15 16:10:27,012 : 2 : 12 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:11:20,256 : 2 : 256 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:11:58,244 : 2 : 244 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:12:55,558 : 2 : 558 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:15:32,030 : 2 : 30 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:15:44,353 : 2 : 353 : CA Assessment results returned successfully. : views : None

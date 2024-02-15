@@ -1,3 +1,4 @@
+import logging
 import binascii
 import cryptography
 from .models import *
@@ -7,6 +8,8 @@ from rest_framework import serializers
 from cryptography.fernet import InvalidToken
 from apis.users.serializers import UserSerializer
 
+
+logger = logging.getLogger("myLogger")
 
 
 class ChoiceSerializer(serializers.ModelSerializer):
@@ -107,6 +110,19 @@ class StudentAssessmentScoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentAssessmentScore 
         fields = ['id', 'score', 'student_first_name', 'student_last_name', 'assessment' ]
+
+
+class StudentStructuralScoreSerializer(serializers.ModelSerializer):
+    student = UserSerializer()#.data['last_name']
+    # student_first_name = serializers.ReadOnlyField(source='student.first_name')
+    # student_last_name = serializers.ReadOnlyField(source='student.last_name')
+    # score = serializers.SerializerMethodField()
+
+
+    class Meta:
+        model = StudentAssessmentScore 
+        fields = ['id', 'score', 'student', 'assessment' ]
+
 
 
 class GradeSystemSerializer(serializers.ModelSerializer):
