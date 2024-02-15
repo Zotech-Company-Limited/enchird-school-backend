@@ -31,7 +31,7 @@ logger = logging.getLogger("myLogger")
 # Create your views here.
 class ApplicantViewSet(viewsets.ModelViewSet):
     
-    queryset = Applicant.objects.all().exclude(Q(status='rejected') | Q(is_deleted=True)).order_by('-created_at')
+    queryset = Applicant.objects.all().exclude(Q(status='accepted') | Q(is_deleted=True)).order_by('-created_at')
     serializer_class = ApplicantSerializer
     pagination_class = PaginationClass
 
@@ -56,7 +56,7 @@ class ApplicantViewSet(viewsets.ModelViewSet):
         gender = request.query_params.get('gender', None) 
         
         
-        queryset = Applicant.objects.exclude(Q(status='rejected') | Q(is_deleted=True))
+        queryset = Applicant.objects.exclude(Q(status='accepted') | Q(is_deleted=True))
         
         if order:
             queryset = queryset.order_by('-created_at') if order == 'desc' else queryset.order_by('created_at')

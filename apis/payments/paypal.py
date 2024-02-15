@@ -81,16 +81,24 @@ def create_paypal_order(user, client_id, client_secret, amount, return_url, canc
 
     return response
 
-    # if response.status_code == 201:
-    #     # Parse the JSON response to extract the order ID
-    #     order_id = response.json().get('id')
-    #     # return order_id
-    #     print(response.json())
-    #     return response.json()
-    # else:
-    #     # Print the error details if the request fails
-    #     print(f"Failed to create order. Status code: {response.status_code}")
-    #     print(response.text)
-    #     return None
+
+def check_paypal_order(client_id, client_secret, txn_id):
+    # PayPal API credentials
+    auth = HTTPBasicAuth(client_id, client_secret)
+
+    # PayPal Orders API endpoint
+    orders_url = settings.CHECK_ORDER_URL+"/"+txn_id
+
+    print(orders_url)
+
+    # Make the request to create the order
+    response = requests.post(orders_url, auth=auth, headers={'Content-Type': 'application/json'})
+    print(response)
+    # response_data = response.json()
+    # print(response_data)
     
+
+    return response
+
+
     

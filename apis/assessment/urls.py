@@ -12,13 +12,14 @@ router.register(r'admin/grade-system', GradeSystemViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('create_assessment/', create_assessment, name='create_assessment'),
-    path('assessments/<int:assessment_id>/', get_assessment_details, name='get_assessment'),
-    path('courses/<int:course_id>/student/grades', calculate_student_grade, name='student-course-grade'),
-    path('courses/<int:course_id>/grades', get_all_students_scores, name='get-all-students-course-grade'),
-    path('assessments/<int:assessment_id>/add_question/', create_question_with_choices, name='add_question'),
-    path('assessment-results/<int:assessment_id>/', get_assessment_results, name='get_assessment_results'),
+    path('assessments/<int:assessment_id>/add_text_question/', create_structural_question, name='add_structural_question'),
+    path('assessments/<int:assessment_id>/add_mcq_question/', create_question_with_choices, name='add_mcq_question'),
     path('assessments/<int:assessment_id>/submit/', submit_assessment_responses, name='submit_assessment_responses'),
+    path('assessment-results/<int:assessment_id>/', get_assessment_results, name='get_assessment_results'),
+    path('courses/<int:course_id>/grades', get_all_students_scores, name='get-all-students-course-grade'),
+    path('courses/<int:course_id>/student/grades', calculate_student_grade, name='student-course-grade'),
+    path('assessments/<int:assessment_id>/', get_assessment_details, name='get_assessment'),
+    path('create_assessment/', create_assessment, name='create_assessment'),
     path('list-assessments/', list_assessments, name='list-assessments'),
 
 ]

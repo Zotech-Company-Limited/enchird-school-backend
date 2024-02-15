@@ -1,3 +1,4 @@
+APScheduler==3.10.4
 asgiref==3.7.2
 async-timeout==4.0.3
 attrs==23.2.0
@@ -50,6 +51,7 @@ twisted-iocpsupport==1.0.4
 txaio==23.1.1
 typing_extensions==4.8.0
 tzdata==2023.3
+tzlocal==5.2
 urllib3==2.1.0
 websocket-client==1.7.0
 zope.interface==6.1

@@ -38787,3 +38787,1807 @@ INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\students
 INFO:daphne.server:HTTP/2 support enabled
 INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
 INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 53238]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53238]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/1/9a4abea704794658383a6dd27156a08271089967bd0ccf704a485f6445663142/ 200 [0.34, 127.0.0.1:53238][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 53238]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53238]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/04e5f21100c5352961fcede032cc4796c1b6ce5fb09e916d62112e2beb6d09bd/ 200 [0.18, 127.0.0.1:53238][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 53238]
+ERROR:myLogger:AuthToken matching query does not exist.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 53238]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 53238]
+INFO:django.channels.server:[mHTTP GET /api/chat-messaging/9/8592860f58a3e225993d66f41dc49d38744a6fe77539c64d2fd4373fcbb9d46a/ 200 [0.06, 127.0.0.1:53238][0m
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57277]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57277]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [5.92, 127.0.0.1:57277][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57277]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57277]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [2.27, 127.0.0.1:57277][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57277]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57277]
+INFO:django.channels.server:[mHTTP GET /api/list-assessments/ 200 [0.80, 127.0.0.1:57277][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\models.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57597]
+WARNING:django.request:Forbidden: /api/create_assessment/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 57597]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57597]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57597]
+WARNING:django.channels.server:[31;1mHTTP POST /api/create_assessment/ 403 [0.25, 127.0.0.1:57597][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57597]
+WARNING:django.request:Bad Request: /api/create_assessment/
+DEBUG:daphne.http_protocol:HTTP 400 response started for ['127.0.0.1', 57597]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57597]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57597]
+WARNING:django.channels.server:[31;1mHTTP POST /api/create_assessment/ 400 [0.45, 127.0.0.1:57597][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57623]
+INFO:django.channels.server:[mHTTP POST /api/create_assessment/ 201 [0.70, 127.0.0.1:57623][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57623]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57623]
+INFO:django.channels.server:[mHTTP POST /api/create_assessment/ 201 [0.13, 127.0.0.1:57623][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57650]
+WARNING:django.request:Forbidden: /api/assessments/3/add_question/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 57650]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57650]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57650]
+WARNING:django.channels.server:[31;1mHTTP POST /api/assessments/3/add_question/ 403 [0.20, 127.0.0.1:57650][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57650]
+ERROR:myLogger:This assess.
+WARNING:django.request:Not Found: /api/assessments/3/add_question/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 57650]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57650]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57650]
+WARNING:django.channels.server:[33mHTTP POST /api/assessments/3/add_question/ 404 [0.11, 127.0.0.1:57650][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 57752]
+ERROR:myLogger:This assess.
+WARNING:django.request:Not Found: /api/assessments/3/add_question/
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 57752]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 57752]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 57752]
+WARNING:django.channels.server:[33mHTTP POST /api/assessments/3/add_question/ 404 [0.16, 127.0.0.1:57752][0m
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\assessment\urls.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 58465]
+INFO:myLogger:Question added to assessment successfully.
+DEBUG:daphne.http_protocol:HTTP 201 response started for ['127.0.0.1', 58465]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 58465]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 58465]
+INFO:django.channels.server:[mHTTP POST /api/assessments/3/add_text_question/ 201 [0.94, 127.0.0.1:58465][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59511]
+INFO:django.channels.server:[mHTTP GET /admin/ 200 [2.41, 127.0.0.1:59511][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59512]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.04, 127.0.0.1:59512][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59520]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/responsive.css 304 [0.04, 127.0.0.1:59520][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59518]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/base.css 304 [0.04, 127.0.0.1:59518][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/dark_mode.css 304 [0.04, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/theme.js 304 [0.22, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59511]
+INFO:django.channels.server:[mHTTP GET /static/admin/css/dashboard.css 200 [0.39, 127.0.0.1:59511][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.01, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.09, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/img/icon-deletelink.svg 304 [0.02, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59511]
+INFO:django.channels.server:[36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.03, 127.0.0.1:59511][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:daphne.http_protocol:HTTP 404 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+WARNING:django.channels.server:[33mHTTP GET /favicon.ico 404 [0.96, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[mHTTP GET /admin/assessment/assessment/ 200 [1.04, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/base.css 304 [0.08, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/changelists.css 304 [0.07, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59511]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/dark_mode.css 304 [0.08, 127.0.0.1:59511][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59512]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.08, 127.0.0.1:59512][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59520]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/jquery.init.js 304 [0.07, 127.0.0.1:59520][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/responsive.css 304 [0.06, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59520]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.06, 127.0.0.1:59520][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59512]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59512]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/actions.js 304 [0.12, 127.0.0.1:59512][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/core.js 304 [0.13, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59511]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59511]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.10, 127.0.0.1:59511][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/urlify.js 304 [0.09, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59520]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59520]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/prepopulate.js 304 [0.06, 127.0.0.1:59520][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.06, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59518]
+INFO:django.channels.server:[mHTTP GET /admin/jsi18n/ 200 [0.36, 127.0.0.1:59518][0m
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response chunk for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[mHTTP GET /static/admin/img/search.svg 200 [0.13, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59519]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59519]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.09, 127.0.0.1:59519][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59521]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59521]
+INFO:django.channels.server:[36mHTTP GET /static/admin/img/tooltag-add.svg 304 [0.04, 127.0.0.1:59521][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59518]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59518]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/filters.js 304 [0.09, 127.0.0.1:59518][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59585]
+INFO:django.channels.server:[mHTTP GET /admin/assessment/question/ 200 [0.19, 127.0.0.1:59585][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59585]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/base.css 304 [0.04, 127.0.0.1:59585][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59586]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/dark_mode.css 304 [0.04, 127.0.0.1:59586][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59589]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/changelists.css 304 [0.07, 127.0.0.1:59589][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59590]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.08, 127.0.0.1:59590][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59591]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.09, 127.0.0.1:59591][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59586]
+INFO:django.channels.server:[36mHTTP GET /static/admin/css/responsive.css 304 [0.05, 127.0.0.1:59586][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59585]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/jquery.init.js 304 [0.05, 127.0.0.1:59585][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59589]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/core.js 304 [0.07, 127.0.0.1:59589][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59590]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59590]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.06, 127.0.0.1:59590][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59591]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59591]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/actions.js 304 [0.07, 127.0.0.1:59591][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59586]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59586]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/urlify.js 304 [0.08, 127.0.0.1:59586][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59585]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59585]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/prepopulate.js 304 [0.08, 127.0.0.1:59585][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59589]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.07, 127.0.0.1:59589][0m
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59588]
+INFO:django.channels.server:[mHTTP GET /admin/jsi18n/ 200 [0.31, 127.0.0.1:59588][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59588]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59588]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/theme.js 304 [0.02, 127.0.0.1:59588][0m
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59589]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.02, 127.0.0.1:59589][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP 304 response started for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59589]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59589]
+INFO:django.channels.server:[36mHTTP GET /static/admin/js/filters.js 304 [0.02, 127.0.0.1:59589][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 59802]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59802]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59802]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59802]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:59802][0m
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 59802]
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59802]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59802]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59802]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [1.66, 127.0.0.1:59802][0m
+DEBUG:daphne.http_protocol:HTTP b'GET' request for ['127.0.0.1', 59862]
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 59862]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 59862]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 59862]
+INFO:django.channels.server:[mHTTP GET /api/assessments/3/ 200 [0.26, 127.0.0.1:59862][0m
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\courses\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\updater.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\updater.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\updater.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:48:42 WAT)" (scheduled at 2024-02-15 08:48:42.217824+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:49:12.217824+01:00 (in 29.980430 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:49:12 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 20, in check_paypal_payments
+    print(user)
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:49:42.217824+01:00 (in 29.977863 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:49:42 WAT)" (scheduled at 2024-02-15 08:49:12.217824+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:49:42 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 20, in check_paypal_payments
+    print(user)
+NameError: name 'user' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:50:01 WAT)" (scheduled at 2024-02-15 08:50:01.493659+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:50:31.493659+01:00 (in 29.996902 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:50:31 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:51:01.493659+01:00 (in 29.990036 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:51:01 WAT)" (scheduled at 2024-02-15 08:50:31.493659+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:51:01 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:51:31.493659+01:00 (in 29.965255 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:51:31 WAT)" (scheduled at 2024-02-15 08:51:01.493659+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:51:31 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:52:39 WAT)" (scheduled at 2024-02-15 08:52:39.484890+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:53:09.484890+01:00 (in 29.977502 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:53:09 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:53:39.484890+01:00 (in 29.975092 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:53:39 WAT)" (scheduled at 2024-02-15 08:53:09.484890+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:53:39 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:54:09.484890+01:00 (in 29.990017 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:54:09 WAT)" (scheduled at 2024-02-15 08:53:39.484890+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:54:09 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\env.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\enchird_backend\env.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:55:40 WAT)" (scheduled at 2024-02-15 08:55:40.415496+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:56:10.415496+01:00 (in 29.980062 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:56:10 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:56:40.415496+01:00 (in 29.992110 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:56:40 WAT)" (scheduled at 2024-02-15 08:56:10.415496+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:56:40 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:56:57 WAT)" (scheduled at 2024-02-15 08:56:57.846572+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 08:57:27.846572+01:00 (in 29.984500 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:57:27 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 25, in check_paypal_payments
+    if user.restaurant is not None:
+NameError: name 'user' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 08:59:57 WAT)" (scheduled at 2024-02-15 08:59:57.432599+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:00:27.432599+01:00 (in 29.975968 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:00:27 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 21, in check_paypal_payments
+    resp = check_paypal_order()
+TypeError: check_paypal_order() missing 3 required positional arguments: 'client_id', 'client_secret', and 'txn_id'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:01:03 WAT)" (scheduled at 2024-02-15 09:01:03.576715+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:01:33.576715+01:00 (in 29.977812 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:01:33 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order()
+TypeError: check_paypal_order() missing 3 required positional arguments: 'client_id', 'client_secret', and 'txn_id'
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:02:03.576715+01:00 (in 29.979733 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:02:03 WAT)" (scheduled at 2024-02-15 09:01:33.576715+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:02:03 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order()
+TypeError: check_paypal_order() missing 3 required positional arguments: 'client_id', 'client_secret', and 'txn_id'
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:02:33.576715+01:00 (in 29.930833 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:02:33 WAT)" (scheduled at 2024-02-15 09:02:03.576715+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:02:33 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order()
+TypeError: check_paypal_order() missing 3 required positional arguments: 'client_id', 'client_secret', and 'txn_id'
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:02:57 WAT)" (scheduled at 2024-02-15 09:02:57.626765+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:03:27.626765+01:00 (in 29.986817 seconds)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:03:27 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+NameError: name 'amount' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:03:57.626765+01:00 (in 29.982660 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:03:57 WAT)" (scheduled at 2024-02-15 09:03:27.626765+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:03:57 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+NameError: name 'amount' is not defined
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:04:27.626765+01:00 (in 29.986407 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:04:27 WAT)" (scheduled at 2024-02-15 09:03:57.626765+01:00)
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:04:27 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+NameError: name 'amount' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:04:51 WAT)" (scheduled at 2024-02-15 09:04:51.979833+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:05:21.979833+01:00 (in 29.974644 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:05:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:05:51.979833+01:00 (in 29.972674 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:05:51 WAT)" (scheduled at 2024-02-15 09:05:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:05:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:06:21.979833+01:00 (in 29.961417 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:06:21 WAT)" (scheduled at 2024-02-15 09:05:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:06:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:06:51.979833+01:00 (in 29.977494 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:06:51 WAT)" (scheduled at 2024-02-15 09:06:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:06:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:07:21.979833+01:00 (in 29.967229 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:07:21 WAT)" (scheduled at 2024-02-15 09:06:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:07:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:07:51.979833+01:00 (in 29.983336 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:07:51 WAT)" (scheduled at 2024-02-15 09:07:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:07:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:08:21.979833+01:00 (in 29.982811 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:08:21 WAT)" (scheduled at 2024-02-15 09:07:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:08:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:08:51.979833+01:00 (in 29.997428 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:08:51 WAT)" (scheduled at 2024-02-15 09:08:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:08:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:09:21.979833+01:00 (in 29.989979 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:09:21 WAT)" (scheduled at 2024-02-15 09:08:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:09:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:09:51.979833+01:00 (in 29.988356 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:09:51 WAT)" (scheduled at 2024-02-15 09:09:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 62818]
+WARNING:django.request:Forbidden: /api/paypal-checkout/
+DEBUG:daphne.http_protocol:HTTP 403 response started for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62818]
+WARNING:django.channels.server:[31;1mHTTP POST /api/paypal-checkout/ 403 [0.43, 127.0.0.1:62818][0m
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:09:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:10:21.979833+01:00 (in 29.963637 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:10:21 WAT)" (scheduled at 2024-02-15 09:09:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:10:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 62818]
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:10:51.979833+01:00 (in 29.974364 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:10:51 WAT)" (scheduled at 2024-02-15 09:10:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+INFO:myLogger:User Logged in sucessfully.
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62818]
+INFO:django.channels.server:[mHTTP POST /api/auth/login/ 200 [4.46, 127.0.0.1:62818][0m
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:10:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:11:21.979833+01:00 (in 29.984512 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:11:21 WAT)" (scheduled at 2024-02-15 09:10:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:11:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 62818]
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:11:51.979833+01:00 (in 29.979707 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:11:51 WAT)" (scheduled at 2024-02-15 09:11:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+INFO:stripe:message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+DEBUG:stripe:api_version=2023-10-16 message='Post details' post_data=line_items[0][price_data][currency]=xaf&line_items[0][price_data][unit_amount]=40000&line_items[0][price_data][product_data][name]=Tyron+Mbiachare+-+Enchird+Fee+Payment&line_items[0][quantity]=1&mode=payment&success_url=https%3A%2F%2Fenchird.biz%2Fapi%2Fmessaging%2F&cancel_url=https%3A%2F%2Fenchird.biz%2Fapi%2Fmessaging%2F&customer_email=tyron.mbiachare1%40ubuea.cm
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.stripe.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:11:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:https://api.stripe.com:443 "POST /v1/checkout/sessions HTTP/1.1" 200 2516
+INFO:stripe:message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+DEBUG:stripe:body='{\n  "id": "cs_test_a1szyOKTenS730BxxH33C5E07TtCZKuCl4C6kn5Vs2Zgdwb0UnOFJnXk1D",\n  "object": "checkout.session",\n  "after_expiration": null,\n  "allow_promotion_codes": null,\n  "amount_subtotal": 40000,\n  "amount_total": 40000,\n  "automatic_tax": {\n    "enabled": false,\n    "liability": null,\n    "status": null\n  },\n  "billing_address_collection": null,\n  "cancel_url": "https://enchird.biz/api/messaging/",\n  "client_reference_id": null,\n  "client_secret": null,\n  "consent": null,\n  "consent_collection": null,\n  "created": 1707984713,\n  "currency": "xaf",\n  "currency_conversion": null,\n  "custom_fields": [],\n  "custom_text": {\n    "after_submit": null,\n    "shipping_address": null,\n    "submit": null,\n    "terms_of_service_acceptance": null\n  },\n  "customer": null,\n  "customer_creation": "if_required",\n  "customer_details": {\n    "address": null,\n    "email": "tyron.mbiachare1@ubuea.cm",\n    "name": null,\n    "phone": null,\n    "tax_exempt": "none",\n    "tax_ids": null\n  },\n  "customer_email": "tyron.mbiachare1@ubuea.cm",\n  "expires_at": 1708071113,\n  "invoice": null,\n  "invoice_creation": {\n    "enabled": false,\n    "invoice_data": {\n      "account_tax_ids": null,\n      "custom_fields": null,\n      "description": null,\n      "footer": null,\n      "issuer": null,\n      "metadata": {},\n      "rendering_options": null\n    }\n  },\n  "livemode": false,\n  "locale": null,\n  "metadata": {},\n  "mode": "payment",\n  "payment_intent": null,\n  "payment_link": null,\n  "payment_method_collection": "if_required",\n  "payment_method_configuration_details": null,\n  "payment_method_options": {},\n  "payment_method_types": [\n    "card"\n  ],\n  "payment_status": "unpaid",\n  "phone_number_collection": {\n    "enabled": false\n  },\n  "recovered_from": null,\n  "setup_intent": null,\n  "shipping_address_collection": null,\n  "shipping_cost": null,\n  "shipping_details": null,\n  "shipping_options": [],\n  "status": "open",\n  "submit_type": null,\n  "subscription": null,\n  "success_url": "https://enchird.biz/api/messaging/",\n  "total_details": {\n    "amount_discount": 0,\n    "amount_shipping": 0,\n    "amount_tax": 0\n  },\n  "ui_mode": "hosted",\n  "url": "https://checkout.stripe.com/c/pay/cs_test_a1szyOKTenS730BxxH33C5E07TtCZKuCl4C6kn5Vs2Zgdwb0UnOFJnXk1D#fidkdWxOYHwnPyd1blpxYHZxWjA0SmJdYHVGdUJCbGFBdHdwMGtof3RhVnR3a0hwXGtwNGdhXTFvfEJPcTNOMzdISFNDaHVMMV9UaH9NPGd%2FNz00SW5mTHFDVTY8fEoyY2xPYDRMblRHcEFyNTVvSXBmaUtKYicpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"\n}' message='API response body'
+DEBUG:stripe:link=https://dashboard.stripe.com/test/logs/req_ki4lLl55xKwMZh message='Dashboard link for request'
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62818]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62818]
+INFO:django.channels.server:[mHTTP POST /api/stripe-checkout/ 200 [10.65, 127.0.0.1:62818][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:12:21.979833+01:00 (in 29.989401 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:12:21 WAT)" (scheduled at 2024-02-15 09:11:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:12:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:12:51.979833+01:00 (in 29.982946 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:12:51 WAT)" (scheduled at 2024-02-15 09:12:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:12:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:13:21.979833+01:00 (in 29.988404 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:13:21 WAT)" (scheduled at 2024-02-15 09:12:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:13:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:13:51.979833+01:00 (in 29.983785 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:13:51 WAT)" (scheduled at 2024-02-15 09:13:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:daphne.http_protocol:HTTP b'POST' request for ['127.0.0.1', 62906]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:13:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders HTTP/1.1" 201 501
+DEBUG:daphne.http_protocol:HTTP 200 response started for ['127.0.0.1', 62906]
+DEBUG:daphne.http_protocol:HTTP close for ['127.0.0.1', 62906]
+DEBUG:daphne.http_protocol:HTTP response complete for ['127.0.0.1', 62906]
+INFO:django.channels.server:[mHTTP POST /api/paypal-checkout/ 200 [16.82, 127.0.0.1:62906][0m
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:14:21.979833+01:00 (in 29.982927 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:14:21 WAT)" (scheduled at 2024-02-15 09:13:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:14:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:14:51.979833+01:00 (in 29.982142 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:14:51 WAT)" (scheduled at 2024-02-15 09:14:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:14:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:15:21.979833+01:00 (in 29.986879 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:15:21 WAT)" (scheduled at 2024-02-15 09:14:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:15:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:15:51.979833+01:00 (in 29.978618 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:15:51 WAT)" (scheduled at 2024-02-15 09:15:21.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:15:51 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:16:21.979833+01:00 (in 29.987696 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:16:21 WAT)" (scheduled at 2024-02-15 09:15:51.979833+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:16:21 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:16:50 WAT)" (scheduled at 2024-02-15 09:16:50.658211+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:17:20.658211+01:00 (in 29.991184 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:17:20 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:17:50.658211+01:00 (in 29.986157 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:17:50 WAT)" (scheduled at 2024-02-15 09:17:20.658211+01:00)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py changed, reloading.
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:17:50 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 24, in check_paypal_payments
+    resp = check_paypal_order(client_id=client_id, client_secret=client_secret, txn_id=txn_id)
+  File "C:\enchird_LMS\enchird-school-backend\apis\payments\paypal.py", line 97, in check_paypal_order
+    # response_data = response.json()
+  File "C:\enchird_LMS\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:18:10 WAT)" (scheduled at 2024-02-15 09:18:10.121378+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:18:40.121378+01:00 (in 29.957725 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+WARNING:apscheduler.scheduler:Execution of job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:18:40 WAT)" skipped: maximum number of running instances reached (1)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:19:10.121378+01:00 (in 29.961699 seconds)
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/4C595933T4552173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/6PT02931UF243772S HTTP/1.1" 404 0
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:19:10 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:20:38 WAT)" (scheduled at 2024-02-15 09:20:38.272555+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:21:08.272555+01:00 (in 29.990023 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/4C595933T4552173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+WARNING:apscheduler.scheduler:Execution of job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:21:08 WAT)" skipped: maximum number of running instances reached (1)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:21:38.272555+01:00 (in 29.983427 seconds)
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/6PT02931UF243772S HTTP/1.1" 404 0
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:21:38 WAT)" executed successfully
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:21:59 WAT)" (scheduled at 2024-02-15 09:21:59.622901+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:22:29.622901+01:00 (in 29.986128 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+ERROR:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:22:29 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\enchird_LMS\enchird-school-backend\jobs\jobs.py", line 26, in check_paypal_payments
+    print(response.status_code)
+NameError: name 'resp' is not defined
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+INFO:django.utils.autoreload:C:\enchird_LMS\enchird-school-backend\jobs\jobs.py changed, reloading.
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:23:54 WAT)" (scheduled at 2024-02-15 09:23:54.149547+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:24:24.149547+01:00 (in 29.994652 seconds)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/38X926043G417173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/4C595933T4552173K HTTP/1.1" 404 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-m.sandbox.paypal.com:443
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+WARNING:apscheduler.scheduler:Execution of job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:24:24 WAT)" skipped: maximum number of running instances reached (1)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:24:54.149547+01:00 (in 29.989605 seconds)
+DEBUG:urllib3.connectionpool:https://api-m.sandbox.paypal.com:443 "POST /v2/checkout/orders/6PT02931UF243772S HTTP/1.1" 404 0
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:24:54 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:25:24.149547+01:00 (in 29.984137 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:25:24 WAT)" (scheduled at 2024-02-15 09:24:54.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:25:24 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:25:54.149547+01:00 (in 29.972990 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:25:54 WAT)" (scheduled at 2024-02-15 09:25:24.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:25:54 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:26:24.149547+01:00 (in 29.930605 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:26:24 WAT)" (scheduled at 2024-02-15 09:25:54.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:26:24 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:26:54.149547+01:00 (in 29.978321 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:26:54 WAT)" (scheduled at 2024-02-15 09:26:24.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:26:54 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:27:24.149547+01:00 (in 29.987765 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:27:24 WAT)" (scheduled at 2024-02-15 09:26:54.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:27:24 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 09:27:54.149547+01:00 (in 29.986429 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:27:54 WAT)" (scheduled at 2024-02-15 09:27:24.149547+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 09:27:54 WAT)" executed successfully
+INFO:daphne.server:HTTP/2 support enabled
+INFO:daphne.server:Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO:daphne.server:Listening on TCP address 127.0.0.1:8000
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:49:39 WAT)" (scheduled at 2024-02-15 11:49:39.563359+01:00)
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:50:09.563359+01:00 (in 29.979683 seconds)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:50:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:50:39.563359+01:00 (in 29.984051 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:50:39 WAT)" (scheduled at 2024-02-15 11:50:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:50:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:51:09.563359+01:00 (in 29.990770 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:51:09 WAT)" (scheduled at 2024-02-15 11:50:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:51:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:51:39.563359+01:00 (in 29.984955 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:51:39 WAT)" (scheduled at 2024-02-15 11:51:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:51:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:52:09.563359+01:00 (in 29.972736 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:52:09 WAT)" (scheduled at 2024-02-15 11:51:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:52:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:52:39.563359+01:00 (in 29.979547 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:52:39 WAT)" (scheduled at 2024-02-15 11:52:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:52:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:53:09.563359+01:00 (in 29.992521 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:53:09 WAT)" (scheduled at 2024-02-15 11:52:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:53:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:53:39.563359+01:00 (in 29.963632 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:53:39 WAT)" (scheduled at 2024-02-15 11:53:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:53:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:54:09.563359+01:00 (in 29.969394 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:54:09 WAT)" (scheduled at 2024-02-15 11:53:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:54:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:54:39.563359+01:00 (in 29.972768 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:54:39 WAT)" (scheduled at 2024-02-15 11:54:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:54:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:55:09.563359+01:00 (in 29.991729 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:55:09 WAT)" (scheduled at 2024-02-15 11:54:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:55:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:55:39.563359+01:00 (in 29.980972 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:55:39 WAT)" (scheduled at 2024-02-15 11:55:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:55:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:56:09.563359+01:00 (in 29.979886 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:56:09 WAT)" (scheduled at 2024-02-15 11:55:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:56:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:56:39.563359+01:00 (in 29.988126 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:56:39 WAT)" (scheduled at 2024-02-15 11:56:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:56:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:57:09.563359+01:00 (in 29.980174 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:57:09 WAT)" (scheduled at 2024-02-15 11:56:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:57:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:57:39.563359+01:00 (in 29.992300 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:57:39 WAT)" (scheduled at 2024-02-15 11:57:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:57:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:58:09.563359+01:00 (in 29.979572 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:58:09 WAT)" (scheduled at 2024-02-15 11:57:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:58:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:58:39.563359+01:00 (in 29.988810 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:58:39 WAT)" (scheduled at 2024-02-15 11:58:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:58:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:59:09.563359+01:00 (in 29.989283 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:59:09 WAT)" (scheduled at 2024-02-15 11:58:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:59:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 11:59:39.563359+01:00 (in 29.994331 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:59:39 WAT)" (scheduled at 2024-02-15 11:59:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 11:59:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:00:09.563359+01:00 (in 29.993491 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:00:09 WAT)" (scheduled at 2024-02-15 11:59:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:00:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:00:39.563359+01:00 (in 29.983421 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:00:39 WAT)" (scheduled at 2024-02-15 12:00:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:00:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:01:09.563359+01:00 (in 29.984586 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:01:09 WAT)" (scheduled at 2024-02-15 12:00:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:01:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:01:39.563359+01:00 (in 29.911260 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:01:39 WAT)" (scheduled at 2024-02-15 12:01:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:01:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:02:09.563359+01:00 (in 29.985513 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:02:09 WAT)" (scheduled at 2024-02-15 12:01:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:02:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:02:39.563359+01:00 (in 29.976108 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:02:39 WAT)" (scheduled at 2024-02-15 12:02:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:02:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:03:09.563359+01:00 (in 29.973595 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:03:09 WAT)" (scheduled at 2024-02-15 12:02:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:03:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:03:39.563359+01:00 (in 29.983893 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:03:39 WAT)" (scheduled at 2024-02-15 12:03:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:03:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:04:09.563359+01:00 (in 29.970003 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:04:09 WAT)" (scheduled at 2024-02-15 12:03:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:04:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:04:39.563359+01:00 (in 29.982148 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:04:39 WAT)" (scheduled at 2024-02-15 12:04:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:04:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:05:09.563359+01:00 (in 29.915883 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:05:09 WAT)" (scheduled at 2024-02-15 12:04:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:05:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:05:39.563359+01:00 (in 29.982709 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:05:39 WAT)" (scheduled at 2024-02-15 12:05:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:05:39 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:06:09.563359+01:00 (in 29.985729 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:09 WAT)" (scheduled at 2024-02-15 12:05:39.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:09 WAT)" executed successfully
+DEBUG:apscheduler.scheduler:Looking for jobs to run
+DEBUG:apscheduler.scheduler:Next wakeup is due at 2024-02-15 12:06:39.563359+01:00 (in 29.968600 seconds)
+INFO:apscheduler.executors.default:Running job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:39 WAT)" (scheduled at 2024-02-15 12:06:09.563359+01:00)
+INFO:apscheduler.executors.default:Job "check_paypal_payments (trigger: interval[0:00:30], next run at: 2024-02-15 12:06:39 WAT)" executed successfully

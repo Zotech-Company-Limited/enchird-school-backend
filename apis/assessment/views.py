@@ -123,10 +123,15 @@ def create_question_with_choices(request, assessment_id):
         return Response(  {"error": "Only teachers can add questions."}, status.HTTP_403_FORBIDDEN )
 
     try:
+        print(assessment_id)
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
         logger.error("Assessment Not Found.", extra={'user': user.id})
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if assessment.structure != "mcq":
+        logger.error("This assessment is not an mcq assessment.", extra={'user': user.id})
+        return Response({'error': 'This assessment is not an mcq assessment'}, status=status.HTTP_404_NOT_FOUND)
 
     if 'file' in request.data:
         try:
@@ -229,6 +234,54 @@ def create_question_with_choices(request, assessment_id):
             return Response(
                 {"error": str(e)},
                 status=status.HTTP_412_PRECONDITION_FAILED)
+
+
+@api_view(['POST'])
+def create_structural_question(request, assessment_id):
+    user = request.user
+    if not user.is_authenticated:
+        logger.error( "You do not have the necessary rights.", extra={'user': 'Anonymous'} )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    if user.is_a_teacher is False:
+        logger.error("Only teachers can add questions.", extra={'user': user.id})
+        return Response(  {"error": "Only teachers can add questions."}, status.HTTP_403_FORBIDDEN )
+
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error("Assessment Not Found.", extra={'user': user.id})
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if assessment.structure != "text":
+        logger.error("This assessment is not a structural assessment.", extra={'user': user.id})
+        return Response({'error': 'This assessment is not a structural assessment'}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        with transaction.atomic():
+            question_serializer = TextQuestionSerializer(data=request.data)
+            if question_serializer.is_valid(raise_exception=True):
+                
+                question_data = question_serializer.validated_data['text']
+                
+                # Encrypt question text
+                encrypted_question_text = encrypt_string(question_data)
+            
+                # Save the question first
+                question = question_serializer.save(assessment=assessment, text=encrypted_question_text)
+
+                logger.info("Question added to assessment successfully.", extra={'user': user.id})
+                return Response({'message': 'Question added to assessment successfully'}, status=status.HTTP_201_CREATED)
+
+            logger.error(str(question_serializer.errors), extra={'user': user.id})
+            return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+    except Exception as e:
+        # Rollback transaction and raise validation error
+        transaction.rollback()
+        logger.error( str(e), extra={ 'user': None } )
+        return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
+
 
 
 @api_view(['GET'])

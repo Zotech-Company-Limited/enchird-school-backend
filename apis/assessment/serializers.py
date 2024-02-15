@@ -36,12 +36,27 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = ['id', 'assessment', 'text', 'image', 'created_at', 'choices']
 
 
+class TextQuestionSerializer(serializers.ModelSerializer):
+    assessment = serializers.PrimaryKeyRelatedField(
+        #queryset=Assessment.objects.all(), #.filter(is_deleted=False),
+        allow_null=True,
+        allow_empty=True,
+        required=False,
+        read_only=True
+    )
+
+    class Meta:
+        model = Question
+        fields = ['id', 'assessment', 'text', 'image', 'created_at']
+
+
+
 class AssessmentSerializer(serializers.ModelSerializer):
     # questions = QuestionSerializer(many=True, read_only=True)
 
     class Meta:
         model = Assessment
-        fields = ['id', 'title', 'description', 'assessment_type', 'instructor', 'course', 'created_at']
+        fields = ['id', 'title', 'description', 'structure', 'assessment_type', 'instructor', 'course', 'created_at']
         read_only_fields = ['instructor']
 
 

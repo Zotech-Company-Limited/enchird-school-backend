@@ -12,20 +12,23 @@ from django.db.models.signals import post_save
 
 class Assessment(models.Model):
 
-    TEXT_TYPE = 'text'
-    MIXED_TYPE = 'mixed'
-    MULTIPLE_CHOICE_TYPE = 'mcq'
 
+    STRUCTURE_CHOICES = [
+        ('text', 'Text'),
+        ('mixed', 'Mixed'),
+        ('mcq', 'Multiple Choice'),
+    ]
+    
     ASSESSMENT_TYPE_CHOICES = [
-        (TEXT_TYPE, 'Text'),
-        (MIXED_TYPE, 'Mixed'),
-        (MULTIPLE_CHOICE_TYPE, 'Multiple Choice'),
+        ('exam', 'Exam'),
+        ('ca', 'CA'),
     ]
 
     assessment_id = models.CharField(max_length=255, blank=False, null=False, unique=True)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
-    assessment_type = models.CharField(max_length=20, choices=ASSESSMENT_TYPE_CHOICES, default=MULTIPLE_CHOICE_TYPE)
+    structure = models.CharField(max_length=20, choices=STRUCTURE_CHOICES, default="mcq")
+    assessment_type = models.CharField(max_length=20, choices=ASSESSMENT_TYPE_CHOICES, default="ca")
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     instructor = models.ForeignKey(User, on_delete=models.PROTECT)
     created_at = models.DateTimeField(auto_now_add=True)
