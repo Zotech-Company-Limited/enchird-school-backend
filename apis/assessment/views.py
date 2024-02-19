@@ -283,6 +283,109 @@ def create_structural_question(request, assessment_id):
         return Response( {"error": str(e)}, status=status.HTTP_412_PRECONDITION_FAILED)
 
 
+@api_view(['PUT'])
+def update_question(request, assessment_id, question_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})
+        return Response({'error': "You must provide valid authentication credentials."},
+                        status=status.HTTP_401_UNAUTHORIZED)
+
+    if user.is_a_teacher is False:
+        logger.error("Only teachers can update questions.", extra={'user': user.id})
+        return Response({"error": "Only teachers can update questions."}, status.HTTP_403_FORBIDDEN)
+
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error("Assessment Not Found.", extra={'user': user.id})
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        with transaction.atomic():
+            # Retrieve the existing question
+            question = Question.objects.get(pk=question_id, assessment=assessment)
+
+            # Check the structure of the assessment to determine the serializer to use
+            if assessment.structure == "mcq":
+                serializer_class = QuestionSerializer
+                choices_serializer_class = ChoiceSerializer
+            elif assessment.structure == "text":
+                serializer_class = TextQuestionSerializer
+                choices_serializer_class = None
+            else:
+                # Handle other assessment structures if needed
+                logger.error("Unsupported assessment structure.", extra={'user': user.id})
+                return Response({'error': 'Unsupported assessment structure'}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Create a serializer instance based on the assessment structure
+            question_serializer = serializer_class(data=request.data, instance=question, partial=True)
+            print(question_serializer)
+            if question_serializer.is_valid(raise_exception=True):
+                # Encrypt the updated question text if applicable
+                if assessment.structure == "text" and 'text' in request.data:
+                    encrypted_question_text = encrypt_string(request.data['text'])
+                    question_serializer.validated_data['text'] = encrypted_question_text
+
+                    # Save the updated question
+                    updated_question = question_serializer.save()
+                
+                
+                # Handle updating choices for MCQ questions
+                if assessment.structure == "mcq":
+                    question_data = request.data.get('question', {})
+                    choices_data = request.data.get('choices', [])
+                    
+                    # Encrypt question text
+                    encrypted_question_text = encrypt_string(question_data.get('text', ''))
+                    question_serializer.validated_data['text'] = encrypted_question_text
+                    question_serializer.save()
+                    
+                    if 'choices' in request.data:
+                        choices_data = request.data['choices']
+
+                        # Delete choices not updated or created
+                        updated_choice_ids = set(choice_data.get('id') for choice_data in choices_data if 'id' in choice_data)
+                        question.choices.exclude(pk__in=updated_choice_ids).delete()
+                        
+                        # Iterate through choices and update/create them
+                        for choice_data in choices_data:
+                            choice_id = choice_data.get('id')
+                            if choice_id:
+                                # Update existing choice
+                                choice = Choice.objects.get(pk=choice_id, question=question)
+                                choice_serializer = ChoiceSerializer(data=choice_data, instance=choice)
+                            else:
+                                # Create new choice
+                                choice_data['question_id'] = question.id
+                                choice_serializer = ChoiceSerializer(data=choice_data)
+                                print(choice_serializer)
+
+                            if choice_serializer.is_valid(raise_exception=True):
+                                # Encrypt the updated choice text if applicable
+                                if 'text' in choice_data:
+                                    encrypted_choice_text = encrypt_string(choice_data['text'])
+                                    choice_serializer.validated_data['text'] = encrypted_choice_text
+                                    choice_serializer.validated_data['question_id'] = question.id
+                                    
+
+                                choice_serializer.save()
+
+                logger.info("Question updated successfully.", extra={'user': user.id})
+                return Response({'message': 'Question updated successfully'},
+                                status=status.HTTP_200_OK)
+
+            logger.error(str(question_serializer.errors), extra={'user': user.id})
+            return Response({'error': question_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+    except Exception as e:
+        # Rollback transaction and raise validation error
+        transaction.rollback()
+        logger.error(str(e), extra={'user': None})
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 
 @api_view(['GET'])
 @transaction.atomic

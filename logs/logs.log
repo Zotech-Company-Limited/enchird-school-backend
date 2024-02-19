@@ -1533,3 +1533,81 @@ INFO : 2024-02-15 16:11:58,244 : 2 : 244 : CA Assessment results returned succes
 INFO : 2024-02-15 16:12:55,558 : 2 : 558 : CA Assessment results returned successfully. : views : None
 INFO : 2024-02-15 16:15:32,030 : 2 : 30 : CA Assessment results returned successfully. : views : None
 INFO : 2024-02-15 16:15:44,353 : 2 : 353 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-15 16:16:29,658 : 2 : 658 : CA Assessment results returned successfully. : views : None
+INFO : 2024-02-19 10:59:03,873 : 9 : 873 : User Logged in sucessfully. : login : None
+INFO : 2024-02-19 10:59:15,565 : 2 : 565 : User Logged in sucessfully. : login : None
+INFO : 2024-02-19 10:59:30,262 : 1 : 262 : User Logged in sucessfully. : login : None
+WARNING : 2024-02-19 11:02:07,044 : 1 : 44 : You do not have the necessary rights! (Not a lecturer nor student) : views : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:360]
+WARNING : 2024-02-19 11:02:16,891 : 1 : 891 : You do not have the necessary rights! (Not a lecturer nor student) : views : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:360]
+INFO : 2024-02-19 11:10:55,109 : 9 : 109 : Question updated successfully. : views : None
+INFO : 2024-02-19 11:12:52,066 : 9 : 66 : Question and choices created successfully. : views : None
+ERROR : 2024-02-19 11:14 : None : 200 : {views} : [update_question] : Question matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:341]
+ERROR : 2024-02-19 11:15 : None : 721 : {views} : [update_question] : Question matching query does not exist. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:341]
+INFO : 2024-02-19 11:15:37,861 : 9 : 861 : Question updated successfully. : views : None
+INFO : 2024-02-19 11:23:02,593 : 9 : 593 : Question updated successfully. : views : None
+ERROR : 2024-02-19 11:24 : None : 952 : {views} : [update_question] : (1048, "Column 'question_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:368]
+ERROR : 2024-02-19 11:30 : None : 724 : {views} : [update_question] : Got a `TypeError` when calling `Choice.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Choice.objects.create()`. You may need to make the field read-only, or override the ChoiceSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Question'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\enchird_LMS\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in as_sql
+    value_rows = [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1746, in <listcomp>
+    [
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\related.py", line 1129, in get_db_prep_save
+    return self.target_field.get_db_prep_save(value, connection=connection)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\__init__.py", line 954, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\__init__.py", line 2742, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\enchird_LMS\venv\lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <Question:  Question for Assessment: Exam>.
+ : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:368]
+INFO : 2024-02-19 11:32:28,635 : 9 : 635 : Question updated successfully. : views : None
+INFO : 2024-02-19 11:40:46,945 : 9 : 945 : Question updated successfully. : views : None
+INFO : 2024-02-19 12:59:28,770 : 9 : 770 : Question updated successfully. : views : None
+INFO : 2024-02-19 13:04:48,866 : 9 : 866 : Question updated successfully. : views : None
+INFO : 2024-02-19 13:12:55,070 : 9 : 70 : Question updated successfully. : views : None
+INFO : 2024-02-19 13:16:08,818 : 9 : 818 : Question updated successfully. : views : None
+ERROR : 2024-02-19 13:17 : None : 933 : {views} : [update_question] : You must call `.is_valid()` before calling `.save()`. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:385]
+INFO : 2024-02-19 13:19:37,632 : 9 : 632 : Question updated successfully. : views : None
+ERROR : 2024-02-19 13:31 : None : 674 : {views} : [update_question] : local variable 'updated_question' referenced before assignment : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:391]
+ERROR : 2024-02-19 13:33 : None : 598 : {views} : [update_question] : local variable 'updated_question' referenced before assignment : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:391]
+INFO : 2024-02-19 13:34:43,662 : 9 : 662 : Question updated successfully. : views : None
+ERROR : 2024-02-19 13:55 : None : 282 : {views} : [update_question] : (1048, "Column 'question_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:377]
+ERROR : 2024-02-19 13:59 : None : 722 : {views} : [update_question] : (1048, "Column 'question_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:378]
+ERROR : 2024-02-19 14:00 : None : 746 : {views} : [update_question] : (1048, "Column 'question_id' cannot be null") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:378]
+INFO : 2024-02-19 14:02:05,249 : 9 : 249 : Question updated successfully. : views : None
+INFO : 2024-02-19 14:02:49,658 : 9 : 658 : Question updated successfully. : views : None
+INFO : 2024-02-19 14:07:33,597 : 9 : 597 : Question updated successfully. : views : None
