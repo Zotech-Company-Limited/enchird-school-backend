@@ -1611,3 +1611,29 @@ ERROR : 2024-02-19 14:00 : None : 746 : {views} : [update_question] : (1048, "Co
 INFO : 2024-02-19 14:02:05,249 : 9 : 249 : Question updated successfully. : views : None
 INFO : 2024-02-19 14:02:49,658 : 9 : 658 : Question updated successfully. : views : None
 INFO : 2024-02-19 14:07:33,597 : 9 : 597 : Question updated successfully. : views : None
+ERROR : 2024-02-19 14:54 : None : 66 : {views} : [create_structural_question] : {'text': [ErrorDetail(string='This field may not be blank.', code='blank')]} : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:288]
+INFO : 2024-02-19 15:27:33,631 : 1 : 631 : User Logged in sucessfully. : login : None
+INFO : 2024-02-19 15:27:43,011 : 2 : 11 : User Logged in sucessfully. : login : None
+INFO : 2024-02-19 15:27:54,888 : 9 : 888 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-19 15:28 : 2 : 15 : {views} : [submit_assessment_responses] : Invalid Question ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:615]
+ERROR : 2024-02-19 15:32 : 2 : 960 : {views} : [submit_assessment_responses] : Invalid Choice ID. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:618]
+ERROR : 2024-02-19 16:33 : 2 : 362 : {views} : [submit_structural_responses] : Responses for this assessment already submitted. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:694]
+INFO : 2024-02-20 09:52:54,126 : 9 : 126 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 09:53:22,658 : 2 : 658 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 09:53:53,383 : 1 : 383 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-20 09:55 : 9 : 39 : {views} : [record_student_grade] : (1054, "Unknown column 'assessment_studentassessmentscore.is_graded' in 'field list'") : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]
+ERROR : 2024-02-20 09:56 : Anonymous : 635 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:112]
+ERROR : 2024-02-20 09:56 : 9 : 635 : {views} : [record_student_grade] :  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]
+INFO : 2024-02-20 13:43:22,841 : 1 : 841 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 13:43:50,869 : 2 : 869 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 13:44:11,210 : 9 : 210 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 13:44:53,605 : 9 : 605 : Question added to assessment successfully. : views : None
+INFO : 2024-02-20 13:46:58,200 : 9 : 200 : Question added to assessment successfully. : views : None
+INFO : 2024-02-20 13:49:50,820 : 9 : 820 : Question updated successfully. : views : None
+INFO : 2024-02-20 16:44:42,848 : 9 : 848 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 16:44:56,391 : 2 : 391 : User Logged in sucessfully. : login : None
+INFO : 2024-02-20 16:45:07,792 : 1 : 792 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-20 16:45 : Anonymous : 713 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:112]
+ERROR : 2024-02-20 16:45 : 9 : 722 : {views} : [record_student_grade] :  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]
+ERROR : 2024-02-20 16:47 : Anonymous : 549 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:112]
+ERROR : 2024-02-20 16:47 : 9 : 556 : {views} : [record_student_grade] :  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]

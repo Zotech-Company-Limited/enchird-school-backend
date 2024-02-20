@@ -264,6 +264,12 @@ def create_structural_question(request, assessment_id):
                 
                 question_data = question_serializer.validated_data['text']
                 
+                # Check if question_data is not an empty string
+                if not question_data.strip():
+                    logger.error("Empty question text for structural question.", extra={'user': user.id})
+                    return Response({'error': 'Empty question text for structural question'},
+                                    status=status.HTTP_400_BAD_REQUEST)
+                
                 # Encrypt question text
                 encrypted_question_text = encrypt_string(question_data)
             
@@ -551,6 +557,7 @@ def list_assessments(request):
             extra={ 'user': user.id })
         return Response({'error': 'You do not have the necessary rights.'}, status=status.HTTP_403_FORBIDDEN)
        
+
 @api_view(['POST'])
 @transaction.atomic
 def submit_assessment_responses(request, assessment_id):
@@ -659,6 +666,152 @@ def submit_assessment_responses(request, assessment_id):
             status=status.HTTP_412_PRECONDITION_FAILED)
 
 
+@api_view(['POST'])
+@transaction.atomic
+def submit_structural_responses(request, assessment_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error("You do not have the necessary rights.", extra={'user': 'Anonymous'})
+        return Response({'error': "You must provide valid authentication credentials."},
+                        status=status.HTTP_401_UNAUTHORIZED)
+
+    if user.is_a_student is False:
+        logger.error("Only students can submit responses.", extra={'user': user.id})
+        return Response({"error": "Only students can submit responses."},
+                        status.HTTP_403_FORBIDDEN)
+
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error("Assessment not found.", extra={'user': user.id})
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        with transaction.atomic():
+            # Check if responses already exist for the assessment by the student
+            existing_responses = StudentResponse.objects.filter(student=user, assessment=assessment)
+            if existing_responses.exists():
+                logger.error("Responses for this assessment already submitted.", extra={'user': user.id})
+                return Response({'error': 'Responses for this assessment already submitted'},
+                                status=status.HTTP_400_BAD_REQUEST)
+
+            responses_data = request.data.get('responses', [])
+
+            for response_data in responses_data:
+                question_id = response_data.get('question_id')
+                text_response = response_data.get('text_response')
+
+                try:
+                    question = Question.objects.get(pk=question_id)
+
+                    # Check if the question is a structural question
+                    if question.assessment.structure != "text":
+                        logger.error("Invalid question type for structural responses.", extra={'user': user.id})
+                        return Response({'error': 'Invalid question type for structural responses'},
+                                        status=status.HTTP_400_BAD_REQUEST)
+
+                except Question.DoesNotExist:
+                    logger.error("Invalid Question ID.", extra={'user': user.id})
+                    return Response({'error': 'Invalid question ID'}, status=status.HTTP_400_BAD_REQUEST)
+
+                # Create or update the student response for structural questions
+                response, created = StudentResponse.objects.get_or_create(
+                    student=user,
+                    assessment=assessment,
+                    question=question,
+                    defaults={'text_response': text_response}
+                )
+
+                if not created:
+                    # Update the text response if the response already exists
+                    response.text_response = text_response
+                    response.save()
+
+            return Response({'message': 'Structural responses submitted successfully'},
+                            status=status.HTTP_200_OK)
+
+    except Exception as e:
+        # Rollback transaction and raise validation error
+        transaction.rollback()
+        logger.error(str(e), extra={'user': None})
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+@api_view(['GET'])
+def get_assessment_submissions(request, assessment_id):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error( "Assessment not found.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the requesting user is the tutor who created the assessment
+    if assessment.instructor != user:
+        logger.error( "You do not have permission to view responses for this assessment.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'You do not have permission to view responses for this assessment'}, status=status.HTTP_403_FORBIDDEN)
+    
+    # Get query parameters for grouping (e.g., group_by=student or group_by=question)
+    group_by = request.query_params.get('group_by', None)
+
+    # Get all student responses for the assessment
+    responses = StudentResponse.objects.filter(assessment=assessment)
+    instance = responses.first()
+    # Assuming you have a queryset, retrieve the desired instance
+    # queryset = StudentResponse.objects.filter(assessment=assessment)
+    # instance = queryset.first()
+    
+    if group_by == 'student':
+        # Group responses by student
+        print("student")
+        grouped_responses = {}
+        for response in responses:
+            student_id = response.student.id
+            if student_id not in grouped_responses:
+                grouped_responses[student_id] = []
+            grouped_responses[student_id].append(response)
+
+    elif group_by == 'question':
+        # Group responses by question
+        print("question")
+        grouped_responses = {}
+        for response in responses:
+            question_id = response.question.id
+            if question_id not in grouped_responses:
+                grouped_responses[question_id] = []
+            grouped_responses[question_id].append(response)
+
+    else:
+        # No grouping, return all responses
+        print("other")
+        grouped_responses = responses
+        
+    # Pass the instance to the serializer
+        # response_serializer = StudentResponseSerializer(instance)
+
+    # Serialize the data
+    # response_serializer = StudentResponseSerializer(grouped_responses, many=True)
+    # print(response_serializer.instance)
+    
+    if instance: #isinstance(response_serializer.instance, StudentResponse):
+        # Pass the instance to the serializer
+        response_serializer = StudentResponseSerializer(instance)
+        print(response_serializer.instance)
+        
+        # Serialize the data only if it's a StudentResponse instance
+        return Response({'responses': response_serializer.data}, status=status.HTTP_200_OK)
+    else:
+        return Response({'error': 'Invalid data type for serialization'}, status=status.HTTP_400_BAD_REQUEST)
+    
+
+
 @api_view(['GET']) 
 def get_assessment_results(request, assessment_id):
     user = request.user
@@ -704,6 +857,61 @@ def get_assessment_results(request, assessment_id):
         except StudentAssessmentScore.DoesNotExist:
             logger.error( "Assessment results not found.", extra={ 'user': user.id } )
             return Response({'error': 'Assessment results not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
+@api_view(['POST'])
+def record_student_grade(request, assessment_id, student_id):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+    except Assessment.DoesNotExist:
+        logger.error( "Assessment not found.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if the requesting user is the tutor who created the assessment
+    if assessment.instructor != user:
+        logger.error( "You do not have permission to record scores for this assessment.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'You do not have permission to record scores for this assessment'}, status=status.HTTP_403_FORBIDDEN)
+    
+    try:
+        assessment_score, created = StudentAssessmentScore.objects.get_or_create(
+            assessment_id=assessment_id,
+            student_id=student_id,
+            defaults={'score': request.data.get('score', ''), 'is_graded': True}
+        )
+        print(assessment_score)
+        print(created)
+        print(request.data)
+
+        # If the score object already exists, update it
+        if not created:
+            serializer = StudentStructuralScoreSerializer(
+                assessment_score,
+                data=request.data,
+                partial=True
+            )
+
+            if serializer.is_valid():
+                serializer.save(is_graded=True)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+
+            logger.error(serializer.errors, extra={ 'user': request.user.id } )
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        # If a new score object is created, return the created data
+        serializer = StudentAssessmentScoreSerializer(assessment_score)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        logger.error( str(e), extra={ 'user': request.user.id } )
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 
 

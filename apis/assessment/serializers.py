@@ -36,7 +36,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ['id', 'assessment', 'text', 'image', 'created_at', 'choices']
+        fields = ['id', 'assessment', 'text', 'mark_allocated', 'image', 'created_at', 'choices']
 
 
 class TextQuestionSerializer(serializers.ModelSerializer):
@@ -50,7 +50,7 @@ class TextQuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ['id', 'assessment', 'text', 'image', 'created_at']
+        fields = ['id', 'assessment', 'text', 'mark_allocated', 'image', 'created_at']
 
 
 
@@ -65,9 +65,14 @@ class AssessmentSerializer(serializers.ModelSerializer):
 
 
 class StudentResponseSerializer(serializers.ModelSerializer):
+    student = UserSerializer()
+    assessment = AssessmentSerializer()
+    question = QuestionSerializer()
+    selected_choice = ChoiceSerializer()
+    
     class Meta:
         model = StudentResponse
-        fields = '__all__'
+        fields = ['id', 'student', 'assessment', 'question', 'selected_choice', 'text_response', 'recorded_at']
         # fields = ['id', 'assess']
 
 
@@ -121,7 +126,7 @@ class StudentStructuralScoreSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StudentAssessmentScore 
-        fields = ['id', 'score', 'student', 'assessment' ]
+        fields = ['id', 'score', 'student', 'assessment']
 
 
 
