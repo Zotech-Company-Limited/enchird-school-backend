@@ -12,14 +12,14 @@ class AssessmentAdmin(admin.ModelAdmin):
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ('assessment', 'text', 'created_at')
+    list_display = ('id', 'assessment', 'text', 'mark_allocated', 'created_at')
     search_fields = ('assessment__title', 'text')
     list_filter = ('assessment__title', 'created_at')
 
 
 @admin.register(Choice)
 class ChoiceAdmin(admin.ModelAdmin):
-    list_display = ('question', 'text', 'is_correct')
+    list_display = ('id', 'question', 'text', 'is_correct')
     search_fields = ('question__text', 'text')
     list_filter = ('question__text', 'is_correct')
     

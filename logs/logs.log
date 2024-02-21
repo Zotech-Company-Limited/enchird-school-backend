@@ -1637,3 +1637,27 @@ ERROR : 2024-02-20 16:45 : Anonymous : 713 : {serializers} : [decrypt_string] : 
 ERROR : 2024-02-20 16:45 : 9 : 722 : {views} : [record_student_grade] :  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]
 ERROR : 2024-02-20 16:47 : Anonymous : 549 : {serializers} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\serializers.py:serializers.py:112]
 ERROR : 2024-02-20 16:47 : 9 : 556 : {views} : [record_student_grade] :  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:909]
+ERROR : 2024-02-20 18:05 : None : 57 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:219]
+INFO : 2024-02-20 18:05:56,883 : None : 883 : Applicant created successfully! : views : None
+ERROR : 2024-02-20 18:28 : None : 912 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:219]
+ERROR : 2024-02-20 18:29 : None : 735 : {views} : [create] : {'id_card_number': [ErrorDetail(string='applicant with this id card number already exists.', code='unique')]} : [in C:\enchird_LMS\enchird-school-backend\apis\applicants\views.py:views.py:219]
+INFO : 2024-02-20 18:31:00,902 : None : 902 : Applicant created successfully! : views : None
+INFO : 2024-02-20 18:52:22,212 : None : 212 : Applicant created successfully! : views : None
+INFO : 2024-02-20 18:55:46,865 : None : 865 : Applicant created successfully! : views : None
+INFO : 2024-02-21 12:09:19,273 : 1 : 273 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 12:09:50,716 : 2 : 716 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 12:10:05,543 : 9 : 543 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 12:11:08,922 : 36 : 922 : Student created successfully! : views : None
+ERROR : 2024-02-21 12:11 : colonelpirate@gmail.com : 104 : {views} : [accept] : Applicant Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:213]
+ERROR : 2024-02-21 12:11 : None : 435 : {views} : [accept] : (1062, "Duplicate entry 'Tyron' for key 'users_username_e8658fc8_uniq'") : [in C:\enchird_LMS\enchird-school-backend\apis\students\views.py:views.py:309]
+INFO : 2024-02-21 12:12:54,315 : 38 : 315 : Student created successfully! : views : None
+INFO : 2024-02-21 12:14:29,206 : 36 : 206 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 12:16:50,268 : 38 : 268 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 23:10:17,716 : 38 : 716 : User Logged in sucessfully. : login : None
+INFO : 2024-02-21 23:10:51,721 : 9 : 721 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-21 23:17 : 9 : 650 : {views} : [record_student_grade] : Student is not registered for the course associated with this assessment. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:820]
+ERROR : 2024-02-21 23:18 : 9 : 48 : {views} : [record_student_grade] : Student is not registered for the course associated with this assessment. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:820]
+ERROR : 2024-02-21 23:19 : 9 : 565 : {views} : [record_student_grade] : Student is not registered for the course associated with this assessment. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:820]
+ERROR : 2024-02-21 23:28 : 9 : 217 : {views} : [record_student_grade] : 'int' object has no attribute 'encode' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:894]
+ERROR : 2024-02-21 23:32 : 9 : 642 : {views} : [record_student_grade] : 'StudentAssessmentScore' object is not iterable : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:894]
+ERROR : 2024-02-21 23:40 : 9 : 8 : {views} : [record_student_grade] : 'int' object has no attribute 'encode' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:903]

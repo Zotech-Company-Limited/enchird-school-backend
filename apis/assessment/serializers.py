@@ -126,7 +126,7 @@ class StudentStructuralScoreSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StudentAssessmentScore 
-        fields = ['id', 'score', 'student', 'assessment']
+        fields = ['id', 'score', 'student', 'question', 'is_graded', 'assessment']
 
 
 

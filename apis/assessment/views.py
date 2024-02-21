@@ -17,6 +17,7 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from cryptography.fernet import InvalidToken
 from rest_framework.decorators import api_view
+from rest_framework.exceptions import ValidationError
 from rest_framework.decorators import permission_classes
 from apis.assessment.serializers import AssessmentSerializer
 
@@ -30,30 +31,16 @@ def create_assessment(request):
     user = request.user
 
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
-        return Response(
-            {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."},
+            status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_teacher is False:
         logger.error(
             "Only teachers can create assessments.",
-            extra={
-                'user': user.id
-            }
-        )
-        return Response(
-            {
-                "error": "Only teachers can create assessments."
-            },
-            status.HTTP_403_FORBIDDEN
-        )
+            extra={ 'user': user.id } )
+        return Response( { "error": "Only teachers can create assessments." },
+            status.HTTP_403_FORBIDDEN )
     
     serializer = AssessmentSerializer(data=request.data)
 
@@ -508,16 +495,10 @@ def list_assessments(request):
     user = request.user
 
     if not user.is_authenticated:
-        logger.error(
-            "You do not have the necessary rights.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
         return Response(
             {'error': "You must provide valid authentication credentials."},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+            status=status.HTTP_401_UNAUTHORIZED )
         
     if user.is_a_teacher is False and user.is_a_student is False:
         logger.warning(
@@ -568,18 +549,11 @@ def submit_assessment_responses(request, assessment_id):
         return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
     if user.is_a_student is False:
-        logger.error(
-            "Only students can register courses.",
-            extra={
-                'user': 'Anonymous'
-            }
-        )
-        return Response(
-            {
+        logger.error( "Only students can register courses.", extra={ 'user': request.user.id } )
+        return Response( {
                 "error": "Only students can register courses."
             },
-            status.HTTP_403_FORBIDDEN
-        )
+            status.HTTP_403_FORBIDDEN )
     
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
@@ -750,65 +724,25 @@ def get_assessment_submissions(request, assessment_id):
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
-        logger.error( "Assessment not found.", extra={ 'user': 'Anonymous' } )
+        logger.error( "Assessment not found.", extra={ 'user': request.user.id } )
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Check if the requesting user is the tutor who created the assessment
     if assessment.instructor != user:
-        logger.error( "You do not have permission to view responses for this assessment.", extra={ 'user': 'Anonymous' } )
+        logger.error( "You do not have permission to view responses for this assessment.", extra={ 'user': request.user.id } )
         return Response({'error': 'You do not have permission to view responses for this assessment'}, status=status.HTTP_403_FORBIDDEN)
     
     # Get query parameters for grouping (e.g., group_by=student or group_by=question)
-    group_by = request.query_params.get('group_by', None)
+    # group_by = request.query_params.get('group_by', None)
 
     # Get all student responses for the assessment
     responses = StudentResponse.objects.filter(assessment=assessment)
-    instance = responses.first()
-    # Assuming you have a queryset, retrieve the desired instance
-    # queryset = StudentResponse.objects.filter(assessment=assessment)
-    # instance = queryset.first()
     
-    if group_by == 'student':
-        # Group responses by student
-        print("student")
-        grouped_responses = {}
-        for response in responses:
-            student_id = response.student.id
-            if student_id not in grouped_responses:
-                grouped_responses[student_id] = []
-            grouped_responses[student_id].append(response)
-
-    elif group_by == 'question':
-        # Group responses by question
-        print("question")
-        grouped_responses = {}
-        for response in responses:
-            question_id = response.question.id
-            if question_id not in grouped_responses:
-                grouped_responses[question_id] = []
-            grouped_responses[question_id].append(response)
-
-    else:
-        # No grouping, return all responses
-        print("other")
-        grouped_responses = responses
+    response_serializer = StudentResponseSerializer(responses, many=True)
+    print(response_serializer.instance)
         
-    # Pass the instance to the serializer
-        # response_serializer = StudentResponseSerializer(instance)
-
-    # Serialize the data
-    # response_serializer = StudentResponseSerializer(grouped_responses, many=True)
-    # print(response_serializer.instance)
-    
-    if instance: #isinstance(response_serializer.instance, StudentResponse):
-        # Pass the instance to the serializer
-        response_serializer = StudentResponseSerializer(instance)
-        print(response_serializer.instance)
-        
-        # Serialize the data only if it's a StudentResponse instance
-        return Response({'responses': response_serializer.data}, status=status.HTTP_200_OK)
-    else:
-        return Response({'error': 'Invalid data type for serialization'}, status=status.HTTP_400_BAD_REQUEST)
+    # Serialize the data only if it's a StudentResponse instance
+    return Response({'responses': response_serializer.data}, status=status.HTTP_200_OK)
     
 
 
@@ -821,7 +755,7 @@ def get_assessment_results(request, assessment_id):
         return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
     
     if user.is_a_student is False and user.is_a_teacher is False:
-        logger.error( "You do not have access to this endpoint.", extra={ 'user': 'Anonymous' } )
+        logger.error( "You do not have access to this endpoint.", extra={ 'user': request.user.id } )
         return Response(  { "error": "You do not have access to this endpoint."}, status.HTTP_403_FORBIDDEN )
 
     try:
@@ -871,43 +805,100 @@ def record_student_grade(request, assessment_id, student_id):
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
     except Assessment.DoesNotExist:
-        logger.error( "Assessment not found.", extra={ 'user': 'Anonymous' } )
+        logger.error( "Assessment not found.", extra={ 'user': request.user.id } )
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Check if the requesting user is the tutor who created the assessment
     if assessment.instructor != user:
-        logger.error( "You do not have permission to record scores for this assessment.", extra={ 'user': 'Anonymous' } )
+        logger.error( "You do not have permission to record scores for this assessment.", extra={ 'user': request.user.id } )
         return Response({'error': 'You do not have permission to record scores for this assessment'}, status=status.HTTP_403_FORBIDDEN)
     
+    # Check if the student is registered for the course
     try:
-        assessment_score, created = StudentAssessmentScore.objects.get_or_create(
-            assessment_id=assessment_id,
-            student_id=student_id,
-            defaults={'score': request.data.get('score', ''), 'is_graded': True}
-        )
-        print(assessment_score)
-        print(created)
-        print(request.data)
+        student = Student.objects.get(user=student_id, registered_courses=assessment.course)
+    except Student.DoesNotExist:
+        logger.error('Student is not registered for the course associated with this assessment.', extra={ 'user': request.user.id } )
+        return Response({'error': 'Student is not registered for the course associated with this assessment.'}, status=status.HTTP_403_FORBIDDEN)
 
-        # If the score object already exists, update it
-        if not created:
-            serializer = StudentStructuralScoreSerializer(
-                assessment_score,
-                data=request.data,
-                partial=True
+    
+    # try:
+    #     assessment_score, created = StudentAssessmentScore.objects.get_or_create(
+    #         assessment_id=assessment_id,
+    #         student_id=student_id,
+    #         defaults={'score': request.data.get('score', ''), 'is_graded': True}
+    #     )
+    #     print(assessment_score)
+    #     print(created)
+    #     print(request.data)
+
+    #     # If the score object already exists, update it
+    #     if not created:
+    #         serializer = StudentStructuralScoreSerializer(
+    #             assessment_score,
+    #             data=request.data,
+    #             partial=True
+    #         )
+
+    #         if serializer.is_valid():
+    #             serializer.save(is_graded=True)
+    #             return Response(serializer.data, status=status.HTTP_200_OK)
+
+    #         logger.error(serializer.errors, extra={ 'user': request.user.id } )
+    #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    #     # If a new score object is created, return the created data
+    #     serializer = StudentAssessmentScoreSerializer(assessment_score)
+    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    try:
+        scores_data = request.data.get('scores', [])
+
+        if not scores_data:
+            logger.error( "Please provide a non-empty array of scores in the request data.", extra={ 'user': request.user.id } )
+            return Response({'error': 'Please provide a non-empty array of scores in the request data.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        recorded_scores = []
+
+        for score_data in scores_data:
+            question_id = score_data.get('question_id')
+            score = score_data.get('score')
+
+            if question_id is None or score is None:
+                logger.error( "Each score in the array should have both question_id and score.", extra={ 'user': request.user.id } )
+                return Response({'error': 'Each score in the array should have both question_id and score.'}, status=status.HTTP_400_BAD_REQUEST)
+
+            try:
+                question = Question.objects.get(pk=question_id)
+            except Question.DoesNotExist:
+                logger.error( f'Question with ID {question_id} not found.', extra={ 'user': request.user.id } )
+                return Response({'error': f'Question with ID {question_id} not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+            # Check that the score is not greater than the mark allocated for the question
+            if score > int(question.mark_allocated):
+                logger.error( f'Score for Question {question_id} cannot exceed the mark allocated.', extra={ 'user': request.user.id } )
+                return Response({'error': f'Score for Question {question_id} cannot exceed the mark allocated.'}, status=status.HTTP_400_BAD_REQUEST)
+
+            assessment_score, created = StudentAssessmentScore.objects.get_or_create(
+                assessment_id=assessment_id,
+                student_id=student_id,
+                question=question,
+                defaults={'score': score, 'is_graded': True}
             )
-
-            if serializer.is_valid():
-                serializer.save(is_graded=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
-
-            logger.error(serializer.errors, extra={ 'user': request.user.id } )
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        # If a new score object is created, return the created data
-        serializer = StudentAssessmentScoreSerializer(assessment_score)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
+            
+            # If a score object already exists, update the score
+            if not created:
+                assessment_score.score = score
+                assessment_score.is_graded = True
+                assessment_score.save()
+                
+            # Add the recorded score to the list
+            recorded_scores.append(StudentStructuralScoreSerializer(assessment_score).data)
+            
+        # Return the array of recorded scores
+        return Response({'recorded_scores': recorded_scores}, status=status.HTTP_201_CREATED)
+    except ValidationError as ve:
+        return Response({'error': ve.detail}, status=status.HTTP_400_BAD_REQUEST)
+    
     except Exception as e:
         logger.error( str(e), extra={ 'user': request.user.id } )
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -1127,7 +1118,7 @@ def get_all_students_scores(request, course_id):
         # Check if teacher is assigned to course
         if user.is_a_teacher is True:
             if user not in course.instructors.all():
-                logger.error( "You do not have access to this endpoint.", extra={ 'user': 'Anonymous' })
+                logger.error( "You do not have access to this endpoint.", extra={ 'user': request.user.id })
                 return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
 
 

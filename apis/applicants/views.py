@@ -230,52 +230,24 @@ class ApplicantViewSet(viewsets.ModelViewSet):
 
         user = self.request.user
         if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."},
+                status=status.HTTP_401_UNAUTHORIZED )
 
         if not user.is_admin:
-            logger.warning(
-                "You do not have the necessary rights!",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "You do not have the necessary rights"},
-                status.HTTP_403_FORBIDDEN
-            )
+            logger.warning( "You do not have the necessary rights!", extra={ 'user': user.id } )
+            return Response( {"error": "You do not have the necessary rights"},
+                status.HTTP_403_FORBIDDEN )
 
         try:
             instance = Applicant.objects.get(id=kwargs['pk'])
         except Applicant.DoesNotExist:
-            logger.error(
-                "Applicant not Found.",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "Applicant Not Found."},
-                status=status.HTTP_404_NOT_FOUND
-            )
+            logger.error( "Applicant not Found.", extra={ 'user': user.id })
+            return Response( {"error": "Applicant Not Found."},
+                status=status.HTTP_404_NOT_FOUND )
         instance.is_deleted = True
         instance.save()
 
-        logger.info(
-            "Applicant marked as deleted successfully",
-            extra={
-                'user': user.id
-            }
-        )
-        return Response(
-            {"message": "Applicant marked as Deleted"},
-            status=status.HTTP_200_OK)
+        logger.info( "Applicant marked as deleted successfully", extra={ 'user': user.id } )
+        return Response( {"message": "Applicant marked as Deleted"}, status=status.HTTP_200_OK)
 

@@ -85,6 +85,7 @@ class StudentResponse(models.Model):
 
 class StudentAssessmentScore(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.PROTECT, null=True, blank=True)
     assessment = models.ForeignKey(Assessment, on_delete=models.CASCADE)
     score = models.CharField(max_length=255)  # Assuming the score is an integer
     is_graded = models.BooleanField(default=False)
