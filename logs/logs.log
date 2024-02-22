@@ -1661,3 +1661,6 @@ ERROR : 2024-02-21 23:19 : 9 : 565 : {views} : [record_student_grade] : Student 
 ERROR : 2024-02-21 23:28 : 9 : 217 : {views} : [record_student_grade] : 'int' object has no attribute 'encode' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:894]
 ERROR : 2024-02-21 23:32 : 9 : 642 : {views} : [record_student_grade] : 'StudentAssessmentScore' object is not iterable : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:894]
 ERROR : 2024-02-21 23:40 : 9 : 8 : {views} : [record_student_grade] : 'int' object has no attribute 'encode' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:903]
+INFO : 2024-02-22 02:35:55,844 : 1 : 844 : User Logged in sucessfully. : login : None
+INFO : 2024-02-22 02:36:09,959 : 2 : 959 : User Logged in sucessfully. : login : None
+INFO : 2024-02-22 02:36:23,784 : 9 : 784 : User Logged in sucessfully. : login : None

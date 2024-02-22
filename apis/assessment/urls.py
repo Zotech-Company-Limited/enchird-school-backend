@@ -12,7 +12,8 @@ router.register(r'admin/grade-system', GradeSystemViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('assessments/<int:assessment_id>/record-grade/<int:student_id>/', record_student_grade, name='record_student_grade'),
+    path('assessments/<int:assessment_id>/grade/<int:student_id>/', get_student_assessment_grade, name='get_student_assessment_grade'),
+    path('assessments/<int:assessment_id>/record-score/<int:student_id>/', record_student_score, name='record_student_score'),
     path('assessments/<int:assessment_id>/add_text_question/', create_structural_question, name='add_structural_question'),
     path('assessments/<int:assessment_id>/mcq-submit/', submit_assessment_responses, name='submit_assessment_responses'),
     path('assessment-submissions/<int:assessment_id>/', get_assessment_submissions, name='get_assessment_submissions'),

@@ -9,6 +9,7 @@ from .serializers import *
 from django.conf import settings
 from django.db import transaction
 from django.shortcuts import render
+from django.db.models import Sum, F
 from apis.courses.models import Course 
 from cryptography.fernet import Fernet
 from apis.students.models import Student
@@ -728,13 +729,16 @@ def get_assessment_submissions(request, assessment_id):
         return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Check if the requesting user is the tutor who created the assessment
-    if assessment.instructor != user:
+    if user.is_a_teacher is True:
+        teacher = Teacher.objects.get(user=user)
+        course = assessment.course
+        if course not in teacher.courses.all():
+            logger.error( "You are not assigned to this course.", extra={ 'user': user.id } )
+            return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
+    else:
         logger.error( "You do not have permission to view responses for this assessment.", extra={ 'user': request.user.id } )
         return Response({'error': 'You do not have permission to view responses for this assessment'}, status=status.HTTP_403_FORBIDDEN)
     
-    # Get query parameters for grouping (e.g., group_by=student or group_by=question)
-    # group_by = request.query_params.get('group_by', None)
-
     # Get all student responses for the assessment
     responses = StudentResponse.objects.filter(assessment=assessment)
     
@@ -742,6 +746,7 @@ def get_assessment_submissions(request, assessment_id):
     print(response_serializer.instance)
         
     # Serialize the data only if it's a StudentResponse instance
+    logger.info( "Asessment submissions returned successfully.", extra={ 'user': user.id } )
     return Response({'responses': response_serializer.data}, status=status.HTTP_200_OK)
     
 
@@ -778,9 +783,11 @@ def get_assessment_results(request, assessment_id):
     # Check if teacher is assigned to course
     if user.is_a_teacher is True:
         try:
+            teacher = Teacher.objects.get(user=user)
             assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id)
             course = assessment.course
-            if user not in course.instructors.all():
+            if course not in teacher.courses.all():
+                logger.error( "You are not assigned to this course.", extra={ 'user': user.id } )
                 return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
 
             serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
@@ -795,7 +802,7 @@ def get_assessment_results(request, assessment_id):
 
 
 @api_view(['POST'])
-def record_student_grade(request, assessment_id, student_id):
+def record_student_score(request, assessment_id, student_id):
     user = request.user
     
     if not user.is_authenticated:
@@ -819,36 +826,6 @@ def record_student_grade(request, assessment_id, student_id):
     except Student.DoesNotExist:
         logger.error('Student is not registered for the course associated with this assessment.', extra={ 'user': request.user.id } )
         return Response({'error': 'Student is not registered for the course associated with this assessment.'}, status=status.HTTP_403_FORBIDDEN)
-
-    
-    # try:
-    #     assessment_score, created = StudentAssessmentScore.objects.get_or_create(
-    #         assessment_id=assessment_id,
-    #         student_id=student_id,
-    #         defaults={'score': request.data.get('score', ''), 'is_graded': True}
-    #     )
-    #     print(assessment_score)
-    #     print(created)
-    #     print(request.data)
-
-    #     # If the score object already exists, update it
-    #     if not created:
-    #         serializer = StudentStructuralScoreSerializer(
-    #             assessment_score,
-    #             data=request.data,
-    #             partial=True
-    #         )
-
-    #         if serializer.is_valid():
-    #             serializer.save(is_graded=True)
-    #             return Response(serializer.data, status=status.HTTP_200_OK)
-
-    #         logger.error(serializer.errors, extra={ 'user': request.user.id } )
-    #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    #     # If a new score object is created, return the created data
-    #     serializer = StudentAssessmentScoreSerializer(assessment_score)
-    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     try:
         scores_data = request.data.get('scores', [])
@@ -874,9 +851,15 @@ def record_student_grade(request, assessment_id, student_id):
                 return Response({'error': f'Question with ID {question_id} not found.'}, status=status.HTTP_404_NOT_FOUND)
 
             # Check that the score is not greater than the mark allocated for the question
-            if score > int(question.mark_allocated):
-                logger.error( f'Score for Question {question_id} cannot exceed the mark allocated.', extra={ 'user': request.user.id } )
-                return Response({'error': f'Score for Question {question_id} cannot exceed the mark allocated.'}, status=status.HTTP_400_BAD_REQUEST)
+            if question.mark_allocated is not None:
+                if score > int(question.mark_allocated):
+                    logger.error( f'Score for Question {question_id} cannot exceed the mark allocated.', extra={ 'user': request.user.id } )
+                    return Response({'error': f'Score for Question {question_id} cannot exceed the mark allocated.'}, status=status.HTTP_400_BAD_REQUEST)
+
+            else:
+                logger.error( f'No mark was allocated for {question_id}.', extra={ 'user': request.user.id } )
+                return Response({'error': f'No mark was allocated for {question_id}.'}, status=status.HTTP_400_BAD_REQUEST)
+
 
             assessment_score, created = StudentAssessmentScore.objects.get_or_create(
                 assessment_id=assessment_id,
@@ -895,8 +878,10 @@ def record_student_grade(request, assessment_id, student_id):
             recorded_scores.append(StudentStructuralScoreSerializer(assessment_score).data)
             
         # Return the array of recorded scores
+        logger.info( "Assessment Score recorded successfully.", extra={ 'user': user.id } )
         return Response({'recorded_scores': recorded_scores}, status=status.HTTP_201_CREATED)
     except ValidationError as ve:
+        logger.error(ve.detail, extra={ 'user': request.user.id } )
         return Response({'error': ve.detail}, status=status.HTTP_400_BAD_REQUEST)
     
     except Exception as e:
@@ -904,6 +889,89 @@ def record_student_grade(request, assessment_id, student_id):
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+
+@api_view(['GET'])
+def get_student_assessment_grade(request, assessment_id, student_id):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'You must provide valid authentication credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+    try:
+        assessment = Assessment.objects.get(pk=assessment_id)
+        # Check if the student is registered for the course
+        try:
+            student = Student.objects.get(user=student_id, registered_courses=assessment.course)
+        except Student.DoesNotExist:
+            logger.error('Student is not registered for the course associated with this assessment.', extra={ 'user': request.user.id } )
+            return Response({'error': 'Student is not registered for the course associated with this assessment.'}, status=status.HTTP_403_FORBIDDEN)
+        
+        if user.is_a_teacher is True:
+            teacher = Teacher.objects.get(user=user)
+            course = assessment.course
+            if course not in teacher.courses.all():
+                logger.error( "You are not assigned to this course.", extra={ 'user': user.id } )
+                return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
+
+            
+        # Check if the requesting user is the tutor who created the assessment
+        if user.is_a_student:
+            if student.user != user:
+                logger.error( "You do not have permission to view grade for this assessment.", extra={ 'user': request.user.id } )
+                return Response({'error': 'You do not have permission to view grade for this assessment'}, status=status.HTTP_403_FORBIDDEN)
+        
+        student_scores = StudentAssessmentScore.objects.filter(assessment=assessment, student_id=student_id)
+        print(student_scores)
+        
+        # Calculate the total score for the student in this assessment
+        total_score = student_scores.aggregate(total_score=Sum('score'))['total_score']
+        print(total_score)
+
+        # Calculate the total mark allocation for all questions in this assessment
+        total_mark_allocation = Question.objects.filter(assessment=assessment).aggregate(total_mark_allocation=Sum('mark_allocated'))['total_mark_allocation']
+        print(total_mark_allocation)
+
+        # Calculate the percentage score
+        percentage_score = (total_score / total_mark_allocation) * 100
+        print(percentage_score)
+
+        # Determine the grade based on your grading system
+        grade = calculate_grade(percentage_score)
+
+        return Response({'total_score': total_score, 'percentage_score': percentage_score, 'grade': grade}, status=status.HTTP_200_OK)
+
+    except Assessment.DoesNotExist:
+        logger.error('Assessment not found', extra={ 'user': user.id })
+        return Response({'error': 'Assessment not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    except StudentAssessmentScore.DoesNotExist:
+        logger.error('Student score not found for this assessment', extra={ 'user': user.id })
+        return Response({'error': 'Student score not found for this assessment'}, status=status.HTTP_404_NOT_FOUND)
+
+    except Exception as e:
+        logger.error( str(e), extra={ 'user': user.id })
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+def calculate_grade(percentage_score):
+    # Grading logic 
+    if percentage_score >= 80:
+        return 'A'
+    elif 70 <= percentage_score < 80:
+        return 'B+'
+    elif 60 <= percentage_score < 70:
+        return 'B'
+    elif 56 <= percentage_score < 60:
+        return 'C+'
+    elif 50 <= percentage_score < 56:
+        return 'C'
+    elif 46 <= percentage_score < 50:
+        return 'D+'
+    elif 40 <= percentage_score < 46:
+        return 'D'
+    else:
+        return 'F'
 
 
 class GradeSystemViewSet(viewsets.ModelViewSet):
