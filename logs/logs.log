@@ -1664,3 +1664,14 @@ ERROR : 2024-02-21 23:40 : 9 : 8 : {views} : [record_student_grade] : 'int' obje
 INFO : 2024-02-22 02:35:55,844 : 1 : 844 : User Logged in sucessfully. : login : None
 INFO : 2024-02-22 02:36:09,959 : 2 : 959 : User Logged in sucessfully. : login : None
 INFO : 2024-02-22 02:36:23,784 : 9 : 784 : User Logged in sucessfully. : login : None
+INFO : 2024-02-23 09:38:07,434 : 9 : 434 : User Logged in sucessfully. : login : None
+INFO : 2024-02-23 09:38:32,525 : 1 : 525 : User Logged in sucessfully. : login : None
+INFO : 2024-02-23 09:38:53,013 : 2 : 13 : User Logged in sucessfully. : login : None
+ERROR : 2024-02-23 09:40 : 9 : 726 : {views} : [get_student_assessment_grade] : No Student matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:950]
+ERROR : 2024-02-23 09:46 : 9 : 853 : {views} : [get_student_assessment_grade] : No Student matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:950]
+ERROR : 2024-02-23 09:52 : 9 : 490 : {views} : [get_student_assessment_grade] : No Student matches the given query. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:950]
+ERROR : 2024-02-23 09:53 : 9 : 201 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:950]
+ERROR : 2024-02-23 09:56 : 9 : 190 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:954]
+ERROR : 2024-02-23 09:57 : 9 : 365 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:954]
+ERROR : 2024-02-23 10:00 : 9 : 887 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:955]
+ERROR : 2024-02-23 10:01 : 9 : 952 : {views} : [get_student_assessment_grade] : Student score not found for this assessment : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:934]

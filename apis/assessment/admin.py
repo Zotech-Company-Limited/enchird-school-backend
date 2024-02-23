@@ -25,7 +25,7 @@ class ChoiceAdmin(admin.ModelAdmin):
     
     
 class StudentAssessmentScoreAdmin(admin.ModelAdmin):
-    list_display = ('student', 'assessment', 'score')
+    list_display = ('student', 'assessment', 'question', 'score')
 
 admin.site.register(StudentAssessmentScore, StudentAssessmentScoreAdmin)
     

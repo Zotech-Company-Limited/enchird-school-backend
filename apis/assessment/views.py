@@ -18,6 +18,7 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from cryptography.fernet import InvalidToken
 from rest_framework.decorators import api_view
+from django.shortcuts import get_object_or_404
 from rest_framework.exceptions import ValidationError
 from rest_framework.decorators import permission_classes
 from apis.assessment.serializers import AssessmentSerializer
@@ -772,7 +773,7 @@ def get_assessment_results(request, assessment_id):
     if user.is_a_student is True:
         try:
             assessment_results = StudentAssessmentScore.objects.filter(assessment_id=assessment_id, student=request.user)
-            serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
+            serializer = StudentStructuralScoreSerializer(assessment_results, many=True)
             
             logger.info( "Score returned successfully.", extra={ 'user': user.id } )
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -790,7 +791,7 @@ def get_assessment_results(request, assessment_id):
                 logger.error( "You are not assigned to this course.", extra={ 'user': user.id } )
                 return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
 
-            serializer = StudentAssessmentScoreSerializer(assessment_results, many=True)
+            serializer = StudentStructuralScoreSerializer(assessment_results, many=True)
             
             logger.info( "Score returned successfully.", extra={ 'user': user.id } )
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -901,12 +902,8 @@ def get_student_assessment_grade(request, assessment_id, student_id):
     try:
         assessment = Assessment.objects.get(pk=assessment_id)
         # Check if the student is registered for the course
-        try:
-            student = Student.objects.get(user=student_id, registered_courses=assessment.course)
-        except Student.DoesNotExist:
-            logger.error('Student is not registered for the course associated with this assessment.', extra={ 'user': request.user.id } )
-            return Response({'error': 'Student is not registered for the course associated with this assessment.'}, status=status.HTTP_403_FORBIDDEN)
-        
+        student = get_object_or_404(Student, user=student_id, registered_courses=assessment.course)
+
         if user.is_a_teacher is True:
             teacher = Teacher.objects.get(user=user)
             course = assessment.course
@@ -922,18 +919,23 @@ def get_student_assessment_grade(request, assessment_id, student_id):
                 return Response({'error': 'You do not have permission to view grade for this assessment'}, status=status.HTTP_403_FORBIDDEN)
         
         student_scores = StudentAssessmentScore.objects.filter(assessment=assessment, student_id=student_id)
-        print(student_scores)
+        print(student_scores) 
         
         # Calculate the total score for the student in this assessment
         total_score = student_scores.aggregate(total_score=Sum('score'))['total_score']
         print(total_score)
+        
+        if total_score is None:
+            logger.error("Student score not found for this assessment", extra={'user': user.id})
+            return Response({'error': 'Student score not found for this assessment'}, status=status.HTTP_404_NOT_FOUND)
 
+        
         # Calculate the total mark allocation for all questions in this assessment
         total_mark_allocation = Question.objects.filter(assessment=assessment).aggregate(total_mark_allocation=Sum('mark_allocated'))['total_mark_allocation']
         print(total_mark_allocation)
 
         # Calculate the percentage score
-        percentage_score = (total_score / total_mark_allocation) * 100
+        percentage_score = (total_score / total_mark_allocation) * 100 if total_mark_allocation != 0 else 0
         print(percentage_score)
 
         # Determine the grade based on your grading system
@@ -954,6 +956,7 @@ def get_student_assessment_grade(request, assessment_id, student_id):
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+
 def calculate_grade(percentage_score):
     # Grading logic 
     if percentage_score >= 80:
@@ -972,6 +975,7 @@ def calculate_grade(percentage_score):
         return 'D'
     else:
         return 'F'
+
 
 
 class GradeSystemViewSet(viewsets.ModelViewSet):
