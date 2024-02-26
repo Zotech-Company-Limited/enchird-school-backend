@@ -1675,3 +1675,11 @@ ERROR : 2024-02-23 09:56 : 9 : 190 : {views} : [get_student_assessment_grade] : 
 ERROR : 2024-02-23 09:57 : 9 : 365 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:954]
 ERROR : 2024-02-23 10:00 : 9 : 887 : {views} : [get_student_assessment_grade] : unsupported operand type(s) for /: 'NoneType' and 'float' : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:955]
 ERROR : 2024-02-23 10:01 : 9 : 952 : {views} : [get_student_assessment_grade] : Student score not found for this assessment : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:934]
+ERROR : 2024-02-23 14:25 : Anonymous : 848 : {views} : [create_meeting] : You do not have the necessary rights. : [in C:\enchird_LMS\enchird-school-backend\apis\messaging\views.py:views.py:564]
+INFO : 2024-02-23 14:26:44,787 : 9 : 787 : User Logged in sucessfully. : login : None
+INFO : 2024-02-25 10:44:46,222 : 9 : 222 : User Logged in sucessfully. : login : None
+INFO : 2024-02-25 10:45:31,857 : 2 : 857 : User Logged in sucessfully. : login : None
+INFO : 2024-02-25 10:45:41,863 : 1 : 863 : User Logged in sucessfully. : login : None
+INFO : 2024-02-26 10:04:57,840 : 9 : 840 : User Logged in sucessfully. : login : None
+INFO : 2024-02-26 10:05:07,614 : 2 : 614 : User Logged in sucessfully. : login : None
+INFO : 2024-02-26 10:05:18,129 : 1 : 129 : User Logged in sucessfully. : login : None

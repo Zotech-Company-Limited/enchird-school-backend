@@ -1,4 +1,5 @@
 import logging
+from .utils import *
 from .models import *
 from .serializers import *
 from django.db.models import Q
@@ -553,6 +554,29 @@ def GroupMessageView(request, group_id, username):
     }
     return render(request, '_message.html', context)
 
+
+
+@api_view(['POST'])
+def create_meeting(request):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error( "You do not have the necessary rights.", extra={ 'user': 'Anonymous' } )
+        return Response( {'error': "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+    
+    if user.is_a_teacher is False:
+        logger.error( "You do not have access to this endpoint.", extra={ 'user': request.user.id } )
+        return Response(  { "error": "You do not have access to this endpoint."}, status.HTTP_403_FORBIDDEN )
+
+    topic = request.data.get('topic')
+    start_time = request.data.get('start_time')
+    duration = request.data.get('duration')
+    meet = createMeeting(topic, start_time, duration)
+    print(meet)
+
+    # meeting_response = create_zoom_meeting(topic, start_time, duration)
+
+    return Response(meet, status=201)
 
 
 
