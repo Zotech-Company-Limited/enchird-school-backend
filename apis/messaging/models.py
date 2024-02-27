@@ -60,6 +60,24 @@ class GroupMessage(models.Model):
         db_table = "group_messages"
         
     
-    
+class ZoomMeeting(models.Model):
+    topic = models.CharField(max_length=255)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False, blank=False)
+    meeting_id = models.CharField(max_length=255, unique=True)
+    start_time = models.DateTimeField()
+    duration = models.IntegerField()  # in minutes
+    join_url = models.URLField()
+    password = models.CharField(max_length=255, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.PROTECT,
+        null=True,
+        related_name='meeting_creator'
+    )
+
+
+    def __str__(self):
+        return self.topic  
     
     

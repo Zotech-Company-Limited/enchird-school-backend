@@ -2,6 +2,7 @@ from .models import *
 from apis.users.models import User
 from rest_framework import serializers
 from apis.users.serializers import UserSerializer
+from apis.courses.serializers import CourseSerializer
 
 
 
@@ -89,5 +90,15 @@ class DirectMessageSerializer(serializers.ModelSerializer):
         return None
     
     
+
+class MeetingSerializer(serializers.ModelSerializer):
+    course = CourseSerializer()
+    created_by = UserSerializer()
+    
+    class Meta:
+        model = ZoomMeeting
+        fields = ['id', 'topic', 'course', 'meeting_id', 'start_time', 'duration',
+                  'join_url', 'password', 'created_at', 'created_by']
+        read_only_fields = ['id', 'created_at']
 
 

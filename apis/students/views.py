@@ -722,12 +722,7 @@ def view_course_materials(request, course_id):
     if request.method == 'GET':
         course_materials = CourseMaterial.objects.filter(course=course)
         serializer = CourseMaterialSerializer(course_materials, many=True)
-        logger.info(
-            "Course materials returned successfully.",
-            extra={
-                'user': request.user.id
-            }
-        )
+        logger.info( "Course materials returned successfully.", extra={ 'user': request.user.id } )
         return Response(serializer.data)
 
     logger.error(

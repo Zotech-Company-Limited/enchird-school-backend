@@ -2,6 +2,7 @@ import logging
 from .utils import *
 from .models import *
 from .serializers import *
+from datetime import datetime
 from django.db.models import Q
 from django.utils import timezone
 from knox.models import AuthToken
@@ -555,9 +556,18 @@ def GroupMessageView(request, group_id, username):
     return render(request, '_message.html', context)
 
 
+def convert_to_zoom_format(input_datetime_str):
+    # Convert the input datetime string to a datetime object
+    input_datetime = datetime.strptime(input_datetime_str, '%Y-%m-%d %H:%M')
+
+    # Format the datetime object in the required Zoom format
+    zoom_datetime_str = input_datetime.strftime('%Y-%m-%dT%H:%M:%S')
+
+    return zoom_datetime_str
+
 
 @api_view(['POST'])
-def create_meeting(request):
+def create_meeting(request, course_id):
     user = request.user
 
     if not user.is_authenticated:
@@ -568,15 +578,153 @@ def create_meeting(request):
         logger.error( "You do not have access to this endpoint.", extra={ 'user': request.user.id } )
         return Response(  { "error": "You do not have access to this endpoint."}, status.HTTP_403_FORBIDDEN )
 
+    try:
+        course = Course.objects.get(id=course_id)
+        teacher = Teacher.objects.get(user=user)
+    except Course.DoesNotExist:
+        logger.error( "Course not found.", extra={ 'user': user.id } )
+        return Response({'error': 'Course not found'}, status=status.HTTP_404_NOT_FOUND)
+    except Teacher.DoesNotExist:
+        logger.error( "Teacher not found.", extra={ 'user': user.id } )
+        return Response({'error': 'Teacher not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if course not in teacher.courses.all():
+        logger.error( "You are not assigned to this course.", extra={ 'user': user.id } )
+        return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
+
+        
     topic = request.data.get('topic')
     start_time = request.data.get('start_time')
+    zoom_start_time = convert_to_zoom_format(start_time)
     duration = request.data.get('duration')
-    meet = createMeeting(topic, start_time, duration)
-    print(meet)
+    
+    meet_response = createMeeting(topic, zoom_start_time, duration)
 
-    # meeting_response = create_zoom_meeting(topic, start_time, duration)
+    if meet_response and 'id' in meet_response:
+        # Extract relevant details from Zoom API response
+        zoom_meeting_id = meet_response['id']
+        join_url = meet_response['join_url']
+        password = meet_response['password']
+        
+        # Save meeting details to your database
+        zoom_meeting = ZoomMeeting.objects.create(
+            created_by=user,
+            topic=topic,
+            start_time=start_time,
+            duration=duration,
+            meeting_id=zoom_meeting_id,
+            join_url=join_url,
+            password=password,
+            course=course
+        )
+        
+        response_data = {
+            'meeting_id': zoom_meeting.meeting_id,
+            'topic': topic,
+            'course': course.course_title,
+            'start_time': start_time,
+            'duration': duration,
+            'join_url': join_url,
+            'password': password,
+        }
+        
+        return Response(response_data, status=status.HTTP_201_CREATED)
+    else:
+        return Response({'error': 'Failed to create meeting.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    return Response(meet, status=201)
+
+
+    # return Response(meet_response, status=201)
+
+
+
+    
+
+        
+
+        # Construct and return the response with saved information
+        
+
+        
+@api_view(['GET'])
+def list_meetings(request, *args, **kwargs):
+    user = request.user
+
+    if not user.is_authenticated:
+        logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})
+        return Response({"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED)
+
+    # Check if the user is an admin or a tutor
+    if user.is_admin:
+        # Admin can see all meetings
+        queryset = ZoomMeeting.objects.all()
+    elif user.is_a_teacher:
+        print("here")
+        # Teachers can see meetings for courses they are assigned to
+        print(user.teacher.courses.all())
+        queryset = ZoomMeeting.objects.filter(course__in=user.teacher.courses.all())
+    else:
+        # Other roles are not allowed to access this endpoint
+        logger.error("You do not have permission to list meetings.", extra={'user': request.user.id})
+        return Response({'error': 'You do not have permission to list meetings'}, status=status.HTTP_403_FORBIDDEN)
+
+    course = request.query_params.get('course', None)
+    
+    queryset = ZoomMeeting.objects.all()
+    
+    if course:
+        queryset = queryset.filter(course__course_title__icontains=course)
+        
+    queryset = queryset.filter().order_by('-created_at')   
+    
+    # Paginate the results
+    paginator = PaginationClass()
+    paginated_meetings = paginator.paginate_queryset(queryset, request)
+
+    # Serialize the paginated meetings
+    meeting_serializer = MeetingSerializer(paginated_meetings, many=True)
+    
+    # Create the response
+    response_data = {
+        'count': paginator.page.paginator.count,
+        'next': paginator.get_next_link(),
+        'previous': paginator.get_previous_link(),
+        'meetings': meeting_serializer.data,
+    }
+    logger.info( "List of Meetings returned successfully.", extra={ 'user': request.user.id } )
+    return Response(response_data)
+
+
+
+@api_view(['GET'])
+def get_meeting_details(request, meeting_id, *args, **kwargs):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
+
+    # Check if the user has permission to view the meeting details
+    if not user.is_admin and not user.is_a_teacher:
+        logger.error("You do not have permission to view meeting details.", extra={'user': user.id})
+        return Response({"error": "You do not have permission to view meeting details."}, status=status.HTTP_403_FORBIDDEN)
+
+    try: 
+        instance = ZoomMeeting.objects.get(id=meeting_id)
+    except ZoomMeeting.DoesNotExist:
+        logger.error( "Zoom Meeting not Found.", extra={ 'user': user.id } )
+        return Response( {"error": "Zoom Meeting Not Found."}, status=status.HTTP_404_NOT_FOUND )
+
+    # If the user is a teacher, check if they are assigned to the course associated with the meeting
+    if user.is_a_teacher:
+        course = instance.course
+        if course not in user.teacher.courses.all():
+            logger.error("You are not assigned to the course associated with this meeting.", extra={'user': user.id})
+            return Response({"error": "You are not assigned to the course associated with this meeting."}, status=status.HTTP_403_FORBIDDEN)
+        
+    serializer = MeetingSerializer(instance)
+    logger.info( "Meeting details returned successfully!", extra={ 'user': request.user.id } )
+    return Response(serializer.data)
 
 
 

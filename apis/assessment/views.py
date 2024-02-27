@@ -1259,7 +1259,6 @@ def get_all_students_scores(request, course_id):
 @api_view(['GET'])
 def list_ca_assessment_results(request, type, *args, **kwargs):
     user = request.user
-    print(type)
 
     if not user.is_authenticated:
         logger.error("You must provide valid authentication credentials.", extra={'user': 'Anonymous'})

@@ -1683,3 +1683,23 @@ INFO : 2024-02-25 10:45:41,863 : 1 : 863 : User Logged in sucessfully. : login :
 INFO : 2024-02-26 10:04:57,840 : 9 : 840 : User Logged in sucessfully. : login : None
 INFO : 2024-02-26 10:05:07,614 : 2 : 614 : User Logged in sucessfully. : login : None
 INFO : 2024-02-26 10:05:18,129 : 1 : 129 : User Logged in sucessfully. : login : None
+INFO : 2024-02-26 17:59:53,163 : 9 : 163 : User Logged in sucessfully. : login : None
+INFO : 2024-02-26 22:09:29,470 : 9 : 470 : User Logged in sucessfully. : login : None
+INFO : 2024-02-27 08:32:24,145 : 9 : 145 : User Logged in sucessfully. : login : None
+INFO : 2024-02-27 08:32:31,827 : 2 : 827 : User Logged in sucessfully. : login : None
+INFO : 2024-02-27 08:32:43,229 : 1 : 229 : User Logged in sucessfully. : login : None
+INFO : 2024-02-27 08:40:00,623 : 1 : 623 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:41:05,377 : 1 : 377 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:42:53,432 : 1 : 432 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:43:54,427 : 1 : 427 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:45:34,573 : 1 : 573 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:45:54,133 : 1 : 133 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:45:59,904 : 1 : 904 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:54:36,893 : 9 : 893 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:55:06,357 : 9 : 357 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:55:34,902 : 9 : 902 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 08:57:06,551 : 9 : 551 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 09:13:22,487 : 9 : 487 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 09:17:34,302 : 9 : 302 : List of Meetings returned successfully. : views : None
+INFO : 2024-02-27 09:27:28,993 : 9 : 993 : Meeting details returned successfully! : views : None
+INFO : 2024-02-27 09:32:34,753 : 9 : 753 : Meeting details returned successfully! : views : None

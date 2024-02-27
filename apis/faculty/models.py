@@ -67,7 +67,7 @@ class Department(models.Model):
     )
 
     def __str__(self):
-        return self.department_id
+        return f"{self.name} of {self.faculty.name}"
 
     class Meta:
         db_table = "department"

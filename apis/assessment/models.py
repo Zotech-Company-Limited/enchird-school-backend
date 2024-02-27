@@ -102,3 +102,7 @@ class GradeSystem(models.Model):
     def __str__(self):
         return f"{self.grade}: {self.min_score}-{self.max_score}"
 
+
+
+
+

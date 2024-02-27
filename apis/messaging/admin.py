@@ -1,5 +1,5 @@
+from .models import *
 from django.contrib import admin
-from .models import DirectMessage, ChatGroup, GroupMessage
 
 
 
@@ -22,3 +22,10 @@ class GroupMessageAdmin(admin.ModelAdmin):
     list_display = ('sender', 'content', 'timestamp', 'group')
     search_fields = ('sender__username', 'content', 'group__name')
     list_filter = ('group',)
+    
+@admin.register(ZoomMeeting)
+class ZoomMeetingAdmin(admin.ModelAdmin):
+    list_display = ('topic', 'course', 'start_time', 'duration', 'join_url', 'password', 'created_by')
+    search_fields = ('created_by__username', 'topic')    
+    
+    

@@ -88,39 +88,17 @@ class CourseViewSet(viewsets.ModelViewSet):
 
         user = self.request.user
         if not user.is_authenticated:
-            logger.error(
-                "You must provide valid authentication credentials.",
-                extra={
-                    'user': 'Anonymous'
-                }
-            )
-            return Response(
-                {"error": "You must provide valid authentication credentials."},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
+            logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+            return Response( {"error": "You must provide valid authentication credentials."}, status=status.HTTP_401_UNAUTHORIZED )
 
         try: 
             instance = Course.objects.get(id=kwargs['pk'])
         except Course.DoesNotExist:
-            logger.error(
-                "Course not Found.",
-                extra={
-                    'user': user.id
-                }
-            )
-            return Response(
-                {"error": "Course Not Found."},
-                status=status.HTTP_404_NOT_FOUND
-            )
-
+            logger.error( "Course not Found.", extra={ 'user': user.id } )
+            return Response( {"error": "Course Not Found."}, status=status.HTTP_404_NOT_FOUND )
 
         serializer = self.get_serializer(instance)
-        logger.info(
-            "Course details returned successfully!",
-            extra={
-                'user': request.user.id
-            }
-        )
+        logger.info( "Course details returned successfully!", extra={ 'user': request.user.id } )
         return Response(serializer.data)
 
     

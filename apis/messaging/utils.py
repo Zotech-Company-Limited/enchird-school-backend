@@ -25,9 +25,17 @@ def generateToken():
         }
 
         response = requests.post(url, data=payload)
-        access_token = response.json().get('access_token')
+        response_data = response.json()
         
-        return access_token
+        if 'access_token' in response_data:
+            access_token = response_data['access_token']
+            return access_token
+        else:
+            # Handle the case where access_token is not present in the response
+            print("Failed to retrieve access token.")
+            logger.error("Failed to retrieve access token." , extra={ 'user': 'Anonymous' } )
+            print(response_data)
+            return None
 
 
 def createMeeting(topic, start_time, duration):
@@ -40,9 +48,9 @@ def createMeeting(topic, start_time, duration):
     # create json data for post requests
     meetingdetails = {"topic": topic,
                     "type": 2,
-                    "start_time": start_time, #"2019-06-14T10: 21: 57",
-                    "duration": duration, #"45",
-                    "timezone": "Africa/Douala",
+                    "start_time": start_time, 
+                    "duration": duration, 
+                    "timezone": "Africa/Bangui",
                     "agenda": topic,
     
                     "recurrence": {"type": 1,
@@ -50,7 +58,7 @@ def createMeeting(topic, start_time, duration):
                                     },
                     "settings": {"host_video": "true",
                                 "participant_video": "true",
-                                "join_before_host": "False",
+                                "join_before_host": "true",
                                 "mute_upon_entry": "False",
                                 "watermark": "true",
                                 "audio": "voip",
@@ -63,7 +71,7 @@ def createMeeting(topic, start_time, duration):
         headers=headers, data=json.dumps(meetingdetails))
  
     print("\n creating zoom meeting ... \n")
-    print(response)
+    print(response.text)
     if response.status_code == 201:
         # y = json.loads(response.text)
         # join_URL = y["join_url"]
@@ -89,21 +97,21 @@ def createMeeting(topic, start_time, duration):
         password: "{meetingPassword}"\n')
 
 
-def create_zoom_meeting(topic, start_time, duration):
-    api_key = settings.ZOOM_CLIENT_ID
-    api_secret = settings.ZOOM_CLIENT_SECRET
-    api_account_id = settings.ZOOM_ACCOUNT_ID
+# def create_zoom_meeting(topic, start_time, duration):
+#     api_key = settings.ZOOM_CLIENT_ID
+#     api_secret = settings.ZOOM_CLIENT_SECRET
+#     api_account_id = settings.ZOOM_ACCOUNT_ID
 
-    client = ZoomClient(api_key, api_secret, api_account_id)
-    print(client)
+#     client = ZoomClient(api_key, api_secret, api_account_id)
+#     print(client)
 
-    # Create a meeting
-    meeting_response = client.meeting.create(user_id='me',
-                                             topic=topic,
-                                             type=2,  # 2 for scheduled meeting
-                                             start_time=start_time,
-                                             duration_in_minutes=duration)
-    print(meeting_response)
-    return meeting_response
+#     # Create a meeting
+#     meeting_response = client.meeting.create(user_id='me',
+#                                              topic=topic,
+#                                              type=2,  # 2 for scheduled meeting
+#                                              start_time=start_time,
+#                                              duration_in_minutes=duration)
+#     print(meeting_response)
+#     return meeting_response
 
 
