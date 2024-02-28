@@ -11,7 +11,7 @@ class UserPayment(models.Model):
         ('successful', 'Successful'),
         ('failed', 'Failed'),
     ]
-    STATUS_CHOICES = [
+    PAYMENT_METHOD_CHOICES = [
         ('stripe', 'Stripe'),
         ('paypal', 'Paypal'),
     ]
@@ -20,7 +20,7 @@ class UserPayment(models.Model):
     has_paid = models.BooleanField(default=False)
     amount = models.DecimalField(max_digits=10, decimal_places=2, blank=False, null=False)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
-    payment_method = models.CharField(max_length=10, choices=STATUS_CHOICES, default='stripe')
+    payment_method = models.CharField(max_length=10, choices=PAYMENT_METHOD_CHOICES, default='stripe')
     stripe_checkout_id = models.CharField(max_length=300, null=True, blank=True)
     paypal_checkout_id = models.CharField(max_length=300, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

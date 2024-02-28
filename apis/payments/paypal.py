@@ -82,23 +82,26 @@ def create_paypal_order(user, client_id, client_secret, amount, return_url, canc
     return response
 
 
-def check_paypal_order(client_id, client_secret, txn_id):
-    # PayPal API credentials
+
+def check_paypal_order(client_id, client_secret, order_id):
     auth = HTTPBasicAuth(client_id, client_secret)
-
-    # PayPal Orders API endpoint
-    orders_url = settings.CHECK_ORDER_URL+"/"+txn_id
-
-    print(orders_url)
-
-    # Make the request to create the order
-    response = requests.post(orders_url, auth=auth, headers={'Content-Type': 'application/json'})
-    print(response)
-    # response_data = response.json()
-    # print(response_data)
+    orders_url = f'https://api-m.sandbox.paypal.com/v2/checkout/orders/{order_id}'
     
+    response = requests.get(orders_url, auth=auth, headers={'Content-Type': 'application/json'})
 
     return response
+
+    # if response.status_code == 200:
+    #     order_details = response.json()
+    #     print("Order Details:")
+    #     print(order_details)
+    #     return order_details
+    # elif response.status_code == 404:
+    #     print(f"Order with ID {order_id} not found.")
+    #     return None
+    # else:
+    #     print(f"Failed to retrieve order details. Status code: {response.status_code}")
+    #     return None
 
 
     

@@ -1703,3 +1703,7 @@ INFO : 2024-02-27 09:13:22,487 : 9 : 487 : List of Meetings returned successfull
 INFO : 2024-02-27 09:17:34,302 : 9 : 302 : List of Meetings returned successfully. : views : None
 INFO : 2024-02-27 09:27:28,993 : 9 : 993 : Meeting details returned successfully! : views : None
 INFO : 2024-02-27 09:32:34,753 : 9 : 753 : Meeting details returned successfully! : views : None
+INFO : 2024-02-28 09:24:39,981 : 2 : 981 : User Logged in sucessfully. : login : None
+INFO : 2024-02-28 09:24:55,626 : 1 : 626 : User Logged in sucessfully. : login : None
+INFO : 2024-02-28 09:25:04,378 : 9 : 378 : User Logged in sucessfully. : login : None
+INFO : 2024-02-28 12:18:55,076 : Anonymous : 76 : Payment status is COMPLETED : jobs : None

@@ -6,6 +6,6 @@ def start():
     scheduler = BackgroundScheduler()
     
     #trigger every 4 minutes
-    scheduler.add_job(check_paypal_payments, 'interval', seconds=30)
+    scheduler.add_job(check_paypal_payments, 'interval', seconds=180)
 
     scheduler.start()
