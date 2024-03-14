@@ -25,7 +25,7 @@ class DirectMessage(models.Model):
 
 class ChatGroup(models.Model):
     name = models.CharField(max_length=255, unique=True)
-    # course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='chat_groups')
     code = models.CharField(max_length=10, unique=True, blank=False, null=False)
     members = models.ManyToManyField(User, blank=True, related_name='chat_groups')
     created_at = models.DateTimeField(
@@ -46,7 +46,6 @@ class ChatGroup(models.Model):
 class GroupMessage(models.Model):
     content = models.TextField()
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
-    # sender = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
     group = models.ForeignKey(ChatGroup, on_delete=models.CASCADE, related_name='messages')
     attachment = models.CharField(max_length=255, null=True, blank=True)

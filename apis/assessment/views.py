@@ -415,13 +415,10 @@ def get_assessment_details(request, assessment_id):
 
         if assessment.course not in tutor.courses.all():
             # if user not in assessment.course.instructors.all():
-            logger.warning(
-                "You are not a lecturer of this course",
+            logger.warning( "You are not a lecturer of this course",
                 extra={ 'user': request.user.id } )
-            return Response(
-                {"error": "You are not a lecturer of this course."},
-                status.HTTP_403_FORBIDDEN
-            )
+            return Response( {"error": "You are not a lecturer of this course."},
+                status.HTTP_403_FORBIDDEN )
         
     if is_student:
         try:
@@ -1189,7 +1186,10 @@ def get_all_students_scores(request, course_id):
 
         # Check if teacher is assigned to course
         if user.is_a_teacher is True:
-            if user not in course.instructors.all():
+            tutor = Teacher.objects.get(user=user)
+            
+            if course not in tutor.courses.all():
+            # if user not in course.instructors.all(): 
                 logger.error( "You do not have access to this endpoint.", extra={ 'user': request.user.id })
                 return Response({'error': 'You are not assigned to this course.'}, status=status.HTTP_403_FORBIDDEN)
 
