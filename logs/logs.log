@@ -1,0 +1,18 @@
+INFO : 2024-03-22 16:54:01,301 : 2 : 301 : User Logged in sucessfully. : login : None
+ERROR : 2024-03-22 16:56 : 2 : 702 : {views} : [calculate_student_grade] : Course Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:1106]
+ERROR : 2024-03-22 16:58 : Anonymous : 41 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:10 : 2 : 866 : {views} : [get_all_students_scores] : You do not have access to this endpoint. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:1177]
+INFO : 2024-03-22 17:10:44,783 : 1 : 783 : User Logged in sucessfully. : login : None
+INFO : 2024-03-22 17:11:10,692 : 9 : 692 : User Logged in sucessfully. : login : None
+ERROR : 2024-03-22 17:11 : Anonymous : 901 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:12 : Anonymous : 558 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:13 : Anonymous : 631 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:20 : Anonymous : 48 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:33 : Anonymous : 353 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:41 : Anonymous : 776 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 17:43 : Anonymous : 533 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+ERROR : 2024-03-22 18:09 : Anonymous : 751 : {views} : [decrypt_string] : Decryption error:  : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:99]
+INFO : 2024-03-22 23:18:17,156 : 9 : 156 : User Logged in sucessfully. : login : None
+INFO : 2024-03-22 23:18:36,769 : 2 : 769 : User Logged in sucessfully. : login : None
+INFO : 2024-03-22 23:18:50,827 : 1 : 827 : User Logged in sucessfully. : login : None
+ERROR : 2024-03-22 23:56 : 1 : 857 : {views} : [get_all_students_scores] : Course Not Found. : [in C:\enchird_LMS\enchird-school-backend\apis\assessment\views.py:views.py:1206]

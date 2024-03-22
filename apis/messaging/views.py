@@ -727,4 +727,20 @@ def get_meeting_details(request, meeting_id, *args, **kwargs):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def list_groups(request):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'You must provide valid authentication credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+    if user.is_admin:
+        groups = ChatGroup.objects.all()
+    else:
+        groups = ChatGroup.objects.filter(members=user)
+    
+    serializer = ChatGroupSerializer(groups, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
 

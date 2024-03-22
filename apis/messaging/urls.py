@@ -26,5 +26,6 @@ urlpatterns = [
     path('tutor-search/group/', tutor_group_search, name='tutor_group_search'),
     path('zoom/meeting/', list_meetings, name='list_meetings'),
     path('inbox/', inbox_messages, name='inbox_messages'),
+    path('list-groups/', list_groups, name='list_groups'),
     path('join-group/', join_group, name='join_group'),
 ]
