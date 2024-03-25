@@ -24,6 +24,7 @@ urlpatterns = [
     path('groups/<int:group_id>/send-message/', send_message, name='send_message'),
     path('messages/<int:user_id>/', list_user_messages, name='list_user_messages'),
     path('tutor-search/group/', tutor_group_search, name='tutor_group_search'),
+    path('groups/<int:group_id>/', get_group_details, name='get_group_details'),
     path('zoom/meeting/', list_meetings, name='list_meetings'),
     path('inbox/', inbox_messages, name='inbox_messages'),
     path('list-groups/', list_groups, name='list_groups'),

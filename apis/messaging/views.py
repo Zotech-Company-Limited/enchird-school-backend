@@ -15,6 +15,7 @@ from apis.teachers.models import Teacher
 from apis.students.models import Student
 from rest_framework.response import Response
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from apis.users.models import User, AnonymousUser
 from rest_framework.pagination import PageNumberPagination
@@ -742,5 +743,34 @@ def list_groups(request):
     
     serializer = ChatGroupSerializer(groups, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_group_details(request, group_id):
+    user = request.user
+    
+    if not user.is_authenticated:
+        logger.error( "You must provide valid authentication credentials.", extra={ 'user': 'Anonymous' } )
+        return Response({'error': 'You must provide valid authentication credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+    try:
+        # Retrieve the group object using group_id
+        group = get_object_or_404(ChatGroup, pk=group_id)
+        
+        # Check if the requesting user is a member of the group
+        if request.user not in group.members.all() and user.is_admin is False:
+            logger.error( "You are not a member of this group.", extra={ 'user': user.id } )
+            return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+        # Serialize the group object
+        serializer = ChatGroupSerializer(group)
+
+        # Return the serialized data in the response
+        logger.info( "Group details returned successfully.", extra={ 'user': user.id } )
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    except ChatGroup.DoesNotExist:
+        logger.error( "Group not found.", extra={ 'user': user.id } )
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
 
 
